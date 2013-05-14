@@ -1,0 +1,736 @@
+/*
+The styles in this stylesheet only apply to resolutions 768px and up
+
+CALCULATING DIMENSIONS:
+----------------------
+The layout is fluid. The sote wrapper (.col-full) has a fixed pixel max-width.
+All subsequent dimensions are calculated based on that fixed pixel width, using the formula: target / context = result
+Credit - http://www.alistapart.com/articles/fluidgrids/
+
+-----
+INDEX
+-----
+
+1. LAYOUT - Float & set width
+2. GLOBAL DROPDOWN STYLES ( Purely for the dropdown layout; Only edit the width of the dropdowns )
+3. TOP NAVIGATION (Add top navigation presentational styles here)
+4. HEADER
+5. HOMEPAGE COMPONENTS
+6. SLIDER
+7. FULL WIDTH SINGLE PAGE
+8. WIDGETS
+9. COMMENTS
+10. FOOTER WIDGETS
+11. PAGE TEMPLATES
+12. MISC
+13. IE FIXES
+14. ADDITIONAL MEDIA QUERIES
+
+/*----------------------*/
+
+@import "mixins";
+
+/*----------------------*/
+
+@media only screen and (min-width: 1024px) {
+
+	/* 	1. LAYOUT - Float & set width */
+	#main.fullwidth, .layout-full #main, .col-full { 
+	    max-width: 75.998em; // Theme Width
+	    margin:0 auto; 
+	    width:100%; 
+	}
+	#main { 
+	    width: 62%; // golden ratio
+	} 
+	#sidebar { 
+	    margin-top: 0; 
+	    width: 34%;  // golden ratio 
+	}
+	.layout-full #main  { 
+	    width: 100%; // full-width template
+	}
+	.col-left { 
+	    float: left; 
+	}
+	.col-right { 
+	    float: right; 
+	}
+	.layout-full .entry img { 
+	    max-width: 100%; 
+	}
+	.layout-right-content {
+	    #main  { 
+	    	float: right; 
+	    }
+	    #sidebar  { 
+	    	float: left; 
+	    }
+	}
+}
+
+@media only screen and (min-width: 768px) {
+
+	/* 2. GLOBAL DROPDOWN STYLES ( Purely for the dropdown layout; Only edit the width of the dropdowns ) */
+	ul.nav {
+	    position: relative;
+	    margin-bottom:0;
+	    text-align: center;
+	    li {
+	    	position: relative;
+	    	display: inline-block;
+	    	zoom:1;
+	    	list-style: none;
+	    	a {
+	    		display: block;
+	    		padding: 1.3em 1em;
+	    		font-size: 1.2em;
+	    		line-height: 1;
+	    		font-weight: bold;
+	    	}
+	    	&.parent { // Styles applied to all parent list items
+	    		> a  {
+	    			&:after  {
+	    				.iconafter;
+	    				content: '\f107';
+	    				position: relative;
+	    				top: -1px;
+	    				margin-left: 2px;
+	    			}
+	    		}
+	    	}
+	    }
+	    /* LEVEL 2 */
+	    ul {
+	    	min-width:11.089em;
+	    	margin:0;
+	    	visibility: hidden;
+	    	position: absolute;
+	    	top:100%;
+	    	left: 0;
+	    	z-index: 9999;
+	    	li {
+	    		float: none;
+	    		a {
+	    			width: 100%;
+	    			font-size: .9em;
+	    			display: inline-block;
+	    			.borderbox();
+	    		}
+	    		&.parent { // Styles applied to parent items in level 2
+	    			> a  {
+	    				&:after  {
+	    					content: '\f105';
+	    				}
+	    			}
+	    		}
+	    	}			
+	    }
+	    /* LEVEL 3 */
+	    ul ul {
+	    	left:100%;
+	    	top:0;
+	    	li {
+	    		&.parent { // Styles applied to parent items in level 3
+	    		}
+	    	}
+	    }
+	    li:hover > ul {
+	    	visibility: visible;
+	    }
+	}
+	    	
+	/* 3. TOP NAVIGATION (Add top navigation presentational styles here) */
+	#top {
+	    #top-nav { 
+	    	display: block; 
+	    }
+	    ul.nav {
+	    	font-size:.857em; // this adjusts the scale of the entire navigation and everything just works like magic
+	    	> li { // The following styles are applied ONLY to the top level list items
+	    		a {
+	    			color: #fff;
+	    		}
+	    		&:hover {
+	    			background: rgba(0,0,0,0.7);
+	    			a  {
+	    				text-decoration: none;
+	    			}
+	    		}
+	    	}
+	    	/* Level 2 */
+	    	ul {
+	    		background: #000;
+	    		background: rgba(0,0,0,0.85);
+	    		.border_radius_bottom(5px);
+	    		li {
+	    			display: block;
+	    			a {
+	    				&:hover  {
+	    					background: rgba(0,0,0,0.7);
+	    				}
+	    			}
+	    			&:first-child  {
+	    				a  {
+	    					.border_radius_top(5px);
+	    				}
+	    			}
+	    			&:last-child  {
+	    				a  {
+	    					.border_radius_bottom(5px);
+	    				}
+	    			}
+	    		}			
+	    	}
+	    	/* Level 2 */
+	    	ul ul {
+	    		-webkit-border-radius: 0 5px 5px 5px;
+	    		   -moz-border-radius: 0 5px 5px 5px;
+	    		        border-radius: 0 5px 5px 5px;
+	    	}
+	    	li:hover > ul {
+	    	}
+	    }
+	}
+	
+	/* 4. HEADER */
+	#header {
+	    hgroup { 
+	        h1, h2, h3 {
+	            float:none;
+	        }
+	    }
+	    ul.rss {
+	        margin-right:0;
+	        padding-right:0;
+	        li {
+	            border-right:0;
+	        }
+	    }
+	    p  {
+			font-size: 3.631em;
+			line-height: 1.25;
+		}
+	}
+	/* 	5. HOMEPAGE COMPONENTS */
+	span.heading, #respond h3  {
+		font-size: 1em;
+	}
+	#content.home-widgets  {
+		.widget_woo_component  {
+			h2.widget-title  {
+				font-size: 2.618em;
+			}
+		}
+		/* Dojo Tweets widget on homepage */
+		.widget_woodojo_tweets  {
+			ul  {
+				li  {
+	     			float: left;
+	     			width: 29.8%;
+	     			margin-right: 5.3%;
+	     			&:nth-child(3n+3)  {
+	     			    margin-right: 0;
+	     			}
+				}
+			}
+		}
+	}
+	.widget_woothemes_features  {
+		padding-bottom: 2.618em!important;
+		.feature  {
+			float: left;
+			width: 21%;
+			margin-right: 5.3%;
+			&.last  {
+				margin-right: 0;
+			}
+		}
+	}
+	.widget_woothemes_testimonials  {
+	     .quote  {
+	     	float: left;
+	     	width: 21%;
+	     	margin-right: 5.3%;
+	     	&:nth-child(5n+5)  {
+				clear: both;
+			}
+			&:nth-child(4n+4)  {
+				margin-right: 0;
+			}
+	     }
+	}
+	#blog-posts  {
+		.post  {
+			header  {
+				h1  {
+					font-size: 2.618em;
+				}
+			}
+		}
+	}
+	#posts-timeline  {
+		position: relative;
+		&:before  {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 10px;
+			left: 0;
+			top: 55%;
+			background: @border_main;
+		}
+		.col-full  {
+			position: relative;
+			min-height: 400px;
+		}
+		.timeline-post  {
+			position: absolute;
+			width: 25%;
+			margin: 0;
+			&:hover  {
+				top: auto;
+				.scale(1.2);
+				margin-bottom: .857em;
+			}
+			&:nth-child(1n)  {
+				left: 0;
+				bottom: 39%;
+			}
+			&:nth-child(2n)  {
+				left: 35%;
+				top: 70%;
+				bottom: auto;
+				&:before  {
+					border-color: transparent transparent @bg_dark transparent;
+					bottom: auto;
+					top: -30px;
+				}
+				&:hover  {
+					margin-top: .857em;
+					&:before  {
+						border-color: transparent transparent darken(@bg_dark, 10%) transparent;
+					}
+				}
+				&:after  {
+					bottom: auto;
+					top: -28px;
+				}
+			}
+			&:nth-child(3n)  {
+				left: auto;
+				right: 0;
+				top: auto;
+				bottom: 39%;
+			}
+		}
+	}
+	.gecko, .ie  {
+		#posts-timeline  {
+			&:before  {
+				top: 61%;
+			}
+		}
+	}
+	#blog-posts  {
+		span.heading  {
+			margin-bottom: 2.244em;
+		}
+		.layout-full  {
+			span.heading  {
+				margin-bottom: 0;
+			}
+		}
+		#sidebar  {
+			margin-top: 0;
+		}
+	}
+	#contact-area  {
+		form  {
+			textarea, input  {
+				padding: 1.387em 1.618em;
+				font-size: 1.387em;
+			}
+			textarea  {
+				float: left;
+				width: 60%;
+			}
+			.col-right  {
+				float: right;
+				width: 35%;
+			}
+		}
+	}
+	/* 	6. SLIDER */
+	.flex-control-nav {
+		display: block;
+	}
+	.flexslider.no-frame  {
+		.slide-content  {
+			margin: 0;
+		}
+		.layout-full  {
+			.slide-content  {
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				padding: 1.618em 2.618em;
+				color: #fff;
+				background: rgba(0,0,0,0.4);
+				z-index: 99;
+				h1  {
+					color: #fff;
+				}
+			}
+			.slide-media  {
+				width: 100%;
+				float: none;
+				img  {
+					width: 100%;
+				}
+			}
+			&.has-video  {
+				.slide-content  {
+					bottom: auto;
+					top: 0;
+				}
+			}
+		}
+		.layout-left-content, .layout-right-content  {
+			.slide-content, .slide-media  {
+				width: 47%;
+			}
+		}
+		.layout-left-content  {
+			.clearfix;
+			.slide-content  {
+				float: left;
+			}
+			.slide-media  {
+				float: right;
+			}
+		}
+		.layout-right-content  {
+			.clearfix;
+			.slide-content  {
+				float: right;
+			}
+			.slide-media  {
+				float: left;
+			}
+		}
+	}
+	.flexslider.frame  {
+		.flex-control-nav  {
+			display: block;
+		}
+	}
+	.flex-direction-nav a {
+		&:before, &:after  {
+			height: 90px;
+			font-size: 3.631em!important;
+		}
+	}
+	.flex-direction-nav .flex-next {
+		&:after  { 
+			padding: 45px 0 0 8px;
+		}
+	}
+	.flex-direction-nav .flex-prev {
+		&:before  { 
+			padding: 45px 8px 0 0;
+		}
+	}
+	/* 7. FULL WIDTH SINGLE PAGE */
+	#full-single-comments-area  {
+		#post-author.fl, #connect.fr  {
+			width: 38%;
+		}
+		#connect  {
+			.newsletter-form {
+				.email { 
+					width: 68%;
+					margin: 0;
+				}
+				.submit  {
+					width: auto;
+					margin: 0;
+				}
+			}
+		}
+		#comments {
+			li.comment { 
+				.comment-container {
+					&:before  {
+						.tip(25px,#fff,auto);
+						border-color: transparent #fff transparent transparent;
+						left: -50px;
+						margin: .236em 0 0;
+					}
+				}
+				&.thread-even {
+					.comment-container {
+						&:before  {
+							border-color: transparent transparent transparent #fff;
+							right: -50px;
+						}
+					}
+					.bypostauthor, &.bypostauthor  {
+						> .comment-container  {
+							&:before  {
+								border-color: transparent transparent transparent @info;
+							}
+						}
+					}
+				}
+				&.bypostauthor { 
+					> .comment-container  {
+						&:before  {
+							border-color: transparent @info transparent transparent;
+						}
+					}
+				}
+			}
+		}
+	}
+	/* 8. WIDGETS */
+	.widget {
+		h3  {
+			text-align: center;
+		}
+	}
+	/* 9. COMMENTS */
+	#comments  {
+		> h3  {
+			font-size: 2.618em;
+		}
+		li.comment  {
+			&.thread-even { 
+				.comment-container {
+					margin: 0 120px 3.631em 0;
+				}
+			}
+			.comment-container {
+				margin: 0 0 3.631em 120px;
+			}
+			.comment-avatar {
+				img { 
+					max-width: none;
+				}
+			}
+			.reply {
+				margin: 0;
+				position: absolute;
+				bottom: 2.618em;
+				right: 2.618em;
+			}
+		}
+	}
+	/* 10. FOOTER WIDGETS */
+	#footer-widgets {
+	    .block { 
+	    	margin-right: 3.8%; 
+	    	float: left; 
+	    }
+	    .col-1 {
+	    	.block { 
+	    		width: 100%; 
+	    		float: none; 
+	    	}
+	    	.footer-widget-1 { 
+	    		margin-right:0; 
+	    	}
+	    }
+	    .col-2 {
+	    	.block { 
+	    		width: 48%; 
+	    	}
+	    	.footer-widget-2 { 
+	    		margin-right:0; 
+	    	}
+	    }
+	    .col-3 {
+	    	.block { 
+	    		width: 30.75%; 
+	    	}
+	    	.footer-widget-3 { 
+	    		margin-right:0; 
+	    	}
+	    }
+	    .col-4 {
+	    	.block { 
+	    		width: 22.05% 
+	    	}
+	    	.footer-widget-4 { 
+	    		margin-right:0; 
+	    	}
+	    }
+	    
+	}
+	/* 11. PAGE TEMPLATES */
+	.page-template-template-contact-php {
+	    .location-twitter  {
+	    	.col-left  { 
+	    		float: left; 
+	    	}
+	    	#office-location { 
+	    	    width: 48%; 
+	    	    margin: 0;
+	    	}
+	    	.contact-social  {
+	    	    float: right; 
+	    	    width: 48%;
+	    	    #twitter  { 
+	    	    	margin: 0; 
+	    	    } 
+	    	}
+	    }
+	}
+	.page-template-template-archives-php,  .page-template-template-sitemap-php  {
+		#main  {
+			#archive-categories, #archive-dates, #sitemap-pages, #sitemap-categories  {
+				width: 48%!important;
+			}
+		}
+	}
+	
+	/* 12. MISC */
+	.entry img { 
+	    max-width: 100%; 
+	}
+	/* 	Post Author */
+	#post-author.fl, #connect.fr  {
+		width: 33%;
+	}
+	#post-author.fl  {
+		float: left;
+	}
+	/* 	Subscribe & Connect */
+	#connect  {
+		.newsletter-form {
+			.email { 
+				width: 68%;
+			}
+		}
+		&.fr  {
+			float: right;
+			.newsletter-form {
+				.email, .submit { 
+					width: 100%;
+					margin: 0 0 .53em;
+				}
+			}
+		}
+	}
+	/* 	Related Posts */
+	.sc-related-posts  {
+		ul { 
+			list-style: none;
+    		li  {
+    			clear: none;
+    		 	float: left;
+    		 	width: 24%;
+    		 	margin-left: 0;
+    		 	margin-right: 1.3%;
+    		 	text-align: center;
+    		 	&:last-child  {
+    		 		margin-right: 0;
+    		 	}
+    		 	.thumbnail  {
+    		 		float: none;
+    		 		display: block;
+    		 	}
+    		 	img  {
+    		 		margin: 0 0 1em;
+    		 		height: auto;
+    		 		.border_radius(300px);
+    		 		.box_shadow(0,0,0,3px,#fff);
+    		 	}
+    		 	span  {
+    		 		font-weight: bold;
+    		 	}
+    		} 
+    	}
+	}
+	/* Pagination */
+	#post-entries  {
+		.fl  {
+			float: left;
+		}
+		.fr  {
+			float: right;
+		}
+		.nav-prev, .nav-next  {
+			margin: 0;
+		}
+	}
+	
+	/* 13. IE FIXES */
+	.ie7 {
+	    #top-nav {
+	    	position: relative;
+	    	z-index: 9999999;
+	    }
+	    #header {
+	    	position: relative;
+	    	z-index: 9999999;
+	    }
+	}
+	.ie8  {
+		#posts-timeline  {
+			min-height: none;
+			&:before  {
+				display: none;
+			}
+			.timeline-post  {
+				position: relative;
+				float: left;
+				width: 26%;
+				margin: 0 2.5%;
+				&:hover  {
+					top: auto;
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+}
+
+/* 14. ADDITIONAL MEDIA QUERIES */
+@media only screen and (min-width: 1600px) {
+	#main.fullwidth, .layout-full #main, .col-full { 
+	    max-width: 100em;
+	}
+}
+
+@media only screen and (min-width: 1100px) {
+	#footer  {
+		p  {
+			margin: 0;
+		}
+		.footer-section  {
+			float: left;
+			margin: 0;
+			line-height: 3;
+		}
+		#copyright  {
+			width: 36%;
+			text-align: right;
+		}
+		#footer-logo  {
+			width: 28%;
+			text-align: center;
+		}
+		#credit {
+			width: 36%;
+			img { 
+				vertical-align: middle; 
+			}
+			span { 
+				display: none; 
+			}
+		}
+	}
+}

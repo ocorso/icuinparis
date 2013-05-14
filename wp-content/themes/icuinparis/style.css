@@ -1,0 +1,325 @@
+/*
+Theme Name:     icuinparis
+Theme URI:      http://example.com/
+Description:    Child theme for athena
+Author:         click3x.com
+Author URI:     http://click3x.com
+Template:       athena                             
+Version:        1.0
+*/
+
+@import url("../athena/style.css");
+@import url("prod-style.css");
+
+  /* Direction Nav */
+
+  /* Control Nav */
+
+body {
+  font-size: 1.3em;
+  line-height: 1.618;
+  color: #999999;
+  background: #ffffff;
+  font-family: 'Source Sans Pro', sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+}  
+
+div#logoposition {
+	width:140px; 
+	position:absolute; 
+	top:0px; 
+	left:50%; 
+	z-index:10000; 
+	margin-left:-450px;"
+}
+
+img.headerlogo { 
+min-width:75%; 
+max-width:95%;
+}
+
+#main {
+    width: 100% !important;
+}
+
+#featured-slider {
+  overflow: hidden;
+  border: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  box-shadow: 0 0 0 0 #ffffff;
+  -webkit-box-shadow: 0 0 0 0 #ffffff;
+  margin: 0;
+  position: relative;
+  background: url("/wp-content/uploads/white.png");
+}
+
+#featured-slider .slide:after {
+    background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0) 100%);
+    bottom: 0;
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 100%;
+}
+
+.home #content {
+  	background: url("/wp-content/uploads/white.png");
+    overflow: hidden;
+    padding: 0;
+}
+
+#featured-slider .slide-content .slide-content-inner { 
+  display:none;
+  position: absolute;
+  bottom: 0;
+  margin: 1.618em;
+}
+ 
+ul.nav { 
+	text-align:right;
+    margin-bottom: 0;
+    position: relative;
+}
+
+#top {
+    background: none repeat scroll 0 0 #242424 !important;
+    padding: 0 1.618em;
+}
+
+#top #top-nav {
+	float:right;
+	padding-right:20%;
+}
+
+#top ul.nav {
+    text-align:right;
+	font-size: 1.0em;
+}
+
+
+ul.nav li {
+    float: left;
+    list-style: none outside none;
+    position: relative;
+    text-transform: uppercase;
+}
+
+#header {
+    background-size: 50% 100%;
+    border-bottom: 0.0em solid #ffffff !important;
+	display:none;
+}
+
+#footer {
+    background: url("/wp-content/uploads/bkgr_foot.jpg") repeat-x scroll 0 0 rgba(0, 0, 0, 0.19);
+    border-top: opx solid #676D76;
+    color: #545454;
+    padding: 4.236em 0 2.618em;
+	height:400px;
+}
+
+#footer {
+    color: #d1d1d1;
+}
+
+ul.nav li { 
+	border-left: #565656 solid;
+	border-left-width:1px;
+    float: left;
+    list-style: none outside none;
+    position: relative;
+}
+
+ul.nav li:last-child {
+	border-right: #565656 solid;
+	border-right-width:1px;
+}
+
+#top ul.nav ul {
+    background: none repeat scroll 0 0 #666666 !important;
+}
+
+#top ul.nav > li a {
+    color: #FDFDFD !important;
+	text-align:left;
+}
+
+ul.sub-menu li {
+    border-left: 0px solid #565656;
+    border-bottom: 1px solid #848484;
+}
+
+div#home-cont {
+	width:960px; 
+	margin: auto; 
+	background-color:#FFF;
+}
+
+div#shopcall2 {
+	width:480; 
+	float:right; 
+	display:none;
+}
+
+div#shopcall {
+	width:480; 
+	float:left;
+	display:none;
+}
+
+div#homeproducts {
+	width:960; 
+	background:#FFF; 
+	padding-bottom:20px;
+	display:none; 
+}
+
+div#call-home-lower-left {
+	width:480px; height:100px; float:left;
+}
+
+div#call-home-lower-right {
+	width:480px; height:100px; float:right;
+}
+
+div#home-cont div#call-home-lower-right li#text-3.widget {
+	height:100px;
+}
+
+#footer-widgets {
+    background:#e6e6e6; 
+    border-top: 0px solid #848A92;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) inset;
+    color: #303030;
+    padding: 5.874em 0 2.244em;
+}
+
+section#footer-widgets div.col-full div.block div#text-5.widget {
+	color:#303030; text-shadow:none;	
+}
+section#footer-widgets div.col-full div.block div#text-6.widget {
+	color:#303030; text-shadow:none;	
+}
+section#footer-widgets div.col-full div.block div#text-7.widget {
+	color:#303030; text-shadow:none;	
+}
+section#footer-widgets div.col-full div.block div#text-8.widget {
+	color:#303030; text-shadow:none;	
+}
+
+H2.home-footer { 
+	color:#303030; 
+	margin-bottom: 1px; 
+	font-weight:200;
+}
+
+DIV.home-footer-header { 
+	text-shadow:none;
+}
+
+.product_cycle_item .item_link {
+    display: none !important;
+}
+
+.product_cycle_category_container {
+    display: none !important;
+}
+
+div#homeproducts h3 { 
+	display:none;
+}
+
+div#homeproducts ul.product_list_widget li { 
+	float:left;
+	background:#ffffff;
+    border-bottom: 0px solid #848A92;
+}
+
+div#home-content {
+	background:#ffffff;
+}
+
+div#homeproducts {
+	background:#ffffff;
+}
+
+div#homeproducts ul.product_list_widget li a {
+	width:240px;
+	font-size:10px;
+	text-shadow:none;
+	color:#000000;
+}
+
+ul.product_list_widget li img {
+    background-clip:padding-box;
+    border-radius: 0em 0em 0em 0em;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    float:none;
+    height: auto;
+    margin: 0 1.387em 1em 0;
+    width: 200px; 
+	text-align:center;
+}
+
+div#homeproducts ul.product_list_widget li span.amount {
+	position: static;
+    bottom: 0px;
+    width: 100%;
+    overflow: none;  
+	width: 50px;
+   	background:#000000;
+   	color:#ffffff;
+   	z-index:1000; 	
+}
+
+.entry img {
+    margin-bottom: -1px;
+    max-width: 100%;
+}
+
+div#creativecommunity {
+	float:left;
+	width:175px;
+	margin:5px;
+}
+
+div#ourdesigners {
+	float:left;
+	width:240px;
+	margin:20px;
+}
+
+div#content.col-full section#main.col-left article.post-8934 aside.post-meta ul { 
+	display:none;
+}
+
+div#content.col-full section#main.col-left article.post-8994 aside.post-meta{ 
+	display:none;
+}
+
+header h1 {
+	padding: 12px 20px 30px 190px; 
+	text-shadow:none; 
+	font-size:2.5em; 
+	font-weight:200;
+	color:#000000; 
+	text-transform:uppercase;	
+	font-family: 'Source Sans Pro', sans-serif;	
+}
+
+.post img, .type-page img, .search-results .features img, .search-results article.page img, .search-results .type-product img, .search-results .type-portfolio img, .post img.thumbnail, .type-page img.thumbnail, .search-results .features img.thumbnail, .search-results article.page img.thumbnail, .search-results .type-product img.thumbnail, .search-results .type-portfolio img.thumbnail {
+    background: none repeat scroll 0 0 padding-box transparent;
+    border: 0 none;
+    border-radius: 0 0 0 0;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    margin: 0 0 0 0;
+    padding: 0;
+}

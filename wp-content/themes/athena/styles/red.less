@@ -1,0 +1,753 @@
+// Red
+/* Imports */
+@import url(../css/mixins.less);
+
+/* Backgrounds */
+@bg_wrapper: #E2E5E9;
+@color_body: #7F7F87;
+@color_links: #595B5D;
+@color_links_entry: #595B5D;
+@color_nav: #fff;
+@color_links_selected: #EDE574;
+@color_buttons: #FF4E50;
+@heading_widgets: #FF4E50;
+@heading_widgets_footer: #fff;
+@border_main: #C5CAD0;
+@breadcrumbs_top: #fff;
+@breadcrumbs_bottom: #fff;
+@header_top: #FF4E50;
+@header_bottom: #FF4E50 + #222;
+
+body  {
+	color: @color_body;
+	background: @bg_dark;
+	.text_shadow(0, 0, 0, rgba(0,0,0,.2));
+}
+
+hr { background-color: @border_main; }
+
+/* 1.2 Hyperlinks */
+
+a { 
+	color: @color_links; 
+	
+	&:hover {
+		color: @color_links - #222;
+	}
+}
+
+/* 1.3 Typography */
+h1, h2, h3, h4, h5, h6  {
+	color: @heading_widgets; 
+	a {
+		&:hover { 
+		}
+	}
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* 2. SITE STRUCTURE & APPEARANCE */
+/*-------------------------------------------------------------------------------------------*/
+
+/* 2.1 Containers & Columns */
+.home #content {
+	overflow: hidden;
+}
+
+/* 2.2 Navigation */
+ul.nav { // Styles applied to all instances of navigation
+	li {
+		a {
+			color: @color_nav;
+			.text_shadow(0, 0, 1px, rgba(0,0,0,.3)) !important;
+			&:hover {
+				color: @color_links_selected !important;
+			}
+		}
+		&.current_page_item, &.current_page_parent, &.current-menu-ancestor, &.current-cat, &.li.current-menu-item {
+			a { 
+				color: @color_links_selected;
+				.text_shadow(0, 0, 1px, rgba(255,255,255,.3)) !important;
+			}
+		}
+		&.parent:hover {
+			a { 
+				color: @color_links !important;
+				.text_shadow(0, 0, 1px, rgba(255,255,255,.3)) !important;
+			}
+		}
+		ul {
+			li a {
+				color: darken(@header_top, 25%) !important;
+				.text_shadow(0, 0, 0, rgba(0,0,0,.3)) !important;
+				&:hover {
+					color: darken(@header_top, 25%) !important;
+				}
+			}
+		}
+	}
+}
+
+#navigation{
+	ul {
+		li {
+			border-bottom: .077em solid #eee;
+			a {
+			}
+		}
+	}
+}
+	
+/* 2.3 Header */
+#header {
+	background-color: @header_top;
+	.vertical_gradient(transparent 50%, @header_bottom 50%);
+	.site-title, .site-description {
+	    color:#000;
+	    a {
+	    	color: darken(@color_body, 20%);
+	    	&:hover { 
+	    	}
+	    }
+	}
+	.nav-toggle {
+		.vertical_gradient(@color_nav_links,@color_nav_links - #111);
+		border:.202em solid @color_nav_links - #444;
+		-webkit-box-shadow:
+			inset 0 1px 0 rgba(255,255,255,0.4),
+			inset 0 -1px 0 @color_nav_links - #333;
+		-moz-box-shadow:
+			inset 0 1px 0 rgba(255,255,255,0.4),
+			inset 0 -1px 0 @color_nav_links - #333;
+			
+		a {
+			color: #fff;
+			.text_shadow(0,-1px,0,rgba(0,0,0,0.4));
+			&:hover {
+			}
+		}		
+	}
+	.site-description { 
+		color: lighten(@color_body, 10%); 
+	}
+	.search_main {
+	}
+}
+
+#wrapper {
+	background: @bg_wrapper;
+}
+
+/* 2.6 Footer */
+#footer{
+	color: @color_footer;
+	background: @bg_dark;
+	border-top: 1px solid @border_footer; 
+	a {
+		color: @color_links_footer_alt;
+	}
+	.nav  {
+		a  {
+			color: #fafafa;
+			&:hover  {  }
+		}
+	}
+	#footer-nav  {
+		a  { background: none!important; }
+	}	
+}
+
+#footer-widgets {
+	color: @color_footer;	
+	background: @bg_dark;
+	border-top:1px solid @border_footer;  
+	a {
+		color: @color_links_footer;
+		&:hover {
+			color: @color_links_footer_alt;
+		}
+	}
+	.widget {
+		color: @color_footer;
+		h3 {
+			color: @heading_widgets_footer;
+		}
+	}
+}
+
+/* 2.7 Breadcrumbs */
+#breadcrumbs {
+	border-top: 1px solid #B3B6BB;
+	.box_shadow(0,1px,1px,0,rgba(0,0,0,.3));
+	background-color: @breadcrumbs_top;
+	.vertical_gradient(transparent 50%, transparent 50%);
+	.trail-begin {
+		background: url(light/ico-breadcrumb-home.png) no-repeat left center;
+	}
+	.sep {
+		background: url(light/ico-breadcrumb-sep.png) no-repeat center;
+	}	
+	&:after {
+	    .vertical_gradient( rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	}
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* 3. POSTS */
+/*-------------------------------------------------------------------------------------------*/
+#breadcrumb, .post .video { 
+	margin-bottom:1.618em; 
+}
+.archive-header {
+	border-bottom:@border_main 1px solid;
+}
+.archive-description {
+}
+
+.post, .type-page {
+	border-bottom: 1px solid @border_main;
+	.post-meta {
+		li  { 
+			a {
+				color: @color_body;
+			}
+			&.post-comments {
+				a {
+					color: @color_body;
+					.vertical_gradient(#F0F0F2, #E2E4E6);
+					.box_shadow(0, 1px, 1px, 0, rgba(0,0,0,.2));
+					.text_shadow(0, 1px, 0, #fff);
+					&:hover {
+						.vertical_gradient(#F0F0F2 + #111, #E2E4E6 - #111);
+					}
+					&:active {
+						.inset_box_shadow(0, 0, 7px, 0, rgba(0,0,0,.2));
+					}
+				}
+			}
+		}
+	}
+
+	/* 3.1 Images */
+	img, img.thumbnail {
+		.box_shadow(1px, 1px, 3px, 0, rgba(0,0,0,.2));
+		&:hover {
+			border-color: darken(@border_main, 10%);
+		}
+	}
+
+	.entry {
+		a {
+			color: @color_links_entry;
+			&:hover {
+				color: @color_links;
+			}
+		}
+	}
+}
+
+.nav-entries {
+	a {
+		color: @color_body;
+	}
+}
+.woo-pagination {
+	.page-numbers {
+		color: @color_nav;
+		.border_radius(.327em);
+		.vertical_gradient(#F0F0F2, #E2E4E6);
+		.box_shadow(0, 1px, 1px, 0, rgba(0,0,0,.2));
+		.text_shadow(0, 1px, 0, #fff);
+		&:hover { 
+			.vertical_gradient(#F0F0F2 + #111, #E2E4E6 - #111);
+		}
+		&.current, &:active  { 
+			.inset_box_shadow(0, 0, 7px, 0, rgba(0,0,0,.2));
+		}
+	}
+}
+
+#post-author { 
+	.vertical_gradient(#FFF, #fff);
+	.box_shadow(1px, 1px, 10px, 1px, rgba(0,0,0,.1));
+	color: #7F848A;
+	border-top:1px solid @border_main; 
+	.text_shadow(0, 0, 0);
+	.border_radius(.382em);
+	a {
+		color: #7F848A;
+	}
+	h3 {
+		color: #222;
+	}
+	.profile-image { 
+		.box_shadow(1px, 1px, 3px, 0, rgba(0,0,0,.2));
+	}
+	
+}
+
+/* 3.4 Post Entry Nav */
+#post-entries {
+	border-top:1px solid @border_main;
+	border-bottom:1px solid @border_main;
+	.nav-prev {
+		a {
+			background: url(light/ico-previous-post.png) no-repeat left center;
+		}
+	}
+	.nav-next {
+		a {
+			background: url(light/ico-next-post.png) no-repeat right center;
+		}
+	}
+}
+
+/* 3.5 Connect */
+#connect { 
+	a {
+		color: @color_links;
+		&:hover {
+			color: @color_links;
+		}
+	}	
+	.newsletter-form {
+		.email { 
+			color: @color_nav;
+		}
+	}
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* 4. WIDGETS */
+/*-------------------------------------------------------------------------------------------*/
+
+/* 4.1 Generic Widgets */
+.widget  { 
+	color: @color_body;
+	h3 { 
+		color: @heading_widgets;
+	}
+}
+
+/* 4.2 Specific Widgets */
+/* SEARCH FORM */
+.search_main {
+	.searchform {
+		background: #fff;
+		.inset_box_shadow(0, 1px, 1px, 0, #ddd);
+		border-color: #CDCED1;
+		input.s {
+			color: lighten(@color_nav, 15%);
+			border-color: #DCDDDF;
+		}
+	}
+}
+
+/* FLICKR */
+.widget_woo_flickr {
+	h3 {
+		span {
+			color:#0051d8;
+			span { 
+				color:#ff1183; 
+			}
+		}
+	}
+	a {
+		img { 
+			.box_shadow(1px, 1px, 3px, 0, rgba(0,0,0,.2));
+		}
+		&:hover {
+			img { 
+				border-color: darken(@border_main, 10%); 
+			}
+		}
+	}
+}
+
+/* CALENDAR */
+#wp-calendar{
+	caption {
+		color: @heading_widgets;
+	}
+	th, td { 
+		background: lighten(@bg_dark, 40%); 
+	}
+	td { 
+		color: lighten(@color_body, 10%);
+		background: none;
+	}
+}
+
+.widget_woo_blogauthorinfo {
+	.avatar { 
+		.box_shadow(1px, 1px, 3px, 0, rgba(0,0,0,.2));
+	}
+}
+
+/* Dojo Tabs */
+body .tabbable {
+	.nav {
+		color: @color_nav;
+		.vertical_gradient(#F0F0F2, #E2E4E6);
+		.box_shadow(0, 1px, 1px, 0, rgba(0,0,0,.2));
+		.text_shadow(0, 1px, 0, #fff);
+	}
+	.tab-pane {
+		ul {
+			li {
+				&:hover {
+					background: darken(@border_main, 16%);
+					border: 1px solid darken(@border_main, 18%);
+					.border_radius(.327em);
+				}
+			}
+		}
+		img {
+			.box_shadow(1px, 1px, 3px, 0, rgba(0,0,0,.2));
+		}
+	}
+}
+
+/* Dojo Tweets */
+.widget_woodojo_tweets {
+	.follow-link { 
+		border-top: 1px solid @border_main;
+	}
+}
+
+/* Dojo Instagram Feed */
+.widget_woodojo_instagram {
+	ul.alignleft {
+		li {
+			.box_shadow(1px, 1px, 3px, 0, rgba(0,0,0,.2));
+			img {
+			}
+		}
+	}
+}
+
+/* Dojo and Twitter Profile */ 
+.widget_woodojo_instagram_profile .profile-box img, .widget_woodojo_twitterprofile img { 
+	.box_shadow(1px, 1px, 3px, 0, rgba(0,0,0,.2));
+}
+.widget_woodojo_twitterprofile {
+	.follow-link { 
+		border-top: 1px solid @border_main;
+	}
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* 5. COMMENTS */
+/*-------------------------------------------------------------------------------------------*/
+
+/* 5.1 Comments */
+#comments {
+	h3 {
+		background: url(light/ico-comments.png) no-repeat left center;
+	}
+	.comment { 
+		.comment-container {
+			border-bottom: 1px solid @border_main;
+		}
+		.comment-head {
+			font-size: .857em;
+			.comment-meta { color: @color_body; }
+			.name { 
+				a {
+					color: #fff;
+				}
+			}
+		}
+		.gravatar {
+			img { 
+				.box_shadow(1px, 1px, 3px, 0, rgba(0,0,0,.2));
+				
+			}
+		}
+		&.parent  {
+			.gravatar {
+				&:after  {  border: 1px solid @border_main; }
+			}
+		}
+		.reply {
+			a {
+				background: url(light/ico-reply.png) no-repeat left center;
+				color: @color_body;
+			}
+		}
+	}
+}
+
+/* 5.2 Comments Form */
+#respond  {
+	label { 
+		color: lighten(@color_body, 10%); 
+	}
+	#commentform  {	
+		input.txt, textarea { 
+			color: darken(@color_nav, 15%);
+			&:focus {
+				.box_shadow(0, 0, 8px, 2px, lighten(@border_main, 10%);
+			}
+		}
+	}
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* 6. PAGE TEMPLATES */
+/*-------------------------------------------------------------------------------------------*/
+
+/* 6.1 Timeline Page Template */
+#archives { 
+	.archives_list {
+		border-left:1px solid @border_main;
+		.date { 
+			color: lighten(@color_body, 10%); 
+		}
+		.comments {
+			a {
+				color: lighten(@color_body, 15%);
+			}
+		}
+	}
+}
+
+h3.archive_year { 
+	color: @color_body; 
+}
+
+
+.page-template-template-contact-php {
+	.location-twitter  {
+		border-bottom: 1px solid @border_main;
+	    .contact-social  {
+	    	#twitter { 
+	    	    ul {
+	    	    	li {
+	    	    		a.time { 
+	    	    			color: lighten(@color_body, 15%); 
+	    	    		}
+	    	    	}
+	    	    }
+	    	}
+	    	#connect  {
+	    		border-top: 1px solid @border_main;
+	    	}
+	    }
+	}
+}
+
+/* 6.3 Image Gallery */
+.image-gallery-item img.woo-image { 
+	&:hover { 
+		.box_shadow(0,1px,.327em,0px,rgba(0,0,0,.2));
+	}
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* 7. FEATURED SLIDER */
+/*-------------------------------------------------------------------------------------------*/
+
+/* Content */
+#featured-slider {
+
+	.flex-control-paging li a { background: #666; background: rgba(0,0,0,0.5); box-shadow: inset 0 0 3px rgba(0,0,0,0.3);}
+	.flex-control-paging li a:hover { background: #333; background: rgba(0,0,0,0.7); }
+	.flex-control-paging li a.flex-active { background: #000; background: rgba(0,0,0,0.9); }
+	color: #fff;
+	a { color:#fff; }
+
+}
+.slide {
+	&:after {
+	    .vertical_gradient( rgba(0,0,0,0) 0%, rgba(0,0,0, .5) 100%);
+	}	
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* 8. MISC */
+/*-------------------------------------------------------------------------------------------*/
+
+/* 8.1 Forms */
+// Input / Textarea
+input[type=text], input.input-text, textarea, input.txt, input[type=tel], input[type=email] {
+	border: 1px solid lighten(@color_links, 40%);
+	border-bottom-color: lighten(@color_links, 30%);
+}
+
+// Buttons
+a.button, 
+a.comment-reply-link, 
+#commentform #submit,
+.submit,
+input[type=submit],
+input.button,
+button.button {
+	border: 1px solid @color_buttons - #555;
+	border-bottom-color: @color_buttons - #666;
+	color: white;
+	text-shadow: 0 -1px 0 hsla(0,0%,0%,.3);
+	.vertical_gradient(@color_buttons, @color_buttons - #444);
+	.inset_box_shadow(0,0px,0px,1px,rgba(255,255,255,.2));
+	
+	&:hover { .vertical_gradient(@color_buttons - #333,@color_buttons - #555); }
+	&:active {
+		border-color: @color_buttons - #666;
+		-webkit-box-shadow: inset 0 0 4px hsla(0,0%,0%,.1),
+						0 1px 0 hsla(0, 80%, 40%, .2);
+		-moz-box-shadow: inset 0 0 4px hsla(0,0%,0%,.1),
+						0 1px 0 hsla(0, 80%, 40%, .2);
+		box-shadow: inset 0 0 4px hsla(0,0%,0%,.1),
+					0 1px 0 hsla(0, 80%, 40%, .2);
+	}
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* 9. HOMEPAGE */
+/*-------------------------------------------------------------------------------------------*/
+
+#intro-message {
+	header {
+		h1 {
+			color: #282A2E;
+		}
+	}
+}
+#portfolio-slideshow {
+	aside {
+		.text_shadow(0,0,0);
+		background: -moz-linear-gradient(left, rgba(255,255,255,1) 63%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, right top, color-stop(63%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(left, rgba(255,255,255,1) 63%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(left, rgba(255,255,255,1) 63%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(left, rgba(255,255,255,1) 63%,rgba(255,255,255,0) 100%); /* IE10+ */
+		background: linear-gradient(to right, rgba(255,255,255,1) 63%,rgba(255,255,255,0) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
+		header {
+			h1 {
+				color: @header_top;
+			}
+		}
+		h3 { color: #282A2E; }
+		p { color: #898C93; }
+		a.portfolio-btn {
+			color: #fff;
+			border: 1px solid #3F4348;
+			.vertical_gradient(#4E5257, #1B1E20);
+			.inset_box_shadow(0,1px, 0,0,rgba(255,255,255,.2));
+			.text_shadow(0, 1px, 0, #111);
+			&:hover {
+				.vertical_gradient(#4E5257 + #111, #1B1E20 - #111);
+			}
+			&:active {
+				.inset_box_shadow(0, 0, 7px, 0, rgba(0,0,0,.2));
+			}
+		}
+	}
+	.flexslider {
+		ul.slides {
+			li {
+				.mask { display: none; color:#fff; a { color: #fff; } }
+				&:hover {
+					.mask {
+						background: @header_top;
+					}
+				}
+			}
+		}
+	}
+	.flexslider-controls-container {
+		ol.flex-control-nav {
+			li {
+				a {
+					background: #fff;
+					border: 3px solid #C6C8CD;
+					&:hover, &.flex-active {
+						background: @header_top;
+						border-color: @header_top;
+					}
+				}
+			}
+		}
+	}
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* 10. PORTFOLIO */
+/*-------------------------------------------------------------------------------------------*/
+
+#portfolio-gallery {
+	#port-tags {
+		a {
+			.vertical_gradient(#fff, #ddd);
+			color:@color_body;
+			.text_shadow(0, 1px, 0, #fff);
+			.box_shadow(0, 1px, 1px, 0, rgba(0,0,0,.2));
+			&:before{
+				.vertical_gradient(#fff, #ddd);
+				.box_shadow(0, 1px, 1px, 0, rgba(0,0,0,.2));
+			}
+			&:after{
+				background: @bg_wrapper;
+				.box_shadow(-1px, -1px, 2px, 0, rgba(0, 0, 0, .4));
+			}			
+		}
+	}
+}
+
+#portfolio {
+	img {
+		.box_shadow(1px, 1px, 0, 1px, rgba(0,0,0,.1));
+	}
+	article {
+		.mask {
+			color:#fff; a { color: #fff; }
+			background: @header_top;
+		}
+		&:active {
+			.mask {
+				.inset_box_shadow(2px,5px,5px,1px, rgba(0,0,0,.1));
+			}
+		}
+	}
+}
+
+.single-portfolio {
+	.portfolio-meta {
+		ul {
+			li {
+				&.portfolio-comments {
+					a {
+						color: @color_nav;
+						.vertical_gradient(#F0F0F2, #E2E4E6);
+						.box_shadow(0, 1px, 1px, 0, rgba(0,0,0,.2));
+						.text_shadow(0, 1px, 0, #fff);
+						&:hover {
+							.vertical_gradient(#F0F0F2 + #111, #E2E4E6 - #111);
+						}
+						&:active {
+							.inset_box_shadow(0, 0, 7px, 0, rgba(0,0,0,.2));
+						}
+					}				
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 780px) {
+	#navigation {
+		ul {
+			a { color: #6A6D78 !important; .text_shadow(0,0,0) !important; }
+		}
+		li ul li a { color: #6A6D78 !important;  }
+		li {
+				&.current_page_item, &.current_page_parent, &.current-menu-ancestor, &.current-cat, &.li.current-menu-item {
+				a { 
+					color: @color_links_selected !important;
+				}
+			}
+		}
+	}
+}

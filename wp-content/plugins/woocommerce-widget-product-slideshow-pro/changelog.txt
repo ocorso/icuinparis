@@ -1,0 +1,21 @@
+== Changelog ==
+
+= 1.0.3 - 2013/03/06 =
+* Feature: Updated all plugin code so that it is 100% compatible with WooCommerce V2.0 and backwards.
+* Tweak: Updated plugins home page URL
+
+
+= 1.0.2 - 2012/12/31 =
+IMPORTANT! Please upgrade your plugin now.
+
+* Feature: Updated plugin API to allow Pro Version License holders to manage their Licenses from the all new "My Account" dashboard on a3rev. Includes the option to see which domains each plugin is installed and activated on and the ability to deactivate the plugin on any domain from the 'My Account' > Manage Licenses dashboard.
+
+
+= 1.0.1 - 2012/12/01 =
+* Feature: Change Pro Version plugin API call from cURL to now use WordPress auto update wp_remote_request function. This is to fix Pro License user who do not have cURL activated on their host not being able to install and activate the plugin.* Feature: Built new Amazon EC2 plugin API to increase connection and download speed as well as reliability and uptime - plugin from this version calls to the new API.* Feature: Now supports WPMU - Pro Version Single License now works on any domain or sub domain that the Plugin is installed on with the WPMU environment. Note it only works on 1. WPMU license option coming soon.
+* Fixed: Use Relative File Path of image instead of using Image URL's. This fix is for  servers that have disabled URL file-access in parameter of getimagesize function.
+* Fixed: Fixed conflict with WordPress Domain Mapping plugin - thanks to Johannes for access to his WPMU install to find and fix this issue.* Fixed: Change Pro Version plugin API call so that it only calls from the WP-Plugins page and not from every admin page.* Fixed: Changed Pro Version plugin API call so that if it calls once to the API and it does not connect it auto aborts instead of keeping on trying to call.
+
+
+= 1.0 - 2012/11/06 =
+* Initial release.

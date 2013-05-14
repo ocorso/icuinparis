@@ -1,0 +1,81 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: maintenance\n"
+"POT-Creation-Date: 2012-12-21 15:51+0200\n"
+"PO-Revision-Date: 2012-12-21 16:11+0200\n"
+"Last-Translator: \n"
+"Language-Team: fruitfulcode.com\n"
+"Language: Russian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: C:\\wamp\\www\\yakovlev\\wr_browser\\wp-content\\plugins"
+"\\maintenance\n"
+"X-Poedit-SearchPath-0: C:\\wamp\\www\\yakovlev\\wr_browser\\wp-content"
+"\\plugins\\maintenance\\lib\n"
+
+#: lib/index.php:94
+msgid "Your session has expired."
+msgstr "Ваша сессия истеклаю"
+
+#: lib/index.php:195
+msgid "Sign In"
+msgstr "Войти"
+
+#: lib/options.php:2
+msgid "Page title"
+msgstr "Заголовок страницы"
+
+#: lib/options.php:3
+msgid "Website is under construction"
+msgstr "Сайт находится на стадии разработки"
+
+#: lib/options.php:4
+msgid "Headline"
+msgstr "Заголовок"
+
+#: lib/options.php:5
+msgid "Customer login"
+msgstr "Вход для администратора"
+
+#: lib/options.php:6
+msgid "Description"
+msgstr "Описание"
+
+#: lib/options.php:7
+msgid "Please login to see website"
+msgstr "Пожалуйста, войдите, чтобы сайт стал доступным"
+
+#: lib/options.php:8
+msgid "Logo"
+msgstr "Логотип"
+
+#: lib/options.php:11
+msgid "Background image"
+msgstr "Фоновое изображение"
+
+#: lib/options.php:14
+msgid "Background color"
+msgstr "Цвет фона"
+
+#: lib/options.php:16
+msgid "Admin Bar"
+msgstr "Админ. панель"
+
+#: page-options:44
+msgid "Save changes"
+msgstr "Сохранить"
+
+#: page-options:52
+msgid "Contact Support"
+msgstr "Контактная информация"
+
+#: page-options:54
+msgid "Premium version"
+msgstr "Premium версия"
+
+#: page-options:55
+msgid "Check out our extended version of plugin with new features"
+msgstr "Узнайте возможности расширенной версии"

@@ -1,0 +1,494 @@
+/*
+The styles in this stylesheet only apply to resolutions 768px and up
+
+CALCULATING DIMENSIONS:
+----------------------
+The layout is fluid. The sote wrapper (.col-full) has a fixed pixel max-width.
+All subsequent dimensions are calculated based on that fixed pixel width, using the formula: target / context = result
+Credit - http://www.alistapart.com/articles/fluidgrids/
+
+-----
+INDEX
+-----
+
+1. Global dropdown styles
+2. Top Navigation
+3. Main navigation dropdown menus
+ -3.1 General dropdown menus
+4. Containers & Columns
+5. Footer widgets
+6. Desktop only styles
+7. IE Fixes
+
+*/
+
+
+/*----------------------*/
+
+@import url(mixins.less);
+
+/*----------------------*/
+
+@media only screen and (min-width: 960px) {
+
+	/* 1. GLOBAL DROPDOWN STYLES (these are purely for the dropdown layout and you should only edit the width of the dropdowns) */
+	ul.nav {
+		position: relative;
+		margin-bottom:0;
+		li {
+			position: relative;
+			float: left;
+			zoom:1;
+			list-style: none;
+			a {
+				display: block;
+				padding:.53em 1em;
+			}
+			&.parent { // Styles applied to all parent list items
+			}
+		}
+		/* LEVEL 2 */
+		ul {
+			width:11.089em;
+			visibility: hidden;
+			position: absolute;
+			top:100%;
+			left: 0;
+			z-index: 9999;
+			margin:0;
+			li {
+				float: none;
+				a {
+					width: 100%;
+					display: inline-block;
+					.borderbox();
+				}
+				&.parent { // Styles applied to parent items in level 2
+				}
+			}			
+		}
+		/* LEVEL 3 */
+		ul ul {
+			left:100%;
+			top:0;
+			li {
+				&.parent { // Styles applied to parent items in level 3
+				}
+			}
+		}
+		li:hover > ul {
+			visibility: visible;
+		}
+	}
+			
+	/* 2. TOP NAVIGATION (Add top navigation presentational styles here) */
+	#top {
+		background: #000;
+		padding:0 1.618em;
+		nav { padding: 0; }
+		#top-nav { 
+			display: block; 
+		}
+		ul.nav {
+			font-size:.857em; // this adjusts the scale of the entire navigation and everything just works like magic
+			> li { // The following styles are applied ONLY to the top level list items
+				a {
+					color: #aaa !important;
+					&:hover {
+						background: #222 !important;
+					}
+				}
+				&:hover {
+					background: #222 !important;
+				}
+			}
+			/* LEVEL 2 */
+			ul {
+				background: #222;
+				li {
+					a {
+					}
+				}			
+			}
+			/* LEVEL 3 */
+			ul ul {
+			}
+			li:hover > ul {
+			}
+		}
+	}
+	
+	/* 3. MAIN NAVIGATION DROPDOWN MENUS (Add main navigation presentational styles here) */
+	#navigation  {
+		display:block !important;
+		margin: 0;
+		width: auto;
+		background: none;
+		position: relative;
+		ul.nav {
+			margin: 0 2.618em;
+			border-width: 0;
+			padding: .5em 1.2em;
+			width: auto;
+			> li { // The following styles are applied ONLY to the top level list items
+				a {
+					padding: .63em 0;
+					margin: 0 1.327em;
+					line-height: 1.2em;
+					font-weight: 700;
+					.text_shadow(0, .077em, 0, #fff);
+					&:hover {
+						color: @color_nav_links;
+					}
+				}
+				&.parent:hover {
+					a {
+						background: #fff;
+						.border_radius_top(.53em);
+						margin: 0;
+						padding: .63em 1.327em;
+					}
+				}
+				&.current_page_item, &.current_page_parent, &.current-menu-ancestor, &.current-cat, &.li.current-menu-item {
+					a:after { 
+					    content: "";
+					    display: block;
+						width: 0; 
+						height: 0;
+						border-left: .382em solid transparent;
+						border-right: .382em solid transparent;
+						border-bottom: .382em solid #222;
+						bottom: -0.49em;
+					    left: 60%;
+					    margin-left: -1.3em;
+					    position: absolute;
+					}
+					ul {
+						li {
+							a {
+								color: @color_nav;
+								&:after {
+									content: none;
+								}
+							}
+							&.current_page_item, &.current_page_parent, &.current-menu-ancestor, &.current-cat, &.li.current-menu-item {
+								a {
+									color: @color_nav_links;
+								}
+							}
+						}
+					}
+				}			
+			}
+			li { border:0; width: auto; }
+			/* LEVEL 2 */
+			ul {
+				width: 11.089em;
+				margin: 0;
+				padding-bottom: .53em;
+				background: #fff;
+				.border_radius_right(.53em);
+				.border_radius_bottom(.53em);
+				li {
+					a {
+					}
+				}			
+			}
+			/* LEVEL 3 */
+			ul ul {
+				top:-1px;  // -1px top to offset the border and keep everything lined up
+				left:100%; // reapply left 100% as we're offsetting the first child by 1px
+			}
+			li:hover > ul {
+			}
+		}
+	}
+	#main-nav {
+		&:before, &:after { 			
+			content: '';
+			position: absolute;
+			display: block;
+			width: 1px;
+			height: 10px;
+			background: lighten(@color_nav, 35%);
+			margin: .8em 0 0;
+			left: 0;
+		}
+		&:after {
+			right: 0;
+			left: auto;
+		}
+	}
+	// Hide the nav toggle link in desktop orientation
+	h3.nav-toggle {
+		display: none;
+	}
+	
+	/* 4. CONTAINERS & COLUMNS */
+	#main.fullwidth, .layout-full #main, .col-full { 
+		max-width:960px; 
+		margin:0 auto; 
+		width:100%;
+	}
+	#content { padding: 0 0 5em; }
+	#main { 
+		width: 72%; // golden ratio
+	} 
+	#sidebar { 
+		margin-top: 0; 
+		width: 23%;  // golden ratio 
+	}
+	.entry img { 
+		max-width: 100%; 
+	}
+	.layout-full .entry img { 
+		max-width: 100%; 
+	}
+	.layout-right-content {
+		#main  { 
+			float: right; 
+		}
+		#sidebar  { 
+			float: left; 
+		}
+	}
+	.layout-full #main  { 
+		width: 100%; // full-width template
+	}
+	.col-left { 
+		float: left; 
+	}
+	.col-right { 
+		float: right;
+	}
+	.page-template-template-contact-php {
+		.location-twitter  {
+			.col-left  { 
+				float: left; 
+			}
+			#office-location { 
+			    width: 48%; 
+			    margin: 0;
+			}
+			.contact-social  {
+			    float: right; 
+			    width: 48%;
+			    #twitter  { 
+			    	margin: 0; 
+			    } 
+			}
+		}
+	}
+
+	// Posts
+	.post, .type-page, .search-results .page, .search-results .type-product, .search-results .type-portfolio {
+
+		.post-meta {
+			display: block;
+			float: left;
+			width: 18%;
+		}
+		.article-inner {
+			float: right;
+			width: 76%;
+		}
+	}
+	
+	/* 5. FOOTER WIDGETS */
+	#footer-widgets {
+		.col-full {
+			.block { 
+				margin-right:3.8%; 
+				float: left; 
+			}
+			&.col-1 {
+				.block { 
+					width: 100%; 
+					float: none; 
+				}
+				.footer-widget-1 { 
+					margin-right:0; 
+				}
+			}
+			&.col-2 {
+				.block { 
+					width: 48%; 
+				}
+				.footer-widget-2 { 
+					margin-right:0; 
+				}
+			}
+			&.col-3 {
+				.block { 
+					width: 30.75%; 
+				}
+				.footer-widget-3 { 
+					margin-right:0; 
+				}
+			}
+			&.col-4 {
+				.block { 
+					width: 22.05% 
+				}
+				.footer-widget-4 { 
+					margin-right:0; 
+				}
+			}
+		}
+	}
+
+	/* 6. DESKTOP ONLY STYLES  */
+	#header {
+		background-size: 50% 100%;
+		.col-full {
+			padding: 0 1.618em;
+		}
+		border-bottom: .077em solid #222;
+		hgroup { float: left; margin: 0; }
+		#logo {
+			margin: .53em 0;
+		}
+		.search_main {
+			float: left;
+			position: static;
+		}
+	}
+
+	#intro-message { display: block; }
+
+	#portfolio-slideshow {
+		padding: 0 0 1em;
+		margin: 0;
+		.flexslider { margin-left: 9.505em; }
+		.flexslider-controls-container {
+			ol.flex-control-nav {
+				width: 20%;
+				max-width: 30%
+			}
+		}
+		aside {
+			margin: 0;
+			header {
+				padding: 0 0 2.244em;
+			}
+			position: absolute;
+			top: 1.2em;
+			z-index: 9999;
+			width: 15.379em;
+			min-height: 240px;
+			padding: 0 9.505em 1em 0;
+		}
+	}
+
+	#featured-slider {
+		.flexslider-container { position: absolute; width: 100%; top: auto; bottom: 50%; }
+		.flex-direction-nav a { width: 61px; height: 61px; top: 50%; background-size: auto; }
+		.flex-direction-nav .flex-next { right: 0; }
+		.flex-direction-nav .flex-prev { left: 0; }
+		.flex-control-nav { bottom: 1.387em; }
+		.slide-content {
+			float: none;
+			margin: 0 auto;
+			max-width: 800px;
+			.slide-content-inner {
+				z-index: 9998;
+				position: absolute;
+				bottom: 2.244em;
+				max-width: 800px;
+				margin: 0;
+				header {
+					h1 {
+						font-size: 2.4em;
+						.text_shadow(0, 0, 10px, rgba(0,0,0,.7));
+						margin: 0 0 .327em;
+					}
+				}
+				footer {
+					font-size: .857em;
+					text-transform: uppercase;
+					.text_shadow(0, 0, 10px, rgba(0,0,0,.7));
+				}			
+			}
+		}
+		.no-image {
+			height: 300px;
+			.slide-content {
+				
+			}
+		}
+		.has-video {
+			.slide-video { padding: 1.618em 0; }
+			.slide-content {
+				.slide-content-inner { margin: 0; }
+			}
+		}
+	}
+
+	/* Footer Nav */
+	#footer  {
+		.nav  {
+			margin: 0;
+			li  {
+				float: left; padding: 0 1em;
+				a {
+					padding: .53em 0;
+				}
+			}
+			a  {
+				
+				background: none; padding: 0 0 0 8px;
+				&:hover  { text-decoration: underline; }
+			}
+		}
+	}	
+
+	/* PORTFOLIO TEMPLATE */
+	#portfolio-gallery {
+		#port-tags {
+			margin: 0 2.244em 1.618em 0;
+		}
+	}	
+	#portfolio {
+		article {
+			float: left;
+			margin: 0 1.15em 2.618em 1.15em !important;
+		}
+	}
+	.single-portfolio {
+		.portfolio  { float: left; width:26%; }
+		.single-portfolio-gallery  { float: right; width: 70%; } 
+	}	
+
+	/* 7. IE FIXES */
+	
+	.ie7 {
+		#top-nav {
+			position: relative;
+			z-index: 9999999;
+		}
+		#header {
+			position: relative;
+			z-index: 9999999;
+		}
+	}
+	.ie8 {
+		#navigation { width: auto; margin: 0 0 0 2.244em; }
+		#featured-slider {
+			.flexslider-container { position: absolute; width: 100%; top: 45%; }
+			.flex-direction-nav a { width: 61px; height: 61px; }
+		}
+		#portfolio-slideshow {
+			.flexslider { margin-left: 0; }
+			aside { background: none; position: static; width: auto; }
+			.flexslider-controls-container {
+				ol.flex-control-nav {
+					width: 10%;
+				}
+			}
+		}
+		.post, .type-page {
+			.post-meta { display: block; }
+		}
+	}
+
+}

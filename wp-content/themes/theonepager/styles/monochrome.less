@@ -1,0 +1,1113 @@
+/* MONOCHROME ALT STYLE */
+
+@import "../css/mixins";
+
+/* Variables */
+// Colors
+@color_links:       #000000;		// Links / Main theme colour 
+@color_secondary:   #444444;        // Secondary color
+@color_body:        #555555;        // Body Copy
+@border_main:       #ececec;        // The 1px grey rules used throughout the WF
+@bg_light: 			#f6f6f6;
+@bg_dark: 			#b7b7b7;
+@success:           #89b93f;
+@info:              #fbeeab;
+@error:             #c84e45;
+
+// Fonts
+@sans:              sans-serif;
+@serif:             Georgia, serif; 
+
+// Google fonts - These are also defined in Theme Setup (theme-actions.php)
+@sans_google:       "Open Sans", sans-serif;
+@serif_google:      "Bitter", sans-serif;
+
+// Paths
+@imagepath:         '../images';
+@fontpath:          '../includes/fonts/';
+
+
+/*-------------------------------------------------------------------------------------------*/
+/* 1. SETUP */
+/*-------------------------------------------------------------------------------------------*/
+
+/* Defaults */
+body  { 
+	color: @color_body;
+	font-family: @sans_google;
+}
+
+hr { background-color: @border_main; }
+
+a { 
+	color: @color_links; 
+	&:hover {
+		color: @color_links - #222;
+	}
+}
+
+
+h1, h2, h3, h4, h5, h6  {
+	font-family: @serif_google; 
+	color: darken(@color_body, 20%); 
+}
+
+
+/*-------------------------------------------------------------------------------------------*/
+/* 2. SITE STRUCTURE & APPEARANCE */
+/*-------------------------------------------------------------------------------------------*/
+
+
+/* Navigation */
+#top {
+	background: #000;
+	background: rgba(0,0,0,0.5);
+}
+	
+/* Header */
+#header {
+	background-color: @bg_dark;
+	border-color: @border_main;
+}
+
+/* Sidebar */
+#sidebar{
+	border-color: @border_main;
+}
+
+/* Footer */
+#footer{
+	color: lighten(@color_body, 10%);
+	border-color: @border_main;
+}
+
+#footer-widgets {
+	border-color: @border_main;  
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* 3. HOMEPAGE COMPONENTS */
+/*-------------------------------------------------------------------------------------------*/
+
+/* Headings */
+span.heading, #respond h3  {
+    font-family: @sans_google;
+    color: lighten(@color_body, 20%);
+}
+
+#content.home-widgets  {
+	/* Global Woo Component Styles */
+	.widget_woo_component  {
+		border-color: @border_main;
+		&:nth-child(2n)  {
+			background: @bg_light;
+		}
+	}
+}
+
+/* Testimonials By WooThemes Widget */
+.widget_woothemes_testimonials  {
+	.quote  {
+		border-color: @bg_light;
+		&:after  {
+			.tip(15px,@bg_light,-30px);
+		}
+		cite  {
+			.url  {
+				a  {
+					color: lighten(@color_body, 10%);
+				}
+			}
+		}
+	}
+	&:nth-child(2n+2)  {
+		blockquote  {
+			.box_shadow(0,2px,3px,1px,rgba(0,0,0,0.05));
+			&:after  {
+				.tip(15px,#fff,-30px);
+			}
+		}
+	}
+}
+
+/* Posts Timeline Component */
+#posts-timeline  {
+	&:before  {
+		background: @border_main;
+	}
+	.timeline-post  {
+		color: #fff;
+		background: @bg_dark;
+		.title  {
+			font-family: @serif_google;
+		}
+		&:hover  {
+			background: darken(@bg_dark, 10%);
+			.box_shadow(0,0,10px,0,rgba(0,0,0,0.1));
+		}
+		&:nth-child(1n)  {
+			&:before  {
+				.tip(15px,@bg_dark,-30px);
+			}
+			&:after  {
+				background: @color_links;
+			}
+			&:hover  {
+				&:before  {
+					border-color: darken(@bg_dark, 10%) transparent transparent transparent;
+				}
+				&:after  {
+					background-color: @color_secondary;
+				}
+			}
+		}
+	}
+}
+
+/* Hero Product Component */
+#home-hero  {
+	h2.widget-title  {
+		a  {
+			color: @color_body;
+		}
+	}
+	.hero-product  {
+		img  {
+			.box_shadow(0,0,0,3px, @bg_dark);
+		}
+	}
+}
+
+/* Contact Area Component */
+#contact-area  {
+	form  {
+		textarea, input  {
+			&:focus  {
+				.box_shadow(0,0,10px,0,lighten(@bg_dark, 30%));
+			}
+		}
+	}
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* 4. POSTS */
+/*-------------------------------------------------------------------------------------------*/
+#breadcrumbs { 
+	border-color: @border_main;
+}
+.archive-header {
+	.archive-rss  {
+		a  {
+			color: @color_body;
+		}
+	}
+}
+
+body.archive, body.search, body.page-template-template-blog-php  {
+	.post, .type-page, .type-feature, .type-testimonial  {
+		border-color: @border_main;
+	}
+}
+
+.post, .page, .type-page, .type-feature, .type-testimonial {
+	header   {
+		h1 {
+			a:link, a:visited { 
+				color: darken(@color_body, 20%);
+			}
+		}
+	}
+	.post-date-author  {
+		a  {
+			color: @color_body;
+		}
+	}
+	.post-category  {
+		a  {
+			background: @bg_light;
+			border-color: @border_main;
+			color: lighten(@color_body, 10%);
+			&:hover  {
+				color: @color_body;
+				border-color: darken(@border_main, 10%);
+			}
+		}
+	}
+	.post-more { 
+		a  {
+			color: lighten(@color_body, 30%);
+		}
+	}
+	.entry {
+		blockquote  {
+			&:before  {
+				font-family: @serif;
+			}
+		}
+		
+		/* Post Content Images */
+		img, img.thumbnail {
+			border-color:@border_main;
+			.border_radius(5px);
+			&:hover { 
+				border-color: darken(@border_main, 10%);
+			}
+		}
+		.wp-caption {
+			background: @bg_light;
+			border-color: @border_main;
+			img { 
+				border-color: @border_main;
+			}
+		}
+	}
+}
+
+
+/* Pagination */
+.nav-entries {
+	a {
+		span.nav-prev, span.nav-next  {
+			color: darken(@bg_dark, 50%);
+			background: @bg_light;
+			border-color: @border_main;
+		}
+		&:hover { 
+			span.nav-prev, span.nav-next  {
+				background: @bg_dark;
+			}
+		}
+	}
+}
+#post-entries  {
+	.nav-prev, .nav-next  {
+		a  {
+			color: darken(@bg_dark, 50%);
+			background-color: @bg_light;
+			border-color: @border_main;
+			&:hover { 
+				background-color: @bg_dark;
+			}
+		}
+	}
+}
+.woo-pagination {
+	span:first-child, a:first-child  {
+		border-color: @border_main;
+	}
+	span:last-child, a:last-child  {
+		border-color: @border_main;
+	}
+	.page-numbers {
+		color: darken(@bg_dark, 50%);
+		background: @bg_light;
+		border-color: @border_main;
+		&:hover { 
+			background: @bg_dark;
+			color: #fff;
+		}
+		&.current  { 
+			background: darken(@bg_dark, 10%);
+		}
+	}
+}
+
+/* Single Post Author */
+#post-author { 
+	border-color:@border_main; 
+}
+
+/* Subscribe & Connect */
+#connect {  
+	border-color: @border_main; 
+	.social {
+		a {
+			background: @color_secondary;
+		}
+	}
+}
+
+/* Related Posts */
+.sc-related-posts {
+    ul { 
+    	li  {
+    	 	span  {
+    	 		color: @color_body;
+    	 	}
+    	} 
+    }
+}
+
+/* Full Width Single Page  */
+#full-single-comments-area  {
+	background: @bg_light;
+	border-color: @border_main;
+	#post-author, #connect  {
+		background: lighten(@bg_light, 20%);
+	}
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* 5. WIDGETS */
+/*-------------------------------------------------------------------------------------------*/
+
+/* GLOBAL WIDGET STYLES */
+.widget  { 
+	color: lighten(@color_body, 20%);
+	a  {
+		color: @color_body;
+		&:hover  {
+			color: @color_links;
+		}
+	}
+	h3 { 
+		color:@color_body;
+	}
+}
+#sidebar  {
+	.widget  {
+		border-color: @border_main;
+		&:nth-child(2n+1)  {
+			background: @bg_light;
+		}	
+	}
+}
+
+/* SPECIFIC WIDGETS */
+/* Search */
+#searchform  { 
+	border-color: darken(@border_main, 8%) @border_main @border_main darken(@border_main, 8%); 
+}
+
+/* Tag Cloud */
+.tag_cloud {
+	a  {
+		background: @bg_dark;
+		color: @color_body;
+		&:hover  {
+			text-decoration: none;
+			background: darken(@bg_dark, 10%);
+		}
+	}
+}
+
+/* Embed */
+.widget_woo_embedwidget  {
+	ul  {
+		li  {
+				color: lighten(@color_body, 50%);
+			a  {
+				color: lighten(@color_body, 20%);
+			}
+		}
+		.active  {
+			color: @color_links;
+			a  {
+				color: @color_body;
+			}
+		}
+	}
+}
+
+/* WooTabs */
+.widget_woodojo_tabs, .woocommerce-tabs { 
+	ul.nav-tabs, ul.tabs {
+		border-color: @border_main;
+		li {
+			a {
+				color: lighten(@color_body, 20%);
+				&:hover {
+					color: @color_links!important;
+				}
+			}
+			&.active {
+				a {
+					color: @color_links;
+				}
+			}
+		}
+	}
+}
+
+/* Features & Tesimonials by WooThemes in Sidebar */
+#sidebar, #footer-widgets  {
+	.widget_woothemes_features  {
+		.feature  {
+			h3  {
+				font-family: @sans_google;
+			}
+		}
+	}
+}
+
+/* WooDojo */
+.widget_woodojo_twitterprofile  {
+	p.stat  {
+		color: #fff;
+		background: @color_secondary;
+	}
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* 6. COMMENTS */
+/*-------------------------------------------------------------------------------------------*/
+
+/* Comments */
+/* Full Width Single Page  */
+#full-single-comments-area  {
+	background: @bg_light;
+	border-color: @border_main;
+	#post-author, #connect  {
+		background: lighten(@bg_light, 20%);
+	}
+	#comments {
+		clear: both;
+		li.comment { 
+			.comment-container {
+				border: none;
+				&:before  {
+					.tip(10px,#fff,auto);
+					border-color: transparent #fff transparent transparent;
+					left: -20px;
+					margin: 0.236em 0 0;
+				}
+			}
+			&.thread-even {
+				.comment-container {
+					border: none;
+					&:before  {
+						border-color: transparent transparent transparent #fff;
+						left: auto;
+						right: -20px;
+					}
+				}
+				.bypostauthor, &.bypostauthor  {
+				    > .comment-container  {
+				    	&:before  {
+							border-color: transparent transparent transparent @info;
+				    	}
+				    }
+				}
+			}
+			&.bypostauthor { 
+				> .comment-container  {
+					&:before  {
+						border-color: transparent @info transparent transparent;
+					}
+				}
+			}
+		}
+	}
+}
+/* Normal Width Single Page  */
+#comments {
+	li.comment { 
+		&.bypostauthor { 
+			> .comment-container {
+				background: @info;
+				border-color: darken(@info, 10%);
+				.reply  {
+				a  {
+						background: darken(@info, 15%);
+						&:hover  {
+							background: darken(@info, 20%);
+						}
+					}
+				}
+			}
+		}
+		.comment-container {
+			background: #fff;
+			border-color: @border_main;
+		}
+		.comment-meta {
+			a  {
+				color: lighten(@color_body, 20%);
+			} 
+			.name { 
+				color: lighten(@color_body, 20%);
+			}
+			.date, .edit, .perma {
+				color: lighten(@color_body, 20%);
+			}
+		}
+		.reply {
+			a {
+				background: darken(@bg_light, 2%);
+				border-color: darken(@border_main, 7%);
+				color: @color_body!important;
+				&:hover { 
+					background: @border_main; 
+				}
+			}
+		}
+	}
+}
+
+/* Comments Form */
+#respond  {
+	a  {
+		color: lighten(@color_body, 20%);
+	} 
+	label { 
+		color: lighten(@color_body, 10%);
+	}
+	.form-submit  {
+		#submit  {
+			font-family: @sans_google;
+		}
+	}
+}
+
+/* Pingbacks / Trackbacks */
+.pinglist {
+	li {
+		.author { 
+			a  {
+				color: @color_body;
+			}
+		}
+	}
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* 7. PAGE TEMPLATES */
+/*-------------------------------------------------------------------------------------------*/
+
+/* Timeline Page Template */
+#archives { 
+	.archives_list {
+		border-color:@border_main;
+		&:last-child:after  {
+			border-color: @border_main;
+			background: @bg_dark;
+		}
+		.date {
+			color: lighten(@color_body, 10%);
+			&:before  {
+				border-color: @border_main;
+			}
+		}
+		.linked {
+			a  {
+				color: @color_body;
+			}
+		}
+		.comments {
+			a {
+				color: lighten(@color_body, 15%);
+			}
+		}
+	}
+}
+h3.archive_year {
+	background: @bg_light;
+	color: @color_body;
+	border-color: @border_main;
+}
+
+/* Contact Form */
+.page-template-template-contact-php {
+	.location-twitter  {
+	    .contact-social  {
+	    	#twitter { 
+	    	    ul {
+	    	    	li {
+	    	    		a.time { 
+	    	    			color: lighten(@color_body, 15%); 
+	    	    		}
+	    	    	}
+	    	    }
+	    	}
+	    	#connect  {
+	    		border-color: @border_main;
+	    	}
+	    }
+	}
+}
+
+/* Image Gallery */
+.image-gallery-item img {
+	border-color: darken(@bg_light,10%); 
+	background:@bg_light; 
+	&:hover { 
+		border-color: darken(@bg_light,20%); 
+	}
+}
+
+/* Archives & Sitemap */
+.page-template-template-archives-php,  .page-template-template-sitemap-php  {
+	#main  {
+		.post, .page  {
+			h4  {
+				font-family: @sans_google;
+				color: lighten(@color_body, 10%);
+			}
+			ul, ol  {
+				border-color: @border_main;
+			}
+			li  {
+				border-color: @border_main;
+				a  {
+					color: @color_body;
+				}
+			}
+		}
+	}
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* 8. FEATURED SLIDER */
+/*-------------------------------------------------------------------------------------------*/
+/* Theme Styles */
+#featured-slider  {
+	border-color: @border_main;
+}
+.flexslider  {
+	.slide-content  { 
+		header  {
+			h1  {
+				a  {
+					color: darken(@color_body, 20%); 
+				}
+			}
+		}
+	}
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* 9. MISC */
+/*-------------------------------------------------------------------------------------------*/
+
+/* Tables */
+table {
+    border-color: @border_main;
+    td,th {
+      border-color: lighten(@border_main, 5%);
+    }
+    thead {
+      th {
+        background: @bg_light;
+        border-color: @border_main;
+        border-color: lighten(@border_main, 5%);
+      }
+    }
+    tbody {
+      th {
+      	border-color: lighten(@border_main, 5%);
+      }
+      tr:nth-child(2n) {
+        td {
+          border-color: @border_main ;
+        }
+      }
+      td {
+        border-color: lighten(@border_main, 5%);
+      }
+    }
+    .alt-table-row  {
+    	td  {
+    	    background: lighten(@bg_light,2%);
+    	}
+    }
+    tfoot  {
+    	tr  {
+    		th, td  {
+    			border-color: @border_main;
+    			border-color: @border_main;
+    			background: @bg_light;
+    		}
+    	}
+    }
+}
+
+/* Forms */
+// Input / Textarea
+input[type=text], input.input-text, textarea, input.txt, input[type=tel], input[type=email], input[type=password] {
+	border-color: @border_main;
+	font-family: @sans_google; /* Make inputs use the correct typeface instead of the browser default */
+}
+
+/* Buttons (Includes WF chortcode buttons) */
+a.button, 
+a.comment-reply-link, 
+#commentform #submit,
+.submit,
+input[type=submit],
+input.button,
+button.button,
+#wrapper .woo-sc-button {
+	color: #fff;
+	font-family: @sans_google;
+	background: @bg_dark;
+	.text_shadow(1px,1px,0,rgba(0,0,0,0.4));
+
+	&:hover { background: darken(@bg_dark, 15%); }
+	&:active {
+		border-color: @color_links - #555;
+	}
+}
+
+/* Shortcode info boxes */
+p.woo-sc-box, div.woo-sc-box {
+	color: darken(@color_body, 15%);
+	&.info {
+		border-color: @border_main;
+		background-color: @bg_light;
+	}
+	&.normal {
+		border-color: @border_main;
+		background-color: @bg_light;
+	}
+}
+
+
+/*-------------------------------------------------------------------------------------------*/
+/* LAYOUT STYLES */
+/*-------------------------------------------------------------------------------------------*/
+
+
+@media only screen and (min-width: 768px) {
+	
+
+	/* 	5. HOMEPAGE COMPONENTS */
+	#posts-timeline  {
+		.timeline-post  {
+			&:nth-child(2n)  {
+				&:before  {
+					border-color: transparent transparent @bg_dark transparent;
+				}
+				&:hover  {
+					&:before  {
+						border-color: transparent transparent darken(@bg_dark, 10%) transparent;
+					}
+				}
+			}
+		}
+	}
+	/* 7. FULL WIDTH SINGLE PAGE */
+	#full-single-comments-area  {
+		#comments {
+			li.comment { 
+				&.thread-even {
+					.bypostauthor, &.bypostauthor  {
+						> .comment-container  {
+							&:before  {
+								border-color: transparent transparent transparent @info;
+							}
+						}
+					}
+				}
+				&.bypostauthor { 
+					> .comment-container  {
+						&:before  {
+							border-color: transparent @info transparent transparent;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/*-------------------------------------------------------------------------------------------*/
+/* WOOCOMMERCE STYLES */
+/*-------------------------------------------------------------------------------------------*/
+
+// Header
+
+// General WooCommerce
+.star-rating {
+	background: @border_main;
+	span {
+		background: @color_links;
+	}
+}
+p.stars {
+	span {
+		background: @border_main;
+		a:hover, a:focus {
+			background: @color_links;
+		}
+		a.active {
+			background: @color_links;
+		}
+	}
+}
+
+// Cart Nav
+ul.cart  {
+	li  {
+		a  {
+			background: @color_links;
+			&:before {
+				background: darken(@color_links, 10%);
+			}
+			&:hover  {
+				background: darken(@color_links, 5%);
+				&:before  {
+					background: darken(@color_links, 20%);
+				}
+			}
+		}
+	}
+}
+// Widgets
+.widget .product_list_widget {
+	li {
+		border-color: @border_main;
+	}
+}
+
+.widget_layered_nav {
+	ul {
+		li {
+			&.chosen {
+				a {
+					background: @color_links;
+				}
+			}
+		}
+	}
+}
+
+.widget_shopping_cart  {
+	.total  {
+		border-color: @border_main;
+	}
+}
+
+.widget_price_filter {
+   .ui-slider .ui-slider-handle { 
+		border-color: @color_links;
+	}
+   .ui-slider .ui-slider-range { 
+		background: @color_links;
+	}
+   .price_slider_wrapper .ui-widget-content { 
+		background: @border_main;
+	}
+}
+
+// Messages / notifications
+.woocommerce_message, .woocommerce_info, .woocommerce_error, .woocommerce-message, .woocommerce-info, .woocommerce-error {
+	background: @bg_light;
+	a  {
+		color: @color_body;
+	}
+}
+.woocommerce_info, .woocommerce-info {
+	&:before {
+		content: "\f05a";
+		color: @color_body;
+	}
+}
+.stock.out-of-stock, .stock.in-stock  {
+	background: @bg_light;
+}
+
+// Products 
+.onsale {
+	background: @color_secondary;
+}
+.quantity {
+	.qty {
+		border-color: @border_main;
+	}
+	.plus, .minus {
+		background: @color_secondary;
+		&:hover  {
+			background: darken(@color_secondary, 8%);
+		}
+	}
+}
+ul.products, .summary div[itemprop=offers], #home-hero  {
+	.price  {
+	    .amount  {
+	    	background: @bg_dark;
+	    	color: #fff;
+	    }
+	    .from  {
+	    	color: lighten(@bg_dark, 20%);
+	    }
+	    del  {
+	    	&:before  {
+	    		background: @error;
+	    	}
+	    }
+	}
+}
+.summary div[itemprop=offers]  {
+	.price  {
+		.amount  {
+			color: #fff;
+			background: @color_links;
+		}
+		del  {
+			.amount  {
+				background: @bg_dark;
+				color: #fff;
+			}
+		}
+	}
+}
+ul.products {
+	li.product {
+		background: darken(@bg_light, 2%);
+		a  {
+			&:hover  {
+				.price  {
+					.amount  {
+						background: darken(@bg_dark, 10%);
+						color: #fff;
+					}
+					del  {
+						.amount  {
+							background: @bg_dark;
+							color: #fff;
+						}
+					}
+				}
+			}
+		}
+		h3  {
+			font-family: @sans_google;
+			a  {
+				color: @color_body;
+			}
+		}
+		.add_to_cart_button  {
+			background: @color_links;
+			&:before  {
+				.tip(5px, @color_links, -10px);
+			}
+			&:hover  {
+				background: darken(@color_links, 3%);
+				&:before  {
+					border-color: darken(@color_links, 3%) transparent transparent transparent;
+				}
+			}
+		}
+		&:hover  {
+			background: darken(@bg_light, 5%);
+		}
+	}
+}
+.woocommerce_ordering {
+	color:@color_body + #333;
+}
+
+// Single product
+.single-product {
+	.summary  {
+		.product_meta  {
+			color: lighten(@color_body, 20%);
+			a  {
+				color: lighten(@color_body, 20%);
+			}
+		}
+		.single_add_to_cart_button  {
+			background: @color_links;
+			&:hover  {
+				background: darken(@color_links, 5%);
+			}
+		}
+	}
+	table.variations  {
+	    a.reset_variations {
+	    	color: lighten(@color_body, 30%);
+	    }
+	}
+	.single_variation_wrap  {
+		background: @bg_light;
+		.price  {
+			color: darken(@color_body, 20%);
+		}
+	}
+	.images {
+		background: @bg_light;
+	}
+}
+.woocommerce_tabs  {
+	border-color: @border_main;
+	ul.nav-tabs, ul.tabs {
+	    li {
+	    	a  {
+	    		background: @bg_light;
+	    		color: lighten(@color_body, 20%);
+	    	}
+	    	&.active  {
+	    		a  {
+	    			background: @border_main;
+	    		}
+	    	}
+	    }
+	}
+	.panel  {
+		border-color: @border_main;
+	}
+}
+
+// My Account
+ul.order_details {
+	border-color:@border_main;
+	li {
+		border-color:@border_main;
+		color: @color_body + #555;
+		strong {
+			color: @color_body;
+		}
+	}
+}
+ul.digital-downloads {
+	li {
+		border-color:@border_main;
+	}
+}
+
+// Cart
+table.cart  {
+	td.product-remove  {
+		a  {
+			background: @bg_dark;
+		}
+	}
+	td.product-name  {
+		a  {
+			color: @color_body;
+		}
+	}
+	.actions {
+		.coupon  {
+			border-color: @border_main;
+		}
+	}
+}
+
+// Product Reviews
+#reviews  {
+	#comments  {
+		.comment  {
+			border-color: @border_main;
+			.meta  {
+				color: lighten(@color_body, 20%);
+			}
+		}
+	}
+}
+
+// Checkout
+#payment {
+	border-color:@border_main;
+	.payment_methods {
+		border-color:@border_main;
+		li {
+			border-color:@border_main;
+			.payment_box {
+				.vertical_gradient(@bg_light, @bg_light - #040404);
+				border-color:@border_main;
+			}
+		}
+	}
+}

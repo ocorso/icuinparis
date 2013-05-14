@@ -1,0 +1,56 @@
+*** Athena Changelog ***
+
+2013.04.01 - version 1.0.11
+ * /includes/js/featured-slider.js - Ensure that all boolean values are translated correctly from the theme options.
+ * /includes/theme-js.php - Make sure $pagination is set to 'true' when pagination is enabled, despite having manual pagination controls.
+
+2013.03.08 - version 1.0.10
+ * header.php - Replaced nav toggle HTML char with img (HTML char #9776 not supported in Android)
+ * style.css - Styling for nav toggle. Fixed <pre> styling.
+ * /images/ico-nav-toggle.png - Added image
+ * /css/woocommerce.less,
+   /css/woocommerce.css - Hides HTML5 quantity selectors from "number" input fields. Fixes colour of "chosen" select box text on frontend. Chckecout validation styling. View cart link styling in archives. .quantity width fix for cart.
+ * /includes/theme-woocommerce.php - Adding WooCommerce support to theme. Fixes WooCommerce pagination.
+ * includes/home-shop.php - Now uses get_product().
+ * includes/theme-actions.php - Resolved $important_text notice.
+ * includes/js/general.js - Cart toggle script loads on on window.load.
+
+2013.03.06 - version 1.0.9
+ * includes/theme-woocommerce.php - Adding WooCommerce support to theme
+
+2013.01.18 - version 1.0.8
+ * /includes/home-shop.php - Replaced woocommerceframework_header_add_to_cart_fragment() with athena_print_minicart().
+ * /includes/js/third-party.js - Replaced fitVids with a newer version.
+ * /includes/theme-woocommerce.php - Added new function athena_print_minicart().
+
+2013.01.15 - version 1.0.7
+ * includes/js/portfolio.js - fixed portfolio stacking bug with WP 3.5
+
+2013.01.08 - version 1.0.6
+* includes/woocommerce.css - Updated with new WooCommerce 2.0 CSS Classes & improved Product Search widget styling.
+* style.css - Fixed search page layout issue.
+* includes/theme-woocommerce.php - Mini-cart now updates dynamically.
+
+2012.12.19 - version 1.0.5
+* includes/woocommerce.css - Fixed alignment of products and shop pagination in mobile mode.
+
+2012.11.29 - version 1.0.4
+* loop-portfolio.php - Fixed issue with Lightbox not loading Vimeo videos.
+* includes/woocommerce.css - Fixed table background color in the WooCommerce Tabs section.
+
+2012.11.26 - version 1.0.3
+ * includes/theme-functions.php - fixed Subscribe Connect widget title
+ * style.css - Removed background from static homepages
+
+2012.11.06 - version 1.0.2
+ * style.css - Fixed Portfolio Tags in IE8, equal spacing between portfolio items and custom typography options.
+ * css/theme-woocommerce.css - Fixed custom typography issue that caused items products to display stacked due to increased font size.
+ * loop-portfolio.php - Added support for embed videos in the Portfolio template.
+
+2012.09.27 - version 1.0.1
+ * index.php - Added check to prevent Shop component from being loaded if WooCommerce is not activated.
+ * style.css - Fixed Portfolio Slideshow bug on Firefox and table styling.
+ * css/woocommerce.css - Improved WooCommerce widget styling.
+
+2012.09.25 - version 1.0
+ * First release!

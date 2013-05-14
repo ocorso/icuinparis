@@ -1,0 +1,3 @@
+[11-May-2013 22:41:10] PHP Fatal error:  Cannot redeclare class WC_Gallery_Widget_Functions in /home/julian/public_html/stage435.com/wp-content/plugins/woocommerce-widget-product-slideshow-pro/classes/class-gallery-widget-functions.php on line 14
+[11-May-2013 22:41:13] PHP Fatal error:  Cannot redeclare class WC_Gallery_Widget_Functions in /home/julian/public_html/stage435.com/wp-content/plugins/woocommerce-widget-product-slideshow-pro/classes/class-gallery-widget-functions.php on line 14
+[11-May-2013 22:41:13] PHP Fatal error:  Cannot redeclare class WC_Gallery_Widget_Functions in /home/julian/public_html/stage435.com/wp-content/plugins/woocommerce-widget-product-slideshow-pro/classes/class-gallery-widget-functions.php on line 14

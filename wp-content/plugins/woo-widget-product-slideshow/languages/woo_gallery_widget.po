@@ -1,0 +1,150 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Widget Product Slideshow LITE\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-06 17:28+0700\n"
+"PO-Revision-Date: 2013-03-06 17:28+0700\n"
+"Last-Translator: Nguyen Tuan <mr.nguyencongtuan@gmail.com>\n"
+"Language-Team: a3rev\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: classes/class-gallery-widget-hook.php:19
+msgid "Documentation"
+msgstr ""
+
+#: classes/class-gallery-widget-hook.php:20
+msgid "Support"
+msgstr ""
+
+#: widget/class-cycle-widget.php:14
+msgid "Add a scrolling Gallery of products. Set to show a slideshow of products from any Category, Tag or products that are currently marked down in price."
+msgstr ""
+
+#: widget/class-cycle-widget.php:15
+msgid "Woo Products Slideshow"
+msgstr ""
+
+#: widget/class-cycle-widget.php:26
+#: widget/class-cycle-widget.php:159
+msgid "View this Product"
+msgstr ""
+
+#: widget/class-cycle-widget.php:27
+#: widget/class-cycle-widget.php:160
+msgid "View All Products"
+msgstr ""
+
+#: widget/class-cycle-widget.php:129
+msgid "Prev"
+msgstr ""
+
+#: widget/class-cycle-widget.php:129
+msgid "Next"
+msgstr ""
+
+#: widget/class-cycle-widget.php:167
+msgid "Title:"
+msgstr ""
+
+#: widget/class-cycle-widget.php:169
+msgid "Category:"
+msgstr ""
+
+#: widget/class-cycle-widget.php:172
+msgid "Image Tall:"
+msgstr ""
+
+#: widget/class-cycle-widget.php:174
+msgid "Manual Scroll"
+msgstr ""
+
+#: widget/class-cycle-widget.php:175
+msgid "Auto Scroll"
+msgstr ""
+
+#: widget/class-cycle-widget.php:177
+msgid "Effect:"
+msgstr ""
+
+#: widget/class-cycle-widget.php:178
+msgid "Scroll Up"
+msgstr ""
+
+#: widget/class-cycle-widget.php:179
+msgid "Scroll Down"
+msgstr ""
+
+#: widget/class-cycle-widget.php:180
+msgid "Scroll Left"
+msgstr ""
+
+#: widget/class-cycle-widget.php:181
+msgid "Scroll Right"
+msgstr ""
+
+#: widget/class-cycle-widget.php:182
+msgid "Fade"
+msgstr ""
+
+#: widget/class-cycle-widget.php:185
+msgid "Upgrade to"
+msgstr ""
+
+#: widget/class-cycle-widget.php:185
+msgid "Pro Version"
+msgstr ""
+
+#: widget/class-cycle-widget.php:185
+msgid "to activate"
+msgstr ""
+
+#: widget/class-cycle-widget.php:187
+msgid "Show Type:"
+msgstr ""
+
+#: widget/class-cycle-widget.php:188
+msgid "Category"
+msgstr ""
+
+#: widget/class-cycle-widget.php:189
+msgid "Tag"
+msgstr ""
+
+#: widget/class-cycle-widget.php:190
+msgid "On Sale"
+msgstr ""
+
+#: widget/class-cycle-widget.php:192
+msgid "Time between transitions:"
+msgstr ""
+
+#: widget/class-cycle-widget.php:192
+#: widget/class-cycle-widget.php:193
+msgid "seconds"
+msgstr ""
+
+#: widget/class-cycle-widget.php:193
+msgid "Transition effect Speed:"
+msgstr ""
+
+#: widget/class-cycle-widget.php:194
+msgid "Number of products to show:"
+msgstr ""
+
+#: widget/class-cycle-widget.php:194
+msgid "Enter -1 to show all products of the Category or Tag or On Sale"
+msgstr ""
+
+#: widget/class-cycle-widget.php:196
+msgid "View this Product Link Text:"
+msgstr ""
+
+#: widget/class-cycle-widget.php:197
+msgid "Product Category Text Link:"
+msgstr ""
+

@@ -291,12 +291,6 @@ div#creativecommunity {
 	margin:5px;
 }
 
-div#ourdesigners {
-	float:left;
-	width:240px;
-	margin:20px;
-}
-
 div#content.col-full section#main.col-left article.post-8934 aside.post-meta ul { 
 	display:none;
 }
@@ -377,8 +371,110 @@ body #content{
 	padding: 0px;
 }
 
+div#ourdesigners {
+	float:left;
+	width:95%;
+	max-width:800px;
+	margin: 20px 5% 0px 20%;
+}
+
+#ourdesigners .designer{
+	display:block;
+	float:left;
+	margin-right:20px;
+	width:323px;
+	height:462px;
+}
+
+#ourdesigners .designer .popup{
+	display:none;
+	width:323px;
+	margin-top: 150px;
+	background-color:#E3B1B7;
+	padding-bottom:10px;
+	padding-top:10px;
+}
+
+#ourdesigners .designer:hover .popup{
+	display:block;
+}
+
+#ourdesigners .designer .popup p{
+	margin: 10px;
+}
+
+#ourdesigners .designer .popup p strong{
+	text-transform:uppercase;
+	font-size: 20px;
+}
+
+#ourdesigners .designer .popup a{
+	color:#fff;
+	text-transform:uppercase;
+}
+
+#ourdesigners .designer .popup a.btn{
+	display: block;
+	background-color:#444;
+	padding: 10px;
+	width: 130px;
+	text-align: center;
+	margin:10px 0px;
+}
+
+#ourdesigners .designer img{
+	position:relative;
+	z-index:400;
+	width:235px;
+}
+
+#ourdesigners .designer.char{
+	background-image:url('http://gibson.loc/c3x-icu/wordpress/wp-content/uploads/0000_char.png');
+}
+
+#ourdesigners .designer.noot{
+	background-image:url('http://gibson.loc/c3x-icu/wordpress/wp-content/uploads/0001_noot.png');
+}
+
+#ourdesigners .designer.aea{
+	background-image:url('http://gibson.loc/c3x-icu/wordpress/wp-content/uploads/0002_aea.png');
+}
+
 @media screen and (max-width: 480px) {
 	.page #content header{
 		margin: 0px 5% 0px 7%;
+	}
+	
+	div#ourdesigners {
+		float:left;
+		width:100%;
+		margin: 20px 1% 0px 1%;
+	}
+	
+	#ourdesigners .designer{
+		width:209px;
+		height:300px;
+	}
+	
+	#ourdesigners .designer .popup{
+		width:209px;
+		margin-top: 0px;
+		padding-top:5px;
+	}
+	
+	#ourdesigners .designer .popup p{
+		line-height:15px;
+	}
+	
+	#ourdesigners .designer.char{
+		background-image:url('http://gibson.loc/c3x-icu/wordpress/wp-content/uploads/0000_char-209x300.png');
+	}
+	
+	#ourdesigners .designer.noot{
+		background-image:url('http://gibson.loc/c3x-icu/wordpress/wp-content/uploads/0001_noot-209x300.png');
+	}
+	
+	#ourdesigners .designer.aea{
+		background-image:url('http://gibson.loc/c3x-icu/wordpress/wp-content/uploads/0002_aea-209x300.png');
 	}
 }

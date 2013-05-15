@@ -24,6 +24,63 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 	$settings = woo_get_dynamic_values( $settings );
 	if ( get_query_var( 'page' ) > 1 ) { $paged = get_query_var( 'page' ); } elseif ( get_query_var( 'paged' ) > 1 ) { $paged = get_query_var( 'paged' ); } else { $paged = 1; } 
 ?>
+	<div id="featured-slider" class="flexslider flexslider default-width-slide">
+	<ul class="slides">
+		<li class="slide slide-number-1 has-image no-video">
+			<div class="slide-wrapper">
+				<div class="slide-media"><img src="wp-content/uploads/0000_video.png" alt=""  width="1300"  class="woo-image slide-image" /></div><!--/.slide-media-->
+								<div class="slide-content">
+					<div class="slide-content-inner">
+						<header><h1><a href="http://gibson.loc/c3x-icu/wordpress/home-3/">Home 3</a></h1></header>
+						<footer class="post-more">
+						By <a href="http://gibson.loc/c3x-icu/wordpress/author/Web Team/" title="Posts by Web Team" rel="author">Web Team</a> - <span>May 9, 2013</span>
+						</footer>
+					</div><!--/.slide-content-inner-->
+				</div><!--/.slide-content-->
+							</div><!--/.slide-wrappper-->
+		</li>
+		<li class="slide slide-number-2 has-image no-video">
+			<div class="slide-wrapper">
+				<div class="slide-media"><img src="wp-content/uploads/0001_CREATIVE-COMMUNITY.png" alt=""  width="1300"  class="woo-image slide-image" /></div><!--/.slide-media-->
+								<div class="slide-content">
+					<div class="slide-content-inner">
+						<header><h1><a href="http://gibson.loc/c3x-icu/wordpress/home-2/">Home 2</a></h1></header>
+						<footer class="post-more">
+						By <a href="http://gibson.loc/c3x-icu/wordpress/author/Web Team/" title="Posts by Web Team" rel="author">Web Team</a> - <span>May 9, 2013</span>
+						</footer>
+					</div><!--/.slide-content-inner-->
+				</div><!--/.slide-content-->
+							</div><!--/.slide-wrappper-->
+		</li>
+		<li class="slide slide-number-3 has-image no-video">
+			<div class="slide-wrapper">
+				<div class="slide-media"><img src="wp-content/uploads/0002_VASKOLG-ESPARATA-SHELL-NECKLACE-GIVE-THEM-SOMETHINGTHEYVE-NE.png" alt=""  width="1300"  class="woo-image slide-image" /></div><!--/.slide-media-->
+								<div class="slide-content">
+					<div class="slide-content-inner">
+						<header><h1><a href="http://gibson.loc/c3x-icu/wordpress/home-1/">Home 1</a></h1></header>
+						<footer class="post-more">
+						By <a href="http://gibson.loc/c3x-icu/wordpress/author/Web Team/" title="Posts by Web Team" rel="author">Web Team</a> - <span>May 7, 2013</span>
+						</footer>
+					</div><!--/.slide-content-inner-->
+				</div><!--/.slide-content-->
+							</div><!--/.slide-wrappper-->
+		</li>
+		<li class="slide slide-number-2 has-image no-video">
+			<div class="slide-wrapper">
+				<div class="slide-media"><img src="wp-content/uploads/0003_NOOT-SS_13.png" alt=""  width="1300"  class="woo-image slide-image" /></div><!--/.slide-media-->
+								<div class="slide-content">
+					<div class="slide-content-inner">
+						<header><h1><a href="http://gibson.loc/c3x-icu/wordpress/home-2/">Home 2</a></h1></header>
+						<footer class="post-more">
+						By <a href="http://gibson.loc/c3x-icu/wordpress/author/Web Team/" title="Posts by Web Team" rel="author">Web Team</a> - <span>May 9, 2013</span>
+						</footer>
+					</div><!--/.slide-content-inner-->
+				</div><!--/.slide-content-->
+							</div><!--/.slide-wrappper-->
+		</li>
+	</ul>
+	<div class="flexslider-container"></div>
+	</div><!--/#featured-slider-->
 
     <div id="content">
     	<div id="home-cont">

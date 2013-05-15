@@ -29,7 +29,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 					
 	$settings = woo_get_dynamic_values( $settings );
 ?>
-       
+       ABCDEFGHIJKLMNOP123
     <div id="content" class="col-full">
     
     	<?php woo_main_before(); ?>

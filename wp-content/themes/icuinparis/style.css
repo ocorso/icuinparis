@@ -119,7 +119,6 @@ ul.nav li {
 }
 
 #footer {
-    background: url("/wp-content/uploads/bkgr_foot.jpg") repeat-x scroll 0 0 rgba(0, 0, 0, 0.19);
     border-top: opx solid #676D76;
     color: #545454;
     padding: 4.236em 0 2.618em;
@@ -158,7 +157,8 @@ ul.sub-menu li {
 }
 
 div#home-cont {
-	width:960px; 
+	width:100%; 
+	max-width:960px;
 	margin: auto; 
 	background-color:#FFF;
 }
@@ -329,7 +329,7 @@ header h1 {
 	margin: 0px 5% 0px 20%;
 }
 
-.page #content header h1 {
+.page #content header h1, .single #content header h1 {
 	padding: 25px 0px 10px 0px; 
 	text-shadow:none; 
 	font-size:2.5em; 
@@ -339,12 +339,12 @@ header h1 {
 	font-family: 'Source Sans Pro', sans-serif;	
 }
 
-.page #content header p {
+.page #content header p, .single #content header p {
 	
 	margin:0px;
 }
 
-.page #content p, .search-results article.page #content p {
+.page #content p, .search-results article.page #content p{
 	margin:20px 10%;
 }
 
@@ -440,9 +440,60 @@ div#ourdesigners {
 	background-image:url('http://gibson.loc/c3x-icu/wordpress/wp-content/uploads/0002_aea.png');
 }
 
+.page-template-single-creativeb-php section.entry{
+	margin-top:25px;
+}
+
+.page-template-single-creativeb-php .useful_box18{
+	border:none;
+	width:200px;
+}
+
+.page-template-single-creativeb-php .useful_box18 .contentTitle{
+	color:#000;
+	text-shadow: none;
+	text-align: left;
+}
+
+.page-template-single-creativeb-php .useful_box18 .img_shadow a{
+	text-align:left;
+}
+
+.page-template-single-creativeb-php .useful_box18 .img_shadow img{
+	width:100%;
+}
+
+.page-template-single-creativeb-php #content .useful_box18 p{
+	margin: 10px 0px 30px 0px;
+	padding:0px;
+}
+
+.page-template-single-creativeb-php #content .useful_box18 a{
+
+	margin: 10px 0px 0px 0px;
+}
+
+.single #content header{
+	margin: 0px 5% 0px 0%;
+}
+
+.single #content p {
+	margin:20px 5% 0px 0%;
+}
+
+.single #content .article-inner{
+	float: right;
+	width: 76%;
+}
+
 @media screen and (max-width: 480px) {
 	.page #content header{
 		margin: 0px 5% 0px 7%;
+	}
+	
+	.page #content{
+		margin:0px;
+		padding:0px;
 	}
 	
 	div#ourdesigners {
@@ -476,5 +527,10 @@ div#ourdesigners {
 	
 	#ourdesigners .designer.aea{
 		background-image:url('http://gibson.loc/c3x-icu/wordpress/wp-content/uploads/0002_aea-209x300.png');
+	}
+	
+	.single #content .article-inner{
+		float: right;
+		width: 95%;
 	}
 }

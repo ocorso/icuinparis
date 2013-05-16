@@ -29,7 +29,7 @@ woo_head();
 
 <div id="logoposition">
 	<a href="/">	
-    	<img src="/wp-content/uploads/logo_icu.jpg" class="headerlogo">
+    	<img src="<?php echo get_bloginfo('wpurl')?>/wp-content/uploads/logo_icu.jpg" class="headerlogo">
     </a>    
 </div>
 

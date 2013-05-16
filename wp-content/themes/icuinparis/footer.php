@@ -1,7 +1,7 @@
-	<footer id="footer">
+	<footer id="footer" style="background: url('<?php echo get_bloginfo('wpurl')?>/wp-content/uploads/bkgr_foot.jpg') repeat-x scroll 0 0 rgba(0, 0, 0, 0.19)">
 	
 		<div class="col-full" style="text-align:center"> 
-<img src="/wp-content/uploads/footer_icu.png" width="397" />
+<img src="<?php echo get_bloginfo('wpurl')?>/wp-content/uploads/footer_icu.png" width="397" />
 <br /> 
 <br /> 
 We welcome you to contact us with questions, feedback, designer submissions and/or custom orders.

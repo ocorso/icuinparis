@@ -85,10 +85,10 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
     <div id="content">
     	<div id="home-cont">
          	<div id="shopcall">
-              	<img src="/wp-content/uploads/call_shop.jpg" width="480" height="65" />
+              	<img src="<?php echo get_bloginfo('wpurl')?>/wp-content/uploads/call_shop.jpg" width="480" height="65" />
           	</div>
           	<div id="shopcall2">
-              <img src="/wp-content/uploads/call_shopall.jpg" width="480" height="65" />
+              <img src="<?php echo get_bloginfo('wpurl')?>/wp-content/uploads/call_shopall.jpg" width="480" height="65" />
           	</div>
 			<div style="clear:both;"></div>
          	<div id="homeproducts">
@@ -98,10 +98,10 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
           	</div>
 			<div style="clear:both;height:10px;"></div>
           	<div id="call-home-lower-left">
-              	<img src="/wp-content/uploads/call_home_lower_left.jpg" width="480" height="100" />
+              	<img src="<?php echo get_bloginfo('wpurl')?>/wp-content/uploads/call_home_lower_left.jpg" width="480" height="100" />
             </div>    
           	<div id="call-home-lower-right">
-              	<img src="/wp-content/uploads/call_home_lower_right.jpg" width="480" height="100" />
+              	<img src="<?php echo get_bloginfo('wpurl')?>/wp-content/uploads/call_home_lower_right.jpg" width="480" height="100" />
           	</div>
 			<div style="clear:both;height:10px;"></div>
         </div>
@@ -138,7 +138,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		<div class="col-full col-<?php echo $total; ?> fix">
 
 		<div class="home-footer-header">
-        	<img src="/wp-content/uploads/home-footer-call-header.jpg" width="200" height="123" align="left"/>We opened in 2010, selling a unique collection of designer jewelry and accessories. Always an online platform and now based between Paris and New York City, we offer a mix of European and American style and culture through our product offering. An important part of the icuinparis.com culture is our customizeable and made-to-order product. We have created strong relationships with our designers, allowing us the advantage to offer you designs and product that may not be available elsewhere, or that was never realized until you suggested it. Now in our third year, icuinparis.com has recenly opened a showroom branch: Showroom ICU. 
+        	<img src="<?php echo get_bloginfo('wpurl')?>/wp-content/uploads/home-footer-call-header.jpg" width="200" height="123" align="left"/>We opened in 2010, selling a unique collection of designer jewelry and accessories. Always an online platform and now based between Paris and New York City, we offer a mix of European and American style and culture through our product offering. An important part of the icuinparis.com culture is our customizeable and made-to-order product. We have created strong relationships with our designers, allowing us the advantage to offer you designs and product that may not be available elsewhere, or that was never realized until you suggested it. Now in our third year, icuinparis.com has recenly opened a showroom branch: Showroom ICU. 
         </div>	
 
 		<div style="clear:both;"></div>

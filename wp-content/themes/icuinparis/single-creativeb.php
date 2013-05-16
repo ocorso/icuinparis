@@ -16,23 +16,20 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 /**
  * The Variables
  *
- * Template Name: About
+ * Template Name: CommunityB
  * Setup default variables, overriding them if the "Theme Options" have been saved.
  */
 	
 	$settings = array(
 					'thumb_single' => 'false', 
-					'single_w' => 200, 
-					'single_h' => 150, 
+					'single_w' => 234, 
+					'single_h' => 340, 
 					'thumb_single_align' => 'alignright'
 					);
 					
 	$settings = woo_get_dynamic_values( $settings );
 ?>
-	<header>
-    	<img src="<?php echo get_bloginfo('wpurl')?>/wp-content/uploads/footer_icu.png"/>
-	</header>
-    <div id="content" class="page col-full">
+        <div id="content" class="page col-full">
     
     	<?php woo_main_before(); ?>
     	
@@ -43,6 +40,11 @@ if ( ! defined( 'ABSPATH' ) ) exit;
         		while ( have_posts() ) { the_post(); $count++;
         ?>                                                           
             <article <?php post_class(); ?>>
+            	
+            	<header>
+			    	<h1><?php the_title(); ?></h1>
+			    	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut dui turpis, in varius mi. Fusce fermentum aliquam elit, id viverra diam pellentesque a. Nullam ac tortor non tellus fermentum porttitor. Nullam vel tempor nibh. Cras vitae urna sem, sed dictum erat. Suspendisse potenti. Duis lobortis mauris eget ante mollis eleifend. Nam ornare vulputate nunc, et aliquet nisi eleifend dignissim. Vivamus tincidunt libero quis nunc feugiat non tincidunt mauris lacinia. In et hendrerit mi. Phasellus convallis arcu feugiat urna molestie quis dignissim mauris tincidunt. Proin a sapien et sem pretium ullamcorper.</p>
+				</header>
 				
                 <section class="entry">
                 	<?php the_content(); ?>
@@ -75,41 +77,5 @@ if ( ! defined( 'ABSPATH' ) ) exit;
         <?php get_sidebar(); ?>
 
     </div><!-- /#content -->
-
-<?php
-
-	$total = 4;
-	if ( isset( $woo_options['woo_footer_sidebars'] ) && ( $woo_options['woo_footer_sidebars'] != '' ) ) {
-		$total = $woo_options['woo_footer_sidebars'];
-	}
-
-	if ( ( woo_active_sidebar( 'footer-1' ) ||
-		   woo_active_sidebar( 'footer-2' ) ||
-		   woo_active_sidebar( 'footer-3' ) ||
-		   woo_active_sidebar( 'footer-4' ) ) && $total > 0 ) {
-
-?>
-	
-	<?php woo_footer_before(); ?>
 		
-	<section id="footer-widgets">
-
-		<div class="col-full col-<?php echo $total; ?> fix">
-
-		<div style="clear:both;"></div>
-
-			<?php $i = 0; while ( $i < $total ) { $i++; ?>
-				<?php if ( woo_active_sidebar( 'footer-' . $i ) ) { ?>
-
-			<div class="block footer-widget-<?php echo $i; ?>">
-	        	<?php woo_sidebar( 'footer-' . $i ); ?>
-			</div>
-
-		        <?php } ?>
-			<?php } // End WHILE Loop ?>
-
-		</div><!-- /.col-full  -->
-
-	</section><!-- /#footer-widgets  -->
-<?php } // End IF Statement ?>
 <?php get_footer(); ?>

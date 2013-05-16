@@ -29,7 +29,6 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 					
 	$settings = woo_get_dynamic_values( $settings );
 ?>
-       ABCDEFGHIJKLMNOP123
     <div id="content" class="col-full">
     
     	<?php woo_main_before(); ?>
@@ -48,10 +47,9 @@ if ( ! defined( 'ABSPATH' ) ) exit;
                 <?php woo_post_meta(); ?>
                	
 	                <header>
-	                
-		                <h1><?php the_title(); ?></h1>
-	                	
-	                </header>
+				    	<h1><?php the_title(); ?></h1>
+				    	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut dui turpis, in varius mi. Fusce fermentum aliquam elit, id viverra diam pellentesque a. Nullam ac tortor non tellus fermentum porttitor. Nullam vel tempor nibh. Cras vitae urna sem, sed dictum erat. Suspendisse potenti. Duis lobortis mauris eget ante mollis eleifend. Nam ornare vulputate nunc, et aliquet nisi eleifend dignissim. Vivamus tincidunt libero quis nunc feugiat non tincidunt mauris lacinia. In et hendrerit mi. Phasellus convallis arcu feugiat urna molestie quis dignissim mauris tincidunt. Proin a sapien et sem pretium ullamcorper.</p>
+					</header>
 	                
 	                <section class="entry fix">
 						<?php query_posts('cat=139&posts_per_page=18'); ?>

@@ -44,7 +44,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 				<?php echo woo_embed( 'width=580' ); ?>
                 <?php if ( $settings['thumb_single'] == 'true' && ! woo_embed( '' ) ) { woo_image( 'width=' . $settings['single_w'] . '&height=' . $settings['single_h'] . '&class=thumbnail ' . $settings['thumb_single_align'] ); } ?>
 
-                <?php woo_post_meta(); ?>
+                <?php //woo_post_meta(); ?>
 
                 <div class="article-inner">
                 	

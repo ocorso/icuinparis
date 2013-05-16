@@ -51,7 +51,7 @@ function extra_widgets_init() {
 add_action( 'init', 'extra_widgets_init' );
 
 
-
+add_filter('widget_text', 'do_shortcode');
 
 /*-----------------------------------------------------------------------------------*/
 /* Don't add any code below here or the sky will fall down */

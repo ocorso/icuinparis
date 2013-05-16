@@ -1,0 +1,125 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-11-08 12:13-0500\n"
+"PO-Revision-Date: 2012-07-10 16:01-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__\n"
+"X-Poedit-Basepath: C:\\Users\\Programador\\Documents\\xampp\\htdocs\\wpes\\wp-content\\plugins\\sharethispost\\application\\views\\\n"
+"X-Poedit-Language: Spanish\n"
+"X-Poedit-Country: SPAIN\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: wpts_matrix.php:1
+msgid "Useful Posts Matrix Shortcode Generator"
+msgstr "Generador de Shortcode para Matriz de Posts Útiles"
+
+#: wpts_matrix.php:2
+msgid "One theme, a thousand posibilities: Create amazing and unlimited themes by playing with 1000+ pre-designed elements (or uploading your own designs) and then download in fully working WP or HTML/CSS."
+msgstr "Un tema, mil posobilidades: Crea increibles temas jugando con los mas de 1000 elementos prediseñados disponibles, ( o sube tus propios elementos ) y luego descarga tu tema en formato WordPress o HTML/CSS."
+
+#: wpts_matrix.php:3
+msgid "Generate your Useful Posts Matrix Shortcode"
+msgstr "Genere su Shortcode de Matriz de Posts Útiles"
+
+#: wpts_matrix.php:4
+msgid "Box Width (in pixels):"
+msgstr "Ancho de Caja (En Pixeles):"
+
+#: wpts_matrix.php:5
+msgid "Category:"
+msgstr "Categoría:"
+
+#: wpts_matrix.php:6
+msgid "Number of Posts:"
+msgstr "Número de Posts:"
+
+#: wpts_matrix.php:7
+msgid "Box Style:"
+msgstr "Estilo de Caja:"
+
+#: wpts_matrix.php:8
+msgid "Your Useful Post Matrix Generated Shortcode is:"
+msgstr "Su Shortcode de Matriz de Post Útiles Generado es:"
+
+#: wpts_matrix.php:9
+msgid "'Read More' Button Color:"
+msgstr "Color del Botón 'Leer Más'"
+
+#: wpts_matrix.php:10
+msgid "Read More"
+msgstr "Leer Más"
+
+#: wpts_matrix.php:11
+msgid "External RSS Feed:"
+msgstr "Feed RSS Externo:"
+
+#: wpts_matrix.php:12
+msgid "Design Shock Freebies"
+msgstr "Freebies de Design Shock"
+
+#: wpts_matrix.php:13
+msgid "Title Font Size (in pixels):"
+msgstr "Tamaño de Fuente del Título (en pixeles):"
+
+#: wpts_matrix.php:14
+msgid "Title Font Style:"
+msgstr "Estilo de Fuente del Título:"
+
+#: wpts_matrix.php:15
+msgid "Content Font Size (in pixels):"
+msgstr "Tamaño de Fuente del Extracto de Contenido (en pixeles):"
+
+#: wpts_matrix.php:16
+msgid "Content Font Style:"
+msgstr "Estilo de Fuente del Extracto de Contenido:"
+
+#: wpts_matrix.php:17
+msgid "Show Title:"
+msgstr "Mostrar Título:"
+
+#: wpts_matrix.php:18
+msgid "Show Image:"
+msgstr "Mostrar Imágen:"
+
+#: wpts_matrix.php:19
+msgid "Show Excerpt:"
+msgstr "Mostrar Extracto de Contenido:"
+
+#: wpts_matrix.php:20
+msgid "All Categories"
+msgstr "Todas las Categorías"
+
+#: wpts_matrix.php:21
+msgid "This Feature is only Available in Full Version"
+msgstr "Esta función sólo está disponible en la versión completa"
+
+#: wpts_matrix.php:22
+msgid "This Box Style is only Available in Full Version"
+msgstr "Este Estilo de Caja sólo está disponible en la versión completa"
+
+#: wpts_matrix.php:23
+msgid "This Button Color is only Available in Full Version"
+msgstr "Este Color de Botón sólo está disponible en la versión completa"
+
+#: wpts_matrix.php:24
+msgid "Affiliate Code (Optional)"
+msgstr "Código del Afiliado (Opcional)"
+
+#: wpts_matrix.php:25
+msgid "Get Full Version"
+msgstr "Obtén la Versión Completa"
+
+#: wpts_matrix.php:26
+msgid "Limit of posts (pagination/slider) use only if you want to limit the shown posts:"
+msgstr "Límite de Posts (paginación/slider) sólo se recomienda si usted quiere limitar los posts mostrados:"
+
+#: wpts_matrix.php:27
+msgid "Enable Masonry JS For responsive boxes (if masonry is disabled, boxes will adjust responsively by css):"
+msgstr "Habilitar Masonry JS Para cajas responsivas (si masonry está desactivado, las cajas se ajustarán responsivamente por CSS):"
+

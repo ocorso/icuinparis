@@ -1,0 +1,125 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-11-08 12:13-0500\n"
+"PO-Revision-Date: 2012-07-10 16:01-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__\n"
+"X-Poedit-Basepath: C:\\Users\\Programador\\Documents\\xampp\\htdocs\\wpes\\wp-content\\plugins\\sharethispost\\application\\views\\\n"
+"X-Poedit-Language: Spanish\n"
+"X-Poedit-Country: SPAIN\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: wpts_matrix.php:1
+msgid "Useful Posts Matrix Shortcode Generator"
+msgstr "Générateur  de Shortcode du Matrice de Articles Utiles"
+
+#: wpts_matrix.php:2
+msgid "One theme, a thousand posibilities: Create amazing and unlimited themes by playing with 1000+ pre-designed elements (or uploading your own designs) and then download in fully working WP or HTML/CSS."
+msgstr "Un thème, un millier de possibilités: Créer des thèmes étonnants et illimité en jouant avec 1000 + éléments pré-conçus (ou en téléchargeant vos propres dessins) et ensuite télécharger intégralement à travailler WP ou HTML/CSS."
+
+#: wpts_matrix.php:3
+msgid "Generate your Useful Posts Matrix Shortcode"
+msgstr "Générez votre Shortcode du Matrice de Articles Utiles"
+
+#: wpts_matrix.php:4
+msgid "Box Width (in pixels):"
+msgstr "Largeur de la Boîte (En Pixels):"
+
+#: wpts_matrix.php:5
+msgid "Category:"
+msgstr "Catégorie:"
+
+#: wpts_matrix.php:6
+msgid "Number of Posts:"
+msgstr "Nombre de Articles:"
+
+#: wpts_matrix.php:7
+msgid "Box Style:"
+msgstr "Style de Boîte:"
+
+#: wpts_matrix.php:8
+msgid "Your Useful Post Matrix Generated Shortcode is:"
+msgstr "Votre Shortcode du Matrice de Articles Utiles Généré est:"
+
+#: wpts_matrix.php:9
+msgid "'Read More' Button Color:"
+msgstr "Couleur du bouton 'Lire plus'"
+
+#: wpts_matrix.php:10
+msgid "Read More"
+msgstr "Lire Plus"
+
+#: wpts_matrix.php:11
+msgid "External RSS Feed:"
+msgstr "Feed RSS Externe:"
+
+#: wpts_matrix.php:12
+msgid "Design Shock Freebies"
+msgstr "Freebies du Design Shock"
+
+#: wpts_matrix.php:13
+msgid "Title Font Size (in pixels):"
+msgstr "Taille de Fonte du Titre (en pixels):"
+
+#: wpts_matrix.php:14
+msgid "Title Font Style:"
+msgstr "Style de Fonte du Titre:"
+
+#: wpts_matrix.php:15
+msgid "Content Font Size (in pixels):"
+msgstr "Taille de Fonte de Extrait du Contenu (en pixels):"
+
+#: wpts_matrix.php:16
+msgid "Content Font Style:"
+msgstr "Style de Fonte de Extrait du Contenu (en pixels):"
+
+#: wpts_matrix.php:17
+msgid "Show Title:"
+msgstr "Afficher le titre:"
+
+#: wpts_matrix.php:18
+msgid "Show Image:"
+msgstr "Afficher l'image:"
+
+#: wpts_matrix.php:19
+msgid "Show Excerpt:"
+msgstr "Afficher L'extrait du Contenu:"
+
+#: wpts_matrix.php:20
+msgid "All Categories"
+msgstr "Toutes les Catégories"
+
+#: wpts_matrix.php:21
+msgid "This Feature is only Available in Full Version"
+msgstr "Cette fonctionnalité est uniquement disponible dans la version complète"
+
+#: wpts_matrix.php:22
+msgid "This Box Style is only Available in Full Version"
+msgstr "Cette Style de Boîte est uniquement disponible dans la version complète"
+
+#: wpts_matrix.php:23
+msgid "This Button Color is only Available in Full Version"
+msgstr "Cette Couleur du bouton est uniquement disponible dans la version complètea"
+
+#: wpts_matrix.php:24
+msgid "Affiliate Code (Optional)"
+msgstr "Code d'affiliation (Facultatif)"
+
+#: wpts_matrix.php:25
+msgid "Get Full Version"
+msgstr "Obtenir la version complète"
+
+#: wpts_matrix.php:26
+msgid "Limit of posts (pagination/slider) use only if you want to limit the shown posts:"
+msgstr "Limite de Articles (pagination/slider) utiliser uniquement si vous souhaitez limiter les Articles indiqués:"
+
+#: wpts_matrix.php:27
+msgid "Enable Masonry JS For responsive boxes (if masonry is disabled, boxes will adjust responsively by css):"
+msgstr "Activer Masonry JS Pour les boîtes répondant (si masonry est désactivé, les boîtes ajustera en réponse par css):"
+

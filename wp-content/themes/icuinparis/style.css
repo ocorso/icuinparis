@@ -450,9 +450,22 @@ div#ourdesigners {
 }
 
 .page-template-single-creativeb-php .useful_box18 .contentTitle{
-	color:#000;
+	color: #000;
 	text-shadow: none;
 	text-align: left;
+	margin: 15px 0px -5px 0px;
+	line-height: 18px;
+}
+
+.page-template-single-creativeb-php .useful_box18 .readmore{
+	color:#000;
+	background: none;
+	text-shadow:none;
+}
+
+.page-template-single-creativeb-php .useful_box18 .readmore:hover{
+	color:#000;
+	text-shadow:0 -1px 0 rgba(0, 0, 0, 0.25);
 }
 
 .page-template-single-creativeb-php .useful_box18 .img_shadow a{
@@ -484,6 +497,82 @@ div#ourdesigners {
 .single #content .article-inner{
 	float: right;
 	width: 76%;
+}
+
+.woocommerce-page #content #main{
+	margin: 40px 0% 0px 20%;
+	width:76% !important;
+	max-width:960px;
+}
+
+.woocommerce-page #content #main h1{
+	color:#000;
+	font-size:48px;
+	margin-bottom: 10px;
+}
+
+/* HIDE THE ADD TO CART BUTTONS*/
+.woocommerce-page #content #main .add_to_cart_button{
+	display:none;
+}
+
+.woocommerce-page #content #sidebar{
+	float:left;
+	color:#000;
+	margin-top: 0;
+	width: 21%;
+	position: absolute;
+	top: 150px;
+	left: 10%;
+}
+
+.woocommerce-page #content #sidebar .widget *{
+	color:#000;
+}
+
+ul.products .product {
+	width: 200px;
+	margin-right: 15px;
+}
+
+ul.products .product:nth-child(2n) {
+	margin-right: 15px;
+}
+
+.woocommerce-page #content #main .product h1.product_title{
+	font-size:24px;
+}
+
+.woocommerce-page #content #main .product .summary span{
+	color:#000;
+}
+
+.woocommerce-page #content #main .product .product_meta *{
+	color:#000;
+}
+
+
+@media screen and (max-width: 768px) {
+	
+	.woocommerce-page #content #main{
+		margin: 40px 0% 0px 0%;
+		width:100% !important;
+		max-width:960px;
+	}
+	
+	.woocommerce-page #content #sidebar{
+		float:left;
+		color:#000;
+		margin-top: 0;
+		width: 100%;
+		position:relative;
+		top: 0px;
+		left: 0%;
+	}
+	
+	.woocommerce-page #content #main .product h1.product_title{
+		font-size:18px;
+	}
 }
 
 @media screen and (max-width: 480px) {
@@ -532,5 +621,9 @@ div#ourdesigners {
 	.single #content .article-inner{
 		float: right;
 		width: 95%;
+	}
+	
+	.woocommerce-page #content #main .product h1.product_title{
+		font-size:14px;
 	}
 }

@@ -793,9 +793,7 @@ function wpts_useful_matrix_shortcode($atts=array()){
             $jQuery_st="#wpts_container$sh_count";//selectores de jQuery
 			foreach($get_cat as $category){
 				echo"<div class='item$sh_count useful_box$boxstyle' style='width: {$bwt}px;'>";
-				if($showtitle=="1"){
-                    echo $title= "\n\t<div class='contentTitle' style='font-size: ".$titlesize."px;font-weight: bold;$titlef;padding: 5px'>".$category->name."</div>";
-                }
+				
 				if($showimage=="1"){
 					$bwt2=$bwt-10;
 					$imgExtract=@get_option('taxonomy_'.$category->term_id); 
@@ -803,6 +801,9 @@ function wpts_useful_matrix_shortcode($atts=array()){
 					foreach ( @$cat_keys as $key ) {
 						echo '<div class="img_shadow" style="width: '.$bwt2.'px;height: '.$bwt2.'px;text-align:center;margin:auto"><a href="'.get_category_link( $category->term_id ).'"><img src="'.$imgExtract[$key].'" height="'.$bwt2.'" width="'.$bwt2.'" alt="" /></a></div>';
 					}
+                }
+				if($showtitle=="1"){
+                    echo $title= "\n\t<div class='contentTitle' style='font-size: ".$titlesize."px;font-weight: bold;$titlef;padding: 5px'>".$category->name."</div>";
                 }
 				if($showexcerpt=="1"){
                     $desc=str_replace("<p>","<p style='font-size: ".$contentsize."px;$contentf'>",strip_tags($category->description));
@@ -1495,14 +1496,7 @@ $counter=0;
 		$tmb=get_the_post_thumbnail(get_the_ID(),$imgc,array("title"=>get_the_title(),"style"=>"width: {$bwt2}px;height: {$bwt2}px;")); 
 	?>
 	<?php
-		if($showtitle=="1"||empty($tmb)){
-			$imgbh-=20;
-	?>
-			<div class="contentTitle" style='font-size: <?php echo $titlesize;?>px;font-weight: bold;<?php echo $titlef;?>;padding: 5px'>
-				<?php the_title();?>
-			</div>
-	<?php 
-		}
+		
 		if($showimage=="1"){?>
 			<div class='img_shadow' style='width: <?php echo $bwt2;?>px;height:auto;text-align:center;margin:auto'>
 				<a title='<?php the_title();?>' href='<?php the_permalink();?>'>
@@ -1540,6 +1534,14 @@ $counter=0;
 				</a>
 			</div>
 			<?php
+		}
+if($showtitle=="1"||empty($tmb)){
+			$imgbh-=20;
+	?>
+			<div class="contentTitle" style='font-size: <?php echo $titlesize;?>px;font-weight: bold;<?php echo $titlef;?>;'>
+				<?php the_title();?>
+			</div>
+	<?php 
 		}
 		if($showexcerpt=="1"){
 			$imgbh-=20;

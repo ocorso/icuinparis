@@ -183,11 +183,11 @@ div#homeproducts {
 }
 
 div#call-home-lower-left {
-	width:480px; height:100px; float:left;
+	float:left;
 }
 
 div#call-home-lower-right {
-	width:480px; height:100px; float:right;
+	float:right;
 }
 
 div#home-cont div#call-home-lower-right li#text-3.widget {
@@ -371,6 +371,11 @@ body #content{
 	padding: 0px;
 }
 
+#call-home-lower-left img, #call-home-lower-right img{
+	width:100%;
+	max-width:480px;
+}
+
 div#ourdesigners {
 	float:left;
 	width:95%;
@@ -429,15 +434,15 @@ div#ourdesigners {
 }
 
 #ourdesigners .designer.char{
-	background-image:url('http://gibson.loc/c3x-icu/wordpress/wp-content/uploads/0000_char.png');
+	background-image:url('http://staging.click3x.com/icuparis/wp-content/uploads/0000_char.png');
 }
 
 #ourdesigners .designer.noot{
-	background-image:url('http://gibson.loc/c3x-icu/wordpress/wp-content/uploads/0001_noot.png');
+	background-image:url('http://staging.click3x.com/icuparis/wp-content/uploads/0001_noot.png');
 }
 
 #ourdesigners .designer.aea{
-	background-image:url('http://gibson.loc/c3x-icu/wordpress/wp-content/uploads/0002_aea.png');
+	background-image:url('http://staging.click3x.com/icuparis/wp-content/uploads/0002_aea.png');
 }
 
 .page-template-single-creativeb-php section.entry{
@@ -512,7 +517,7 @@ div#ourdesigners {
 }
 
 /* HIDE THE ADD TO CART BUTTONS*/
-.woocommerce-page #content #main .add_to_cart_button{
+.woocommerce-page #content #main .add_to_cart_button, .woocommerce-page #content #main .product .cart{
 	display:none;
 }
 
@@ -607,15 +612,15 @@ ul.products .product:nth-child(2n) {
 	}
 	
 	#ourdesigners .designer.char{
-		background-image:url('http://gibson.loc/c3x-icu/wordpress/wp-content/uploads/0000_char-209x300.png');
+		background-image:url('http://staging.click3x.com/icuparis/wp-content/uploads/0000_char-209x300.png');
 	}
 	
 	#ourdesigners .designer.noot{
-		background-image:url('http://gibson.loc/c3x-icu/wordpress/wp-content/uploads/0001_noot-209x300.png');
+		background-image:url('http://staging.click3x.com/icuparis/wp-content/uploads/0001_noot-209x300.png');
 	}
 	
 	#ourdesigners .designer.aea{
-		background-image:url('http://gibson.loc/c3x-icu/wordpress/wp-content/uploads/0002_aea-209x300.png');
+		background-image:url('http://staging.click3x.com/icuparis/wp-content/uploads/0002_aea-209x300.png');
 	}
 	
 	.single #content .article-inner{

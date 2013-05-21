@@ -98,10 +98,10 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
           	</div>
 			<div style="clear:both;height:10px;"></div>
           	<div id="call-home-lower-left">
-              	<img src="<?php echo get_bloginfo('wpurl')?>/wp-content/uploads/call_home_lower_left.jpg" width="480" height="100" />
+              	<a href="showroom"><img src="<?php echo get_bloginfo('wpurl')?>/wp-content/uploads/call_home_lower_left.jpg" width="100%"/></a>
             </div>    
           	<div id="call-home-lower-right">
-              	<img src="<?php echo get_bloginfo('wpurl')?>/wp-content/uploads/call_home_lower_right.jpg" width="480" height="100" />
+              	<a href="showroom"><img src="<?php echo get_bloginfo('wpurl')?>/wp-content/uploads/call_home_lower_right.jpg" width="100%" /></a>
           	</div>
 			<div style="clear:both;height:10px;"></div>
         </div>

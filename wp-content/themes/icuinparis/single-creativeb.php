@@ -43,7 +43,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
             	
             	<header>
 			    	<h1><?php the_title(); ?></h1>
-			    	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut dui turpis, in varius mi. Fusce fermentum aliquam elit, id viverra diam pellentesque a. Nullam ac tortor non tellus fermentum porttitor. Nullam vel tempor nibh. Cras vitae urna sem, sed dictum erat. Suspendisse potenti. Duis lobortis mauris eget ante mollis eleifend. Nam ornare vulputate nunc, et aliquet nisi eleifend dignissim. Vivamus tincidunt libero quis nunc feugiat non tincidunt mauris lacinia. In et hendrerit mi. Phasellus convallis arcu feugiat urna molestie quis dignissim mauris tincidunt. Proin a sapien et sem pretium ullamcorper.</p>
+			    	<p>Wherever we go, whomever we meet, we are inspired. The Creative Community page is our digital journal. Are you in the creative industry and have something to share? An expo or event you think we'll enjoy? <a href="mailto:submissions@icuinparis.com">Tell us</a>.</p>
 				</header>
 				
                 <section class="entry">

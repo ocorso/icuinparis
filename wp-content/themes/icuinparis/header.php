@@ -28,7 +28,7 @@ woo_head();
 <?php woo_top(); ?>
 
 <div id="logoposition">
-	<a href="/">	
+	<a href="http://staging.click3x.com/icuparis/">	
     	<img src="<?php echo get_bloginfo('wpurl')?>/wp-content/uploads/logo_icu.jpg" class="headerlogo">
     </a>    
 </div>

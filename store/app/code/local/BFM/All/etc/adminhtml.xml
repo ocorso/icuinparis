@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <bfmall translate="title" module="bfmall">
+            <title>BFM Modules</title>
+            <sort_order>100</sort_order>
+        </bfmall>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <bfmall translate="title" module="bfmall">
+                        <title>BFM Modules</title>
+                        <sort_order>100</sort_order>
+                    </bfmall>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

@@ -1,0 +1,27 @@
+<?php $lang = ''; if (Mage::app()->getStore(true)->getCode() == 'fr') { $lang = '_fr'; } ?>
+<div class="popup-fixed"></div>
+<div class="popup-box"><img src="<?php echo $this->getUrl(); ?>images/popup_merci<?php echo $lang; ?>.jpg" /></div>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+    var mapPopup = {
+        popupWrap : jQuery('.popup-fixed'),
+        popupBox : jQuery('.popup-box'),
+        clickOpen : function(){
+            mapPopup.popupWrap.fadeIn(500);
+            mapPopup.popupBox.fadeIn(500);
+            return false
+        },
+        clickClose : function() {
+            mapPopup.popupWrap.fadeOut(500, function(){
+                mapPopup.popupWrap.removeAttr('style');
+            });
+            mapPopup.popupBox.fadeOut(500, function(){
+                mapPopup.popupBox.removeAttr('style');
+            });
+            return false
+        }
+    }
+	mapPopup.popupBox.click(mapPopup.clickClose)
+    mapPopup.popupWrap.click(mapPopup.clickClose)
+})
+</script>

@@ -1,0 +1,410 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2010 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+/**
+ * Product list template
+ *
+ * @see Mage_Catalog_Block_Product_List
+ */
+?>
+<!--[if lt IE 8]>
+   <style type="text/css">
+   li a {display:inline-block;}
+   li a {display:block;}
+   </style>
+<![endif]-->
+<?php
+    $_productCollection=$this->getLoadedProductCollection();
+	 Mage::getModel('catalog/layer')->prepareProductCollection($_productCollection);
+    $_helper = $this->helper('catalog/output');
+?>
+
+<script language="javascript">
+function showBigImageDiv(packName, packId) {
+//alert(packId);
+document.getElementById(packId).src = packName;
+//document.getElementById('pro1').innerHTML = 'ffff';
+}
+</script>
+<?php //echo $_productCollection->getSelect(); ?>
+
+<div id="all_products">
+
+    <div id="tagline222">
+	
+	<div class="dividerline"></div>
+      <div class="left">
+      <?php 
+		$tarray = explode("/", $this->helper('core/url')->getCurrentUrl());
+		$pagetype = explode(".", $tarray[4]);
+		$t2array = explode(".", $tarray[3]);
+		$currcat223 = $t2array[0];
+	 ?>
+	  <?php  
+	  		$category = Mage::registry('current_category'); 
+			$style = "";
+			$material = "";
+			$designer = "";
+			$countryorig = "";
+			if($_GET['style']){
+				$attributeId = '118';
+				$attribute = Mage::getModel('catalog/resource_eav_attribute')->load($attributeId);
+				$attributeOptions = $attribute ->getSource()->getAllOptions();				
+				foreach($attributeOptions as $sstyle){
+					if($sstyle['value'] == $_GET['style']){
+						$style = $sstyle['label'];
+					}
+				}
+			}
+			if($_GET['material']){
+				$attributeId = '120';
+				$attribute = Mage::getModel('catalog/resource_eav_attribute')->load($attributeId);
+				$attributeOptions = $attribute ->getSource()->getAllOptions();
+				foreach($attributeOptions as $sstyle){
+					if($sstyle['value'] == $_GET['material']){
+						$material = $sstyle['label'];
+					}
+				}
+			}
+			if($_GET['designer']){
+				$attributeId = '119';
+				$attribute = Mage::getModel('catalog/resource_eav_attribute')->load($attributeId);
+				$attributeOptions = $attribute ->getSource()->getAllOptions();
+				foreach($attributeOptions as $sstyle){
+					if($sstyle['value'] == $_GET['designer']){
+						$designer = $sstyle['label'];
+					}
+				}
+			}
+			if($_GET['countryorig']){
+				$attributeId = '127';
+				$attribute = Mage::getModel('catalog/resource_eav_attribute')->load($attributeId);
+				$attributeOptions = $attribute ->getSource()->getAllOptions();
+				foreach($attributeOptions as $sstyle){
+					if($sstyle['value'] == $_GET['countryorig']){
+						$countryorig = $sstyle['label'];
+					}
+				}
+			}
+			
+			if($_GET['style']){
+				echo strtoupper($style);
+			}else if($_GET['material']){
+				echo strtoupper($material);
+			}else if($_GET['designer']){
+				echo strtoupper($designer);
+			}else if($this->helper('catalogSearch')->getEscapedQueryText()){ 
+				echo ucwords($this->helper('catalogSearch')->getEscapedQueryText()); 
+			}else{ 
+				if(strtoupper($category->getName()) == strtoupper("ladies") || strtoupper($category->getName()) == strtoupper("gentlemen")){
+					echo strtoupper("accessorize your style");
+				}else{
+					echo strtoupper($category->getName());
+				}
+			} 
+		?>
+	  </div>
+	  <?php echo str_replace("<a href=\"#\" class=\"backlink\">back to top <img src=\"http://www.icuinparis.com/skin/frontend/icu/icu/images/up_arrow.jpg\" width=\"10\" height=\"8\" /></a>", "", $this->getToolbarHtml()); ?>
+	   </div>
+	   <div id="filternavtext">
+	 <?php 
+	  	$totalfilters = 0;
+	  	/*
+	  	$breadcrumbs = $this->getLayout()->getBlock('breadcrumbs');
+	  	if($breadcrumbs) echo $breadcrumbs->toHtml();
+	  	 */
+		if(Mage::app()->getStore()->getStoreId() == "1"){ echo "Sort by price"; }else{ echo "Trier par prix"; } ?>: <?php echo "<a href=\"?";
+				if($_GET['price']){ 
+					echo "&price=" . $_GET['price'];
+				}
+				if($_GET['countryorig']){
+					echo "&countryorig=" . $_GET['countryorig'];
+				}
+				if($_GET['style']){
+					echo "&style=" . $_GET['style'];
+				}
+				if($_GET['material']){
+					echo "&material=" . $_GET['material'];
+				}
+				if($_GET['material_2']){
+					echo "&material_2=" . $_GET['material_2'];
+				}
+				if($_GET['designer']){
+                	echo "&designer=" . $_GET['designer'];
+                }
+				if($_GET['limit']){
+					echo "&limit=" . $_GET['limit'];
+				}
+				if($_GET['q']){
+					echo "&q=" . $_GET['q'];
+				}
+				if(Mage::app()->getStore()->getStoreId() == "1"){
+					echo "&dir=desc&order=price\" class=\"tTip\" title=\"Sort High to Low\">High</a> | ";
+				}else{
+					echo "&dir=desc&order=price\" class=\"tTip\" title=\"Trier max à min\">Max</a> | ";
+				}
+				
+				echo "<a href=\"?";
+				if($_GET['price']){ 
+					echo "&price=" . $_GET['price'];
+				}
+				if($_GET['countryorig']){
+					echo "&countryorig=" . $_GET['countryorig'];
+				}
+				if($_GET['style']){
+					echo "&style=" . $_GET['style'];
+				}
+				if($_GET['material']){
+					echo "&material=" . $_GET['material'];
+				}
+				if($_GET['material_2']){
+					echo "&material_2=" . $_GET['material_2'];
+				}
+				if($_GET['designer']){
+                	echo "&designer=" . $_GET['designer'];
+                }
+				if($_GET['limit']){
+					echo "&limit=" . $_GET['limit'];
+				}
+				if($_GET['q']){
+					echo "&q=" . $_GET['q'];
+				}
+				if(Mage::app()->getStore()->getStoreId() == "1"){
+					echo "&dir=asc&order=price\" class=\"tTip\" title=\"Sort Low to High\">Low</a>";
+				}else{
+					echo "&dir=asc&order=price\" class=\"tTip\" title=\"Trier min à max\">Min</a>";
+                }?>
+        <?php 
+		echo "</div>";
+		?>
+		
+    <div id="sidemenu22">
+    <?php 
+    	$left_navigation_menu = '
+    	      <ul id="menu2222">
+	  	<li>';
+    	if(Mage::app()->getStore()->getStoreId() == "1")
+    	{
+    		$left_navigation_menu .= "CATEGORIES";
+    	}
+    	else
+    	{
+    		$left_navigation_menu .= "CATÉGORIES";
+    	}
+    	$left_navigation_menu .= '</li>';
+		if($tarray[3] == "gentlemen" || $tarray[3] == "gentlemen.html")
+		{
+			$left_navigation_menu .= '<li><a href="#" onclick="swaparrow(\'arrow1\')"><img src="http://www.icuinparis.com/skin/frontend/icu/icu/images/down-arrow.jpg" width="9" height="9" id="arrow1" name="arrow1" />jewelry</a>
+				<ul>
+				<li><a href="http://www.icuinparis.com/' . $currcat223 . '/cufflinks.html?limit=12&p=1" ' . ($pagetype[0] == "cufflinks" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>cufflinks</a></li>
+				<li><a href="http://www.icuinparis.com/' . $currcat223 . '/rings.html?limit=12&p=1" ' . ($pagetype[0] == "rings" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>RINGS</a></li>
+				<li><a href="http://www.icuinparis.com/' . $currcat223 . '/bracelets.html?limit=12&p=1" ' . ($pagetype[0] == "bracelets" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>BRACELETS</a></li>
+				<li><a href="http://www.icuinparis.com/' . $currcat223 . '/necklaces.html?limit=12&p=1" ' . ($pagetype[0] == "necklaces" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>NECKLACES</a></li>
+				<li><a href="http://www.icuinparis.com/' . $currcat223 . '/pins.html?limit=12&p=1" ' . ($pagetype[0] == "pins" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>PINS</a></li>
+				</ul>
+			</li>
+			<li><a href="#" onclick="swaparrow(\'arrow2\')"><img src="http://www.icuinparis.com/skin/frontend/icu/icu/images/down-arrow.jpg" width="9" height="9" id="arrow2" name="arrow2" />accessories</a>
+				<ul>
+				<li><a href="http://www.icuinparis.com/' . $currcat223 . '/scarves.html?limit=12&p=1" ' . ($pagetype[0] == "scarves" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>scarves</a></li>
+				<li><a href="http://www.icuinparis.com/' . $currcat223 . '/bows.html?limit=12&p=1" ' . ($pagetype[0] == "bows" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>bows</a></li>
+				</ul>
+			</li>
+			<li><a href="#" onclick="swaparrow(\'arrow3\')"><img src="http://www.icuinparis.com/skin/frontend/icu/icu/images/down-arrow.jpg" width="9" height="9" id="arrow3" name="arrow3" />clothing</a>
+				<ul>
+				<li><a href="http://www.icuinparis.com/' . $currcat223 . '/tee-shirts.html?limit=12&p=1" ' . ($pagetype[0] == "tee-shirts" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>tee-shirts</a></li>
+				</ul>
+			</li>';
+		}else{
+			$left_navigation_menu .= '
+			<li><a href="#" onclick="swaparrow(\'arrow1\')"><img src="http://www.icuinparis.com/skin/frontend/icu/icu/images/down-arrow.jpg" width="9" height="9" id="arrow1" name="arrow1" />jewelry</a>
+				<ul>
+				<li><a href="http://www.icuinparis.com/ladies/earrings.html?limit=12&p=1" ' . ($pagetype[0] == "earrings" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>EARRINGS</a></li>
+				<li><a href="http://www.icuinparis.com/ladies/rings.html?limit=12&p=1" ' . ($pagetype[0] == "rings" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>RINGS</a></li>
+				<li><a href="http://www.icuinparis.com/ladies/bracelets.html?limit=12&p=1" ' . ($pagetype[0] == "bracelets" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>BRACELETS</a></li>
+				<li><a href="http://www.icuinparis.com/ladies/necklaces.html?limit=12&p=1" ' . ($pagetype[0] == "necklaces" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>NECKLACES</a></li>
+				</ul>
+			</li>
+			<li><a href="#" onclick="swaparrow(\'arrow2\')"><img src="http://www.icuinparis.com/skin/frontend/icu/icu/images/down-arrow.jpg" width="9" height="9" id="arrow2" name="arrow2" />accessories</a>
+				<ul>
+				<li><a href="http://www.icuinparis.com/ladies/scarves.html?limit=12&p=1" ' . ($pagetype[0] == "scarves" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>scarves</a></li>
+				<li><a href="http://www.icuinparis.com/ladies/bags.html?limit=12&p=1" ' . ($pagetype[0] == "bgs" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>bags</a></li>
+				<li><a href="http://www.icuinparis.com/ladies/clutches.html?limit=12&p=1" ' . ($pagetype[0] == "clutches" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>clutches</a></li>
+				<li><a href="http://www.icuinparis.com/ladies/purses.html?limit=12&p=1" ' . ($pagetype[0] == "purses" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>purses</a></li>
+				<li><a href="http://www.icuinparis.com/ladies/hair-jewels.html?limit=12&p=1" ' . ($pagetype[0] == "hair-jewels" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>hair jewels</a></li>
+				<li><a href="http://www.icuinparis.com/ladies/brooches.html?limit=12&p=1" ' . ($pagetype[0] == "brooches" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>brooches</a></li>
+				<li><a href="http://www.icuinparis.com/ladies/bows.html?limit=12&p=1" ' . ($pagetype[0] == "bows" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>bows</a></li>
+				</ul>
+			</li>
+			<li><a href="#" onclick="swaparrow(\'arrow3\')"><img src="http://www.icuinparis.com/skin/frontend/icu/icu/images/down-arrow.jpg" width="9" height="9" id="arrow3" name="arrow3" />clothing</a>
+				<ul>
+				<li><a href="http://www.icuinparis.com/ladies/tee-shirts.html?limit=12&p=1" ' . ($pagetype[0] == "tee-shirts" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>tee-shirts</a></li>
+				</ul>
+			</li>';
+		};
+		$left_navigation_menu .=  '</ul>';
+    
+    
+    $catalog_leftnav = $this->getLayout()->getBlock('catalog.leftnav');
+    if($catalog_leftnav)
+    {
+		$catalog_leftnav->setIndianMenu($left_navigation_menu);
+    	echo $catalog_leftnav->toHtml();
+    }
+    else
+    {
+    	echo $left_navigation_menu;
+    }
+    ?>
+		
+	<!-- subscribe-left -->
+		<?php echo $this->getChildHtml('subscribe_left'); ?>
+	<!-- /subscribe-left -->
+
+</div>
+	
+
+	
+	
+	
+    <div id="content2">
+    <div class="contentad">
+     <?php if($category != NULL && strlen(trim($category->getImageUrl())) > 0){?>
+     <img src="<?php echo $category->getImageUrl(); ?>" />
+     <?php }?>
+    </div>
+	<?php if(!$_productCollection->count()): ?>
+	<div style='text-align:center; padding-top:200px; font:31px/40px "Baskerville Handcut"'>
+		
+		<?php echo $this->__('There are no products matching the selection.') ?>
+
+	</div>
+<?php else: ?>
+	
+	
+	  
+	<?php // Grid Mode ?>
+    <?php if($this->getMode()=='grid'): ?>
+
+
+    <?php $_collectionSize = $_productCollection->count() ?>
+    <?php $_columnCount = $this->getColumnCount(); ?>
+    <?php $i=0; foreach ($_productCollection as $_product): $i = $i+1; ?>
+		
+		<?php 
+			$attributeId = '119';
+			$attributes = $_product->getAttributes();
+			$designer = ucwords($attributes['designer']->getFrontend()->getValue($_product));
+			//$designer = $_product->getAttributeText('designer');
+		?>
+	  	
+	 
+	  
+		  <div class="pro_box">
+		  <table>
+		  <tr>
+		  <td>
+		  </td>
+		  <td>
+		  <div style="text-align:left">
+		  	<a href="<?php echo $_product->getProductUrl() ?>" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('<?php echo $i . "image"; ?>','','<?php echo $this->helper('catalog/image')->init($_product, 'thumbnail')->resize(195, 292); ?>',0)"><img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(195, 292); ?>" alt="<?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?>" width="195" height="292" name="<?php echo $i . "image"; ?>" id="<?php echo $i . "image"; ?>" /></a>
+		  </div>
+		  </td>
+		  <td>
+		  </td>
+		  </tr>
+		  <tr>
+		  <td width="25">
+		  </td>
+		  <td>
+		  <div style="text-align:left">
+		  <a href="<?php echo $_product->getProductUrl() ?>" class="prodtitlelink"><b><?php echo $designer; ?></b><br><?php echo str_replace($designer, "", $_helper->productAttribute($_product, $_product->getName(), 'name')) ?><br><?php $specialPrice = $_product->getSpecialPrice(); if($specialPrice != 0){ if(Mage::app()->getStore()->getStoreId() == "1"){ echo "<div class=\"price-box\"><p class=\"old-price\"><span class=\"price-label\">Regular Price: </span><span class=\"price\" id=\"old-price-136\">" . Mage::helper('core')->currency($_product->getPrice(), true, false) . "</span></p><p class=\"special-price\"><span class=\"price-label\">Sales Price: </span><span class=\"price\" id=\"product-price-136\">" . Mage::helper('core')->currency($_product->getSpecialPrice(), true, false) . "</span></p></div>"; }else{ echo "<div class=\"price-box\"><p class=\"old-price\"><span class=\"price-label\">Prix Initial: </span><span class=\"price\" id=\"old-price-136\">" . Mage::helper('core')->currency($_product->getPrice(), true, false) . "</span></p><p class=\"special-price\"><span class=\"price-label\">Prixe Promo: </span><span class=\"price\" id=\"product-price-136\">" . Mage::helper('core')->currency($_product->getSpecialPrice(), true, false) . "</span></p></div>"; } }else{ echo "<b>" . Mage::helper('core')->currency($_product->getPrice(), true, false) . "</b>"; } ?></a>
+		  </div>
+		  </td>
+		  <td>
+		  </td>
+		  </tr>
+		  </table>
+		  </div>
+          
+		  <div id="pro<?php echo $i ?>" style="display:none">
+			<div class="product_popup">
+			  <div class="product_desc">
+				<div class="img_box" id="mygall<?php echo $i ?>"><img id="listbigimage<?php echo $i ?>" height="250" src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(250); ?>" alt="<?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?>" /></div>
+					<div class="txt_box">
+				  		<a href="<?php echo $_product->getProductUrl() ?>"><h2><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h2></a>
+				  
+				  		<h4><?php echo $this->getPriceHtml($_product, true) ?></h4>
+				  		<p>&nbsp;</p>
+				  		<p><?php echo $_helper->productAttribute($_product, $_product->getShortDescription(), 'short_description') ?></p>
+				  		<p>&nbsp;</p>
+				  		<h4><a href="<?php echo $_product->getProductUrl() ?>"><strong>View Product Detail</strong></a></h4>
+				  		<p>&nbsp;</p>
+					</div>
+			  	</div>
+			  <div class="product_slider">
+				<div class="Container3">
+				<img src="<?php echo $this->getSkinUrl('images/up_arrow.gif') ?>" class="Scrollbar-Up3" onmouseover="scroller.startScroll(0, 5);" onmouseout="scroller.stopScroll();" alt="" /> 
+				<img src="<?php echo $this->getSkinUrl('images/down_arrow.gif') ?>" class="Scrollbar-Down3" onmouseover="scroller.startScroll(0, -5);" onmouseout="scroller.stopScroll();" alt="" />
+				  <div id="Scroller-3">
+				  
+					<div class="Scroller-Container3">
+					<?php $_gallery = Mage::getModel('catalog/product')->load($_product->getId())->getMediaGalleryImages(); 
+					$jjs = 0;  ?>
+						<?php foreach ($_gallery as $_image ):  $jjs = $jjs+1; ?>
+					  <div class="box3"><img onclick="showBigImageDiv('<?php echo $this->helper('catalog/image')->init($_product->getProduct(), '', $_image->getFile()); ?>', 'listbigimage<?php echo $i ?>')" style="cursor:pointer;" src="<?php echo $this->helper('catalog/image')->init($_product, 'thumbnail', $_image->getFile())->resize(100, 100); ?>" alt="" /></div>
+					  <?php endforeach;  ?>
+					</div>
+					
+				  </div>
+				</div>
+			  </div>
+			  <br class="clr" />
+			  <div class="button">
+				<p align="center">
+				  <input type="button" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')" class="btn01" value="ADD TO SHOPPING BAG" />
+				  <input type="button" onclick="setLocation('<?php echo $this->helper('wishlist')->getAddUrl($_product) ?>')" class="btn02" value="ADD TO WISHLIST" />
+				</p>
+			  </div>
+			</div>
+			
+		  </div>
+	  
+	  
+	  
+	  
+     
+		
+		<?php endforeach ?>
+		
+	<?php endif; ?>
+	<?php endif; ?>  
+      
+    
+    </div>
+  </div>
+ 
+  <div id="toolbarbottom"> <?php if(substr_count($this->getToolbarHtml(), "12 per page") > 0){ echo str_replace("padding-top:14px", "padding-top:16px", $this->getToolbarHtml()); }else{ if(Mage::app()->getStore()->getStoreId() == "1"){ echo str_replace("<div class=\"pages\"><div class=\"basictextfiller\">all products shown</div>", "", $this->getToolbarHtml());}else{ echo str_replace("<div class=\"pages\"><div class=\"basictextfiller\">Tous les produits indiqués</div>", "", $this->getToolbarHtml()); } } ?></div>

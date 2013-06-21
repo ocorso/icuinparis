@@ -1,0 +1,10 @@
+<rss xmlns:g="http://base.google.com/ns/1.0" version="2.0">
+<channel>
+	<title><![CDATA[<?php echo $this->getFeedTitle()?>]]></title>
+	<link><![CDATA[<?php echo $this->getFeedLink()?>]]></link>
+	<description><![CDATA[<?php echo $this->getFeedDescription()?>]]></description>
+	<?php foreach($this->getCollection() as $product) :?>
+		<?php echo $this->getItemHtml($product)?>
+	<?php endforeach;?>
+</channel>
+</rss>

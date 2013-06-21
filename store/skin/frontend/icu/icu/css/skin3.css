@@ -1,0 +1,110 @@
+.jcarousel-skin-tango .jcarousel-container {
+	background: #fff;
+
+}
+
+.jcarousel-skin-tango li {list-style:none; float:left; width:173px; height:173px; padding:0; margin:0; background:url(../images/line4.gif) no-repeat right top; text-align:center;}
+
+.jcarousel-skin-tango li .img_box {margin:0; padding:0 15px; width:143px; height:100px; text-align:center;}
+.jcarousel-skin-tango li .txt_box {margin:0; padding:0 15px; width:143px; height:auto; text-align:right;}
+.jcarousel-skin-tango li .txt_box p {font:normal 11px/12px "Baskerville Old Face"; color:#999999;}
+.jcarousel-skin-tango li .txt_box p a {color:#999999; text-decoration:none;}
+.jcarousel-skin-tango li .txt_box p a:hover {color:#000000;}
+.jcarousel-skin-tango li .txt_box p img {margin:2px 0;}
+
+.jcarousel-skin-tango .jcarousel-direction-rtl {
+	direction: rtl;
+}
+
+.jcarousel-skin-tango .jcarousel-container-horizontal {
+    width:690px;
+    padding:0 30px;
+	height:173px;
+}
+
+.jcarousel-skin-tango .jcarousel-clip-horizontal {
+    width: auto;
+    height: 173px;
+    margin:0;
+}
+
+.jcarousel-skin-tango .jcarousel-item {
+    
+}
+
+.jcarousel-skin-tango .jcarousel-item-horizontal {
+	
+}
+
+
+
+.jcarousel-skin-tango .jcarousel-item-placeholder {
+    background: #fff;
+    color: #000;
+}
+
+/**
+ *  Horizontal Buttons
+ */
+.jcarousel-skin-tango .jcarousel-next-horizontal {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 14px;
+    height: 27px;
+    cursor: pointer;
+    background:url(../images/btn_prev3.gif) no-repeat center;
+}
+
+.jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-next-horizontal {
+    left: 5px;
+    right: auto;
+    background:url(../images/btn_next3.gif) no-repeat center;
+}
+
+.jcarousel-skin-tango .jcarousel-next-horizontal:hover {
+    background:url(../images/btn_prev3-h.gif) no-repeat center;
+}
+
+.jcarousel-skin-tango .jcarousel-next-horizontal:active {
+    background:url(../images/btn_prev3-h.gif) no-repeat center;
+}
+
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal,
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal:hover,
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal:active {
+    cursor: default;
+    background:url(../images/btn_prev3-h.gif) no-repeat center;
+}
+
+.jcarousel-skin-tango .jcarousel-prev-horizontal {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 14px;
+    height: 27px;
+    cursor: pointer;
+    background:url(../images/btn_next3.gif) no-repeat center;
+}
+
+.jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-prev-horizontal {
+    left: auto;
+    right: 5px;
+    background:url(../images/btn_next3.gif) no-repeat center;
+}
+
+.jcarousel-skin-tango .jcarousel-prev-horizontal:hover {
+    background:url(../images/btn_next3-h.gif) no-repeat center;
+}
+
+.jcarousel-skin-tango .jcarousel-prev-horizontal:active {
+    background:url(../images/btn_next3-h.gif) no-repeat center;
+}
+
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal,
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal:hover,
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal:active {
+    cursor: default;
+    background:url(../images/btn_next3-h.gif) no-repeat center;
+}
+

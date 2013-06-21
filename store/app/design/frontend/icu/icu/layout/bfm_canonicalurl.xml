@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Blue Fountain Media
+ *
+ * NOTICE OF LICENSE
+ *
+ * <notice_of_license>
+ *
+ * @category    BFM
+ * @package     BFM_CanonicalUrl
+ * @copyright   Copyright (c) 2011 Blue Fountain Media (http://www.bluefountainmedia.com/). All Rights Reserved.
+ * @license     <license_url>
+ */ 
+-->
+<layout version="0.1.0">
+	<default>
+		<reference name="head">
+				<block type="page/html_head" name="head_url" as="head_url" template="bfm_canonicalurl/head.phtml" />
+		</reference>
+	</default>
+<!--
+Product view, force to load Sitemap URL instead of current URL
+-->
+    <catalog_product_view>
+		<reference name="head">	
+			<action method="unsetChild" ifconfig="canonicalurl/settings/product"><name>head_url</name></action>
+			<block type="page/html_head" name="head_url" as="head_url">
+				<action method="setTemplate" ifconfig="canonicalurl/settings/product"><template>bfm_canonicalurl/head-product.phtml</template></action>
+			</block>
+		</reference>
+	</catalog_product_view>
+<!--
+Remove Canonincal URL header from search pages
+-->
+	<catalogsearch_result_index>
+		<reference name="head">	
+			<action method="unsetChild"><name>head_url</name></action>
+		</reference>
+	</catalogsearch_result_index>
+	<catalogsearch_advanced_index>
+		<reference name="head">	
+			<action method="unsetChild"><name>head_url</name></action>
+		</reference>
+	</catalogsearch_advanced_index>
+	<catalogsearch_advanced_result>
+		<reference name="head">	
+			<action method="unsetChild"><name>head_url</name></action>
+		</reference>
+	</catalogsearch_advanced_result>
+<!--
+Remove Canonincal URL header from checkout pages
+-->
+	 <checkout_cart_index>
+		<reference name="head">	
+			<action method="unsetChild"><name>head_url</name></action>
+		</reference>
+	</checkout_cart_index>
+	<checkout_onepage_index>
+		<reference name="head">	
+			<action method="unsetChild"><name>head_url</name></action>
+		</reference>
+	</checkout_onepage_index>
+</layout>

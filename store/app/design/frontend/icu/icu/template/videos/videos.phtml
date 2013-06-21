@@ -1,0 +1,147 @@
+<script language="javascript">
+
+function showVideoDiv(packTitle, packContent, packName) {
+
+//alert(packName);
+
+var htmlcontents ='<object width="449" height="297" allowScriptAccess="never" allowNetworking="internal"><param name="movie" value="'+packName+'?fs=1&amp;hl=en_US&amp;color1=FFFFFF&amp;color2=FFFFFF&autoplay=1&loop=0&showsearch=0"></param><param name="allowFullScreen" value="true"></param><param name="allowScriptAccess" value="never" /><param name="allowNetworking" value="internal" /><param name="wmode" value="transparent" /><embed wmode="transparent" src="'+packName+'?fs=1&amp;hl=en_US&amp;color1=FFFFFF&amp;color2=FFFFFF&autoplay=1&loop=0&showsearch=0" type="application/x-shockwave-flash" allowfullscreen="true" width="449" height="297" allowScriptAccess="never" allowNetworking="internal"></embed></object>';
+
+document.getElementById('youtubevideo').innerHTML = htmlcontents;
+
+document.getElementById('pTitle').innerHTML = packTitle;
+
+document.getElementById('pContent').innerHTML = packContent;
+
+}
+
+</script>
+
+<?php
+
+$i = 0;             
+
+$collection = Mage::getModel('videos/videos')->getCollection();
+
+
+
+$size = $collection->getSize();
+
+$cnt = count($collection);
+
+foreach ($collection as $item) {
+
+	$i = $i+1;
+
+	if($i==1) {
+
+		
+
+		$replaceText = array("watch?v=");
+
+		$firstVideo = str_replace($replaceText, "v/", $item->getStatus());
+
+		$title = $item->getTitle();
+
+		$content = $item->getContent();
+
+
+
+	}
+
+	}
+
+?>
+
+<div id="video_section">
+
+	<div class="video" id="youtubevideo">
+
+	
+
+	
+
+	<object width="449" height="297" allowScriptAccess="never" allowNetworking="internal">
+
+	<param name="movie" value="<?php echo $firstVideo ?>?fs=1&amp;hl=en_US&amp;color1=FFFFFF&amp;color2=FFFFFF&autoplay=0&loop=0&showsearch=0"></param>
+
+	<param name="allowFullScreen" value="true"></param>
+
+	<param name="allowScriptAccess" value="never" />
+
+    <param name="allowNetworking" value="internal" />
+
+    <param name="wmode" value="transparent" />
+
+<embed wmode="transparent" src="<?php echo $firstVideo ?>?fs=1&amp;hl=en_US&amp;color1=FFFFFF&amp;color2=FFFFFF&autoplay=0&loop=0&showsearch=0" type="application/x-shockwave-flash" allowfullscreen="true" width="449" height="297" allowScriptAccess="never" allowNetworking="internal"></embed></object>
+
+
+
+
+
+	</div>
+
+	<div class="video_des">
+
+	  <h2 id="pTitle"><?php echo $title ?></h2>
+
+	  <p>&nbsp;</p>
+
+	  <p id="pContent"><?php echo $content ?></p>
+
+	</div>
+
+</div>
+
+
+
+
+
+<div id="video_carousel">
+
+<ul id="mycarousel" class="jcarousel-skin-tango">
+
+<?php
+
+$i = 0;
+
+//$collection->setPageSize(5);
+
+//$collection->setCurPage(2);
+
+$size = $collection->getSize();
+
+$cnt = count($collection);
+
+foreach ($collection as $item) {
+
+	$i = $i+1;
+
+	//$item->setTitle($i);
+
+	//echo $item->getFilename();
+
+	$replaceText = array("watch?v=");
+
+	$videoSrc = str_replace($replaceText, "v/", $item->getStatus());
+
+	$title = htmlentities($item->getTitle(),ENT_QUOTES);
+
+	$content = htmlentities($item->getContent(),ENT_QUOTES);
+
+?>
+
+<li style="width:140px; padding:9px; height:90px; margin-right:40px; list-style:none outside none; border:1px solid #FFFFFF;">
+
+<img style="cursor:pointer;" onclick="showVideoDiv('<?php echo $title ?>', '<?php echo $content ?>', '<?php echo $videoSrc ?>')" src="<?php echo $this->getUrl().'media/video/'.$item->getFilename() ?>" width="140" height="90" alt="" />
+
+</li>
+
+<?php
+
+}		
+
+?>
+
+</ul>
+
+</div>

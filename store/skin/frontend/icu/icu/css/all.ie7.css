@@ -1,0 +1,8 @@
+ul.dropdown ul li {
+    position: relative;
+    left: -3px
+}
+.b-style-dropdown, .b-style-dropdown__wrap {
+    position: relative;
+    z-index: 9999;
+}

@@ -1,0 +1,28 @@
+<div class="subscribe-left-block">
+	<div class="subscribe-borders">
+		<form action="<?php echo $this->getUrl('bfmsubscribe/subscriber/new') ?>" method="post" id="subscribe-left-validate-detail">
+			<div class="subscribe-header"><span class="subscribe-to"><img src="<?php echo $this->getSkinUrl('images/subscribe_to.gif') ?>" alt="<?php echo $this->__('Subscribe to') ?>" /></span>&nbsp;<?php echo $this->__('I C U') ?></div>
+			<div class="subscribe-content"><?php echo $this->__('Sign up for specials, promos and new product announcements from ICUinParis.com') ?></div>
+			<div class="newsletter-elements">
+				<input type="text" value="<?php echo $this->__('YOUR EMAIL ADDRESS') ?>" onfocus="if(this.value=='<?php echo $this->__('YOUR EMAIL ADDRESS') ?>')this.value='';" onblur="if(this.value=='')this.value='<?php echo $this->__('YOUR EMAIL ADDRESS') ?>';" name="email" id="newsletternew" class="_for_sending" />
+				<button class="subscribe-button" type="submit">
+					<span>
+						<img src="<?php echo $this->getSkinUrl('images/btn_arrow.gif') ?>" alt="" />
+					</span>
+				</button>
+			</div>
+		</form>
+	</div>
+</div>
+
+<script type="text/javascript">
+	//<![CDATA[
+	var newsletterSubscriberFormDetail = new VarienForm('subscribe-left-validate-detail');
+	//]]>
+	jQuery(document).ready(function(){
+
+		/* create static Newsletter  */
+		bfm.utils.Newsletter.create("#subscribe-left-validate-detail");
+
+	});
+</script>

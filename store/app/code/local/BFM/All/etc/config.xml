@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <BFM_All>
+            <version>0.0.1</version>
+        </BFM_All>
+    </modules>
+    <global>
+        <helpers>
+            <bfmall>
+                <class>BFM_All_Helper</class>
+            </bfmall>
+        </helpers>
+        <models>
+            <core>
+                <rewrite>
+                    <translate_inline>BFM_All_Model_Renderer</translate_inline>
+                </rewrite>
+            </core>
+            <bfmall>
+                <class>BFM_All_Model</class>
+                <resourceModel>bfmall_mysql4</resourceModel>
+            </bfmall>
+        </models>
+    </global>
+    <phpunit>
+        <suite>
+            <modules>
+                <BFM_All/>
+            </modules>
+        </suite>
+    </phpunit>
+</config>

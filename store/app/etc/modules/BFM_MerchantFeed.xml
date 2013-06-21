@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<BFM_MerchantFeed>
+			<active>true</active>
+			<codePool>local</codePool>
+		</BFM_MerchantFeed>
+	</modules>
+</config>

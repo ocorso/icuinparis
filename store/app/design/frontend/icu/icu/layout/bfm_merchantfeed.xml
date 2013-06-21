@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout>
+
+	<merchantfeed_index_index>
+		<reference name="root">
+			<action method="setTemplate"><template>bfm_merchantfeed/xmlpage.phtml</template></action>
+			<action method="unsetChildren" />
+			<block type="merchantfeed/feed" name="merchantfeed_feed" template="bfm_merchantfeed/feed.phtml">
+				<block type="core/template" name="merchantfeed_feed_item" template="bfm_merchantfeed/feed/item.phtml" />
+			</block>
+		</reference>
+	</merchantfeed_index_index>
+	
+</layout>

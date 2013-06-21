@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <bfmall translate="label" module="bfmall">
+            <label>BFM Extensions</label>
+            <sort_order>300</sort_order>
+        </bfmall>
+    </tabs>
+</config>

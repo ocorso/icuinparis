@@ -1,0 +1,164 @@
+* 3.1.3
+
+* Improved: invoice pdf with complete payment information
+* Improved: possibility to update magento order payment data
+* Improved: when create magento order use first options values for products with variations listed as simple
+* Improved: added link to paypal transaction page when available
+* Improved: changing shipping/billing address when customer changed it on eBay
+* Fix: incorrect images urls (missing slash)
+* Fix: do not stop item by synchronization template
+* Fix: wrong state (Alabama) in US-orders addresses
+* Fix: do not use all feedback templates by cicle mode
+
+* 3.1.2
+
+* Improved: possibility to cancel magento orders for transactions, when combined order available
+* Improved: more readable order logs
+* Improved: IE9 and magento 1.6.x support
+* Improved: added interval setting to synchronization inspector
+* Fix: shipping status not updated
+* Fix: may not import tracking information in some situations
+* Fix: wrong configurable price when variation price get from associated products
+* Fix: wrong link to ebay item on order page for all marketplaces except USA
+* Fix: cannot save logs clearing settings when everything is disabled
+* Fix: measurement system after save always shows as metric
+* Fix: last instead of first custom option was used in magento order for simple product without variations
+* Fix: third party listings progressbar worked incorrectly
+
+* 3.1.1
+
+* Improved: relist item without update it data
+* Improved: added search listings items tool
+* Improved: order log entries when order status has been updated on eBay
+* Improved: support importing tracking details from eBay
+* Improved: added partial product revise
+* Improved: when special price empty use main price
+* Improved: support special price from/to date
+* Improved: support ebay shipping rate table
+* Improved: support international shipping to locations without specified service
+* Improved: support free shipping for first flat/calculated domestic shipping service
+* Improved: support actions for multiple orders
+* Improved: display and search by selling manager record number in orders grid
+* Improved: search items by sku in orders grid
+* Improved: tax table is enabled for eBay motors
+* Improved: add option to getting price from associated products
+* Fix: wrong product details mode after migration process
+* Fix: ignore best offer accept and reject price when (<= 0)
+* Fix: ignore variation options when require is false
+* Fix: mixed EPS and self hosted images fail
+* Fix: low speed of synchronization when variations are changed
+* Fix: wrong price in magento order for products with tier price
+* Fix: categories with level more than 3 are not displayed during listing creation
+* Fix: error for tag <Item.ShippingDetails.CalculatedShippingRate.PackageWidth> when dimension source is none
+* Fix: wrong html for gallery with one image
+* Fix: error Please specify tracking_number in magento 1.6.*
+* Fix: show empty sku at listing view grid (conflict with other extension)
+* Fix: item do not relist and stop when categories set is source of it listing
+* Fix: get wrong magento product status when cron is running (trouble of relist action)
+* Fix: non-alphabetical sort order of templates in filters at listings grid
+
+* 3.1.0
+
+* Fix: listing upgrades correct save all options
+* Fix: media gallery and image in product description
+* Fix: shipping cost changed when migration is run
+* Fix: replace comma to point in shipping cost value
+* Fix: wrong select attribute sets when template is duplicate
+* Fix: images qty 'All' for non-gallery view shows no images
+* Fix: wrong error message 'Product is out of stock' during order creation
+* Fix: wrong max gallery images amount in description templates
+
+* 3.0.9
+
+* Improved: added checkout message from buyer
+* Fix: orders duplicated when fatal error occurred
+* Fix: revise fail when variation was purchased
+* Fix: correct revise and stop variation products
+* Fix: unexpected stop of variation product
+* Fix: unsupported operand types orders synch
+* Fix: can't get ebay sales list exception
+* Fix: incorrect prices for orders with tax
+* Fix: undefined index items in synchronization
+* Fix: cannot save eBay store category
+* Fix: feedback transaction id linked to wrong order
+* Fix: feedback item id linked to wrong item
+
+* 3.0.8
+
+* Improved: more secure extension layout
+* Improved: magento go buttons support
+* Improved: inspector added to templates synchronization
+* Fix: migration tool shipping price with comma
+* Fix: migration tool gallery images count
+* Fix: store view products thumbnails not showed
+* Fix: request info is not defined, php configuration
+* Fix: account does not exist error
+* Fix: disabled calculated shipping for eBay Motors
+* Fix: vat rate not saves float value
+* Fix: incorrect price and special price formatting in description template
+
+* 3.0.7
+
+* Improved: periodical update products thumbnails
+* Fix: fatal error synchronization undefined index: only_data
+* Fix: listing view grid same id already exist
+* Fix: progress bar count products of multiple ebay actions
+* Fix: correct count of upload gallery images
+* Fix: SQL syntax error of relist synchronization
+* Fix: creation synchronization template when migration run
+* Fix: unsupported image format fatal error message
+* Fix: order creation error "Please specify the product required option(s)"
+* Fix: multiple creation of magento products
+
+* 3.0.6
+
+* Improved order grid with logs preview
+* Improved detect magento professional edition
+* Automatic migration of existing accounts during the migration
+* All new relist schedule logic of synchronization templates
+* Fix: automatic order creation error "headers already sent"
+* Fix: broken description media gallery when synchronization run
+* Fix: creating orders with fake (0000) zip-code for countries that don't have it
+* Fix: fatal error when was entered wrong license key
+* Fix: migration calculated shipping duplicate PRIMARY key
+* Fix: when connector duplicate ebay items
+* Fix: correct configurable attribute images
+* Fix: collision synchronization and changes of products
+* Fix: wrong validation license directory by cron
+
+* 3.0.5
+
+* Fix: disabled payment methods issue
+* Fix: escapeHtml added for magento < 1.4.0
+* Fix: correct product delete issue
+
+* 3.0.4
+
+* Fix: critical issue of license validation
+
+* 3.0.3
+
+* Added FAQ block at support page
+* Added ability to send Tracking Number to eBay after order has status Shipped.
+* Added PayPal transaction information to magento orders transactions
+* Added synchronization for Singel Item and Custom Number QTY mode
+* Fix: correct price for bundle products
+* Fix: eBay images was limited to 12
+
+* 3.0.2
+
+* Add Stock Availability column to listing view
+* Fix: success verification SSL certificate
+* Fix: correct price for configurable products
+
+* 3.0.1
+
+* Code directory moved from local to community
+* Improved localization possibilities
+* Fix: incorrect price in orders for bundle products with custom price attribute
+* Fix: tracking number was not sent after creating invoice
+* Fix: no currency conversion for orders with custom currency
+
+* 3.0.0
+
+* There are all new extension, named currently as "M2E Pro"

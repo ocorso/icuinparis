@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+    </default>
+    <videos_index_index>
+		<reference name="root">
+            <action method="setTemplate"><template>page/video.phtml</template></action>
+        </reference>
+        <reference name="content">
+            <block type="videos/videos" name="videos" template="videos/videos.phtml" />
+        </reference>
+    </videos_index_index>
+</layout> 

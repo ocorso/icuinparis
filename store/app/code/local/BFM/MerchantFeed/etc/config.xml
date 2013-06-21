@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<BFM_MerchantFeed>
+			<version>0.0.1</version>
+		</BFM_MerchantFeed>
+	</modules>
+	
+	<frontend>
+		<routers>
+			<merchantfeed>
+				<use>standard</use>
+				<args>
+					<module>BFM_MerchantFeed</module>
+					<frontName>merchantfeed_universal</frontName>
+				</args>
+			</merchantfeed>
+		</routers>
+		
+		<layout>
+			<updates>
+				<merchantfeed>
+					<file>bfm_merchantfeed.xml</file>
+				</merchantfeed>
+			</updates>
+		</layout>
+	</frontend>
+	
+	<global>
+		<blocks>
+			<merchantfeed>
+				<class>BFM_MerchantFeed_Block</class>
+			</merchantfeed>
+		</blocks>
+	
+		<helpers>
+			<merchantfeed>
+				<class>BFM_MerchantFeed_Helper</class>
+			</merchantfeed>
+		</helpers>
+		<events>
+            <controller_front_init_routers>
+                <observers>
+                    <merchantfeed>
+                        <class>BFM_MerchantFeed_Controller_Router</class>
+                        <method>initControllerRouters</method>
+                    </merchantfeed>
+                </observers>
+            </controller_front_init_routers>
+        </events>
+	</global>
+	
+	<adminhtml>
+		<acl>
+			<resources>
+				<admin>
+					<children>
+						<system>
+							<children>
+								<config>
+									<children>
+										<merchantfeed_settings>
+											<title>Google Merchant Feed Options</title>
+										</merchantfeed_settings>
+									</children>
+								</config>
+							</children>
+						</system>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+	</adminhtml>
+</config>

@@ -1,11 +1,15 @@
+#RewriteEngine On
+#RewriteCond %{HTTP_HOST} ^(www.)?icuinparis.dev$
+#RewriteRule ^(/)?$ wp [L]
+
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /c3x-icu/wordpress/
+RewriteBase /
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /c3x-icu/wordpress/index.php [L]
+RewriteRule . /index.php [L]
 </IfModule>
 
 # END WordPress

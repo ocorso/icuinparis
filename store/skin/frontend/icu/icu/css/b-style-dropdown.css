@@ -1,0 +1,119 @@
+.b-style-dropdown {
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 11px;
+    width: 200px;
+    z-index: 999;
+    z-index:54;
+}
+
+.b-style-dropdown span { padding: 0; margin: 0; }
+
+.b-style-dropdown_state_close .b-style-dropdown__inner {
+    display: none;
+}
+
+.b-style-dropdown_state_open .b-style-dropdown__inner {
+    display: block;
+}
+
+.b-style-dropdown__placeholder {
+    color: #666;
+}
+
+.b-style-dropdown__flag {
+    display: inline-block;
+    margin: 0 3px 0 10px;
+    vertical-align: middle;
+    height: 18px;
+    /* IE7 hack */
+    *display:inline;
+    *zoom:1;
+}
+
+.b-style-dropdown__flag IMG {
+    vertical-align: top;
+}
+
+.b-style-dropdown__currentcy {
+    color: #000;
+}
+
+.b-style-dropdown__button {
+    display: inline-block;
+    overflow: hidden;
+    margin: 0 0 0 5px;
+    vertical-align: middle;
+    width:10px;
+    height: 10px;
+    text-decoration: none;
+    text-indent: 99px;
+    background: transparent url(../images/b-style-dropdown__button.png) no-repeat 0 2px;
+    /* IE7 hack */
+    *display:inline;
+    *zoom:1;
+}
+
+.b-style-dropdown__inner {
+    position: absolute;
+    display: block;
+    padding: 15px 15px 10px;
+    top: 25px;
+    right: 0;
+    font-size: 10px;
+    text-align: left;
+    background: #f7f7f7;
+    background: rgba(247,247, 247, .98);
+    -webkit-box-shadow: 2px 4px 5px 2px rgba(0, 0, 0, 0.2);
+       -moz-box-shadow: 2px 4px 5px 2px rgba(0, 0, 0, 0.2);
+            box-shadow: 2px 4px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+.b-style-dropdown__inner STRONG,
+.b-style-dropdown__list__item {
+    text-transform: uppercase;
+}
+
+.b-style-dropdown__inner STRONG {
+    display: block;
+    margin: 10px 0 0;
+    padding: 10px 0 0;
+    border-top: 1px solid #000;
+}
+
+.b-style-dropdown__inner STRONG:FIRST-CHILD {
+    margin: 0;
+    padding: 0;
+    border-top: none;
+}
+
+.b-style-dropdown__list {
+    margin: 5px 0 0;
+}
+
+.b-style-dropdown__list__item {
+    margin: 2px 0;
+}
+
+.b-style-dropdown__list__icon {
+    display: inline-block;
+    vertical-align: top;
+    width: 25px;
+    /* IE7 hack */
+    *display:inline;
+    *zoom:1;
+}
+
+.b-style-dropdown__list__link {
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    color: #666;
+    text-decoration: none;
+}
+
+.b-style-dropdown__list__link:HOVER,
+.b-style-dropdown__list__link_state_current{
+    color: #000;
+}

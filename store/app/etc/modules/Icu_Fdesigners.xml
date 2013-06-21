@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Icu_Fdesigners>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Icu_Fdesigners>
+    </modules>
+</config> 

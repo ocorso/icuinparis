@@ -1,0 +1,70 @@
+@charset "UTF-8";
+ul.dropdown {width:960px; padding:0; margin:0;}
+ul.dropdown, ul.dropdown li, ul.dropdown ul {list-style: none; margin: 0; padding: 0;}
+ul.dropdown {position: relative; z-index:597; float: left;}
+ul.dropdown li {float: left; zoom: 1; width:136px; /*height:22px;*/ text-align:center;}
+ul.dropdown li.first_nav_child {width: 144px!important;}
+ul.dropdown li.first_nav_child a {width: 144px!important;}
+ul.dropdown li.hover, ul.dropdown li:hover {position: relative; z-index: 599; cursor: default;}
+
+ul.dropdown ul {visibility: hidden;	position: absolute;	top:22px; left:0; z-index: 598; width:143px;}
+ul.dropdown ul li {float: none;}
+ul.dropdown ul ul {top: 0; left:0;}
+ul.dropdown li:hover > ul {visibility: visible;}
+ul.dropdown {font:bold 11px/22px Arial, Helvetica, sans-serif; color:#FFFFFF; text-transform:uppercase; margin:0; padding:0;}
+ul.dropdown li {padding:0; margin:0; color: #FFFFFF; line-height: 22px;}
+ul.dropdown a:link,  ul.dropdown a:visited {color: #fff; text-decoration: none;}
+ul.dropdown a:hover {color: #000000; text-decoration: none; background-color:#f7f7f7;}
+ul.dropdown a:active {color: #000000; background-color:#f7f7f7;}
+/* ----- END LEVEL */
+
+	/* ----- NON-FIRST LEVEL */
+
+	ul.dropdown ul {width: 143px; background:url(../images/navibg.png) no-repeat bottom right; color: #000000; font:normal 12px/20px Arial, Helvetica, sans-serif;	padding:5px 0 20px 0; text-transform:none;}
+	ul.dropdown ul li {background-color: transparent; color: #000000; filter: none;}
+	ul.dropdown ul li.hover, ul.dropdown ul li:hover {}
+	ul.dropdown ul a:link,  ul.dropdown ul a:visited {color: #000000;  text-align:left;}
+	ul.dropdown ul a:hover {color: #000000; text-decoration: none; background:none;}
+	ul.dropdown ul a:active {color: #000000;}
+
+	ul.dropdown ul a.ladies:link,  ul.dropdown ul a.ladies:visited {color: #000000; text-align:left; padding-left:50px; width:86px;}
+	ul.dropdown ul a.ladies:hover {color: #FFFFFF; text-decoration: none; background-color:#000000;}
+	ul.dropdown ul a.ladies:active {color: #FFFFFF; background-color:#000000;}
+
+	ul.dropdown ul a.gentelmen:link,  ul.dropdown ul a.gentelmen:visited {color: #000000; text-align:left; padding-left:38px; width:99px;}
+	ul.dropdown ul a.gentelmen:hover {color: #FFFFFF; text-decoration: none; background-color:#000000;}
+	ul.dropdown ul a.gentelmen:active {color: #FFFFFF; background-color:#000000;}
+
+	ul.dropdown ul a.designer:link,  ul.dropdown ul a.designer:visited {color: #000000; text-align:left; padding-left:52px; width:108px;}
+	ul.dropdown ul a.designer:hover {color: #FFFFFF; text-decoration: none; background-color:#000000;}
+	ul.dropdown ul a.designer:active {color: #FFFFFF; background-color:#000000;}
+	/* ----- END LEVEL */
+
+	/*------------------------------------------------------------------------------------------------------/
+ 	* @section	Support Class 'dir'
+ 	* @level sep	ul, .class
+ 	*/
+
+	/* ----- ALL LEVELS (incl. first) */
+	ul.dropdown *.dir {width:136px;}
+	/* ----- END LEVEL */
+
+	/* Components override */
+	ul.dropdown li a {display: block; padding:0; margin:0; width:136px;}
+
+	/* ------------- Override default */
+	ul.dropdown li {padding: 0;}
+	/* ------------- Reinitiate default: post-override activities  */
+
+	ul.dropdown li.dir {padding:0;}
+	ul.dropdown ul li.dir {	padding:0;}
+	/* ------------- Custom */
+	ul.dropdown li {}
+	ul.dropdown ul a {padding:0; width:136px; color: #000000; margin:0;}
+	ul.dropdown ul a:hover {color: #FFFFFF;	background-color:#000000;}
+	ul.dropdown a.open {background-color:#FFFFFF; color: #000;}
+	ul.dropdown ul a.open {background-color:#FFFFFF; color: #000;}
+
+	/* CSS 2.1 */
+	ul.dropdown li:hover > a.dir {background-color:#FFFFFF;	color: #000;}
+	ul.dropdown ul li:hover > a.dir {background-color:#FFFFFF; color: #000;}

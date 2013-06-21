@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+    </default>
+    <fdesigners_index_index>
+		<reference name="root">
+            <action method="setTemplate"><template>page/fdesign.phtml</template></action>
+        </reference>
+        <reference name="content">
+            <block type="fdesigners/fdesigners" name="fdesigners" template="fdesigners/fdesigners.phtml" />
+        </reference>
+    </fdesigners_index_index>
+</layout> 

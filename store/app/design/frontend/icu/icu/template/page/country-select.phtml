@@ -1,0 +1,436 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2010 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+/**
+ * Template for Mage_Page_Block_Html
+ */
+?>
+<?php
+	if($_POST['mmform'] == "formcc1"){
+		Mage::app()->getStore()->setCurrentCurrencyCode($_POST['currency']);
+		//Mage::run($_POST['language'], 'website');
+		setcookie("ICUcurrCountryCode", $_POST['country_id'], time()+3600*24*30);
+		setcookie("ICUcurrCountryName", $_POST['countryName'], time()+3600*24*30);
+		setcookie("ICUcurrLanguage", $_POST['language'], time()+3600*24*30);
+		setcookie("ICUcurrCurrency", $_POST['currency'], time()+3600*24*30);
+		header("Location: http://icuinparis.com");
+	}
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<?php echo $this->getChildHtml('head') ?>
+<script type="text/javascript">
+	function open_image(id) {
+	jQuery('#man01, #man02, #man03, #man04,> div').each(function(index) {
+    	//alert(index + ': ' + $(this).html());
+		jQuery(this).hide();
+  	});
+	jQuery('#'+id).show();
+	}
+	
+</script>
+<style type="text/css">
+
+#sddm1
+{	margin: 0;
+	padding: 0;
+	z-index: 30}
+
+#sddm1 li
+{	margin: 0;
+	padding: 0;
+	list-style: none;
+	float: left;
+	font: bold 11px arial}
+
+#sddm1 li a
+{	display: block;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	width: 60px;
+	background: #FFF;
+	color: #FFF;
+	text-align: center;
+	text-decoration: none}
+
+#sddm1 li a:hover
+{	background: #FFF}
+
+#sddm1 div
+{	position: absolute;
+	visibility: hidden;
+	margin: 0;
+	padding: 0 0 0 0;
+	background: #FFF;
+	border:none; }
+
+	#sddm1 div a
+	{	position: relative;
+		display: block;
+		margin: 0;
+		padding: 0 0 0 0;
+		width: auto;
+		white-space: nowrap;
+		text-align: left;
+		text-decoration: none;
+		background: #FFF;
+		color: #2875DE;
+		font: 11px arial}
+
+	#sddm1 div a:hover
+	{	background: #FFF;
+		color: #FFF}
+</style>
+<style type="text/css">
+#sddm2
+{	margin: 0;
+	padding: 0;
+	z-index: 30}
+
+#sddm2 li
+{	margin: 0;
+	padding: 0;
+	list-style: none;
+	float: left;
+	font: bold 11px arial}
+
+#sddm2 li a
+{	display: block;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	width: 60px;
+	background: #FFF;
+	color: #FFF;
+	text-align: center;
+	text-decoration: none}
+
+#sddm2 li a:hover
+{	background: #FFF}
+
+#sddm2 div
+{	position: absolute;
+	visibility: hidden;
+	margin: 0;
+	padding: 0 0 0 0;
+	background: #FFF;
+	border:none; }
+
+	#sddm2 div a
+	{	position: relative;
+		display: block;
+		margin: 0;
+		padding: 0 0 0 0;
+		width: auto;
+		white-space: nowrap;
+		text-align: left;
+		text-decoration: none;
+		background: #FFF;
+		color: #2875DE;
+		font: 11px arial}
+
+	#sddm2 div a:hover
+	{	background: #FFF;
+		color: #FFF}
+</style>
+<style type="text/css">
+#sddm3
+{	margin: 0;
+	padding: 0;
+	z-index: 30}
+
+#sddm3 li
+{	margin: 0;
+	padding: 0;
+	list-style: none;
+	float: left;
+	font: bold 11px arial}
+
+#sddm3 li a
+{	display: block;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	width: 60px;
+	background: #FFF;
+	color: #FFF;
+	text-align: center;
+	text-decoration: none}
+
+#sddm3 li a:hover
+{	background: #FFF}
+
+#sddm3 div
+{	position: absolute;
+	visibility: hidden;
+	margin: 0;
+	padding: 0 0 0 0;
+	background: #FFF;
+	border:none; }
+
+	#sddm3 div a
+	{	position: relative;
+		display: block;
+		margin: 0;
+		padding: 0 0 0 0;
+		width: auto;
+		white-space: nowrap;
+		text-align: left;
+		text-decoration: none;
+		background: #FFF;
+		color: #2875DE;
+		font: 11px arial}
+
+	#sddm3 div a:hover
+	{	background: #FFF;
+		color: #FFF}
+</style>
+<script type="text/javascript" language="javascript">
+var timeout	= 100;
+var closetimer	= 0;
+var ddmenuitem	= 0;
+
+// open hidden layer
+function mopen(id)
+{	
+	// cancel close timer
+	mcancelclosetime();
+
+	// close old layer
+	if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+
+	// get new layer and show it
+	ddmenuitem = document.getElementById(id);
+	ddmenuitem.style.visibility = 'visible';
+
+}
+// close showed layer
+function mclose()
+{
+	if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+	
+}
+
+// go close timer
+function mclosetime()
+{
+	closetimer = window.setTimeout(mclose, timeout);
+}
+
+// cancel close timer
+function mcancelclosetime()
+{
+	if(closetimer)
+	{
+		window.clearTimeout(closetimer);
+		closetimer = null;
+	}
+}
+
+function mchange(cur){
+	if(cur == "USD"){
+		document.getElementById('usdfirst').style.display = 'block';
+		document.getElementById('gbpfirst').style.display = 'none';
+		document.getElementById('eurfirst').style.display = 'none';
+	}else if(cur == "GBP"){
+		document.getElementById('usdfirst').style.display = 'none';
+		document.getElementById('gbpfirst').style.display = 'block';
+		document.getElementById('eurfirst').style.display = 'none';
+	}else if(cur == "EUR"){
+		document.getElementById('usdfirst').style.display = 'none';
+		document.getElementById('gbpfirst').style.display = 'none';
+		document.getElementById('eurfirst').style.display = 'block';
+	}
+	document.getElementById("currency").value = cur;
+}
+
+// close layer when click-out
+document.onclick = mclose; 
+
+</script>
+</head>
+<body>
+<?php echo $this->getChildHtml('after_body_start') ?>
+<?php echo $this->getChildHtml('global_notices') ?>
+<!-- HEADER AND NAVIGATION SECTION -->
+<?php echo $this->getChildHtml('header') ?>
+<!-- /HEADER AND NAVIGATION SECTION -->
+<div class="clr"></div>
+<!-- BODY SECTION -->
+<div id="body_section" style="background-image:url(http://icuinparis.com/skin/frontend/icu/icu/images/large_map.jpg); background-repeat:no-repeat; background-position: 0 110px">
+  <!-- body container -->
+	<form id="form1" method="post" action="countrychange.html">
+    <table style="width:100%">
+    	<tr>
+        	<td style="text-align:center;">
+            	<br /><br /><div class="titletext">ICU - WORLDWIDE SHIPPING</div><div class="basictext"><span style="color:#039"><?php if($_COOKIE['ICUcurrCountryCode'] == "US"){ echo "Howdy!"; }else if($_COOKIE['ICUcurrCountryCode'] == "FR"){ echo "Salut!"; }else{ echo "Cheers!"; }?></span> You are currently shopping from <span style="color:#039"><?php if($_COOKIE['ICUcurrCountryName']== "UNITED STATES"){ echo "The " . ucwords(strtolower($_COOKIE['ICUcurrCountryName'])); }else{ echo ucwords(strtolower($_COOKIE['ICUcurrCountryName'])); }?></span>, in <span style="color:#039"><?php if($_COOKIE['ICUcurrLanguage'] == "default"){ echo "English"; }else{ echo "French"; }?></span> with prices in the <span style="color:#039"><?php 
+			if(Mage::app()->getStore()->getCurrentCurrencyCode() == "USD"){ 
+				echo "United States Dollar"; 
+			}else if(Mage::app()->getStore()->getCurrentCurrencyCode() == "EUR"){ 
+				echo "Euro"; 
+			}else{ 
+				echo "British Pound"; 
+			} ?></span>.<br />If you wish to modify any of these criterias please do so below.</div>
+            </td>
+        </tr>
+    </table>
+    <p align="center" style="font-size:11px;" class="basictext">*It is not required to change all criteria if you choose to change only one. For example, you may shop in English on the French website in Dollars.</p><br /><br />
+    <table style="width:100%">
+    	<tr>
+        	<td style="width:30%"><div class="subtitletext">LANGUAGE</div></td>
+            <td style="width:40%"><div class="subtitletext">COUNTRY</div></td>
+            <td style="width:30%"><div class="subtitletext">CURRENCY</div></td>
+        </tr>
+        <tr height="10px">
+        	<td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+          <td height="15" colspan="3" class="basictext"></td>
+      </tr>
+        <tr>
+        	<td style="width:33%" class="basictext">Please choose to shop ICU - IN PARIS<br />in either French or English:</td>
+            <td style="width:33%" class="basictext">Please select your country:</td>
+            <td style="width:33%" class="basictext">Please select the currency you<br />wish to shop in:</td>
+        </tr>
+        <tr height="10px">
+        	<td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+          <td height="25">&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+        	<td>
+            	<?php /*
+            	<select name="language" id="language">
+        			<option value="default" <?php if($_COOKIE['ICUcurrLanguage'] == "default"){ echo "selected=\"selected\""; }?>>English</option>
+        			<option value="fr" <?php if($_COOKIE['ICUcurrLanguage'] == "fr"){ echo "selected=\"selected\""; }?>>French</option>
+      			</select>*/?>
+                <?php echo $this->getLayout()->getBlock('store_language')->toHtml(); ?>
+            </td>
+            <td>
+				<?php //echo Mage::getBlockSingleton('directory/data')->getCountryHtmlSelect($this->getEstimateCountryId()) 
+					echo str_replace("<select name=\"country_id\" id=\"country\" class=\"validate-select\" title=\"Pays\" >", "<select name=\"country_id\" id=\"country_id\" class=\"validate-select\" onChange=\"updateCountryName()\" >", str_replace("<select name=\"country_id\" id=\"country\" class=\"validate-select\" title=\"Country\" >", "<select name=\"country_id\" id=\"country_id\" class=\"validate-select\" onChange=\"updateCountryName()\" >", Mage::getBlockSingleton('directory/data')->getCountryHtmlSelect($_COOKIE['ICUcurrCountryCode'])));
+				?>
+				<input type="hidden" name="countryCode" id="countryCode" value="<?php echo $_COOKIE['ICUcurrCountryCode']; ?>" />
+                <input type="hidden" name="countryName" id="countryName" value="<?php echo $_COOKIE['ICUcurrCountryName']; ?>" />
+            </td>
+            <td>
+        <div id="usdfirst" <?php if(Mage::app()->getStore()->getCurrentCurrencyCode() == "USD"){ echo "style=\"display:block\""; }else{ echo "style=\"display:none\""; } ?>>
+            <ul id="sddm1">
+                <li><a href="#" 
+                	onclick="mchange('USD')" 
+                    onmouseover="mopen('m11')" 
+                    onmouseout="mclosetime()"><img src="http://icuinparis.com/skin/frontend/icu/icu/images/usd-arrow.jpg" /></a>
+                    <div id="m11" 
+                        onmouseover="mcancelclosetime()" 
+                        onmouseout="mclosetime()">
+                    <a href="#" onclick="mchange('GBP')" ><img src="http://icuinparis.com/skin/frontend/icu/icu/images/British-pounds.jpg" /></a>
+                    <a href="#" onclick="mchange('EUR')" ><img src="http://icuinparis.com/skin/frontend/icu/icu/images/euros.jpg" /></a>
+                    </div>
+                </li>
+            </ul>
+            <div style="clear:both"></div>
+    	</div>
+        <div id="eurfirst" <?php if(Mage::app()->getStore()->getCurrentCurrencyCode() == "EUR"){ echo "style=\"display:block\""; }else{ echo "style=\"display:none\""; } ?>>
+            <ul id="sddm2">
+                <li><a href="#" 
+                	onclick="mchange('EUR')" 
+                    onmouseover="mopen('m12')" 
+                    onmouseout="mclosetime()"><img src="http://icuinparis.com/skin/frontend/icu/icu/images/euros-arrow.jpg" /></a>
+                    <div id="m12" 
+                        onmouseover="mcancelclosetime()" 
+                        onmouseout="mclosetime()">
+                    <a href="#" onclick="mchange('USD')" ><img src="http://icuinparis.com/skin/frontend/icu/icu/images/usd.jpg" /></a>
+                    <a href="#" onclick="mchange('GBP')" ><img src="http://icuinparis.com/skin/frontend/icu/icu/images/British-pounds.jpg" /></a>
+                    </div>
+                </li>
+            </ul>
+            <div style="clear:both"></div>
+    	</div>
+        <div id="gbpfirst" <?php if(Mage::app()->getStore()->getCurrentCurrencyCode() == "GBP"){ echo "style=\"display:block\""; }else{ echo "style=\"display:none\""; } ?>>
+            <ul id="sddm3">
+                <li><a href="#" 
+                	onclick="mchange('GBP')" 
+                    onmouseover="mopen('m13')" 
+                    onmouseout="mclosetime()"><img src="http://icuinparis.com/skin/frontend/icu/icu/images/British-pounds-arrow.jpg" /></a>
+                    <div id="m13" 
+                        onmouseover="mcancelclosetime()" 
+                        onmouseout="mclosetime()">
+                    <a href="#" onclick="mchange('USD')" ><img src="http://icuinparis.com/skin/frontend/icu/icu/images/usd.jpg" /></a>
+                    <a href="#" onclick="mchange('EUR')" ><img src="http://icuinparis.com/skin/frontend/icu/icu/images/euros.jpg" /></a>
+                    </div>
+                </li>
+            </ul>
+            <div style="clear:both"></div>
+    	</div>
+    <input type="hidden" name="currency" id="currency" value="<?php echo Mage::app()->getStore()->getCurrentCurrencyCode(); ?>" />
+                <script type="text/javascript" language="javascript">
+				function updateCountryName(){
+					var sel = document.getElementById('country_id');
+					var strValue = sel.options[sel.selectedIndex].value;
+					var strText = sel.options[sel.selectedIndex].text;
+					document.getElementById("countryName").value = strText;
+					//alert(document.getElementById("countryName").value);
+				}
+				</script>
+            </td>
+        </tr>
+        <tr>
+        	<td height="46" colspan="3" style="height=55px">&nbsp;</td>
+        </tr>
+        <tr align="center">
+            <td colspan="3" style="text-align:center">
+            	<input type="hidden" name="mmform" id="mmform" value="formcc1" />
+    			<input type="submit" value="UPDATE &amp; RETURN TO SHOPPING" style="cursor:pointer; background:#3F3F3F; color:#FFF; height:22px; width:240px;" />
+            </td>
+        </tr>
+        <tr height="300px">
+        	<td></td>
+            <td></td>
+            <td></td>
+        </tr>
+   </table>
+  	
+  </form>
+  <!-- /body container -->
+
+  <div class="clr"></div>
+</div>
+<!-- /BODY SECTION -->
+<div class="clr"></div>
+<!-- FOOTER SECTION -->
+<?php echo $this->getChildHtml('footer') ?>
+<!-- /FOOTER SECTION -->
+<?php echo $this->getChildHtml('before_body_end') ?>
+<div class="clr"></div>
+</body>
+</html>

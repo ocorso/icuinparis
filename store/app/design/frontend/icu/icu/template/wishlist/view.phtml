@@ -1,0 +1,127 @@
+<div id="wishlist_section">
+        <h4>My Wishlist</h4>
+        <p>Save your favorite designs for your next visit, share with your friends and family, send to Facebook or Tweet about it. </p>
+      </div>
+	  
+	  
+	<?php if ($this->hasWishlistItems()): ?>
+    <form action="<?php echo $this->getUrl('*/*/update') ?>" method="post">
+	<?php echo $this->getBlockHtml('formkey')?>
+	
+      <div id="wishlist_carousel">
+      <ul id="mycarousel1" class="jcarousel-skin-tango">
+	  
+	  <?php foreach ($this->getWishlistItems() as $item): ?>
+        <li>
+        	<div class="img_box"><a href="<?php echo $this->getProductUrl($item) ?>"><img src="<?php echo $this->helper('catalog/image')->init($item, 'small_image')->resize(100, 100); ?>" alt="" /></a></div>
+            <div class="txt_box">
+            	<p><a href="<?php echo $this->getItemAddToCartUrl($item) ?>">Add to Cart</a></p>
+                <p><a href="<?php echo $this->getProductUrl($item) ?>">View Product</a></p>
+                <p><a href="#"><img src="<?php echo $this->getSkinUrl('images/icon-facebook2.gif') ?>" alt="" /></a> <a href="#"><img src="<?php echo $this->getSkinUrl('images/icon-twitter2.gif') ?>" alt="" /></a></p>
+            </div>
+        </li>
+		<?php endforeach ?>
+		
+		
+        
+      </ul>
+      </div>
+	  
+	  
+	  
+	  </form>
+    <?php else: ?>
+        <p style="padding-top:150px; padding-bottom:50px; padding-left:215px; font-size:11px;"><?php echo $this->__('You have no items in your wishlist.') ?></p>
+    <?php endif ?>
+    <script type="text/javascript">
+    //<![CDATA[
+    function confirmRemoveWishlistItem() {
+        return confirm('<?php echo $this->__('Are you sure you want to remove this product from your wishlist?') ?>');
+    }
+
+    function focusComment(obj) {
+        if( obj.value == '<?php echo $this->__('Please enter your comments...') ?>' ) {
+            obj.value = '';
+        } else if( obj.value == '' ) {
+            obj.value = '<?php echo $this->__('Please enter your comments...') ?>';
+        }
+    }
+    //]]>
+    </script>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	<?php /////////////////////////// BEST SELLING PRODUCTS ////////////////////////////////// ?>
+	
+	  
+	<?php //echo $this->getBlockHtml('formkey')?>
+  	  <div id="bestseller_section">
+        <h4>ICU - In Paris Best Sellers</h4>
+        <p>Explore the most popular ICU products, add them to your wishlist or click to view full product description.</p>
+  </div>
+      <div id="bestseller_carousel">
+      <ul id="mycarousel2" class="jcarousel-skin-tango">
+	  
+	  
+	  <?php
+	$totalPerPage = ($this->show_total) ? $this->show_total : 6;
+	$counter = 1;
+	$visibility = array(
+						  Mage_Catalog_Model_Product_Visibility::VISIBILITY_BOTH,
+						  Mage_Catalog_Model_Product_Visibility::VISIBILITY_IN_CATALOG
+					  );
+
+	$storeId = Mage::app()->getStore()->getId();
+	$_productCollection = Mage::getResourceModel('reports/product_collection')
+								  ->addAttributeToSelect('*')
+								  ->addOrderedQty()
+								  ->addAttributeToFilter('visibility', $visibility)
+								  ->setOrder('ordered_qty', 'desc');
+	?>
+	  
+	<?php foreach($_productCollection as $product): ?>
+
+	<?php
+			$categories = null;
+			foreach (explode(",", $product->category_ids) as $catId){
+
+			  //Mage_Catalog_Model_Category
+			  $cat = Mage::getModel('catalog/category')
+							->setStoreId(Mage::app()->getStore()->getId())
+							->load($catId);
+			  $catName = $cat->getName();
+
+			  $catLink = $cat->getUrlPath();
+			  $categories .= '<a href="'.$catLink.'" title="'.$catName.'">'.$catName.'</a>&nbsp;&nbsp;';
+			}
+
+	?>
+
+	<?php //if($counter <= $totalPerPage): ?>  
+	<?php $productUrl =  $product->getProductUrl() ?>
+	
+	  <?php //echo '<PRE>'; var_dump($product); echo '</PRE>'; ?>
+	  
+		<li>
+			<div class="img_box"><a href="<?php echo $productUrl ?>"><img src="<?php echo $this->helper('catalog/image')->init($product, 'image')->resize(100); ?>" alt="" /></a></div>
+			<div class="txt_box">
+				<p><a href="<?php echo $this->getUrl().'checkout/cart/add?product='.$product->getId().'&qty;=1' ?>">Add to Cart</a></p>
+				<p><a href="#">View Product</a></p>
+				<p><a href="#"><img src="<?php echo $this->getSkinUrl('images/icon-facebook2.gif') ?>" alt="" /></a> <a href="#"><img src="<?php echo $this->getSkinUrl('images/icon-twitter2.gif') ?>" alt="" /></a></p>
+			</div>
+		</li>
+        
+	<?php $counter++; ?>
+	<?php endforeach; ?>	
+		
+		
+      </ul>
+  </div>

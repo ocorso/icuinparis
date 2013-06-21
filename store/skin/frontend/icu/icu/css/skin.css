@@ -1,0 +1,75 @@
+.jcarousel-skin-tango .jcarousel-container {
+    background: #fff;
+}
+.jcarousel-skin-tango .jcarousel-direction-rtl {
+	direction: rtl;
+}
+.jcarousel-skin-tango li {list-style:none;}
+.jcarousel-skin-tango .jcarousel-container-vertical {
+    width: 100px;
+    height: 460px;
+    padding: 70px 0;
+}
+.jcarousel-skin-tango .jcarousel-clip-vertical {
+    width:  100px;
+    height: 460px;
+}
+.jcarousel-skin-tango .jcarousel-item {
+    width: 100px;
+    height: 101px;
+	padding:8px 0;
+	background:url(../images/line.gif) no-repeat bottom;
+}
+.jcarousel-skin-tango .jcarousel-item-vertical {
+    margin: 0;
+}
+.jcarousel-skin-tango .jcarousel-item-placeholder {
+    background: #fff;
+    color: #000;
+}
+/**
+ *  Vertical Buttons
+ */
+.jcarousel-skin-tango .jcarousel-next-vertical {
+    position: absolute;
+    top: 50px;
+    left: 37px;
+    width: 27px;
+    height: 15px;
+    cursor: pointer;
+    background:url(../images/up_arrow.gif) no-repeat center;
+}
+.jcarousel-skin-tango .jcarousel-next-vertical:hover {
+    background:url(../images/up_arrow-h.gif) no-repeat center;
+}
+.jcarousel-skin-tango .jcarousel-next-vertical:active {
+    background:url(../images/up_arrow.gif) no-repeat center;
+}
+.jcarousel-skin-tango .jcarousel-next-disabled-vertical,
+.jcarousel-skin-tango .jcarousel-next-disabled-vertical:hover,
+.jcarousel-skin-tango .jcarousel-next-disabled-vertical:active {
+    cursor: default;
+    background:url(../images/up_arrow.gif) no-repeat center;
+}
+.jcarousel-skin-tango .jcarousel-prev-vertical {
+    position: absolute;
+    bottom: 45px;
+    left: 37px;
+    width: 27px;
+    height: 15px;
+    cursor: pointer;
+    background:url(../images/down_arrow.gif) no-repeat center;
+}
+.jcarousel-skin-tango .jcarousel-prev-vertical:hover {
+    background:url(../images/down_arrow-h.gif) no-repeat center;
+}
+.jcarousel-skin-tango .jcarousel-prev-vertical:active {
+    background:url(../images/down_arrow.gif) no-repeat center;
+}
+.jcarousel-skin-tango .jcarousel-prev-disabled-vertical,
+.jcarousel-skin-tango .jcarousel-prev-disabled-vertical:hover,
+.jcarousel-skin-tango .jcarousel-prev-disabled-vertical:active {
+    cursor: default;
+    background:url(../images/down_arrow.gif) no-repeat center;
+}
+.error404 {font:normal 60px/60px "Fiolex Girls"; color:#000000; text-align:center;}

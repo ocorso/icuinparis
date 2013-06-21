@@ -1,0 +1,118 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2010 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+/**
+ * Template for Mage_Page_Block_Html
+ */
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html class="ored" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<?php echo $this->getChildHtml('head') ?>
+<link rel="stylesheet" type="text/css" href="http://www.icuinparis.com/skin/frontend/icu/icu/css/style.css" media="all" />
+
+		
+
+        
+     
+                
+<script type="text/javascript">
+function open_image(id) {
+	jQuery('#body_container > div').each(function(index) {
+    	//alert(index + ': ' + $(this).html());
+		jQuery(this).hide();
+  	});
+	jQuery('#'+id).show();
+}
+</script>
+<script type="text/javascript">
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+</script>
+<script language="javascript" type="text/javascript">
+function chnText(){
+document.getElementById('tooltipTxt').innerHTML="it's working";
+}
+
+<script src="<?php echo $this->getSkinUrl('Scripts/AC_RunActiveContent.js') ?>" type="text/javascript">
+</script>
+</head>
+<body>
+<div id="popuparea">
+<div id="signupPopupClose"><a href="#"><img src="skin/frontend/icu/icu/images/closebtn.jpg" alt="" width="19" height="19" onclick="document.getElementById('popuparea').style.display='none';"/></a></div>
+  <div id="signupBG"><div id="signupFormArea"><form action="<?php echo $this->getUrl('newsletter/subscriber/new') ?>" method="post" id="newsletter-validate-detail">
+   <input type="text" name="email" id="newsletter11" class="emailaddressClass" />
+  <input type="submit" name="submit" value="ENTER" onmouseover="this.style.cursor='pointer'" onmouseout="this.style.cursor='default'" />
+</form></div></div>
+<div id="divSignup">
+  </div>
+</div>
+<?php echo $this->getChildHtml('after_body_start') ?>
+<?php echo $this->getChildHtml('global_notices') ?>
+<!-- HEADER AND NAVIGATION SECTION -->
+<?php echo $this->getChildHtml('header') ?>
+<!-- /HEADER AND NAVIGATION SECTION -->
+<div class="clr"></div>
+<!-- BODY SECTION -->
+<div id="body_section">
+<?php //echo $this->getChildHtml('global_messages') ?>
+  <!-- body container -->
+<div id="body_section">
+
+<a href="https://www.icuinparis.com/shop-independent-designer-accessories.html?designer=44" class="flashSale"></a>
+ 
+  
+  <!-- /body container -->
+  <!-- brand container -->
+  
+  
+  <div class="clr"></div>
+</div>
+<!-- /BODY SECTION -->
+<div class="clr"></div>
+<a href="https://www.icuinparis.com/aea-jewelry-designer/"><img src="<?php echo $this->getSkinUrl('images/aea-BANNER.jpg');?>"/></a>
+<!-- FOOTER SECTION -->
+<?php echo $this->getChildHtml('footer') ?>
+<!-- /FOOTER SECTION -->
+<?php echo $this->getChildHtml('before_body_end') ?>
+<div class="clr"></div>
+<script type="text/javascript"> 
+<!--
+
+window.onload = function () {
+
+	 MM_preloadImages('<?php echo $this->getSkinUrl('images/animal-rules_ENGLISH_homepageB.jpg') ?>') ?>');
+	 
+};
+//-->
+</script>
+
+</body>
+</html>

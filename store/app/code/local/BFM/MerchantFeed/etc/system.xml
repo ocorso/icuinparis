@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<tabs>
+		<merchantfeed translate="label" module="merchantfeed">
+			<label>Google Merchant Feed</label>
+			<sort_order>3500</sort_order>
+		</merchantfeed>
+	</tabs>
+	
+	<sections>
+		<merchantfeed_settings translate="label" module="merchantfeed">
+			<label>Feed Options</label>
+			<tab>merchantfeed</tab>
+			<frontend_type>text</frontend_type>
+			<sort_order>8000</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+			<groups>
+				<general translate="label">
+					<label>General</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>1</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<title>
+							<label>Feed Title</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</title>
+						<link>
+							<label>Feed Link</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>2</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</link>
+						<description>
+							<label>Feed Description</label>
+							<frontend_type>textarea</frontend_type>
+							<sort_order>3</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</description>
+					</fields>
+				</general>
+			</groups>
+		</merchantfeed_settings>
+	</sections>
+</config>

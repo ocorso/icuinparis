@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<BFM_Icu>
+			<version>0.1.3</version>
+		</BFM_Icu>
+	</modules>
+	
+	<global>
+		<models>
+			<cataloginventory>
+				<rewrite>
+					<stock_item>BFM_Icu_Model_CatalogInventory_Item</stock_item>
+				</rewrite>
+			</cataloginventory>
+		</models>
+		<resources>
+			<bfmicu_setup>
+				<setup>
+					<module>BFM_Icu</module>
+					<class>Mage_Catalog_Model_Resource_Eav_Mysql4_Setup</class>
+				</setup>
+				<connection>
+					<use>core_setup</use>
+				</connection>
+			</bfmicu_setup>
+		</resources>
+	
+		<helpers>
+			<bfmicu>
+				<class>BFM_Icu_Helper</class>
+			</bfmicu>
+		</helpers>
+	</global>
+	
+	<stores>
+		<admin>
+			<design>
+				<theme>
+					<default>icu</default>
+				</theme>
+			</design>
+		</admin>
+	</stores>
+</config>

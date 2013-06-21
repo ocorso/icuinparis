@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <BFM_Icu>
+      <version>0.1.0</version>
+    </BFM_Icu>
+  </modules>
+  <global>
+    <resources>
+      <bfmicu_setup>
+        <setup>
+          <module>BFM_Icu</module>
+          <class>Mage_Catalog_Model_Resource_Eav_Mysql4_Setup</class>
+        </setup>
+        <connection>
+          <use>core_setup</use>
+        </connection>
+      </bfmicu_setup>
+    </resources>
+
+  </global>
+</config>

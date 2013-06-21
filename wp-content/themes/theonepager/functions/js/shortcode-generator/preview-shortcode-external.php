@@ -1,1 +1,0 @@
-<?php die( 'Please don\'t access this file directly. Thanks!' ); ?>

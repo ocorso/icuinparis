@@ -1,0 +1,97 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2010 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+
+/**
+ * Product media data template
+ *
+ * @see Mage_Catalog_Block_Product_View_Media
+ */
+?>
+<script language="javascript">
+function showBigImageDiv(largeName, smallName) {
+	document.getElementById('imagebigg').src = smallName;
+	document.getElementById('axss').href = largeName;
+}
+</script>
+<?php
+    $_product = $this->getProduct();
+    $_helper = $this->helper('catalog/output');
+?>
+<div id="product_details">
+	<table border="0" cellspacing="0" cellpadding="0">
+	<tr><td>
+	<table border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td height="540" width="125">
+				<div id="product_images">
+					<?php if (count($this->getGalleryImages()) > 0): ?>
+						<?php foreach ($this->getGalleryImages() as $_image): ?>
+						  <div class="box2"><img onclick="showBigImageDiv('<?php echo $this->helper('catalog/image')->init($this->getProduct(), '', $_image->getFile()); ?>', '<?php echo $this->helper('catalog/image')->init($this->getProduct(), '', $_image->getFile())->resize(350, 525); ?>')" style="cursor:pointer;" src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(75,125); ?>" alt="" /></div>
+						<?php endforeach; ?>
+					<?php endif; ?>
+				</div>
+			</td>
+			<td width="450">
+			<div id="product_bigimg">
+				
+							<table>
+								<tr>
+									<td width="0">
+										<a href="<?php echo $this->helper('catalog/image')->init($_product, 'image'); ?>" class="jqzoom" id="axss"><img id="imagebigg" src="<?php echo $this->helper('catalog/image')->init($_product, 'image')->resize(350, 525); ?>" alt="" width="350" /></a>
+									</td>
+								</tr>
+							</table>
+						
+			</div>
+			</td>
+		</tr>
+		<tr>
+			<td background="http://www.icuinparis.com/skin/frontend/icu/icu/images/bg_icons.jpg" style="background-repeat:repeat-x" height="20" align="right" colspan="2" width="450">
+				<table align="right" border="0" cellspacing="0" cellpadding="0">
+					<tr height="20" style="margin:0; padding:0;">
+						<td width="100" height="20" align="right" style="vertical-align:middle; padding: 0 3px 3px 0; margin:0; text-align:right">
+							<?php if(Mage::app()->getStore()->getStoreId() == "1"){ echo "share this"; }else{ echo "partager"; }?>:
+						</td>
+						<td width="3" height="20">
+							<a href="#"><img src="http://www.icuinparis.com/skin/frontend/icu/icu/images/icon_divider.jpg" width="3" height="24" border="0"></a>
+						</td>
+						<td width="18" height="20">
+							<a href="http://www.facebook.com/sharer.php?u=<?php echo $this->helper('core/url')->getCurrentUrl(); ?>" target="_blank"><img src="http://www.icuinparis.com/skin/frontend/icu/icu/images/facebook_icon.jpg" width="18" height="24" border="0"></a>
+						</td>
+						<td width="18" height="20">
+							<a href="http://twitter.com/?status=<?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') . ": " . $this->helper('core/url')->getCurrentUrl(); ?>" target="_blank"><img src="http://www.icuinparis.com/skin/frontend/icu/icu/images/twitter_icon.jpg" width="18" height="24" border="0"></a>
+						</td>
+						<td width="17" height="20">
+							<a href="mailto:?subject=<?php echo $_helper->productAttribute($_product, $_product->getName(), 'name'); ?>&body=<?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') . ": " . $this->helper('core/url')->getCurrentUrl(); ?>" target="_blank"><img src="http://www.icuinparis.com/skin/frontend/icu/icu/images/email_icon.jpg" width="17" height="24" border="0"></a>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+      
+	</table>
+	</td>
+	<td valign="top">

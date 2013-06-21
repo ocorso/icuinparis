@@ -1,0 +1,52 @@
+<div id="all_designer">
+<div id="tagline222"><div class="dividerline"></div><div class="left">FEATURED DESIGNERS</div></div>
+<div id="sidemenu3">
+  <ul>
+	<?php
+	$i = 0;
+	$collection = Mage::getModel('fdesigners/fdesigners')->getCollection();
+	$size = $collection->getSize();
+	$cnt = count($collection);
+	foreach ($collection as $item) {
+	$i = $i+1;
+	$title = htmlentities($item->getTitle());
+	?>
+	<li><a id="link_designer0<?php echo $i ?>" href="javascript:void(0)" onclick="open_image('designer0<?php echo $i ?>')" class="active"><?php echo $title ?></a></li>
+	<?php } ?>
+
+  </ul>
+</div>
+<div id="content3">
+	<?php
+	$i = 0;             
+	
+	foreach ($collection as $item) {
+		$i = $i+1;
+		//if($i==1) {
+			
+			$replaceText = array("watch?v=");
+			$firstVideo = str_replace($replaceText, "v/", $item->getStatus());
+			$title = $item->getTitle();
+			$dLink = $item->getContent();
+
+			?>
+			
+			
+			<div class="designer_design" id="designer0<?php echo $i ?>"<?php if ($i > 1): ?> style="display:none;"<?php endif; ?>>
+				<a href="<?php echo $dLink ?>" target="_self"><img src="<?php echo $this->getUrl().'media/designer/'.$item->getFilename() ?>" alt="" /></a>
+			</div>
+			
+		<?php	
+		//}
+		//else
+		//{
+		?>
+		<?php
+		//}
+		}
+	?>
+  
+  
+</div>
+<div class="clr"></div>
+</div>

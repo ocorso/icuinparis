@@ -1,0 +1,41 @@
+<div id="footer_section">
+  <!-- share -->
+  <div id="share">
+    <ul>
+      <li>|</li>
+      <li><a href="http://www.facebook.com/icuinparis" target="_blank"><img src="http://icuinparis.dev/store/skin/frontend/icu/icu/images/icon-facebook.gif" alt="" /></a></li>
+      <li><a href="http://twitter.com/icuinparis" target="_blank"><img src="http://icuinparis.dev/store/skin/frontend/icu/icu/images/icon-twitter.gif" alt="" /></a></li>
+      <li><a href="http://www.youtube.com/user/PARISICU" target="_blank"><img src="http://icuinparis.dev/store/skin/frontend/icu/icu/images/icon-utube.gif" alt="" /></a></li>
+      <li>|</li>
+    </ul>
+  </div>
+  <!-- /share -->
+  <!-- footer links -->
+  <div id="footer_link"><a href="http://icuinparis.dev/store/about-us-landing.html">About Us</a> <span>|</span> <a href="http://icuinparis.dev/store/contact-us-landing.html">Contact Us</a> <span>|</span> <a href="http://icuinparis.dev/store/customer-service.html">Customer Service</a> <span>|</span> <a href="http://icuinparis.dev/store/designs">Submit Your Design</a></div>
+  <!-- /footer links -->
+  
+  <!-- newsletter -->
+  <form action="http://icuinparis.dev/store/newsletter/subscriber/new/" method="post" id="newsletter11-validate-detail">
+  <div id="newsletter">
+  <div style="width:215px; float:left;">Sign up for the I C U <span class="fio_txt">&nbsp;updates:</span></div>
+  
+  
+  <div style="width:180px; float:right;">
+    <input type="text" value="Enter e-mail &amp; press enter" onfocus="if(this.value=='Enter e-mail &amp; press enter')this.value='';" onblur="if(this.value=='')this.value='Enter e-mail &amp; press enter';" name="email" id="newsletter11" />
+    </div>
+	
+	
+	
+  </div>
+  </form>
+    <script type="text/javascript">
+    //<![CDATA[
+        var newsletterSubscriberFormDetail = new VarienForm('newsletter11-validate-detail');
+    //]]>
+    </script>
+  <!-- /newsletter -->
+  <br class="clr" />
+  <!-- copyright -->
+  <div id="copyright">&copy; 2011 ICU IN PARIS. All Rights Reserved.</div>
+  <!-- /copyright -->
+</div>

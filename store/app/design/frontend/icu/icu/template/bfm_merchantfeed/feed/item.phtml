@@ -1,0 +1,19 @@
+<?php $productData = $this->getProductData()?>
+<item>
+	<title><![CDATA[<?php echo $productData->getTitle()?>]]></title>
+	<link><![CDATA[<?php echo $productData->getLink()?>]]></link>
+	<description><![CDATA[<?php echo $productData->getDescription()?>]]></description>
+	<g:id><?php echo $productData->getId()?></g:id>
+	<g:condition><?php echo $productData->getCondition()?></g:condition>
+	<g:price><?php echo $productData->getPrice()?></g:price>
+	<g:availability><?php echo $productData->getAvailability()?></g:availability>
+	<g:image_link><![CDATA[<?php echo $productData->getImageLink()?>]]></g:image_link>
+	<g:brand><?php echo $productData->getBrand()?></g:brand>
+	<g:mpn><?php echo $productData->getMpn()?></g:mpn>
+	<g:google_product_category><![CDATA[<?php echo $productData->getGoogleCategory()?>]]></g:google_product_category>
+	<g:gender><?php echo $productData->getGender()?></g:gender>
+	<g:color><?php echo $productData->getColor()?></g:color>
+	<g:size><?php echo $productData->getSize()?></g:size>
+	<g:age_group><?php echo $productData->getAgeGroup()?></g:age_group>
+	<g:product_type><?php echo $productData->getProductType()?></g:product_type>
+</item>

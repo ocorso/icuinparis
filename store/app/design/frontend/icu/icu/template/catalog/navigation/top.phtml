@@ -1,0 +1,124 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2010 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+/**
+ * Top menu for store
+ *
+ * @see Mage_Catalog_Block_Navigation
+ */
+?>
+<?php
+/**
+ * $this->renderCategoriesMenuHtml() supports optional arguments:
+ * int Level number for list item class to start from
+ * string Extra class of outermost list items
+ * string If specified wraps children list in div with this class
+ */
+?>
+<ul class="dropdown dropdown-horizontal">
+    	<li class="first_nav_child"><a href="<?php echo $this->getUrl().'fdesigners' ?>"><?php echo $this->__('DESIGNER INSPIRATION') ?></a></li>
+	<?php
+		/*
+		define('MAGENTO', realpath(dirname(__FILE__)));
+		require_once MAGENTO.'/app/Mage.php';
+		Mage::app();*/
+
+		/* Provide a known category id that has children as a test */
+		$id = 3;
+
+		/* Load category by id*/
+		$cat = Mage::getModel('catalog/category')->load($id);
+		
+	?>
+	
+    <li><a href="http://www.icuinparis.com/ladies.html?limit=12&p=1" class="dir"><?php echo $cat->getName(); ?></a>
+		<ul>
+		<?php
+		/*Returns comma separated ids*/
+		$subcats = $cat->getChildren();
+
+		//Print out categories string
+		#print_r($subcats);
+
+		foreach(explode(',',$subcats) as $subCatid)
+		{
+		  $_category = Mage::getModel('catalog/category')->load($subCatid);
+		  if($_category->getIsActive())
+		  {
+			$caturl     = $_category->getURL();
+			$catname     = $_category->getName();
+			echo '<li><a href="'.$caturl.'?limit=12&p=1" class="ladies" >'.$catname.'</a></li>';
+		  }
+		}
+		?>
+		<li><a href="#" style="padding:0 0 12px 0; background:url(<?php echo $this->getSkinUrl('images/line2.gif') ?>) no-repeat 26px 10px;"></a></li>
+        <li><a href="<?php echo $this->getUrl().'ladies.html?limit=12&p=1' ?>" class="ladies"><?php echo $this->__('shop all...') ?></a></li>
+		</ul>
+      
+    </li>
+	<?php
+		
+		/*
+		define('MAGENTO', realpath(dirname(__FILE__)));
+		require_once MAGENTO.'/app/Mage.php';
+		Mage::app();*/
+
+		/* Provide a known category id that has children as a test */
+		$id = 7;
+
+		/* Load category by id*/
+		$cat = Mage::getModel('catalog/category')->load($id);
+		?>
+    <li><a href="http://www.icuinparis.com/gentlemen.html" class="dir"><?php echo $cat->getName(); ?></a>
+      <ul>
+        <?php
+		/*Returns comma separated ids*/
+		$subcats = $cat->getChildren();
+
+		//Print out categories string
+		#print_r($subcats);
+
+		foreach(explode(',',$subcats) as $subCatid)
+		{
+		  $_category = Mage::getModel('catalog/category')->load($subCatid);
+		  if($_category->getIsActive())
+		  {
+			$caturl     = $_category->getURL();
+			$catname     = $_category->getName();
+			echo '<li><a href="'.$caturl.'" class="gentelmen" >'.$catname.'</a></li>';
+		  }
+		}
+		?>
+        <li><a href="#" style="padding:0 0 12px 0; background:url(<?php echo $this->getSkinUrl('images/line2.gif') ?>) no-repeat 26px 10px;"></a></li>
+        <li><a href="<?php echo $this->getUrl().'gentlemen.html' ?>" class="gentelmen"><?php echo $this->__('shop all...') ?></a></li>
+      </ul>
+    </li>
+    <li><a href="<?php echo $this->getUrl().'all-designers.html' ?>" class="dir"><?php echo $this->__('DESIGNERS') ?></a></li>
+    <li><a href="<?php echo $this->getUrl().'lookbook' ?>"><?php echo $this->__('THE LOOKBOOK') ?></a></li>
+    <li><a href="<?php echo $this->getUrl().'videos' ?>"><?php echo $this->__('THE VIDEOS') ?></a></li>
+    <li><a href="http://www.icuinparis.com/blog" target="_blank"><?php echo $this->__('THE BLOG') ?></a></li>
+  </ul>

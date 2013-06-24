@@ -1,3 +1,6 @@
 store/media
 store/media/*
-
+store/var/cache
+store/var/cache/*
+store/var/session
+store/var/session/*

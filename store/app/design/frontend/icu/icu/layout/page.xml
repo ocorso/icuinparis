@@ -51,10 +51,11 @@ Default layout, loads most of the pages
                 <action method="addCss"><stylesheet>css/dropdown.css</stylesheet><params>media="all"</params></action>
                 <action method="addCss"><stylesheet>css/skin.css</stylesheet></action>
 
-                <action method="addJs"><script>vendor/jquery-1.9.1.min.js</script></action>
-                <action method="addJs"><script>vendor/jquery.jcarousel.min.js</script></action>
                 <action method="addJs"><script>vendor/modernizr-2.6.2-respond-1.1.0.min.js</script></action>
+                <action method="addJs"><script>vendor/jquery-1.8.3.js</script></action>
                 <action method="addJs"><script>vendor/bootstrap.min.js</script></action>
+                <action method="addJs"><script>vendor/jquery.jcarousel.min.js</script></action>
+                <action method="addJs"><script>jquery.jqzoom-core-pack.js</script></action>
 
                 <action method="addJs"><script>prototype/prototype.js</script></action>
                 <action method="addJs" ifconfig="dev/js/deprecation"><script>prototype/deprecation.js</script></action>

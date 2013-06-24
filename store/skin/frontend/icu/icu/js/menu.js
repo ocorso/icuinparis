@@ -105,10 +105,12 @@ function initMenu() {
 }
 
 function swaparrow(e){
-	if(document.getElementById(e).src == "http://www.icuinparis.com/skin/frontend/icu/icu/images/down-arrow.jpg"){
-		document.getElementById(e).src = "http://www.icuinparis.com/skin/frontend/icu/icu/images/right-arrow.jpg";
+  var down  = skin_url + "images/down-arrow.jpg";
+  var right = skin_url + "images/right-arrow.jpg";
+	if(document.getElementById(e).src == down ){
+		document.getElementById(e).src = right;
 	}else{
-		document.getElementById(e).src = "http://www.icuinparis.com/skin/frontend/icu/icu/images/down-arrow.jpg";
+		document.getElementById(e).src = down;
 	}
 }
 

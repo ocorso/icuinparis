@@ -8,6 +8,634 @@ Template:       icuinparis
 Version:        1.0
 */
 
+body {
+  font-size: 1.3em;
+  line-height: 1.618;
+  color: #666;
+  background: #ffffff;
+  font-family: 'Source Sans Pro', sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+}  
+
+a{
+    color:#000000;
+}
+
+div#logoposition {
+    width:140px; 
+    position:absolute; 
+    top:0px; 
+    left:50%; 
+    z-index:10000; 
+    margin-left:-450px;"
+}
+
+img.headerlogo { 
+min-width:75%; 
+max-width:95%;
+}
+
+#main {
+    width: 100% !important;
+}
+
+#featured-slider {
+  overflow: hidden;
+  border: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  box-shadow: 0 0 0 0 #ffffff;
+  -webkit-box-shadow: 0 0 0 0 #ffffff;
+  margin: 0;
+  position: relative;
+  background: url("/wp-content/uploads/white.png");
+}
+
+#featured-slider .slide:after {
+    background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0) 100%);
+    bottom: 0;
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 100%;
+}
+
+.home #content {
+    background: url("/wp-content/uploads/white.png");
+    overflow: hidden;
+    padding: 0;
+}
+
+#featured-slider .slide-content .slide-content-inner { 
+  display:none;
+  position: absolute;
+  bottom: 0;
+  margin: 1.618em;
+}
+ 
+ul.nav { 
+    text-align:right;
+    margin-bottom: 0;
+    position: relative;
+}
+
+#top {
+    background: none repeat scroll 0 0 #242424 !important;
+    padding: 0 1.618em;
+}
+
+#top #top-nav {
+    float:right;
+    padding-right:20%;
+}
+
+#top ul.nav {
+    text-align:right;
+    font-size: 1.0em;
+}
+
+
+ul.nav li {
+    float: left;
+    list-style: none outside none;
+    position: relative;
+    text-transform: uppercase;
+}
+
+#header {
+    background-size: 50% 100%;
+    border-bottom: 0.0em solid #ffffff !important;
+    display:none;
+}
+
+#footer {
+    border-top: opx solid #676D76;
+    color: #545454;
+    padding: 4.236em 0 2.618em;
+    height:400px;
+}
+
+#footer {
+    color: #d1d1d1;
+}
+
+ul.nav li { 
+    border-left: #565656 solid;
+    border-left-width:1px;
+    float: left;
+    list-style: none outside none;
+    position: relative;
+}
+
+ul.nav li:last-child {
+    border-right: #565656 solid;
+    border-right-width:1px;
+}
+
+#top ul.nav ul {
+    background: none repeat scroll 0 0 #666666 !important;
+}
+
+#top ul.nav > li a {
+    color: #FDFDFD !important;
+    text-align:left;
+}
+
+ul.sub-menu li {
+    border-left: 0px solid #565656;
+    border-bottom: 1px solid #848484;
+}
+
+div#home-cont {
+    width:100%; 
+    max-width:960px;
+    margin: auto; 
+    background-color:#FFF;
+}
+
+div#shopcall2 {
+    width:480; 
+    float:right; 
+    display:none;
+}
+
+div#shopcall {
+    width:480; 
+    float:left;
+    display:none;
+}
+
+div#homeproducts {
+    width:960; 
+    background:#FFF; 
+    padding-bottom:20px;
+    display:none; 
+}
+
+div#call-home-lower-left {
+    float:left;
+}
+
+div#call-home-lower-right {
+    float:right;
+}
+
+div#home-cont div#call-home-lower-right li#text-3.widget {
+    height:100px;
+}
+
+#footer-widgets {
+    background:#e6e6e6; 
+    border-top: 0px solid #848A92;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) inset;
+    color: #303030;
+    padding: 5.874em 0 2.244em;
+}
+
+section#footer-widgets div.col-full div.block div#text-5.widget {
+    color:#303030; text-shadow:none;    
+}
+section#footer-widgets div.col-full div.block div#text-6.widget {
+    color:#303030; text-shadow:none;    
+}
+section#footer-widgets div.col-full div.block div#text-7.widget {
+    color:#303030; text-shadow:none;    
+}
+section#footer-widgets div.col-full div.block div#text-8.widget {
+    color:#303030; text-shadow:none;    
+}
+
+H2.home-footer { 
+    color:#303030; 
+    margin-bottom: 1px; 
+    font-weight:200;
+}
+
+DIV.home-footer-header { 
+    text-shadow:none;
+}
+
+.product_cycle_item .item_link {
+    display: none !important;
+}
+
+.product_cycle_category_container {
+    display: none !important;
+}
+
+div#homeproducts h3 { 
+    display:none;
+}
+
+div#homeproducts ul.product_list_widget li { 
+    float:left;
+    background:#ffffff;
+    border-bottom: 0px solid #848A92;
+}
+
+div#home-content {
+    background:#ffffff;
+}
+
+div#homeproducts {
+    background:#ffffff;
+}
+
+div#homeproducts ul.product_list_widget li a {
+    width:240px;
+    font-size:10px;
+    text-shadow:none;
+    color:#000000;
+}
+
+ul.product_list_widget li img {
+    background-clip:padding-box;
+    border-radius: 0em 0em 0em 0em;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    float:none;
+    height: auto;
+    margin: 0 1.387em 1em 0;
+    width: 200px; 
+    text-align:center;
+}
+
+div#homeproducts ul.product_list_widget li span.amount {
+    position: static;
+    bottom: 0px;
+    width: 100%;
+    overflow: none;  
+    width: 50px;
+    background:#000000;
+    color:#ffffff;
+    z-index:1000;   
+}
+
+.entry img {
+    margin-bottom: -1px;
+    max-width: 100%;
+}
+
+div#creativecommunity {
+    float:left;
+    width:175px;
+    margin:5px;
+}
+
+div#content.col-full section#main.col-left article.post-8934 aside.post-meta ul { 
+    display:none;
+}
+
+div#content.col-full section#main.col-left article.post-8994 aside.post-meta{ 
+    display:none;
+}
+
+header h1 {
+    padding: 12px 20px 30px 190px; 
+    text-shadow:none; 
+    font-size:2.5em; 
+    font-weight:normal;
+    color:#000000; 
+    text-transform:uppercase;   
+    font-family: 'Source Sans Pro', sans-serif; 
+}
+
+.post img, .type-page img, .search-results .features img, .search-results article.page img, .search-results .type-product img, .search-results .type-portfolio img, .post img.thumbnail, .type-page img.thumbnail, .search-results .features img.thumbnail, .search-results article.page img.thumbnail, .search-results .type-product img.thumbnail, .search-results .type-portfolio img.thumbnail {
+    background: none repeat scroll 0 0 padding-box transparent;
+    border: 0 none;
+    border-radius: 0 0 0 0;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    margin: 0 0 0 0;
+    padding: 0;
+}
+
+
+.type-page, .search-results article.page {
+    border-bottom: none;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.page #content header{
+    margin: 0px 5% 0px 20%;
+}
+
+.page #content header h1, .single #content header h1 {
+    padding: 25px 0px 10px 0px; 
+    text-shadow:none; 
+    font-size:2.5em; 
+    font-weight:normal;
+    color:#000000; 
+    text-transform:uppercase;   
+    font-family: 'Source Sans Pro', sans-serif; 
+}
+
+.page #content header p, .single #content header p {
+    
+    margin:0px;
+}
+
+.page #content p, .search-results article.page #content p{
+    margin:20px 10%;
+}
+
+body #content{
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+
+.page-template-single-about-php header{
+    background: #0fb7ba;
+    text-align: center;
+    width: 100%;
+    padding: 100px 0px;
+}
+
+.page-template-single-about-php header img{
+    width:95%;
+    max-width:397px;
+}
+
+.page-template-single-about-php #sidebar{
+    display: none;
+}
+
+.page-template-single-about-php #footer-widgets {
+    background:none;
+    padding: 0px;
+}
+
+#call-home-lower-left img, #call-home-lower-right img{
+    width:100%;
+    max-width:480px;
+}
+
+div#ourdesigners {
+    float:left;
+    width:95%;
+    max-width:800px;
+    margin: 20px 5% 0px 20%;
+}
+
+#ourdesigners .designer{
+    display:block;
+    float:left;
+    margin-right:20px;
+    width:323px;
+    height:462px;
+}
+
+#ourdesigners .designer .popup{
+    display:none;
+    width:323px;
+    margin-top: 105px;
+    background-color:#E3B1B7;
+    padding-bottom:10px;
+    padding-top:10px;
+}
+
+#ourdesigners .designer:hover .popup{
+    display:block;
+}
+
+#ourdesigners .designer .popup p{
+    margin: 10px;
+}
+
+#ourdesigners .designer .popup p strong{
+    text-transform:uppercase;
+    font-size: 20px;
+}
+
+#ourdesigners .designer .popup a{
+    color:#fff;
+    text-transform:uppercase;
+}
+
+#ourdesigners .designer .popup a.btn{
+    display: block;
+    background-color:#444;
+    padding: 10px;
+    width: 130px;
+    text-align: center;
+    margin:10px 0px;
+}
+
+#ourdesigners .designer img{
+    position:relative;
+    z-index:400;
+    width:235px;
+}
+
+#ourdesigners .designer.char{
+    background-image:url('http://staging.click3x.com/icuparis/wp-content/uploads/0000_char.png');
+}
+
+#ourdesigners .designer.noot{
+    background-image:url('http://staging.click3x.com/icuparis/wp-content/uploads/0001_noot.png');
+}
+
+#ourdesigners .designer.aea{
+    background-image:url('http://staging.click3x.com/icuparis/wp-content/uploads/0002_aea.png');
+}
+
+.page-template-single-creativeb-php section.entry{
+    margin-top:25px;
+}
+
+.page-template-single-creativeb-php .useful_box18{
+    border:none;
+    width:200px;
+}
+
+.page-template-single-creativeb-php .useful_box18 .contentTitle{
+    color: #000;
+    text-shadow: none;
+    text-align: left;
+    margin: 15px 0px -5px 0px;
+    line-height: 18px;
+}
+
+.page-template-single-creativeb-php .useful_box18 .readmore{
+    color:#000;
+    background: none;
+    text-shadow:none;
+}
+
+.page-template-single-creativeb-php .useful_box18 .readmore:hover{
+    color:#000;
+    text-shadow:0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.page-template-single-creativeb-php .useful_box18 .img_shadow a{
+    text-align:left;
+}
+
+.page-template-single-creativeb-php .useful_box18 .img_shadow img{
+    width:100%;
+}
+
+.page-template-single-creativeb-php #content .useful_box18 p{
+    margin: 10px 0px 30px 0px;
+    padding:0px;
+}
+
+.page-template-single-creativeb-php #content .useful_box18 a{
+
+    margin: 10px 0px 0px 0px;
+}
+
+.single #content header{
+    margin: 0px 5% 0px 0%;
+}
+
+.single #content p {
+    margin:20px 5% 0px 0%;
+}
+
+.single #content .article-inner{
+    float: right;
+    width: 76%;
+}
+
+.woocommerce-page #content #main{
+    margin: 40px 0% 0px 20%;
+    width:76% !important;
+    max-width:960px;
+}
+
+.woocommerce-page #content #main h1{
+    color:#000;
+    font-size:48px;
+    margin-bottom: 10px;
+}
+
+/* HIDE THE ADD TO CART BUTTONS*/
+.woocommerce-page #content #main .add_to_cart_button, .woocommerce-page #content #main .product .cart{
+    display:none;
+}
+
+.woocommerce-page #content #sidebar{
+    float:left;
+    color:#000;
+    margin-top: 0;
+    width: 21%;
+    position: absolute;
+    top: 150px;
+    left: 10%;
+}
+
+.woocommerce-page #content #sidebar .widget *{
+    color:#000;
+}
+
+ul.products .product {
+    width: 200px;
+    margin-right: 15px;
+}
+
+ul.products .product:nth-child(2n) {
+    margin-right: 15px;
+}
+
+.woocommerce-page #content #main .product h1.product_title{
+    font-size:24px;
+}
+
+.woocommerce-page #content #main .product .summary span{
+    color:#000;
+}
+
+.woocommerce-page #content #main .product .product_meta *{
+    color:#000;
+}
+
+
+@media screen and (max-width: 768px) {
+    
+    .woocommerce-page #content #main{
+        margin: 40px 0% 0px 0%;
+        width:100% !important;
+        max-width:960px;
+    }
+    
+    .woocommerce-page #content #sidebar{
+        float:left;
+        color:#000;
+        margin-top: 0;
+        width: 100%;
+        position:relative;
+        top: 0px;
+        left: 0%;
+    }
+    
+    .woocommerce-page #content #main .product h1.product_title{
+        font-size:18px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .page #content header{
+        margin: 0px 5% 0px 7%;
+    }
+    
+    .page #content{
+        margin:0px;
+        padding:0px;
+    }
+    
+    div#ourdesigners {
+        float:left;
+        width:100%;
+        margin: 20px 1% 0px 1%;
+    }
+    
+    #ourdesigners .designer{
+        width:209px;
+        height:300px;
+    }
+    
+    #ourdesigners .designer .popup{
+        width:209px;
+        margin-top: 0px;
+        padding-top:5px;
+    }
+    
+    #ourdesigners .designer .popup p{
+        line-height:15px;
+    }
+    
+    #ourdesigners .designer.char{
+        background-image:url('http://staging.click3x.com/icuparis/wp-content/uploads/0000_char-209x300.png');
+    }
+    
+    #ourdesigners .designer.noot{
+        background-image:url('http://staging.click3x.com/icuparis/wp-content/uploads/0001_noot-209x300.png');
+    }
+    
+    #ourdesigners .designer.aea{
+        background-image:url('http://staging.click3x.com/icuparis/wp-content/uploads/0002_aea-209x300.png');
+    }
+    
+    .single #content .article-inner{
+        float: right;
+        width: 95%;
+    }
+    
+    .woocommerce-page #content #main .product h1.product_title{
+        font-size:14px;
+    }
+}
+
+/* wpts_matrix css */
+
 /*box styles*/
 
 a{

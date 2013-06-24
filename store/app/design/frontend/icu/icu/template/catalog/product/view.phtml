@@ -38,7 +38,7 @@
 <script type="text/javascript">
     var optionsPrice = new Product.OptionsPrice(<?php echo $this->getJsonConfig() ?>);
 </script>
-<script type="text/javascript" src="http://icuinparis.com/tinymce/jscripts/tiny_mce/tiny_mce.js"></script>
+<script type="text/javascript" src="<?= $this->getSkinUrl('js/tiny_mce/tiny_mce.js'); ?>"></script>
 <script type="text/javascript">
 	tinyMCE.init({
 		// General options
@@ -60,7 +60,7 @@
 			$url = Mage::getStoreConfig('web/unsecure/base_url') . $category;
 		}
 	?>
-	<?php echo "<a href=\"" . $url . "\" class=\"gobacklink\"><img src=\"http://www.icuinparis.com/skin/frontend/icu/icu/images/left-arrow.jpg\" /> "; if(Mage::app()->getStore()->getStoreId() == "1"){ echo "Back to products"; }else{ echo "Retour à les produits"; } echo "</a>";	?>
+	<?php echo "<a href=\"" . $url . "\" class=\"gobacklink\"><img src=\"" . $this->getSkinUrl('images/left-arrow.jpg') . "\" /> "; if(Mage::app()->getStore()->getStoreId() == "1"){ echo "Back to products"; }else{ echo "Retour à les produits"; } echo "</a>";	?>
 </div>
 
 
@@ -88,9 +88,9 @@
                 <li><a href="#">Love it more</a></li>
           </ul>
             <ul class="othpro">
-            	<li><a href="#"><img src="images/oth-pro01.jpg" alt="" width="100" height="100" /></a></li>
-                <li><a href="#"><img src="images/oth-pro02.jpg" alt="" width="100" height="100" /></a></li>
-                <li><a href="#"><img src="images/oth-pro03.jpg" alt="" width="100" height="100" /></a></li>
+            	<li><a href="#"><img src="<?= $this->getSkinUrl('images/oth-pro01.jpg'); ?>" alt="" width="100" height="100" /></a></li>
+                <li><a href="#"><img src="<?= $this->getSkinUrl('images/oth-pro02.jpg'); ?>" alt="" width="100" height="100" /></a></li>
+                <li><a href="#"><img src="<?= $this->getSkinUrl('images/oth-pro03.jpg'); ?>" alt="" width="100" height="100" /></a></li>
             </ul>
         </div>
     </div>
@@ -413,7 +413,7 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
                             </tr>
                             <tr height="3"><td></td></tr>
                             <tr>
-                            	<td align="left"><img src="http://www.icuinparis.com/skin/frontend/icu/icu/images/creditcardsoffered.jpg"></td>
+                            	<td align="left"><img src="<?= $this->getSkinUrl('images/creditcardsoffered.jpg'); ?>"></td>
                             </tr>
                         </table>
                     </td>
@@ -454,13 +454,13 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
                     </td>
                 </tr>
                 <tr>
-                	<td style="text-align:right; padding: 0 5px 0 0" bgcolor="#CCCCCC"><a onclick="MM_openBrWindow('http://www.icuinparis.com/secure-online-payment.html','','scrollbars=yes,width=720,height=460')" href="#"><img src="http://www.icuinparis.com/skin/frontend/icu/icu/images/more_info.jpg" /></a></td>
+                	<td style="text-align:right; padding: 0 5px 0 0" bgcolor="#CCCCCC"><a onclick="MM_openBrWindow('<?= $this->getBaseUrl(); ?>/secure-online-payment.html','','scrollbars=yes,width=720,height=460')" href="#"><img src="<?= $this->getSkinUrl('images/more_info.jpg'); ?>" /></a></td>
                 	<td></td>
-                	<td style="text-align:right; padding: 0 5px 0 0" bgcolor="#CCCCCC"><a onclick="MM_openBrWindow('http://www.icuinparis.com/shipping-info.html','','scrollbars=yes,width=720,height=460')" href="#"><img src="http://www.icuinparis.com/skin/frontend/icu/icu/images/more_info.jpg" /></a></td>
+                	<td style="text-align:right; padding: 0 5px 0 0" bgcolor="#CCCCCC"><a onclick="MM_openBrWindow('<?= $this->getBaseUrl(); ?>/shipping-info.html','','scrollbars=yes,width=720,height=460')" href="#"><img src="<?= $this->getSkinUrl('images/more_info.jpg'); ?>" /></a></td>
                 	<td></td>
-                	<td style="text-align:right; padding: 0 5px 0 0" bgcolor="#CCCCCC"><a href="http://www.icuinparis.com/customer-service.html"><img src="http://www.icuinparis.com/skin/frontend/icu/icu/images/more_info.jpg" /></a></td>
+                	<td style="text-align:right; padding: 0 5px 0 0" bgcolor="#CCCCCC"><a href="<?= $this->getBaseUrl(); ?>/customer-service.html"><img src="<?= $this->getSkinUrl('images/more_info.jpg'); ?>" /></a></td>
                 	<td></td>
-                	<td style="text-align:right; padding: 0 5px 0 0" bgcolor="#CCCCCC"><a onclick="MM_openBrWindow('http://www.icuinparis.com/returns-exchanges.html','','scrollbars=yes,width=720,height=460')" href="#"><img src="http://www.icuinparis.com/skin/frontend/icu/icu/images/more_info.jpg" /></a></td>
+                	<td style="text-align:right; padding: 0 5px 0 0" bgcolor="#CCCCCC"><a onclick="MM_openBrWindow('<?= $this->getBaseUrl(); ?>/returns-exchanges.html','','scrollbars=yes,width=720,height=460')" href="#"><img src="<?= $this->getSkinUrl('images/more_info.jpg'); ?>" /></a></td>
                 </tr>
             </table>
         </td>

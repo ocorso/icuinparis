@@ -69,23 +69,23 @@ function showBigImageDiv(largeName, smallName) {
 			</td>
 		</tr>
 		<tr>
-			<td background="http://www.icuinparis.com/skin/frontend/icu/icu/images/bg_icons.jpg" style="background-repeat:repeat-x" height="20" align="right" colspan="2" width="450">
+			<td background="<?= $this->getSkinUrl('images/bg_icons.jpg'); ?>" style="background-repeat:repeat-x" height="20" align="right" colspan="2" width="450">
 				<table align="right" border="0" cellspacing="0" cellpadding="0">
 					<tr height="20" style="margin:0; padding:0;">
 						<td width="100" height="20" align="right" style="vertical-align:middle; padding: 0 3px 3px 0; margin:0; text-align:right">
 							<?php if(Mage::app()->getStore()->getStoreId() == "1"){ echo "share this"; }else{ echo "partager"; }?>:
 						</td>
 						<td width="3" height="20">
-							<a href="#"><img src="http://www.icuinparis.com/skin/frontend/icu/icu/images/icon_divider.jpg" width="3" height="24" border="0"></a>
+							<a href="#"><img src="<?= $this->getSkinUrl('images/icon_divider.jpg'); ?>" width="3" height="24" border="0"></a>
 						</td>
 						<td width="18" height="20">
-							<a href="http://www.facebook.com/sharer.php?u=<?php echo $this->helper('core/url')->getCurrentUrl(); ?>" target="_blank"><img src="http://www.icuinparis.com/skin/frontend/icu/icu/images/facebook_icon.jpg" width="18" height="24" border="0"></a>
+							<a href="http://www.facebook.com/sharer.php?u=<?php echo $this->helper('core/url')->getCurrentUrl(); ?>" target="_blank"><img src="<?= $this->getSkinUrl('images/facebook_icon.jpg'); ?>" width="18" height="24" border="0"></a>
 						</td>
 						<td width="18" height="20">
-							<a href="http://twitter.com/?status=<?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') . ": " . $this->helper('core/url')->getCurrentUrl(); ?>" target="_blank"><img src="http://www.icuinparis.com/skin/frontend/icu/icu/images/twitter_icon.jpg" width="18" height="24" border="0"></a>
+							<a href="http://twitter.com/?status=<?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') . ": " . $this->helper('core/url')->getCurrentUrl(); ?>" target="_blank"><img src="<?= $this->getSkinUrl('images/twitter_icon.jpg'); ?>" width="18" height="24" border="0"></a>
 						</td>
 						<td width="17" height="20">
-							<a href="mailto:?subject=<?php echo $_helper->productAttribute($_product, $_product->getName(), 'name'); ?>&body=<?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') . ": " . $this->helper('core/url')->getCurrentUrl(); ?>" target="_blank"><img src="http://www.icuinparis.com/skin/frontend/icu/icu/images/email_icon.jpg" width="17" height="24" border="0"></a>
+							<a href="mailto:?subject=<?php echo $_helper->productAttribute($_product, $_product->getName(), 'name'); ?>&body=<?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') . ": " . $this->helper('core/url')->getCurrentUrl(); ?>" target="_blank"><img src="<?= $this->getSkinUrl('images/email_icon.jpg'); ?>" width="17" height="24" border="0"></a>
 						</td>
 					</tr>
 				</table>

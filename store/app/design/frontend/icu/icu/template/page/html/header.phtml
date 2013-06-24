@@ -41,8 +41,6 @@ var google_conversion_value = 0;
 </script>
 <script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js"></script>
 
-<div id="navigation_section" style="z-index:4; position:relative;">
-
 	<?php 
 		//oc: remove old stuff.
 		//echo $this->getChildHtml('topMenu') 
@@ -53,8 +51,7 @@ var google_conversion_value = 0;
 		echo $header;
 
 	?>
-  
-</div>
+
 <div id="header_section">
   <?php echo $this->getChildHtml('bfm_storeswitcher') ?>
 
@@ -83,7 +80,7 @@ var google_conversion_value = 0;
   
   </div>
   <!-- /account -->
-  <?php //echo $this->getChildHtml('store_language') ?>
+  <?php echo $this->getChildHtml('store_language') ?>
   <!-- search -->
   <?php echo $this->getChildHtml('topSearch') ?>
   <!-- /search -->

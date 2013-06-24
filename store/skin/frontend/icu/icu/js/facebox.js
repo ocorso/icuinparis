@@ -1,4 +1,5 @@
 var target12345='';
+var base_url = "http://icuinparis.dev";
 (function($) {
   $.facebox = function(data, klass) {
     $.facebox.init()
@@ -7,8 +8,8 @@ var target12345='';
   }
 
   $.facebox.settings = {
-    loading_image : 'http://www.acumencs.com/icuinparis/skin/frontend/icu/icu/images/loading.gif',
-    close_image   : 'http://www.acumencs.com/icuinparis/skin/frontend/icu/icu/images/closelabel.gif',
+    loading_image : base_url+'/skin/frontend/icu/icu/images/loading.gif',
+    close_image   : base_url+'/skin/frontend/icu/icu/images/closelabel.gif',
     image_types   : [ 'png', 'jpg', 'jpeg', 'gif' ],
     facebox_html  : '\
   <div id="facebox" style="display:none;"> \

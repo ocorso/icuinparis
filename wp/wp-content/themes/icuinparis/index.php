@@ -10,7 +10,7 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
  * Here we setup all logic and XHTML that is required for the index template, used as both the homepage
  * and as a fallback template, if a more appropriate template file doesn't exist for a specific context.
  *
- * @package WooFramework
+ * @package icuinparis
  * @subpackage Template
  */
 	get_header();

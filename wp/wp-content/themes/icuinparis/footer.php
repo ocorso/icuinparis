@@ -25,7 +25,7 @@ Monday-Friday 9:00–7:00
 	</footer><!-- /#footer  -->
 
 </div><!-- /#wrapper -->
-<?php //wp_footer(); ?>
+<?php wp_footer(); ?>
 <?php //woo_foot(); ?>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

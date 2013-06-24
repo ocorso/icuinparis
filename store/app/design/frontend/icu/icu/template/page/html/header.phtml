@@ -27,113 +27,7 @@
  * @var Mage_Page_Block_Html_Header $this
  */
 ?>
-<?php
 
-/*	if(!$_COOKIE['ICUcurrCountryCode']){
-		$countryCode = countryCityFromIP($_SERVER["REMOTE_ADDR"]);
-		setcookie("ICUcurrCountryCode", $countryCode, time()+3600*24*30);
-	}else{
-		$countryCode = $_COOKIE['ICUcurrCountryCode'];
-	}
-	if(!$_COOKIE['ICUcurrCountryName']){
-		$countryName = countryFromIP($_SERVER["REMOTE_ADDR"]);
-		setcookie("ICUcurrCountryName", $countryName, time()+3600*24*30);
-	}else{
-		$countryName = $_COOKIE['ICUcurrCountryName'];
-	}
-	if(!$_COOKIE['ICUcurrCurrency']){
-		if($countryCode == "US"){
-			Mage::app()->getStore()->setCurrentCurrencyCode('USD');
-			setcookie("ICUcurrCurrency", "USD", time()+3600*24*30);
-		}else if($countryCode == "GB"){
-			Mage::app()->getStore()->setCurrentCurrencyCode('GBP');
-			setcookie("ICUcurrCurrency", "GBP", time()+3600*24*30);
-		}else{
-			Mage::app()->getStore()->setCurrentCurrencyCode('EUR');
-			setcookie("ICUcurrCurrency", "EUR", time()+3600*24*30);
-		}
-	}
-	if(!$_COOKIE['ICUcurrLanguage']){
-		if($countryCode == "FR"){
-			setcookie("ICUcurrLanguage", "french", time()+3600*24*30);
-			header("http://www.icuinparis.com?___store=fr&___from_store=default");
-		}else{
-			setcookie("ICUcurrLanguage", "default", time()+3600*24*30);
-		}
-		
-	}
-	if(Mage::app()->getStore()->getStoreId() == "2"){
-		setcookie("ICUcurrLanguage", "french", time()+3600*24*30);
-	}
-	//Mage::run('default', 'website');
-	function countryCityFromIP($ipAddr){
-	  //function to find country and city from IP address
-	  //Developed by Roshan Bhattarai [url]http://roshanbh.com.np[/url]
-	  //verify the IP address for the
-	  ip2long($ipAddr)== -1 || ip2long($ipAddr) === false ? trigger_error("Invalid IP", E_USER_ERROR) : "";
-	  //$ipDetail=array(); //initialize a blank array
-	  //get the XML result from hostip.info
-	  $xml = file_get_contents("http://api.hostip.info/?ip=".$ipAddr);
-	  //get the city name inside the node <gml:name> and </gml:name>
-	  //preg_match("@<Hostip>(\s)*<gml:name>(.*?)</gml:name>@si",$xml,$match);
-	  //assing the city name to the array
-	  //$ipDetail['city']=$match[2];
-	  //get the country name inside the node <countryName> and </countryName>
-	  //preg_match("@<countryName>(.*?)</countryName>@si",$xml,$matches);
-	  //assign the country name to the $ipDetail array
-	  //$ipDetail['country']=$matches[1];
-	  //get the country name inside the node <countryName> and </countryName>
-	  preg_match("@<countryAbbrev>(.*?)</countryAbbrev>@si",$xml,$cc_match);
-	  $ipDetail=$cc_match[1]; //assing the country code to array
-	  //return the array containing city, country and country code
-	  return $ipDetail;
-	}
-	
-	function countryFromIP($ipAddr){
-	  //function to find country and city from IP address
-	  //Developed by Roshan Bhattarai [url]http://roshanbh.com.np[/url]
-	  //verify the IP address for the
-	  ip2long($ipAddr)== -1 || ip2long($ipAddr) === false ? trigger_error("Invalid IP", E_USER_ERROR) : "";
-	  $ipDetail=array(); //initialize a blank array
-	  //get the XML result from hostip.info
-	  $xml = file_get_contents("http://api.hostip.info/?ip=".$ipAddr);
-	  //get the city name inside the node <gml:name> and </gml:name>
-	  preg_match("@<Hostip>(\s)*<gml:name>(.*?)</gml:name>@si",$xml,$match);
-	  //assing the city name to the array
-	  $ipDetail['city']=$match[2];
-	  //get the country name inside the node <countryName> and </countryName>
-	  preg_match("@<countryName>(.*?)</countryName>@si",$xml,$matches);
-	  //assign the country name to the $ipDetail array
-	  $ipDetail['country']=$matches[1];
-	  //get the country name inside the node <countryName> and </countryName>
-	  preg_match("@<countryAbbrev>(.*?)</countryAbbrev>@si",$xml,$cc_match);
-	  $ipDetail=$cc_match[1]; //assing the country code to array
-	  //return the array containing city, country and country code
-	  return $matches[1];
-	}
-	*/
-?>
-<div style="display:none;">
-<?php if(Mage::app()->getStore()->getStoreId() == "1"){?>
-<!-- Google Code for ICU remarketing_2 Remarketing List -->
-<script type="text/javascript">
-/* <![CDATA[ */
-var google_conversion_id = 1008295145;
-var google_conversion_language = "en";
-var google_conversion_format = "3";
-var google_conversion_color = "666666";
-var google_conversion_label = "FVa8CP-p6AIQ6bnl4AM";
-var google_conversion_value = 0;
-/* ]]> */
-</script>
-<script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
-</script>
-<noscript>
-<div style="display:inline;">
-<img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1008295145/?label=FVa8CP-p6AIQ6bnl4AM&amp;guid=ON&amp;script=0"/>
-</div>
-</noscript>
-<?php }else{?>
 <!-- Google Code for ICU remarketing_2 Remarketing List -->
 <script type="text/javascript">
 /* <![CDATA[ */
@@ -145,16 +39,8 @@ var google_conversion_label = "FVa8CP-p6AIQ6bnl4AM";
 var google_conversion_value = 0;
 /* ]]> */
 </script>
-<script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
-</script>
-<noscript>
-<div style="display:inline;">
-<img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1008295145/?label=FVa8CP-p6AIQ6bnl4AM&amp;guid=ON&amp;script=0"/>
-</div>
-</noscript>
-<?php }?>
-</div>
-<!--  -->
+<script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js"></script>
+
 <div id="navigation_section" style="z-index:4; position:relative;">
 
 	<?php 
@@ -162,7 +48,7 @@ var google_conversion_value = 0;
 		//echo $this->getChildHtml('topMenu') 
 		$base_url  	= str_replace("/store/", "",$this->getUrl(''));
 		$headerPath	= $base_url . '/php/common_icu_header.php';
-		print_r($headerPath);
+		//print_r($headerPath);
 		$header  	= file_get_contents($headerPath, false); 
 		echo $header;
 

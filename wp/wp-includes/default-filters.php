@@ -199,20 +199,18 @@ add_filter( 'xmlrpc_pingback_error',    'xmlrpc_pingback_error'               );
 add_action( 'wp_head',             'wp_enqueue_scripts',              1     );
 
 //oc: remove feed and other extras...
-remove_action('wp_head', 'wp_generator');
-//add_action( 'wp_head',             'feed_links',                      2     );
-//add_action( 'wp_head',             'feed_links_extra',                3     );
-//add_action( 'wp_head',             'rsd_link'                               );
-//add_action( 'wp_head',             'wlwmanifest_link'                       );
-//add_action( 'wp_head',             'adjacent_posts_rel_link_wp_head', 10, 0 );
-
+add_action( 'wp_head',             'feed_links',                      2     );
+add_action( 'wp_head',             'feed_links_extra',                3     );
+add_action( 'wp_head',             'rsd_link'                               );
+add_action( 'wp_head',             'wlwmanifest_link'                       );
+add_action( 'wp_head',             'adjacent_posts_rel_link_wp_head', 10, 0 );
 add_action( 'wp_head',             'locale_stylesheet'                      );
 add_action( 'publish_future_post', 'check_and_publish_future_post',   10, 1 );
 add_action( 'wp_head',             'noindex',                          1    );
 add_action( 'wp_head',             'wp_print_styles',                  8    );
 add_action( 'wp_head',             'wp_print_head_scripts',            9    );
-//add_action( 'wp_head',             'wp_generator'                           );
-//add_action( 'wp_head',             'rel_canonical'                          );
+add_action( 'wp_head',             'wp_generator'                           );
+add_action( 'wp_head',             'rel_canonical'                          );
 add_action( 'wp_footer',           'wp_print_footer_scripts',         20    );
 add_action( 'wp_head',             'wp_shortlink_wp_head',            10, 0 );
 add_action( 'template_redirect',   'wp_shortlink_header',             11, 0 );
@@ -230,9 +228,7 @@ add_action( 'login_init',          'send_frame_options_header',     10, 0 );
 
 // Feed Generator Tags
 foreach ( array( 'rss2_head', 'commentsrss2_head', 'rss_head', 'rdf_header', 'atom_head', 'comments_atom_head', 'opml_head', 'app_head' ) as $action ) {
-	//add_action( $action, 'the_generator' );
-	remove_action('wp_head', 'wp_generator');
-	remove_action('wp_head', 'the_generator');
+	add_action( $action, 'the_generator' );
 }
 
 // WP Cron

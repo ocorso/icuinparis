@@ -96,10 +96,11 @@ if ( ! is_admin() ) { add_action( 'wp_enqueue_scripts', 'woo_load_frontend_css',
 
 if ( ! function_exists( 'woo_load_frontend_css' ) ) {
 	function woo_load_frontend_css () {
-		wp_register_style( 'theme-stylesheet', get_stylesheet_uri() );
-		wp_register_style( 'woo-layout', get_template_directory_uri() . '/css/layout.css' );
-		wp_enqueue_style( 'theme-stylesheet' );
-		wp_enqueue_style( 'woo-layout' );
+		//oc: remove this.
+		// wp_register_style( 'theme-stylesheet', get_stylesheet_uri() );
+		// wp_register_style( 'woo-layout', get_template_directory_uri() . '/css/layout.css' );
+		// wp_enqueue_style( 'theme-stylesheet' );
+		// wp_enqueue_style( 'woo-layout' );
 	} // End woo_load_frontend_css()
 }
 

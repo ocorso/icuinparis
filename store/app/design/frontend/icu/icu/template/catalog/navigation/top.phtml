@@ -55,7 +55,7 @@
 		
 	?>
 	
-    <li><a href="http://www.icuinparis.com/ladies.html?limit=12&p=1" class="dir"><?php echo $cat->getName(); ?></a>
+    <li><a href="<?= $this->getUrl(); ?>/ladies.html?limit=12&p=1" class="dir"><?php echo $cat->getName(); ?></a>
 		<ul>
 		<?php
 		/*Returns comma separated ids*/
@@ -93,7 +93,7 @@
 		/* Load category by id*/
 		$cat = Mage::getModel('catalog/category')->load($id);
 		?>
-    <li><a href="http://www.icuinparis.com/gentlemen.html" class="dir"><?php echo $cat->getName(); ?></a>
+    <li><a href="<?= $this->getUrl(); ?>/gentlemen.html" class="dir"><?php echo $cat->getName(); ?></a>
       <ul>
         <?php
 		/*Returns comma separated ids*/
@@ -120,5 +120,5 @@
     <li><a href="<?php echo $this->getUrl().'all-designers.html' ?>" class="dir"><?php echo $this->__('DESIGNERS') ?></a></li>
     <li><a href="<?php echo $this->getUrl().'lookbook' ?>"><?php echo $this->__('THE LOOKBOOK') ?></a></li>
     <li><a href="<?php echo $this->getUrl().'videos' ?>"><?php echo $this->__('THE VIDEOS') ?></a></li>
-    <li><a href="http://www.icuinparis.com/blog" target="_blank"><?php echo $this->__('THE BLOG') ?></a></li>
+    <li><a href="<?= $base_url; ?>" target="_blank"><?php echo $this->__('THE BLOG') ?></a></li>
   </ul>

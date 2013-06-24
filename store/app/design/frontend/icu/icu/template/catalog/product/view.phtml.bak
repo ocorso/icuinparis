@@ -49,7 +49,7 @@
 </script>
 <div id="messages_product_view"><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></div>
 <div style="padding-top:5px; text-align:left;">
-	<?php echo "<a href=\"http://www.icuinparis.com/shop-independent-designer-accessories.html\" class=\"gobacklink\"><img src=\"http://www.icuinparis.com/skin/frontend/icu/icu/images/left-arrow.jpg\" /> "; if(Mage::app()->getStore()->getStoreId() == "1"){ echo "back to all products"; }else{ echo "Retour à tous les produits"; } echo "</a>";	?>
+	<?= "<a href=\"" . $this->getUrl('') . "/shop-independent-designer-accessories.html\" class=\"gobacklink\"><img src=\"http://www.icuinparis.com/skin/frontend/icu/icu/images/left-arrow.jpg\" /> "; if(Mage::app()->getStore()->getStoreId() == "1"){ echo "back to all products"; }else{ echo "Retour à tous les produits"; } echo "</a>";	?>
 </div>
 
 

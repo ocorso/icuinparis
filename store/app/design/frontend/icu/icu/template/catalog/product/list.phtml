@@ -128,7 +128,7 @@ document.getElementById(packId).src = packName;
 			} 
 		?>
 	  </div>
-	  <?php echo str_replace("<a href=\"#\" class=\"backlink\">back to top <img src=\"http://www.icuinparis.com/skin/frontend/icu/icu/images/up_arrow.jpg\" width=\"10\" height=\"8\" /></a>", "", $this->getToolbarHtml()); ?>
+	  <?php echo str_replace("<a href=\"#\" class=\"backlink\">back to top <img src=\"<?= $this->getUrl(); ?>/skin/frontend/icu/icu/images/up_arrow.jpg\" width=\"10\" height=\"8\" /></a>", "", $this->getToolbarHtml()); ?>
 	   </div>
 	   <div id="filternavtext">
 	 <?php 
@@ -218,50 +218,50 @@ document.getElementById(packId).src = packName;
     	$left_navigation_menu .= '</li>';
 		if($tarray[3] == "gentlemen" || $tarray[3] == "gentlemen.html")
 		{
-			$left_navigation_menu .= '<li><a href="#" onclick="swaparrow(\'arrow1\')"><img src="http://www.icuinparis.com/skin/frontend/icu/icu/images/down-arrow.jpg" width="9" height="9" id="arrow1" name="arrow1" />jewelry</a>
+			$left_navigation_menu .= '<li><a href="#" onclick="swaparrow(\'arrow1\')"><img src="<?= $this->getUrl(); ?>/skin/frontend/icu/icu/images/down-arrow.jpg" width="9" height="9" id="arrow1" name="arrow1" />jewelry</a>
 				<ul>
-				<li><a href="http://www.icuinparis.com/' . $currcat223 . '/cufflinks.html?limit=12&p=1" ' . ($pagetype[0] == "cufflinks" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>cufflinks</a></li>
-				<li><a href="http://www.icuinparis.com/' . $currcat223 . '/rings.html?limit=12&p=1" ' . ($pagetype[0] == "rings" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>RINGS</a></li>
-				<li><a href="http://www.icuinparis.com/' . $currcat223 . '/bracelets.html?limit=12&p=1" ' . ($pagetype[0] == "bracelets" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>BRACELETS</a></li>
-				<li><a href="http://www.icuinparis.com/' . $currcat223 . '/necklaces.html?limit=12&p=1" ' . ($pagetype[0] == "necklaces" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>NECKLACES</a></li>
-				<li><a href="http://www.icuinparis.com/' . $currcat223 . '/pins.html?limit=12&p=1" ' . ($pagetype[0] == "pins" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>PINS</a></li>
+				<li><a href="<?= $this->getUrl(); ?>/' . $currcat223 . '/cufflinks.html?limit=12&p=1" ' . ($pagetype[0] == "cufflinks" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>cufflinks</a></li>
+				<li><a href="<?= $this->getUrl(); ?>/' . $currcat223 . '/rings.html?limit=12&p=1" ' . ($pagetype[0] == "rings" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>RINGS</a></li>
+				<li><a href="<?= $this->getUrl(); ?>/' . $currcat223 . '/bracelets.html?limit=12&p=1" ' . ($pagetype[0] == "bracelets" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>BRACELETS</a></li>
+				<li><a href="<?= $this->getUrl(); ?>/' . $currcat223 . '/necklaces.html?limit=12&p=1" ' . ($pagetype[0] == "necklaces" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>NECKLACES</a></li>
+				<li><a href="<?= $this->getUrl(); ?>/' . $currcat223 . '/pins.html?limit=12&p=1" ' . ($pagetype[0] == "pins" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>PINS</a></li>
 				</ul>
 			</li>
-			<li><a href="#" onclick="swaparrow(\'arrow2\')"><img src="http://www.icuinparis.com/skin/frontend/icu/icu/images/down-arrow.jpg" width="9" height="9" id="arrow2" name="arrow2" />accessories</a>
+			<li><a href="#" onclick="swaparrow(\'arrow2\')"><img src="<?= $this->getUrl(); ?>/skin/frontend/icu/icu/images/down-arrow.jpg" width="9" height="9" id="arrow2" name="arrow2" />accessories</a>
 				<ul>
-				<li><a href="http://www.icuinparis.com/' . $currcat223 . '/scarves.html?limit=12&p=1" ' . ($pagetype[0] == "scarves" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>scarves</a></li>
-				<li><a href="http://www.icuinparis.com/' . $currcat223 . '/bows.html?limit=12&p=1" ' . ($pagetype[0] == "bows" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>bows</a></li>
+				<li><a href="<?= $this->getUrl(); ?>/' . $currcat223 . '/scarves.html?limit=12&p=1" ' . ($pagetype[0] == "scarves" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>scarves</a></li>
+				<li><a href="<?= $this->getUrl(); ?>/' . $currcat223 . '/bows.html?limit=12&p=1" ' . ($pagetype[0] == "bows" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>bows</a></li>
 				</ul>
 			</li>
-			<li><a href="#" onclick="swaparrow(\'arrow3\')"><img src="http://www.icuinparis.com/skin/frontend/icu/icu/images/down-arrow.jpg" width="9" height="9" id="arrow3" name="arrow3" />clothing</a>
+			<li><a href="#" onclick="swaparrow(\'arrow3\')"><img src="<?= $this->getUrl(); ?>/skin/frontend/icu/icu/images/down-arrow.jpg" width="9" height="9" id="arrow3" name="arrow3" />clothing</a>
 				<ul>
-				<li><a href="http://www.icuinparis.com/' . $currcat223 . '/tee-shirts.html?limit=12&p=1" ' . ($pagetype[0] == "tee-shirts" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>tee-shirts</a></li>
+				<li><a href="<?= $this->getUrl(); ?>/' . $currcat223 . '/tee-shirts.html?limit=12&p=1" ' . ($pagetype[0] == "tee-shirts" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>tee-shirts</a></li>
 				</ul>
 			</li>';
 		}else{
 			$left_navigation_menu .= '
-			<li><a href="#" onclick="swaparrow(\'arrow1\')"><img src="http://www.icuinparis.com/skin/frontend/icu/icu/images/down-arrow.jpg" width="9" height="9" id="arrow1" name="arrow1" />jewelry</a>
+			<li><a href="#" onclick="swaparrow(\'arrow1\')"><img src="<?= $this->getUrl(); ?>/skin/frontend/icu/icu/images/down-arrow.jpg" width="9" height="9" id="arrow1" name="arrow1" />jewelry</a>
 				<ul>
-				<li><a href="http://www.icuinparis.com/ladies/earrings.html?limit=12&p=1" ' . ($pagetype[0] == "earrings" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>EARRINGS</a></li>
-				<li><a href="http://www.icuinparis.com/ladies/rings.html?limit=12&p=1" ' . ($pagetype[0] == "rings" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>RINGS</a></li>
-				<li><a href="http://www.icuinparis.com/ladies/bracelets.html?limit=12&p=1" ' . ($pagetype[0] == "bracelets" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>BRACELETS</a></li>
-				<li><a href="http://www.icuinparis.com/ladies/necklaces.html?limit=12&p=1" ' . ($pagetype[0] == "necklaces" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>NECKLACES</a></li>
+				<li><a href="<?= $this->getUrl(); ?>/ladies/earrings.html?limit=12&p=1" ' . ($pagetype[0] == "earrings" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>EARRINGS</a></li>
+				<li><a href="<?= $this->getUrl(); ?>/ladies/rings.html?limit=12&p=1" ' . ($pagetype[0] == "rings" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>RINGS</a></li>
+				<li><a href="<?= $this->getUrl(); ?>/ladies/bracelets.html?limit=12&p=1" ' . ($pagetype[0] == "bracelets" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>BRACELETS</a></li>
+				<li><a href="<?= $this->getUrl(); ?>/ladies/necklaces.html?limit=12&p=1" ' . ($pagetype[0] == "necklaces" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>NECKLACES</a></li>
 				</ul>
 			</li>
-			<li><a href="#" onclick="swaparrow(\'arrow2\')"><img src="http://www.icuinparis.com/skin/frontend/icu/icu/images/down-arrow.jpg" width="9" height="9" id="arrow2" name="arrow2" />accessories</a>
+			<li><a href="#" onclick="swaparrow(\'arrow2\')"><img src="<?= $this->getUrl(); ?>/skin/frontend/icu/icu/images/down-arrow.jpg" width="9" height="9" id="arrow2" name="arrow2" />accessories</a>
 				<ul>
-				<li><a href="http://www.icuinparis.com/ladies/scarves.html?limit=12&p=1" ' . ($pagetype[0] == "scarves" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>scarves</a></li>
-				<li><a href="http://www.icuinparis.com/ladies/bags.html?limit=12&p=1" ' . ($pagetype[0] == "bgs" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>bags</a></li>
-				<li><a href="http://www.icuinparis.com/ladies/clutches.html?limit=12&p=1" ' . ($pagetype[0] == "clutches" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>clutches</a></li>
-				<li><a href="http://www.icuinparis.com/ladies/purses.html?limit=12&p=1" ' . ($pagetype[0] == "purses" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>purses</a></li>
-				<li><a href="http://www.icuinparis.com/ladies/hair-jewels.html?limit=12&p=1" ' . ($pagetype[0] == "hair-jewels" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>hair jewels</a></li>
-				<li><a href="http://www.icuinparis.com/ladies/brooches.html?limit=12&p=1" ' . ($pagetype[0] == "brooches" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>brooches</a></li>
-				<li><a href="http://www.icuinparis.com/ladies/bows.html?limit=12&p=1" ' . ($pagetype[0] == "bows" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>bows</a></li>
+				<li><a href="<?= $this->getUrl(); ?>/ladies/scarves.html?limit=12&p=1" ' . ($pagetype[0] == "scarves" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>scarves</a></li>
+				<li><a href="<?= $this->getUrl(); ?>/ladies/bags.html?limit=12&p=1" ' . ($pagetype[0] == "bgs" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>bags</a></li>
+				<li><a href="<?= $this->getUrl(); ?>/ladies/clutches.html?limit=12&p=1" ' . ($pagetype[0] == "clutches" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>clutches</a></li>
+				<li><a href="<?= $this->getUrl(); ?>/ladies/purses.html?limit=12&p=1" ' . ($pagetype[0] == "purses" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>purses</a></li>
+				<li><a href="<?= $this->getUrl(); ?>/ladies/hair-jewels.html?limit=12&p=1" ' . ($pagetype[0] == "hair-jewels" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>hair jewels</a></li>
+				<li><a href="<?= $this->getUrl(); ?>/ladies/brooches.html?limit=12&p=1" ' . ($pagetype[0] == "brooches" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>brooches</a></li>
+				<li><a href="<?= $this->getUrl(); ?>/ladies/bows.html?limit=12&p=1" ' . ($pagetype[0] == "bows" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>bows</a></li>
 				</ul>
 			</li>
-			<li><a href="#" onclick="swaparrow(\'arrow3\')"><img src="http://www.icuinparis.com/skin/frontend/icu/icu/images/down-arrow.jpg" width="9" height="9" id="arrow3" name="arrow3" />clothing</a>
+			<li><a href="#" onclick="swaparrow(\'arrow3\')"><img src="<?= $this->getUrl(); ?>/skin/frontend/icu/icu/images/down-arrow.jpg" width="9" height="9" id="arrow3" name="arrow3" />clothing</a>
 				<ul>
-				<li><a href="http://www.icuinparis.com/ladies/tee-shirts.html?limit=12&p=1" ' . ($pagetype[0] == "tee-shirts" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>tee-shirts</a></li>
+				<li><a href="<?= $this->getUrl(); ?>/ladies/tee-shirts.html?limit=12&p=1" ' . ($pagetype[0] == "tee-shirts" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>tee-shirts</a></li>
 				</ul>
 			</li>';
 		};

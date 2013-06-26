@@ -29,10 +29,11 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 					
 	$settings = woo_get_dynamic_values( $settings );
 ?>
+</div>
 	<header>
-    	<img src="<?php echo get_bloginfo('wpurl')?>/wp-content/uploads/footer_icu.png"/>
+    	<img src="<?php echo get_bloginfo('wpurl')?>/wp-content/uploads/icu-logo-black.png"/>
 	</header>
-    <div id="content" class="page col-full">
+    <div id="content" class="page col-full container">
     
     	<?php woo_main_before(); ?>
     	
@@ -92,22 +93,22 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 	
 	<?php woo_footer_before(); ?>
 		
-	<section id="footer-widgets">
+	<section id="footer-widgets" class="container">
 
 		<div class="col-full col-<?php echo $total; ?> fix">
 
-		<div style="clear:both;"></div>
+			<div style="clear:both;"></div>
+			<div class="row">
+				<?php $i = 0; while ( $i < $total ) { $i++; ?>
+					<?php if ( woo_active_sidebar( 'footer-' . $i ) ) { ?>
 
-			<?php $i = 0; while ( $i < $total ) { $i++; ?>
-				<?php if ( woo_active_sidebar( 'footer-' . $i ) ) { ?>
+				<div class="span3 block footer-widget-<?php echo $i; ?>">
+		        	<?php woo_sidebar( 'footer-' . $i ); ?>
+				</div>
 
-			<div class="block footer-widget-<?php echo $i; ?>">
-	        	<?php woo_sidebar( 'footer-' . $i ); ?>
-			</div>
-
-		        <?php } ?>
-			<?php } // End WHILE Loop ?>
-
+			        <?php } ?>
+				<?php } // End WHILE Loop ?>
+			</div><!-- /.row  -->
 		</div><!-- /.col-full  -->
 
 	</section><!-- /#footer-widgets  -->

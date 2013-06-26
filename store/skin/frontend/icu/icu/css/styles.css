@@ -26,7 +26,7 @@
 /* Reset ================================================================================= */
 * { margin:0; padding:0; }
 
-body          { font:12px/1.55 Arial, Helvetica, sans-serif; }
+body          { font:12px/1.55 Arial, Helvetica, sans-serif; font-size: 62.5%}
 
 /* Forms */
 form          { display:inline; }
@@ -349,7 +349,19 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 .subtitle { clear:both; padding:15px 0 0; font-size:15px; font-weight:bold; margin:0 0 6px; color:#e25203; }
 
 /* Pager */
-.pager { margin:6px 0 0 0; font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#000; background:#fff; padding:8px 8px; text-align:center; font-weight:bold; -moz-user-select: none; -khtml-user-select: none; user-select: none; cursor: default; }
+.pager { 
+	margin:6px 0 0 0; 
+	font-size:12px; 
+	font-family:Arial, Helvetica, sans-serif; 
+	color:#000; 
+	background:#fff; 
+	/*padding:8px 8px; */
+	text-align:center; 
+	font-weight:bold; 
+	-moz-user-select: none; 
+	-khtml-user-select: none; 
+	user-select: none; cursor: default; 
+}
 .pager .amount { float:left; margin:0; }
 .pager .limiter { float:right; }
 .pager .limiter label { vertical-align:middle; }

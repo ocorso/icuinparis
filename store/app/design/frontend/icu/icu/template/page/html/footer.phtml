@@ -37,7 +37,13 @@
   </div>
   <!-- /share -->
   <!-- footer links -->
-  <div id="footer_link"><a href="<?php echo $this->getUrl().'about-us-landing.html' ?>"><?php echo $this->__('About Us') ?></a> <span>|</span> <a href="<?php echo $this->getUrl().'contact-us-landing.html' ?>"><?php echo $this->__('Contact Us') ?></a> <span>|</span> <a href="<?php echo $this->getUrl().'customer-service.html' ?>"><?php echo $this->__('Customer Service') ?></a> <span>|</span> <a href="<?php echo $this->getUrl().'designs' ?>"><?php echo $this->__('Submit Your Design') ?></a></div>
+  <div id="footer_link">
+    <a href="<?php echo $this->getUrl().'contact-us-landing.html' ?>"><?php echo $this->__('Contact Us') ?></a> 
+    <span>|</span> 
+    <a href="<?php echo $this->getUrl().'customer-service.html' ?>"><?php echo $this->__('Customer Service') ?></a> 
+    <span>|</span> 
+    <a href="<?php echo $this->getUrl().'designs' ?>"><?php echo $this->__('Submit Your Design') ?></a>
+  </div>
   <!-- /footer links -->
   
   <!-- newsletter -->
@@ -62,6 +68,6 @@
   <!-- /newsletter -->
   <br class="clr" />
   <!-- copyright -->
-  <div id="copyright"><?php echo $this->getCopyright() ?></div>
+  <div id="copyright"><?= $this->getCopyright() ?></div>
   <!-- /copyright -->
 </div>

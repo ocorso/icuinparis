@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 <body <?php body_class(); ?>>
 
-<div id="wrapper">
+<div id="wrapper" class="container">
 <?php 
 	$base_url = "http://icuinparis.dev";
 	include_once('php/common_icu_header.php'); ?>

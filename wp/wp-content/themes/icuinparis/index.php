@@ -98,10 +98,10 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
           	</div>
 			<div style="clear:both;height:10px;"></div>
           	<div id="call-home-lower-left">
-              	<a href="showroom"><img src="<?php echo get_bloginfo('wpurl')?>/wp-content/uploads/call_home_lower_left.jpg" width="100%"/></a>
+              	<a href="<?= get_bloginfo('url'); ?>/store/designs"><img src="<?php echo get_bloginfo('wpurl')?>/wp-content/uploads/call_home_lower_left.jpg" width="100%"/></a>
             </div>    
           	<div id="call-home-lower-right">
-              	<a href="showroom"><img src="<?php echo get_bloginfo('wpurl')?>/wp-content/uploads/call_home_lower_right.jpg" width="100%" /></a>
+              	<a href="<?= get_bloginfo('url'); ?>/representation"><img src="<?php echo get_bloginfo('wpurl')?>/wp-content/uploads/call_home_lower_right.jpg" width="100%" /></a>
           	</div>
 			<div style="clear:both;height:10px;"></div>
         </div>
@@ -138,21 +138,24 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		<div class="col-full col-<?php echo $total; ?> fix">
 
 		<div class="home-footer-header">
-        	<img src="<?php echo get_bloginfo('wpurl')?>/wp-content/uploads/home-footer-call-header.jpg" width="200" height="123" align="left"/>We opened in 2010, selling a unique collection of designer jewelry and accessories. Always an online platform and now based between Paris and New York City, we offer a mix of European and American style and culture through our product offering. An important part of the icuinparis.com culture is our customizeable and made-to-order product. We have created strong relationships with our designers, allowing us the advantage to offer you designs and product that may not be available elsewhere, or that was never realized until you suggested it. Now in our third year, icuinparis.com has recenly opened a showroom branch: Showroom ICU. 
+        	<div class="row">
+        		<div class="span2"><img src="<?php echo get_bloginfo('wpurl')?>/wp-content/uploads/home-footer-call-header.jpg" width="200" height="123" align="left"/></div>
+        		<div class="span10">We opened in 2010, selling a unique collection of designer jewelry and accessories. Always an online platform and now based between Paris and New York City, we offer a mix of European and American style and culture through our product offering. An important part of the icuinparis.com culture is our customizeable and made-to-order product. We have created strong relationships with our designers, allowing us the advantage to offer you designs and product that may not be available elsewhere, or that was never realized until you suggested it. Now in our third year, icuinparis.com has recenly opened a showroom branch: Showroom ICU. </div>
+        	</div>
         </div>	
 
 		<div style="clear:both;"></div>
-
+		<div class="row">
 			<?php $i = 0; while ( $i < $total ) { $i++; ?>
 				<?php if ( woo_active_sidebar( 'footer-' . $i ) ) { ?>
 
-			<div class="block footer-widget-<?php echo $i; ?>">
+			<div class=" span3 block footer-widget-<?php echo $i; ?>">
 	        	<?php woo_sidebar( 'footer-' . $i ); ?>
 			</div>
 
 		        <?php } ?>
 			<?php } // End WHILE Loop ?>
-
+		</div><!-- /.row  -->
 		</div><!-- /.col-full  -->
 
 	</section><!-- /#footer-widgets  -->

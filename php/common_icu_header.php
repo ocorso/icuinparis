@@ -1,5 +1,7 @@
 <?php if(!isset($base_url)) $base_url = "http://icuinparis.dev"; ?>
 
+<link media="all" href="<?= $base_url; ?>/php/ored-styles.css" type="text/css" rel="stylesheet">
+
 <div class="navbar navbar-inverse navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">

@@ -5,11 +5,7 @@ Controller description: Retrieve sidebar widgets
 */
 
 class JSON_API_Widgets_Controller {
-  function get_header(){
-     global $json_api;
-     $menu = $json_api->wp_nav_menu();
-     return array("menu"=>$menu);
-  }
+  
   function get_sidebar() {
     global $json_api;
     $index = @$_REQUEST['sidebar_id'];

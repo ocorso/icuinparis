@@ -4,3 +4,4 @@ store/var/cache
 store/var/cache/*
 store/var/session
 store/var/session/*
+store/var/log/*

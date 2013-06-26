@@ -8,8 +8,21 @@ Template:       icuinparis
 Version:        1.0
 */
 
+@font-face {
+    font-family: 'JosefinSansStdLight';
+    src: url('fonts/JosefinSansStd-Light-webfont.eot');
+    src: url('fonts/JosefinSansStd-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/JosefinSansStd-Light-webfont.woff') format('woff'),
+         url('fonts/JosefinSansStd-Light-webfont.ttf') format('truetype'),
+         url('fonts/JosefinSansStd-Light-webfont.svg#JosefinSansStdLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 body {
-  font-size: 1.3em;
+  font-size: 62.5%;
   line-height: 1.618;
   color: #666;
   background: #ffffff;
@@ -19,7 +32,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   text-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-}  
+} 
 
 a{
     color:#000000;
@@ -55,7 +68,7 @@ max-width:95%;
   -webkit-box-shadow: 0 0 0 0 #ffffff;
   margin: 0;
   position: relative;
-  background: url("/wp-content/uploads/white.png");
+  background: url("../../uploads/white.png");
 }
 
 #featured-slider .slide:after {
@@ -79,41 +92,6 @@ max-width:95%;
   bottom: 0;
   margin: 1.618em;
 }
- 
-ul.nav { 
-    text-align:right;
-    margin-bottom: 0;
-    position: relative;
-}
-
-#top {
-    background: none repeat scroll 0 0 #242424 !important;
-    padding: 0 1.618em;
-}
-
-#top #top-nav {
-    float:right;
-    padding-right:20%;
-}
-
-#top ul.nav {
-    text-align:right;
-    font-size: 1.0em;
-}
-
-
-ul.nav li {
-    float: left;
-    list-style: none outside none;
-    position: relative;
-    text-transform: uppercase;
-}
-
-#header {
-    background-size: 50% 100%;
-    border-bottom: 0.0em solid #ffffff !important;
-    display:none;
-}
 
 #footer {
     border-top: opx solid #676D76;
@@ -126,32 +104,7 @@ ul.nav li {
     color: #d1d1d1;
 }
 
-ul.nav li { 
-    border-left: #565656 solid;
-    border-left-width:1px;
-    float: left;
-    list-style: none outside none;
-    position: relative;
-}
 
-ul.nav li:last-child {
-    border-right: #565656 solid;
-    border-right-width:1px;
-}
-
-#top ul.nav ul {
-    background: none repeat scroll 0 0 #666666 !important;
-}
-
-#top ul.nav > li a {
-    color: #FDFDFD !important;
-    text-align:left;
-}
-
-ul.sub-menu li {
-    border-left: 0px solid #565656;
-    border-bottom: 1px solid #848484;
-}
 
 div#home-cont {
     width:100%; 
@@ -212,13 +165,15 @@ section#footer-widgets div.col-full div.block div#text-8.widget {
     color:#303030; text-shadow:none;    
 }
 
-H2.home-footer { 
+h2.home-footer { 
     color:#303030; 
     margin-bottom: 1px; 
-    font-weight:200;
+    font-weight:normal;
+    font-family: 'JosefinSansStdLight', 'Source Sans Pro', sans-serif;
+    font-size: 2.3em;
 }
 
-DIV.home-footer-header { 
+div.home-footer-header { 
     text-shadow:none;
 }
 
@@ -322,18 +277,16 @@ header h1 {
     padding-bottom: 0px;
 }
 
-.page #content header{
-    margin: 0px 5% 0px 20%;
-}
+
 
 .page #content header h1, .single #content header h1 {
     padding: 25px 0px 10px 0px; 
     text-shadow:none; 
-    font-size:2.5em; 
+    font-size:5.0em; 
     font-weight:normal;
     color:#000000; 
     text-transform:uppercase;   
-    font-family: 'Source Sans Pro', sans-serif; 
+    font-family: 'JosefinSansStdLight', 'Source Sans Pro', sans-serif; 
 }
 
 .page #content header p, .single #content header p {
@@ -343,6 +296,7 @@ header h1 {
 
 .page #content p, .search-results article.page #content p{
     margin:20px 10%;
+    font-size: 1.2em;
 }
 
 body #content{
@@ -352,7 +306,7 @@ body #content{
 
 
 .page-template-single-about-php header{
-    background: #0fb7ba;
+    background-color: #c5d9d9;
     text-align: center;
     width: 100%;
     padding: 100px 0px;
@@ -370,6 +324,7 @@ body #content{
 .page-template-single-about-php #footer-widgets {
     background:none;
     padding: 0px;
+    padding-bottom: 35px;
 }
 
 #call-home-lower-left img, #call-home-lower-right img{
@@ -378,17 +333,18 @@ body #content{
 }
 
 div#ourdesigners {
-    float:left;
+/*    float:left;
     width:95%;
     max-width:800px;
-    margin: 20px 5% 0px 20%;
+    margin: 20px 5% 0px 20%;*/
 }
 
 #ourdesigners .designer{
-    display:block;
+    background-repeat: no-repeat;
+/*    display:block;
     float:left;
-    margin-right:20px;
-    width:323px;
+    margin-right:20px;*/
+/*    width:323px; */
     height:462px;
 }
 
@@ -557,7 +513,14 @@ ul.products .product:nth-child(2n) {
     color:#000;
 }
 
-
+article {
+    overflow: hidden;
+}
+/*****************************************************************************
+/*****************************************************************************
+/* @media queries */
+/*****************************************************************************
+/*****************************************************************************/
 @media screen and (max-width: 768px) {
     
     .woocommerce-page #content #main{
@@ -633,8 +596,11 @@ ul.products .product:nth-child(2n) {
         font-size:14px;
     }
 }
-
-/* wpts_matrix css */
+/*****************************************************************************
+/*****************************************************************************
+/* @wpts_matrix css */
+/*****************************************************************************
+/*****************************************************************************/
 
 /*box styles*/
 

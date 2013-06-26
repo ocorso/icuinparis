@@ -1,0 +1,44 @@
+
+body{
+
+padding-top: 41px; /* 60px to make the container go all the way to the bottom of the topbar */ 
+}
+
+.navbar-fixed-top, .navbar-fixed-bottom {
+    position: fixed;
+}
+.nav a{
+	text-transform: uppercase;
+    font-size: 1.3em;	
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.navbar .brand{
+    padding: 0px 20px;
+}
+
+ul.nav li { 
+    border-left: #565656 solid;
+    border-left-width:1px;
+    float: left;
+    list-style: none outside none;
+    position: relative;
+}
+
+ul.nav li:last-child {
+    border-right: #565656 solid;
+    border-right-width:1px;
+}
+
+.nav ul.nav ul {
+    background: none repeat scroll 0 0 #666666 !important;
+}
+
+.nav ul.nav > li a {
+    color: #FDFDFD !important;
+    text-align:left;
+}
+
+ul.sub-menu li {
+    border-left: 0px solid #565656;
+    border-bottom: 1px solid #848484;
+}

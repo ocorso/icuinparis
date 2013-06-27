@@ -106,7 +106,8 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 			<div style="clear:both;height:10px;"></div>
         </div>
 	</div>
-
+</div><!-- /#wrapper -->
+<div id="footer-widget-wrapper">
 <?php
 if ( ! defined( 'ABSPATH' ) ) exit;
 /**
@@ -133,7 +134,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 	
 	<?php woo_footer_before(); ?>
 		
-	<section id="footer-widgets">
+	<section id="footer-widgets" class="container">
 
 		<div class="col-full col-<?php echo $total; ?> fix">
 

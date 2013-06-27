@@ -143,7 +143,9 @@ div#call-home-lower-right {
 div#home-cont div#call-home-lower-right li#text-3.widget {
     height:100px;
 }
-
+#footer-widget-wrapper{
+    background-color: #E6E6E6;
+}
 #footer-widgets {
     background:#e6e6e6; 
     border-top: 0px solid #848A92;

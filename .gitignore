@@ -5,3 +5,4 @@ store/var/cache/*
 store/var/session
 store/var/session/*
 store/var/log/*
+store/var/locks/*

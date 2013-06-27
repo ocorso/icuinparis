@@ -1,5 +1,5 @@
 var target12345='';
-var base_url = "http://icuinparis.dev/store";
+
 (function($) {
   $.facebox = function(data, klass) {
     $.facebox.init()

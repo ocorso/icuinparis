@@ -1,6 +1,12 @@
-#RewriteEngine On
-#RewriteCond %{HTTP_HOST} ^(www.)?icuinparis.dev$
-#RewriteRule ^(/)?$ wp [L]
+# BEGIN Remove www.
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.icuinparis.dev$ [NC]
+RewriteRule ^(.*)$ http://icuinparis.dev/$1 [R=301,L]
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.icuinparis.com$ [NC]
+RewriteRule ^(.*)$ http://icuinparis.com/$1 [R=301,L]
+# END Remove www.
 
 # BEGIN WordPress
 <IfModule mod_rewrite.c>

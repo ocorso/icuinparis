@@ -55,7 +55,9 @@ max-width:95%;
 #main {
     width: 100% !important;
 }
-
+.flexslider-container{
+    display: none;
+}
 #featured-slider {
   overflow: hidden;
   border: 0;
@@ -81,7 +83,7 @@ max-width:95%;
 }
 
 .home #content {
-    background: url("/wp-content/uploads/white.png");
+    background: url("../../uploads/white.png");
     overflow: hidden;
     padding: 0;
 }
@@ -393,15 +395,15 @@ div#ourdesigners {
 }
 
 #ourdesigners .designer.char{
-    background-image:url('http://staging.click3x.com/icuparis/wp-content/uploads/0000_char.png');
+    background-image:url('../../uploads/0000_char.png');
 }
 
 #ourdesigners .designer.noot{
-    background-image:url('http://staging.click3x.com/icuparis/wp-content/uploads/0001_noot.png');
+    background-image:url('../../uploads/0001_noot.png');
 }
 
 #ourdesigners .designer.aea{
-    background-image:url('http://staging.click3x.com/icuparis/wp-content/uploads/0002_aea.png');
+    background-image:url('../../uploads/0002_aea.png');
 }
 
 .page-template-single-creativeb-php section.entry{

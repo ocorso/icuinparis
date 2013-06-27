@@ -28,33 +28,33 @@
 <config>
     <global>
         <install>
-            <date>{{date}}</date>
+            <date><![CDATA[Mon, 17 Jun 2013 16:58:42 +0000]]></date>
         </install>
         <crypt>
-            <key>{{key}}</key>
+            <key><![CDATA[4ad83fce858a2ffa3493ecd3cb2f9ab0]]></key>
         </crypt>
         <disable_local_modules>false</disable_local_modules>
         <resources>
             <db>
-                <table_prefix>{{db_prefix}}</table_prefix>
+                <table_prefix><![CDATA[]]></table_prefix>
             </db>
             <default_setup>
                 <connection>
-                    <host>{{db_host}}</host>
-                    <username>{{db_user}}</username>
-                    <password>{{db_pass}}</password>
-                    <dbname>{{db_name}}</dbname>
+                    <host><![CDATA[localhost]]></host>
+                    <username><![CDATA[cinsummer]]></username>
+                    <password><![CDATA[christans1234]]></password>
+                    <dbname><![CDATA[cinsummer_dev_magento]]></dbname>
                     <active>1</active>
                 </connection>
             </default_setup>
         </resources>
-        <session_save>{{session_save}}</session_save>
+        <session_save><![CDATA[files]]></session_save>
     </global>
     <admin>
         <routers>
             <adminhtml>
                 <args>
-                    <frontName>{{admin_frontname}}</frontName>
+                    <frontName><![CDATA[admin]]></frontName>
                 </args>
             </adminhtml>
         </routers>

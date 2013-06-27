@@ -1,4 +1,10 @@
-<?php if(!isset($base_url)) $base_url = "http://icuinparis.dev"; ?>
+<?php 
+
+    $protocol = isset( $_SERVER['HTTPS'] ) ? "https://" : "http://";
+    $base_url = $protocol . $_SERVER['HTTP_HOST'];
+
+
+?>
 
 <link media="all" href="<?= $base_url; ?>/php/ored-styles.css" type="text/css" rel="stylesheet">
 

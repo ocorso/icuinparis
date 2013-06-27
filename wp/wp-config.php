@@ -33,18 +33,29 @@
 // ** MySQL settings - You can get this info from your web host ** //
 
 /** Database for info WordPress */
-echo $SERVER['HTTP_HOST'];
-/*
-define('DB_NAME', 'julian_wrdp3');
-define('DB_USER', 'julian_wrdp3');
-define('DB_PASSWORD', '69s1B1Lgm38q');
-define('DB_HOST', 'localhost');
-*/
-define('DB_NAME', 'icuinparis_wp');
-define('DB_USER', 'root');
-define('DB_PASSWORD', 'root');
-define('DB_HOST', 'localhost');
 
+switch($_SERVER['HTTP_HOST']){
+	case "icuinparis.dev" :
+		define('DB_NAME', 'icuinparis_wp');
+		define('DB_USER', 'root');
+		define('DB_PASSWORD', 'root');
+		break;
+
+	case "dev.icuinparis.com" :
+
+		define('DB_NAME', 'cinsummer_dev_wp');
+		define('DB_USER', 'cinsummer');
+		define('DB_PASSWORD', 'christans1234');
+		break;
+
+	default : 
+		define('DB_NAME', 'cinsummer_prod_wp');
+		define('DB_USER', 'cinsummer');
+		define('DB_PASSWORD', 'christans1234');
+
+}
+
+define('DB_HOST', 'localhost');
 define('DB_CHARSET', 'utf8');
 define('DB_COLLATE', '');
 

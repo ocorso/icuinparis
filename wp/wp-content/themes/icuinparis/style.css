@@ -33,7 +33,9 @@ body {
   -webkit-font-smoothing: antialiased;
   text-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
 } 
-
+#wrapper{
+    margin-top: 0;
+}
 a{
     color:#000000;
 }
@@ -96,7 +98,9 @@ max-width:95%;
   bottom: 0;
   margin: 1.618em;
 }
-
+#homepage_callouts{
+    padding-bottom: 31px;
+}
 #footer {
     border-top: opx solid #676D76;
     color: #545454;
@@ -108,19 +112,32 @@ max-width:95%;
     color: #d1d1d1;
 }
 
-
-
-
-div#homeproducts {
-    width:960; 
-    background:#FFF; 
-    padding-bottom:20px;
-    display:none; 
+.product{
 }
-
-
-
-
+.product a{
+    position: relative;
+    display: block;
+    text-transform: uppercase;
+    line-height: 17px;
+}
+.product span{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 1.4em;
+    padding: 4px 8px;
+    background-color: #000;
+}
+.designer-name{
+    font-size: 1.4em;
+    color: #000;  
+    font-weight: bold;  
+}
+.product-name{
+    font-size: 1.4em;
+    color: #000;  
+    font-weight: normal;  
+}
 #footer-widget-wrapper{
     background-color: #E6E6E6;
 }
@@ -155,61 +172,6 @@ h2.home-footer {
 
 div.home-footer-header { 
     text-shadow:none;
-}
-
-.product_cycle_item .item_link {
-    display: none !important;
-}
-
-.product_cycle_category_container {
-    display: none !important;
-}
-
-div#homeproducts h3 { 
-    display:none;
-}
-
-div#homeproducts ul.product_list_widget li { 
-    float:left;
-    background:#ffffff;
-    border-bottom: 0px solid #848A92;
-}
-
-div#home-content {
-    background:#ffffff;
-}
-
-div#homeproducts {
-    background:#ffffff;
-}
-
-div#homeproducts ul.product_list_widget li a {
-    width:240px;
-    font-size:10px;
-    text-shadow:none;
-    color:#000000;
-}
-
-ul.product_list_widget li img {
-    background-clip:padding-box;
-    border-radius: 0em 0em 0em 0em;
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-    float:none;
-    height: auto;
-    margin: 0 1.387em 1em 0;
-    width: 200px; 
-    text-align:center;
-}
-
-div#homeproducts ul.product_list_widget li span.amount {
-    position: static;
-    bottom: 0px;
-    width: 100%;
-    overflow: none;  
-    width: 50px;
-    background:#000000;
-    color:#ffffff;
-    z-index:1000;   
 }
 
 .entry img {
@@ -259,7 +221,7 @@ header h1 {
 
 
 
-.page #content header h1, .single #content header h1, #store_featurette h1 {
+.page #content header h1, .single #content header h1, #store_featurette_header h1 {
     padding: 25px 0px 10px 0px; 
     text-shadow:none; 
     font-size:5.0em; 

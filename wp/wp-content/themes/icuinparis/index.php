@@ -83,17 +83,31 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 	</div><!--/#featured-slider-->
 
 
-    	<div id="store_featurette" class="row">
+    	<div id="store_featurette_header" class="row">
          	<h1 class="span10">Shop ICU Online</h1>
          	<a class="shop-all-btn span2" href="<?= get_bloginfo('url'); ?>/store/" title="Shop All ICU">Shop All</a>
-
-         	<div id="homeproducts">
-            <?php if ( woo_active_sidebar( 'homeproducts-widget' ) ) { ?>
-        		<?php woo_sidebar( 'homeproducts-widget' ); ?>
- 			<?php } // End IF Statement ?>
-          	</div>
-		    
         </div><!--/#store_featurette .row-->
+
+     	<div id="homeproducts" class="row">
+        <?php 
+        	$args 		= array(	'category'=> '1343',
+        							'suppress_filters' => true
+        					);
+        	$featured 	= get_posts( $args ); 
+        	$i = 0;
+
+    	 	while ($i<6): $i += 1; foreach ($featured as $p):  $info = get_post_custom($p->ID); 
+    	 ?>
+    	 		<div class="product span2">
+
+    	 			<a href="<?= $info['link'][0]; ?>" title="<?= $p->post_title; ?>"><?= $p->post_content; ?><span class="price"><?= $info['price'][0]; ?></span></a>
+    	 			
+    	 			<a class="designer-name" href="<?= $info['link'][0]; ?>" title="<?= $p->post_title; ?>"><?= $info['designer'][0]; ?></a>
+    	 			<a class="product-name" href="<?= $info['link'][0]; ?>" title="<?= $p->post_title; ?>"><?= $info['name'][0]; ?></a>
+    	 		</div>
+    	 	<?php  endforeach; endwhile; ?>
+      	</div>
+	    
         <div id="homepage_callouts" class="row">
             <a class="span6" href="<?= get_bloginfo('url'); ?>/store/designs"><img alt="Submit Your Designs Image" src="<?php bloginfo('stylesheet_directory'); ?>/img/homepage/submit-your-own-design.jpg" /></a>
             <a class="span6" href="<?= get_bloginfo('url'); ?>/representation"><img alt="ICU Representation" src="<?php bloginfo('stylesheet_directory'); ?>/img/homepage/representation.jpg" /></a>

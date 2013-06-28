@@ -16,10 +16,10 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 	get_header();
 	
 	$settings = array(
-					'custom_intro_message' => 'true',
-					'portfolio_area' => 'true', 
-					'shop_area' => 'true'
-					);
+					'custom_intro_message' 	=> 'true',
+					'portfolio_area' 		=> 'true', 
+					'shop_area' 			=> 'true'
+				);
 					
 	$settings = woo_get_dynamic_values( $settings );
 	if ( get_query_var( 'page' ) > 1 ) { $paged = get_query_var( 'page' ); } elseif ( get_query_var( 'paged' ) > 1 ) { $paged = get_query_var( 'paged' ); } else { $paged = 1; } 
@@ -28,7 +28,7 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 	<ul class="slides">
 		<li class="slide slide-number-1 has-image no-video">
 			<div class="slide-wrapper">
-				<div class="slide-media"><img src="<?= get_bloginfo('wpurl'); ?>/wp-content/uploads/0000_video.png" alt=""  width="1300"  class="woo-image slide-image" /></div><!--/.slide-media-->
+				<div class="slide-media"><img src="<?= get_bloginfo('wpurl'); ?>/wp-content/uploads/0000_video.png" alt=""  class="woo-image slide-image" /></div><!--/.slide-media-->
 								<div class="slide-content">
 					<div class="slide-content-inner">
 						<header><h1><a href="http://gibson.loc/c3x-icu/wordpress/home-3/">Home 3</a></h1></header>
@@ -41,7 +41,7 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 		</li>
 		<li class="slide slide-number-2 has-image no-video">
 			<div class="slide-wrapper">
-				<div class="slide-media"><img src="<?= get_bloginfo('wpurl'); ?>/wp-content/uploads/0001_CREATIVE-COMMUNITY.png" alt=""  width="1300"  class="woo-image slide-image" /></div><!--/.slide-media-->
+				<div class="slide-media"><img src="<?= get_bloginfo('wpurl'); ?>/wp-content/uploads/0001_CREATIVE-COMMUNITY.png" alt=""    class="woo-image slide-image" /></div><!--/.slide-media-->
 								<div class="slide-content">
 					<div class="slide-content-inner">
 						<header><h1><a href="http://gibson.loc/c3x-icu/wordpress/home-2/">Home 2</a></h1></header>
@@ -54,7 +54,7 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 		</li>
 		<li class="slide slide-number-3 has-image no-video">
 			<div class="slide-wrapper">
-				<div class="slide-media"><img src="<?= get_bloginfo('wpurl'); ?>/wp-content/uploads/0002_VASKOLG-ESPARATA-SHELL-NECKLACE-GIVE-THEM-SOMETHINGTHEYVE-NE.png" alt=""  width="1300"  class="woo-image slide-image" /></div><!--/.slide-media-->
+				<div class="slide-media"><img src="<?= get_bloginfo('wpurl'); ?>/wp-content/uploads/0002_VASKOLG-ESPARATA-SHELL-NECKLACE-GIVE-THEM-SOMETHINGTHEYVE-NE.png" alt=""   class="woo-image slide-image" /></div><!--/.slide-media-->
 								<div class="slide-content">
 					<div class="slide-content-inner">
 						<header><h1><a href="http://gibson.loc/c3x-icu/wordpress/home-1/">Home 1</a></h1></header>
@@ -67,7 +67,7 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 		</li>
 		<li class="slide slide-number-2 has-image no-video">
 			<div class="slide-wrapper">
-				<div class="slide-media"><img src="<?= get_bloginfo('wpurl'); ?>/wp-content/uploads/0003_NOOT-SS_13.png" alt=""  width="1300"  class="woo-image slide-image" /></div><!--/.slide-media-->
+				<div class="slide-media"><img src="<?= get_bloginfo('wpurl'); ?>/wp-content/uploads/0003_NOOT-SS_13.png" alt=""    class="woo-image slide-image" /></div><!--/.slide-media-->
 								<div class="slide-content">
 					<div class="slide-content-inner">
 						<header><h1><a href="http://gibson.loc/c3x-icu/wordpress/home-2/">Home 2</a></h1></header>
@@ -82,28 +82,22 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 	<div class="flexslider-container"></div>
 	</div><!--/#featured-slider-->
 
-    <div id="content">
-    	<div id="home-cont">
-         	<div id="shopcall">
-              	<img src="<?php echo get_bloginfo('wpurl')?>/wp-content/uploads/call_shop.jpg" width="480" height="65" />
-          	</div>
-          	<div id="shopcall2">
-              <img src="<?php echo get_bloginfo('wpurl')?>/wp-content/uploads/call_shopall.jpg" width="480" height="65" />
-          	</div>
-			<div style="clear:both;"></div>
+
+    	<div id="store_featurette" class="row">
+         	<h1 class="span10">Shop ICU Online</h1>
+         	<a class="shop-all-btn span2" href="<?= get_bloginfo('url'); ?>/store/" title="Shop All ICU">Shop All</a>
+
          	<div id="homeproducts">
             <?php if ( woo_active_sidebar( 'homeproducts-widget' ) ) { ?>
         		<?php woo_sidebar( 'homeproducts-widget' ); ?>
  			<?php } // End IF Statement ?>
           	</div>
-			<div style="clear:both;height:10px;"></div>
-          	<div id="call-home-lower-left">
-              	<a href="<?= get_bloginfo('url'); ?>/store/designs"><img src="<?php echo get_bloginfo('wpurl')?>/wp-content/uploads/call_home_lower_left.jpg" width="100%"/></a>
-            </div>    
-          	<div id="call-home-lower-right">
-              	<a href="<?= get_bloginfo('url'); ?>/representation"><img src="<?php echo get_bloginfo('wpurl')?>/wp-content/uploads/call_home_lower_right.jpg" width="100%" /></a>
-          	</div>
-			<div style="clear:both;height:10px;"></div>
+		    
+        </div><!--/#store_featurette .row-->
+        <div id="homepage_callouts" class="row">
+            <a class="span6" href="<?= get_bloginfo('url'); ?>/store/designs"><img alt="Submit Your Designs Image" src="<?php bloginfo('stylesheet_directory'); ?>/img/homepage/submit-your-own-design.jpg" /></a>
+            <a class="span6" href="<?= get_bloginfo('url'); ?>/representation"><img alt="ICU Representation" src="<?php bloginfo('stylesheet_directory'); ?>/img/homepage/representation.jpg" /></a>
+
         </div>
 	</div>
 </div><!-- /#wrapper -->

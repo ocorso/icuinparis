@@ -370,7 +370,7 @@ document.getElementById(packId).src = packName;
 				<div class="Container3">
 				<img src="<?php echo $this->getSkinUrl('images/up_arrow.gif') ?>" class="Scrollbar-Up3" onmouseover="scroller.startScroll(0, 5);" onmouseout="scroller.stopScroll();" alt="" /> 
 				<img src="<?php echo $this->getSkinUrl('images/down_arrow.gif') ?>" class="Scrollbar-Down3" onmouseover="scroller.startScroll(0, -5);" onmouseout="scroller.stopScroll();" alt="" />
-				  <div id="Scroller-3">
+				  <div class="Scroller-3">
 				  
 					<div class="Scroller-Container3">
 					<?php $_gallery = Mage::getModel('catalog/product')->load($_product->getId())->getMediaGalleryImages(); 

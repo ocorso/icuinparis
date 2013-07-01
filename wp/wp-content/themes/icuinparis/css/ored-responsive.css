@@ -1,0 +1,13 @@
+@media (max-width: 1200px) {
+	#ourdesigners .designer .popup {
+		margin-right: 0;
+	}
+}
+
+@media (max-width: 979px) {
+	#ourdesigners .designer .popup p, #ourdesigners .designer .popup h2, .designer-btn {
+	  padding-left: 5px;
+	  padding-right: 5px;
+	  font-size: 1.1em; 
+	}
+}

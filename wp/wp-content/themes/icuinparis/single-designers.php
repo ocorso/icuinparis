@@ -41,7 +41,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
         ?>                                                           
             <article <?php post_class(); ?>>
             	
-            	<header class="container">
+            	<header id="designer_header" class="container">
 			    	<h1><?php the_title(); ?></h1>
 			    	<p class="span8">Showroom ICU is the business-to-business division of the ICU e-shop. We represent a curated selection of designers for international retail distribution. To receive look books and linesheets for any of the designers listed below, <a title="Christan Summers" href="mailto:christan@icuinparis.com">please contact us</a>. </p>
 				</header>

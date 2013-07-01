@@ -321,5 +321,5 @@ function woo_comment_reply() {
 } // End woo_comment_reply()
 }
 
-add_action( 'get_header', 'woo_comment_reply', 10 );
+//add_action( 'get_header', 'woo_comment_reply', 10 );
 ?>

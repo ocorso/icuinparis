@@ -1587,9 +1587,9 @@ input[type="button"].btn03 {margin:0; padding:0; width:110px; height:23px; backg
 
 	.Container3 {position:absolute; top:60px; right:0; width:120px; height:300px;}
 
-	#Scroller-3 {position:absolute; overflow:hidden; width:300px; height:120px;}
+	.Scroller-3 {position:absolute; overflow:hidden; width:300px; height:120px;}
 
-	#Scroller-3 .box3 {margin:0; padding:0 10px; width:100px; height:100px; text-align:center;}
+	.Scroller-3 .box3 {margin:0; padding:0 10px; width:100px; height:100px; text-align:center;}
 
 	.Scroller-Container3 {position:absolute; top:0px; left:0px;}
 

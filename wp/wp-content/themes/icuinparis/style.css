@@ -20,7 +20,9 @@ Version:        1.0
 
 }
 
-
+html{
+    background: #545454;
+}
 body {
   font-size: 62.5%;
   line-height: 1.618;
@@ -275,41 +277,59 @@ body #content{
     max-width:480px;
 }
 
-div#ourdesigners {
+
+
+
+
+#designer_header a{
+    color: #444;
+}
+#ourdesigners{
+    margin-top: 24px;
+}
+
+.designer-wrapper p{
 /*    float:left;
     width:95%;
     max-width:800px;
     margin: 20px 5% 0px 20%;*/
+    margin: 0 !important;
 }
 
 #ourdesigners .designer{
     background-repeat: no-repeat;
-/*    display:block;
-    float:left;
-    margin-right:20px;*/
-/*    width:323px; */
-    height:462px;
+    overflow: hidden;
+    position: relative;
 }
 
 #ourdesigners .designer .popup{
-    display:none;
-    width:323px;
-    margin-top: 105px;
+    opacity: 0;
+    bottom: -50px;
+    position: absolute;
     background-color:#E3B1B7;
+    margin-right: 46px;
     padding-bottom:10px;
     padding-top:10px;
+    overflow: hidden;
+
+    transition: all 0.2s ease 0s;
+    linear-gradient(to bottom, #111111 0%, #222222 100%) repeat scroll 0 0 transparent;
 }
 
 #ourdesigners .designer:hover .popup{
-    display:block;
+    opacity: .9;
+    bottom: 0;
 }
 
-#ourdesigners .designer .popup p{
-    margin: 10px;
+#ourdesigners .designer .popup p, #ourdesigners .designer .popup h2, .designer-btn{
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-#ourdesigners .designer .popup p strong{
+#ourdesigners .designer .popup h2{
     text-transform:uppercase;
+    font-family: 'JosefinSansStdLight', 'Source Sans Pro', sans-serif; 
+    font-weight: normal;
     font-size: 20px;
 }
 
@@ -318,32 +338,27 @@ div#ourdesigners {
     text-transform:uppercase;
 }
 
-#ourdesigners .designer .popup a.btn{
+#ourdesigners .designer .popup a.designer-btn{
     display: block;
     background-color:#444;
     padding: 10px;
     width: 130px;
     text-align: center;
     margin:10px 0px;
+    margin-left: 10px;
+}
+#ourdesigners .designer .popup ul{
+    list-style: none;
+}
+#ourdesigners .designer .popup ul li{
+    display: inline;
 }
 
-#ourdesigners .designer img{
-    position:relative;
-    z-index:400;
-    width:235px;
-}
 
-#ourdesigners .designer.char{
-    background-image:url('../../uploads/0000_char.png');
-}
 
-#ourdesigners .designer.noot{
-    background-image:url('../../uploads/0001_noot.png');
-}
 
-#ourdesigners .designer.aea{
-    background-image:url('../../uploads/0002_aea.png');
-}
+
+
 
 .page-template-single-creativeb-php section.entry{
     margin-top:25px;

@@ -6,6 +6,11 @@ function icu_scripts() {
   wp_enqueue_script('bootstrap', get_stylesheet_directory_uri() . '/js/vendor/bootstrap.min.js', array( 'jquery','modernizr' ));
 	wp_enqueue_script('icu', get_stylesheet_directory_uri() . '/js/main.js', array( 'jquery','modernizr','bootstrap' ));
 
+if( !is_admin()){
+  wp_deregister_script('jquery');
+  wp_register_script('jquery', ("//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"), false, '1.10.1', true);
+  wp_enqueue_script('jquery');
+}
 }
 
 
@@ -21,12 +26,13 @@ function icu_styles()
   wp_register_style( 'concatenated-styles', get_stylesheet_directory_uri() . '/css/concate-style.css', array(), '20130621', 'all' );
 
   wp_register_style('ored-styles', get_stylesheet_directory_uri() . '/style.css', array(), '20130621','all');
+  wp_register_style('ored-responsive', get_stylesheet_directory_uri() . '/css/ored-responsive.css', array(), '20130701','all');
 
   // enqueing:
   wp_enqueue_style( 'bootstrap-styles' );
   wp_enqueue_style( 'responsive-styles' );
-  //wp_enqueue_style( 'concatenated-styles' );
   wp_enqueue_style( 'ored-styles' );
+  wp_enqueue_style( 'ored-responsive' );
 }
 
 // add actions

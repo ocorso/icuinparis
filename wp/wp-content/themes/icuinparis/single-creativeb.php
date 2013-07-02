@@ -37,7 +37,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
         <?php
         	if ( have_posts() ) { $count = 0;
-        		while ( have_posts() ) { the_post(); $count++;
+        		while ( have_posts() ) { the_post(); $count++; 
         ?>                                                           
             <article <?php post_class(); ?>>
             	

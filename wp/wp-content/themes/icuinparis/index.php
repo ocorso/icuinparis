@@ -86,7 +86,7 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
     	<div id="store_featurette_header" class="row">
          	<h1 class="span10">Shop ICU Online</h1>
          	<a class="shop-all-btn span2" href="<?= get_bloginfo('url'); ?>/store/" title="Shop All ICU">Shop All</a>
-        </div><!--/#store_featurette .row-->
+        </div><!--/#store_featurette_header .row-->
 
      	<div id="homeproducts" class="row">
         <?php 

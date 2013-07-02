@@ -5,9 +5,19 @@
 }
 
 @media (max-width: 979px) {
+
 	#ourdesigners .designer .popup p, #ourdesigners .designer .popup h2, .designer-btn {
-	  padding-left: 5px;
-	  padding-right: 5px;
-	  font-size: 1.1em; 
+		padding-left: 5px;
+		padding-right: 5px;
+		font-size: 1.1em; 
+	}
+	html.js body.page div#wrapper.container div#content.page section#main.col-left article.post-8994 section.entry div#ourdesigners.row div.designer-wrapper div.designer div.popup p{
+    	font-size: 1.0em;
+	}
+	.page #content header h1, .single #content header h1, #store_featurette_header h1{
+		font-size: 5.6em;
+	}
+	#content{
+		padding-top: 0;
 	}
 }

@@ -66,13 +66,64 @@ ul.sub-menu li {
 .dropdown-menu > li > a{
     clear: both;
     color: #fff;
-display: block;
-font-weight: normal;
-line-height: 20px;
-padding: 3px 20px;
-white-space: nowrap;
+    display: block;
+    font-weight: normal;
+    line-height: 20px;
+    padding: 3px 20px;
+    white-space: nowrap;
 }
 
 .dropdown-menu > li > a:hover{
     background-color: #999999;
 }
+
+.nav-collapse.collapse {
+
+  margin-left: 178px;
+
+}
+
+.navbar .brand{
+    font-family: 'JosefinSansStdLight', 'Source Sans Pro', sans-serif;
+    background-color: black;
+    padding: 0 20px;
+    position: absolute;
+    top: 0;
+    width: 178px;
+    height: 178px;
+    background-image: url('../wp/wp-content/themes/icuinparis/img/ICU.jpg');
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    text-indent: -9999px;
+}
+
+
+/*****************************************************************************
+/*****************************************************************************
+/* @media queries */
+/*****************************************************************************
+/*****************************************************************************/
+
+@media (max-width: 979px) {
+
+.navbar .brand{
+        text-indent: 0;
+        background-image: none;
+        height: inherit;
+        width: inherit;
+        padding:11px;
+        padding-bottom: 0;
+        margin-left: 20px;
+    }
+    .nav-collapse.collapse{
+        margin-left: 0px;
+    }
+}
+@media (max-width: 753px){
+    .navbar .btn-navbar {
+        margin-right: 20px;
+    }
+}
+
+

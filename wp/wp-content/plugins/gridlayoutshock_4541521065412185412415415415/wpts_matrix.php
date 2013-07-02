@@ -512,7 +512,7 @@ function wpts_useful_matrix_shortcode($atts=array()){
 
 //oc: remove and consolidate.
 //        $content1.= "<link rel='stylesheet' href='".plugin_dir_url(__FILE__)."css/bootstrap.min.css'  />";
-        $content1.= "<link rel='stylesheet' href='".plugin_dir_url(__FILE__)."css/wpts_matrix.css'  />";
+//        $content1.= "<link rel='stylesheet' href='".plugin_dir_url(__FILE__)."css/wpts_matrix.css'  />";
         add_action('wp_print_footer_scripts', 'ts_pinterest_js', 20);       
     }
 	if($categories!='none'){
@@ -771,7 +771,7 @@ function wpts_useful_matrix_shortcode($atts=array()){
 							jQuery('.item<?php echo $sh_count;?>').each(function(){
 			            		var btn=jQuery(this).find('a:last');
 			            		//button style
-				            	btn.addClass('btn').addClass('btn-inverse');
+				            	//btn.addClass('btn').addClass('btn-inverse');
 					   		});
 						}
 						/*ics*/
@@ -975,7 +975,7 @@ function wpts_useful_matrix_shortcode($atts=array()){
 															jQuery('.item<?php echo $sh_count;?>').each(function(){
 											            		var btn=jQuery(this).find('a:last');
 											            		//button style
-												            	btn.addClass('btn').addClass('btn-inverse');
+												            	//btn.addClass('btn').addClass('btn-inverse');
 													   		});
 														}
 														/*ics*/
@@ -1444,8 +1444,15 @@ function pint_make_html($get_cat,$category_asigned,$taxo_html,$q_posts,$sh_count
 						if(jQuery('.item<?php echo $sh_count;?>').hasClass('useful_box18')===true){
 							jQuery('.item<?php echo $sh_count;?>').each(function(){
 			            		var btn=jQuery(this).find('a:last');
-			            		//button style
-				            	btn.addClass('btn').addClass('btn-inverse');
+			            		
+                                //button style
+                                
+
+                                //btn.addClass('btn').addClass('btn-inverse');
+                                //oc: fix read more.
+                                var item = btn.parent();
+                                item.find("p").append("...").append(btn);
+                              // jQuery("<p class='timestamp'>Posted: <?php the_time('m/j/y g:i A'); ?></p>").insertAfter(item.find(".contentTitle"));
 					   		});
 						}
 						/*ics*/

@@ -442,35 +442,6 @@ body {margin:0; padding:0; font-family:Arial, Helvetica, sans-serif; color:#0000
 
 
 
-/* Helvetica 45 Light Styles */
-
-
-
-@font-face {
-
- font-family:"Helvetica 45 Light";
-
- src: url("../font/hll____.eot") /* EOT file for IE */
-
-}
-
-@font-face {
-
- font-family:"Helvetica 45 Light";
-
- src: url("../font/hll____.ttf") format("truetype"); /* TTF file for CSS3 browsers */
-
-}
-
-@font-face {
-
- font-family:"Helvetica 45 Light";
-
- src: url("../font/hll___.otf") format("opentype"); /* OTF file for Firefox */
-
-}
-
-
 
 /* Baskerville-DemiBold Styles */
 
@@ -640,11 +611,10 @@ input[type="button"].btn03 {margin:0; padding:0; width:110px; height:23px; backg
 
 /* ---------------------------- Header Styles ---------------------------- */
 
-#header_section {margin:0 auto; padding:0; width:960px; height:100px; position: relative;}
+#header_section {margin:0 auto; padding:0; width:960px; /*height:100px;*/ position: relative;}
 
 
 	/* logo */
-	#search_mini_form { position:middle; right: 50; top: 100px;}
 
 	#logo {margin:0; padding:10px 0 0 0; width:345px; height:50px; float:middle; }
 
@@ -1652,68 +1622,124 @@ input[type="button"].btn03 {margin:0; padding:0; width:110px; height:23px; backg
 	#content3 .designer_design img {display:block}
 
 
+#design-submit-form {
+	width: 575px;	
+	padding:0; 
+	height:auto; 
+	min-height:530px;
+	display: block;
+}
+ #submit_designs_header h2{
+ 	font-family: "JosefinSansStdLight", sans-serif;
+ 	text-transform: uppercase;
+ 	font-size: 5.0em;
+	color:#333333;
+ }
 
+#submit_designs_header p, #design-submit-form p{
+	font-family: 'Gotham-Light',sans-serif;
+	font-size: 1.5em;
+	color: #333;
+}
 
-	#submit_design {margin:0 auto; padding:0; width:960px; height:auto; min-height:530px;}
-
-	#tagline4 {margin:0; padding:10px 0 10px 0; width:960px; height:auto; float:left;}
-
-	#tagline4 h2 {font:normal 58px/70px "Fiolex Girls"; color:#000000; cursor:pointer; margin-left:115px;}
-
-	#tagline4 h2:hover {color:#999999;}
-
-	#tagline4 p {font:normal 14px/18px "Helvetica 45 Light"; color:#999999; padding:0 180px 0 290px;}
-
-	#tagline4 p a {color:#999999; text-decoration:none;}
-
-	#tagline4 p a:hover {color:#000000;}
+.form_section {
+	margin:0; 
+	border-bottom: 1px solid #CCCCCC;
+	padding-bottom: 20px;
+}
+.form_section h4{
+	font-size: 2.5em;
+	text-transform: uppercase;
+	font-family: 'Gotham-Light', sans-serif;
+	color: #333;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+#submit_designs_header { 
+	margin-bottom: 50px;
+}
 
 	#button {margin:0; padding:0 0 20px 0; width:960px; height:auto; float:left; text-align:center;}
 
-
-
-	.form_section {margin:0; padding:0 40px; width:400px; height:auto; min-height:300px; float:left;}
-
-	.form_section h4.one {font:normal 16px/75px Arial, Helvetica, sans-serif; color:#000000; text-transform:uppercase; background:url(../images/1.jpg) no-repeat 178px 0;}
-
-	.form_section h4.two {font:normal 16px/75px Arial, Helvetica, sans-serif; color:#000000; text-transform:uppercase; background:url(../images/2.jpg) no-repeat 210px 0;}
-
-	.form_section h4.three {font:normal 16px/75px Arial, Helvetica, sans-serif; color:#000000; text-transform:uppercase; background:url(../images/3.jpg) no-repeat 205px 0;}
-
-	.form_section h4.four {font:normal 16px/75px Arial, Helvetica, sans-serif; color:#000000; text-transform:uppercase; background:url(../images/4.jpg) no-repeat 155px 0;}
-
-
-
-	.form_section .lable01 {margin:0; padding:0; width:400px; height:auto; float:left; font:normal 11px/20px Arial, Helvetica, sans-serif; color:#000000;}
-
-	.form_section .field01 {margin:0; padding:0; width:400px; height:18px; float:left; font:normal 11px/20px Arial, Helvetica, sans-serif; color:#999999;}
-
-	.form_section .lable02 {margin:0; padding:0; width:200px; height:auto; float:left; font:normal 11px/20px Arial, Helvetica, sans-serif; color:#000000;}
-
-	.form_section .field02 {margin:0; padding:0; width:200px; height:18px; float:left; font:normal 11px/20px Arial, Helvetica, sans-serif; color:#999999;}
-
-	.form_section .lable03 {margin:0; padding:0; width:400px; height:auto; float:left; font:normal 11px Arial, Helvetica, sans-serif; color:#000000;}
-
-	.form_section .lable04 {margin:0; padding:10px 0 0 0; width:400px; height:auto; float:left; font:normal 12px/20px Arial, Helvetica, sans-serif; color:#000000;}
-
-	.form_section .lable04 span {font:normal 10px/20px Arial, Helvetica, sans-serif; color:#FF0000;}
-
-	.form_section .lable03 a {color:#666666; text-decoration:none;}
-
-	.form_section .lable03 a:hover {color:#333333;}
-
-
-
-	.form_section input[type="text"] {margin:0; padding:2px; width:auto; height:auto; background-color:#FFFFFF; border:1px solid #000000; font-family:Arial, Helvetica, sans-serif; color:#000000; font-size:11px;}
-
+.form_section input[type="text"] {
+	background-color: #e6e6e6;
+	height: 38px;	
+	font-family:'Gotham-Light', Helvetica, sans-serif; 
+	font-size: 1.3em;
+	outline: 0;
+	color:#333333; 
+	border-radius: 0;
+	 -moz-border-radius:0;
+	 padding: 0;
+	 padding-left: 17px;
+	 margin-right: 10px;
+	 margin-bottom: 13px;
+}
+	
 	.form_section input[type="password"] {margin:0; padding:2px; width:auto; height:auto; background-color:#FFFFFF; border:1px solid #000000; font-family:Arial, Helvetica, sans-serif; color:#000000; font-size:11px;}
 
-	.form_section textarea {margin:0; padding:2px; width:auto; height:auto; background-color:#FFFFFF; border:1px solid #000000; font-family:Arial, Helvetica, sans-serif; color:#000000; font-size:11px; overflow:auto;}
+.form_section label{
+	font-family:'Gotham-Light', Helvetica, sans-serif; 
+	font-size: 1.3em;
+	outline: 0;
+	color:#333333; 
+}
+.form_section textarea {
+	background-color:#e6e6e6; 
+	font-family:'Gotham-Light', Helvetica, sans-serif; 
+	color:#333; 
+	font-size:1.3em; 
+	overflow:auto;
+}
 
-	.form_section select {margin:0; padding:1px 2px; width:auto; height:auto; background-color:#FFFFFF; border:1px solid #000000; font-family:Arial, Helvetica, sans-serif; color:#000000; font-size:11px;}
+.form_section .styled-select select {
+	background: transparent;
+	padding: 5px;
+	font-size: 1.2em;
+	color: #333;
+	line-height: 1;
+	border: 0;
+	border-radius: 0;
+	 -moz-border-radius:0;
+	height: 38px;
+	-webkit-appearance: none;
+	font-family:'Gotham-Light', Helvetica, sans-serif; 
+	outline: 0;
+	padding-top: 8px;
+}
+.form_section .styled-select {
+	margin:0; 
+	padding:0px 5px; 
+	border: 1px solid #ccc;
+	color:#333333; 
+	font-size:1.3em;
+	height: 38px;
+	overflow: hidden;
+	background: url('../images/teal-arrow.png') no-repeat 250px #e6e6e6;
+	outline: 0;
+	}
 
-	.form_section input[type="file"] {margin:1px 0; padding:2px; width:auto; height:auto; background-color:#FFFFFF; border:1px solid #000000; font-family:Arial, Helvetica, sans-serif; color:#000000; font-size:11px;}
+.form_section input[type="file"] {
+	border-radius: 0;
+ -moz-border-radius:0;
+	margin:1px 0; 
+	padding:2px; 
+	width:auto; 
+	height:auto; 
+	background-color:#99cccc; 
+	font-family:'Gotham-Light', Helvetica, sans-serif; 
+	color:#fff; 
+	font-size:1.3em;
+}
 
+#submit_design_btn{
+	color: white;
+	background-color:#99cccc; 
+	font-family:'Gotham-Light', Helvetica, sans-serif; 
+	text-transform: uppercase;
+	font-size: 2.2em;
+	padding:13px;
+}
 
 
 
@@ -2642,3 +2668,33 @@ a.flashSale_French:hover {
          -webkit-border-radius: 3px;
          -moz-border-radius: 3px;
          border-radius: 3px; }
+
+@font-face {
+    font-family: 'Gotham-Light';
+    src: url('../fonts/gotham-light.eot');
+    src: url('../fonts/gotham-light.eot') format('embedded-opentype'),
+         url('../fonts/gotham-light.woff') format('woff'),
+         url('../fonts/gotham-light.ttf') format('truetype'),
+         url('../fonts/gotham-light.svg#GothamRegular') format('svg');
+}
+@font-face {
+    font-family: 'JosefinSansStdLight';
+    src: url('../fonts/JosefinSansStd-Light-webfont.eot');
+    src: url('../fonts/JosefinSansStd-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/JosefinSansStd-Light-webfont.woff') format('woff'),
+         url('../fonts/JosefinSansStd-Light-webfont.ttf') format('truetype'),
+         url('../fonts/JosefinSansStd-Light-webfont.svg#JosefinSansStdLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+#search_mini_form {
+  overflow: hidden;
+  padding-top: 37px;
+  position: relative;
+  display: block;
+
+}
+#select-language{
+	display: none;
+}

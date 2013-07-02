@@ -1,5 +1,15 @@
 <?php
+
+
 remove_action('wp_head', 'wp_generator');
+
+
+function ored_pre_get_posts($query){
+   if ( $query->is_main_query() ) {
+    //echo "poop";
+        $query->set( 'cat', '-1343' );
+    }
+}
 
 function icu_scripts() {
 	wp_enqueue_script('modernizr', get_stylesheet_directory_uri() . '/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js');
@@ -38,7 +48,7 @@ function icu_styles()
 // add actions
 add_action('wp_enqueue_scripts', 'icu_styles');
 add_action( 'wp_enqueue_scripts', 'icu_scripts' );
-
+//add_action( 'pre_get_posts', 'ored_pre_get_posts' );
 
 //oc: remove feed and other extras...
 remove_action( 'wp_head',             'feed_links',                      2     );

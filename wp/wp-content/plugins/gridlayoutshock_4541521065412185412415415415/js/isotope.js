@@ -347,7 +347,7 @@
     sortBy : 'original-order',
     sortAscending : true,
     resizesContainer : true,
-    transformsEnabled: !$.browser.opera, // disable transforms in Opera
+  //  transformsEnabled: !$.browser.opera, // disable transforms in Opera
     itemPositionDataEnabled: false
   };
 

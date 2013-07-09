@@ -89,24 +89,54 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
         </div><!--/#store_featurette_header .row-->
 
      	<div id="homeproducts" class="row">
+     		
         <?php 
-        	$args 		= array(	'category'=> '1343',
+        //oc: pull in main large featured product (catID = 1343)
+            $args 		= array(	'category'=> '1343',
         							'suppress_filters' => true
         					);
         	$featured 	= get_posts( $args ); 
-        	$i = 0;
 
-    	 	while ($i<6): $i += 1; foreach ($featured as $p):  $info = get_post_custom($p->ID); 
+        	//oc: fake it till you make it.
+    	 	$p 		= $featured[0];
+    	 	$info 	= get_post_custom($p->ID); 
     	 ?>
-    	 		<div class="product span2">
-
+    	 		<div id="large_featured_product" class="product span6">
     	 			<a href="<?= $info['link'][0]; ?>" title="<?= $p->post_title; ?>"><?= $p->post_content; ?><span class="price"><?= $info['price'][0]; ?></span></a>
-    	 			
     	 			<a class="designer-name" href="<?= $info['link'][0]; ?>" title="<?= $p->post_title; ?>"><?= $info['designer'][0]; ?></a>
     	 			<a class="product-name" href="<?= $info['link'][0]; ?>" title="<?= $p->post_title; ?>"><?= $info['name'][0]; ?></a>
     	 		</div>
-    	 	<?php  endforeach; endwhile; ?>
-      	</div>
+    	 	<div id="small_featured_products" class="span6">
+    	 		<div class="container-fluid">
+    	 			<div class="row-fluid">
+    	 	<?php  
+        	
+        //oc: pull in 'store' category posts (catID = 1342) and echo them out.
+        	$args 		= array(	'category'=> '1342',
+        							'posts_per_page' => 6,
+        							'suppress_filters' => true
+        					);
+        	$featured 	= get_posts( $args ); 
+        	print_r(sizeof($featured));
+        	$i = 0;//oc: counter for 3-across row.
+
+        	//oc: fake it till you make it.
+    	 	foreach ($featured as $p):  
+    	 		$info 	= get_post_custom($p->ID); 
+    	 		if ($i == 3) : ?> 
+    	 		</div><div class='row-fluid'> 
+    	 		<?php endif; ?>
+    	 
+    	 		<div class="product span4">
+    	 			<a href="<?= $info['link'][0]; ?>" title="<?= $p->post_title; ?>"><?= $p->post_content; ?><span class="price"><?= $info['price'][0]; ?></span></a>
+    	 			<a class="designer-name" href="<?= $info['link'][0]; ?>" title="<?= $p->post_title; ?>"><?= $info['designer'][0]; ?></a>
+    	 			<a class="product-name" href="<?= $info['link'][0]; ?>" title="<?= $p->post_title; ?>"><?= $info['name'][0]; ?></a>
+    	 		</div>
+    	 		
+    	 	<?php $i += 1; endforeach; ?>
+    	 </div></div><!-- /end row-fluid and container fluid of small right side products -->
+    	</div><!-- /end span6 for right side products -->
+      	</div><!-- /end row of all products -->
 	    
         <div id="homepage_callouts" class="row">
             <a class="span6" href="<?= get_bloginfo('url'); ?>/store/designs"><img alt="Submit Your Designs Image" src="<?php bloginfo('stylesheet_directory'); ?>/img/homepage/submit-your-own-design.jpg" /></a>
@@ -146,14 +176,10 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 		<div class="col-full col-<?php echo $total; ?> fix">
 
-		<div class="home-footer-header">
-        	<div class="row">
-        		<div class="span2"><img src="<?php echo get_bloginfo('wpurl')?>/wp-content/uploads/home-footer-call-header.jpg" width="200" height="123" align="left"/></div>
+		<div class="home-footer-header row">
+           		<div class="span2"><img src="<?php echo get_bloginfo('wpurl')?>/wp-content/uploads/home-footer-call-header.png" width="200" height="123" align="left"/></div>
         		<div class="span10">We opened in 2010, selling a unique collection of designer jewelry and accessories. Always an online platform and now based between Paris and New York City, we offer a mix of European and American style and culture through our product offering. An important part of the icuinparis.com culture is our customizeable and made-to-order product. We have created strong relationships with our designers, allowing us the advantage to offer you designs and product that may not be available elsewhere, or that was never realized until you suggested it. Now in our third year, icuinparis.com has recenly opened a showroom branch: Showroom ICU. </div>
-        	</div>
         </div>	
-
-		<div style="clear:both;"></div>
 		<div class="row">
 			<?php $i = 0; while ( $i < $total ) { $i++; ?>
 				<?php if ( woo_active_sidebar( 'footer-' . $i ) ) { ?>

@@ -227,7 +227,7 @@ header h1 {
 .page #content header h1, .single #content header h1, #store_featurette_header h1 {
     padding: 25px 0px 10px 0px; 
     text-shadow:none; 
-    font-size:8.6em; 
+    font-size: 5.0em; 
     line-height: 83px;
     font-weight:normal;
     color:#000000; 

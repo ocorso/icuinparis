@@ -5,10 +5,13 @@ remove_action('wp_head', 'wp_generator');
 
 
 function ored_pre_get_posts($query){
-   if ( $query->is_main_query() ) {
-    //echo "poop";
-        $query->set( 'cat', '-1343' );
-    }
+
+        //oc: don't include the following categories:
+        //  - 1343 featured products, 
+        //  - 1342 store,
+        //  - 1344 footer widget
+if($query->is_home())
+        $query->set( 'cat', '-1342,-1343,-1344' );
 }
 
 function icu_scripts() {
@@ -48,7 +51,7 @@ function icu_styles()
 // add actions
 add_action('wp_enqueue_scripts', 'icu_styles');
 add_action( 'wp_enqueue_scripts', 'icu_scripts' );
-//add_action( 'pre_get_posts', 'ored_pre_get_posts' );
+add_action( 'pre_get_posts', 'ored_pre_get_posts' );
 
 //oc: remove feed and other extras...
 remove_action( 'wp_head',             'feed_links',                      2     );

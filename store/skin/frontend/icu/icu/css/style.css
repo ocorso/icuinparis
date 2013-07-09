@@ -1540,7 +1540,14 @@ input[type="button"].btn03 {margin:0; padding:0; width:110px; height:23px; backg
 	#filternavtext a:hover {font:10px/12px Arial, Helvetica, sans-serif; font-weight:bold; text-decoration:none; color:#000;}
 
 
-	#content2 {margin:-18px 0 0 0; padding:20px 0 0 0; width:755px; height:auto; float:left; border-left:1px solid #ccc;}
+	#content2 {
+		margin:-18px 0 0 0; 
+		padding:20px 0 0 0; 
+		width:755px; 
+		height:auto; 
+		float:left; 
+		/*border-left:1px solid #ccc;*/
+	}
 
 	#content2 .pro_box {margin:0 0 0 40px; padding:0 0 0 0; width:205px; height:397px; float:left; text-align:center;}
 

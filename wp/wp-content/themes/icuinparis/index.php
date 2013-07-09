@@ -117,7 +117,6 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
         							'suppress_filters' => true
         					);
         	$featured 	= get_posts( $args ); 
-        	print_r(sizeof($featured));
         	$i = 0;//oc: counter for 3-across row.
 
         	//oc: fake it till you make it.
@@ -146,60 +145,30 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 	</div>
 </div><!-- /#wrapper -->
 <div id="footer-widget-wrapper">
-<?php
-if ( ! defined( 'ABSPATH' ) ) exit;
-/**
- * Footer Template
- *
- * Here we setup all logic and XHTML that is required for the footer section of all screens.
- *
- * @package WooFramework
- * @subpackage Template
- */
-	global $woo_options;
 
-	$total = 4;
-	if ( isset( $woo_options['woo_footer_sidebars'] ) && ( $woo_options['woo_footer_sidebars'] != '' ) ) {
-		$total = $woo_options['woo_footer_sidebars'];
-	}
-
-	if ( ( woo_active_sidebar( 'footer-1' ) ||
-		   woo_active_sidebar( 'footer-2' ) ||
-		   woo_active_sidebar( 'footer-3' ) ||
-		   woo_active_sidebar( 'footer-4' ) ) && $total > 0 ) {
-
-?>
-	
-	<?php woo_footer_before(); ?>
-		
-	<section id="footer-widgets" class="container">
-
-		<div class="col-full col-<?php echo $total; ?> fix">
-
-		<div class="home-footer-header row">
-           		<div class="span2"><img src="<?php echo get_bloginfo('wpurl')?>/wp-content/uploads/home-footer-call-header.png" width="200" height="123" align="left"/></div>
-        		<div class="span10">We opened in 2010, selling a unique collection of designer jewelry and accessories. Always an online platform and now based between Paris and New York City, we offer a mix of European and American style and culture through our product offering. An important part of the icuinparis.com culture is our customizeable and made-to-order product. We have created strong relationships with our designers, allowing us the advantage to offer you designs and product that may not be available elsewhere, or that was never realized until you suggested it. Now in our third year, icuinparis.com has recenly opened a showroom branch: Showroom ICU. </div>
+	<section id="footer_widgets" class="container">
+		<div id="footer_widgets_header" class="row">
+        	<div class="span2"><img src="<?php echo get_bloginfo('wpurl')?>/wp-content/uploads/home-footer-call-header.png" width="200" height="123" align="left"/></div>
+       		<div class="span10">We opened in 2010, selling a unique collection of designer jewelry and accessories. Always an online platform and now based between Paris and New York City, we offer a mix of European and American style and culture through our product offering. An important part of the icuinparis.com culture is our customizeable and made-to-order product. We have created strong relationships with our designers, allowing us the advantage to offer you designs and product that may not be available elsewhere, or that was never realized until you suggested it. Now in our third year, icuinparis.com has recenly opened a showroom branch: Showroom ICU. </div>
         </div>	
+
 		<div class="row">
-			<?php $i = 0; while ( $i < $total ) { $i++; ?>
-				<?php if ( woo_active_sidebar( 'footer-' . $i ) ) { ?>
-
-			<div class=" span3 block footer-widget-<?php echo $i; ?>">
-	        	<?php woo_sidebar( 'footer-' . $i ); ?>
-			</div>
-
-		        <?php } ?>
-			<?php } // End WHILE Loop ?>
-		</div><!-- /.row  -->
-		</div><!-- /.col-full  -->
+			<?php 
+			$args = array( 	'post_type' => 'footer-widget', 
+							'posts_per_page' => 4,
+							'order'           => 'ASC' );
+			$loop = new WP_Query( $args );
+			while ( $loop->have_posts() ) : $loop->the_post();
+			
+				echo '<div class="span3">';
+					the_content();
+				echo '</div>';
+			endwhile;
+			?>
+		</div> <!-- test row -->
 
 	</section><!-- /#footer-widgets  -->
-<?php } // End IF Statement ?>
 
-
-    	<?php woo_main_before(); ?>
-		
-		<?php woo_main_after(); ?>
     </div><!-- /#content -->
 		
 <?php get_footer(); ?>

@@ -33,12 +33,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 	<header>
     	<img src="<?php echo get_bloginfo('wpurl')?>/wp-content/uploads/icu-logo-black.png"/>
 	</header>
-    <div id="content" class="page col-full container">
-    
-    	<?php woo_main_before(); ?>
-    	
-		<section id="main" class="col-left"> 			
-
+    <div id="content" class="container">
         <?php
         	if ( have_posts() ) { $count = 0;
         		while ( have_posts() ) { the_post(); $count++;
@@ -47,7 +42,6 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 				
                 <section class="entry">
                 	<?php the_content(); ?>
-
 					<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'woothemes' ), 'after' => '</div>' ) ); ?>
                	</section><!-- /.entry -->
 
@@ -68,49 +62,23 @@ if ( ! defined( 'ABSPATH' ) ) exit;
             	<p><?php _e( 'Sorry, no posts matched your criteria.', 'woothemes' ); ?></p>
             </article><!-- /.post -->
         <?php } // End IF Statement ?>  
-        
-		</section><!-- /#main -->
-		
-		<?php woo_main_after(); ?>
 
-        <?php get_sidebar(); ?>
-
-    </div><!-- /#content -->
-
-<?php
-
-	$total = 4;
-	if ( isset( $woo_options['woo_footer_sidebars'] ) && ( $woo_options['woo_footer_sidebars'] != '' ) ) {
-		$total = $woo_options['woo_footer_sidebars'];
-	}
-
-	if ( ( woo_active_sidebar( 'footer-1' ) ||
-		   woo_active_sidebar( 'footer-2' ) ||
-		   woo_active_sidebar( 'footer-3' ) ||
-		   woo_active_sidebar( 'footer-4' ) ) && $total > 0 ) {
-
-?>
-	
-	<?php woo_footer_before(); ?>
-		
-	<section id="footer-widgets" class="container">
-
-		<div class="col-full col-<?php echo $total; ?> fix">
-
-			<div style="clear:both;"></div>
-			<div class="row">
-				<?php $i = 0; while ( $i < $total ) { $i++; ?>
-					<?php if ( woo_active_sidebar( 'footer-' . $i ) ) { ?>
-
-				<div class="span3 block footer-widget-<?php echo $i; ?>">
-		        	<?php woo_sidebar( 'footer-' . $i ); ?>
-				</div>
-
-			        <?php } ?>
-				<?php } // End WHILE Loop ?>
-			</div><!-- /.row  -->
-		</div><!-- /.col-full  -->
+<section id="footer_widgets" class="container">
+		<div class="row">
+			<?php 
+			$args = array( 	'post_type' => 'footer-widget', 
+							'posts_per_page' => 4,
+							'order'           => 'ASC' );
+			$loop = new WP_Query( $args );
+			while ( $loop->have_posts() ) : $loop->the_post();
+			
+				echo '<div class="span3">';
+					the_content();
+				echo '</div>';
+			endwhile;
+			?>
+		</div> <!-- test row -->
 
 	</section><!-- /#footer-widgets  -->
-<?php } // End IF Statement ?>
+
 <?php get_footer(); ?>

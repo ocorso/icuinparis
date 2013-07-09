@@ -19,7 +19,7 @@
       <a class="brand" href="<?= $base_url; ?>">ICU</a>
       <div class="nav-collapse collapse">
         <ul class="nav">
-          <li class="active"><a href="<?= $base_url; ?>">Home</a></li>
+          <li><a href="<?= $base_url; ?>">Home</a></li>
           <li class="dropdown">
             <a href="#" title="Shop" class="dropdown-toggle " data-toggle="dropdown">Shop</a>
             <ul class="dropdown-menu">

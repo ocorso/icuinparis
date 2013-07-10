@@ -160,7 +160,7 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 			$loop = new WP_Query( $args );
 			while ( $loop->have_posts() ) : $loop->the_post();
 			
-				echo '<div class="span3">';
+				echo '<div class="widget span3">';
 					the_content();
 				echo '</div>';
 			endwhile;

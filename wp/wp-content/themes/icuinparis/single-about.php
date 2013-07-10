@@ -72,7 +72,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 			$loop = new WP_Query( $args );
 			while ( $loop->have_posts() ) : $loop->the_post();
 			
-				echo '<div class="span3">';
+				echo '<div class="widget span3">';
 					the_content();
 				echo '</div>';
 			endwhile;

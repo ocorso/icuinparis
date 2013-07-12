@@ -153,25 +153,6 @@ _gaq.push(['_trackPageview'{$optPageURL}]);
      */
     protected function _toHtml()
     {
-        if (!Mage::helper('googleanalytics')->isGoogleAnalyticsAvailable()) {
-            return '';
-        }
-        $accountId = Mage::getStoreConfig(Mage_GoogleAnalytics_Helper_Data::XML_PATH_ACCOUNT);
-        return '
-<!-- BEGIN GOOGLE ANALYTICS CODE -->
-<script type="text/javascript">
-//<![CDATA[
-    (function() {
-        var ga = document.createElement(\'script\'); ga.type = \'text/javascript\'; ga.async = true;
-        ga.src = (\'https:\' == document.location.protocol ? \'https://ssl\' : \'http://www\') + \'.google-analytics.com/ga.js\';
-        (document.getElementsByTagName(\'head\')[0] || document.getElementsByTagName(\'body\')[0]).appendChild(ga);
-    })();
-
-    var _gaq = _gaq || [];
-' . $this->_getPageTrackingCode($accountId) . '
-' . $this->_getOrdersTrackingCode() . '
-//]]>
-</script>
-<!-- END GOOGLE ANALYTICS CODE -->';
+return "";
     }
 }

@@ -45,10 +45,10 @@ Default layout, loads most of the pages
                 <action method="addItem"><type>skin_css</type><name>css/all.ie9.css</name><params/><if>IE 9</if></action>
                 <action method="addItem"><type>skin_css</type><name>css/all.ie7.css</name><params/><if>IE 7</if></action>
                 <action method="addCss"><stylesheet>css/widgets.css</stylesheet></action>
-              
-                
                 <action method="addCss"><stylesheet>css/dropdown.css</stylesheet><params>media="all"</params></action>
+                <action method="addCss"><stylesheet>css/facebox.css</stylesheet><params>media="all"</params></action>
                 <action method="addCss"><stylesheet>css/skin.css</stylesheet></action>
+                <action method="addCss"><stylesheet>css/jqzoom.css</stylesheet></action>
                 <action method="addCss"><stylesheet>css/style.css</stylesheet></action>
 
                 <action method="addJs"><script>vendor/modernizr-2.6.2-respond-1.1.0.min.js</script></action>
@@ -56,8 +56,8 @@ Default layout, loads most of the pages
                 <action method="addJs"><script>prototype/prototype.js</script></action>
                 <action method="addJs"><script>vendor/bootstrap.min.js</script></action>
                 <action method="addJs"><script>vendor/jquery.jcarousel.min.js</script></action>
-                <action method="addJs"><script>jquery.jqzoom-core.js</script></action>
-
+                <action method="addJs"><script>vendor/jquery.jqzoom-core.js</script></action>
+                <action method="addJs"><script>vendor/facebox.js</script></action>
                 <action method="addJs" ifconfig="dev/js/deprecation"><script>prototype/deprecation.js</script></action>
                 <action method="addJs"><script>lib/ccard.js</script></action>
                 <action method="addJs"><script>prototype/validation.js</script></action>
@@ -73,10 +73,10 @@ Default layout, loads most of the pages
                 <action method="addJs"><script>mage/cookies.js</script></action>
                 <action method="addJs"><script>bfm/libs/bfm/bfm.js</script></action>
                 <action method="addJs"><script>bfm/libs/bfm/utils/newsletter/0.0.1.js</script></action>
-
-				
                 <action method="addItem"><type>js</type><name>lib/ds-sleight.js</name><params/><if>lt IE 7</if></action>
                 <action method="addItem"><type>skin_js</type><name>js/ie6.js</name><params/><if>lt IE 7</if></action>
+                <action method="addJs"><script>icu_store.js</script></action>
+
             </block>
 
             <block type="core/text_list" name="after_body_start" as="after_body_start"/>

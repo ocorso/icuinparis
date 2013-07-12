@@ -29,27 +29,20 @@
  * Template for Mage_Page_Block_Html
  */
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
 <?= $this->getChildHtml('head'); ?>
 <?php 
 	$_helper 	= $this->helper('catalog/output'); 
 	$_product 	= $this->getProduct(); 
 ?>
-<link rel="stylesheet" href="<?= $this->getSkinUrl('css/jqzoom.css'); ?>" type="text/css">
+
 <script src="<?= $this->getSkinUrl('js/jsScroller.js'); ?>"></script>
 
-
-<style type"text/css">
-	div.notes{
-		font-size:12px;
-	}
-	div.notes a{
-		color:#990000;
-	}
-
-</style>
 <script defer>
 jQuery(document).ready(function() {
 	var options = {
@@ -68,16 +61,14 @@ jQuery(document).ready(function() {
 	jQuery(".jqzoom").jqzoom(options);
 });
 
-
-
 </script>
 
 <link rel="stylesheet" href="<?php echo $this->getSkinUrl('css/sexylightbox.css') ?>" type="text/css"/>
 <script type="text/javascript">
 var scroller = null;
 window.onload = function () {
-  var el = document.getElementById("Scroller-2");
-  scroller = new jsScroller(el, 400, 200);
+  var el 		= document.getElementById("Scroller-2");
+  scroller 		= new jsScroller(el, 400, 200);
 }
 </script>
 <script type="text/javascript">
@@ -109,29 +100,26 @@ function showinquiriespanel(){
 	document.getElementById('inquiriespanel').style.display = "block";
 }
 </script>
-</head>
-<body>
 <?php echo $this->getChildHtml('after_body_start') ?>
 <?php echo $this->getChildHtml('global_notices') ?>
-<!-- HEADER AND NAVIGATION SECTION -->
+</head>
+<body>
+<!-- oc: productdetails HEADER AND NAVIGATION SECTION -->
 <?php echo $this->getChildHtml('header') ?>
 <!-- /HEADER AND NAVIGATION SECTION -->
-<div class="clr"></div>
+
 <!-- BODY SECTION -->
 <div id="body_section">
-  <!-- body container -->
-	
-	<?php echo $this->getChildHtml('content') ?> 
-  <!-- /body container -->
 
-  <div class="clr"></div>
+	<?php echo $this->getChildHtml('content') ?> 
+
 </div>
 <!-- /BODY SECTION -->
-<div class="clr"></div>
+
 <!-- FOOTER SECTION -->
 <?php echo $this->getChildHtml('footer') ?>
 <!-- /FOOTER SECTION -->
 <?php echo $this->getChildHtml('before_body_end') ?>
-<div class="clr"></div>
+
 </body>
 </html>

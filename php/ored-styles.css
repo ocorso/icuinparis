@@ -98,7 +98,16 @@ ul.sub-menu li {
     text-indent: -9999px;
 }
 
-
+h1{
+    padding: 25px 0px 10px 215px; 
+    text-shadow:none; 
+    font-size: 5.0em; 
+    line-height: 83px;
+    font-weight:normal;
+    color:#000000; 
+    text-transform:uppercase;   
+    font-family: 'JosefinSansStdLight', 'Source Sans Pro', sans-serif; 
+}
 /*****************************************************************************
 /*****************************************************************************
 /* @media queries */
@@ -106,7 +115,9 @@ ul.sub-menu li {
 /*****************************************************************************/
 
 @media (max-width: 979px) {
-
+    h1{
+        padding-left: 0;
+    }
 .navbar .brand{
         text-indent: 0;
         background-image: none;
@@ -123,6 +134,14 @@ ul.sub-menu li {
 @media (max-width: 753px){
     .navbar .btn-navbar {
         margin-right: 20px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .page #content header{
+        margin: 0px 5% 0px 7%;
+    }
+     h1{
+       font-size: 4em;
     }
 }
 

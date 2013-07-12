@@ -42,94 +42,79 @@
 	 Mage::getModel('catalog/layer')->prepareProductCollection($_productCollection);
     $_helper = $this->helper('catalog/output');
 ?>
-
-<script language="javascript">
-function showBigImageDiv(packName, packId) {
-alert(packId);
-document.getElementById(packId).src = packName;
-//document.getElementById('pro1').innerHTML = 'ffff';
-}
-</script>
-<?php //echo $_productCollection->getSelect(); ?>
-
-<div id="all_products">
-
-    <div id="tagline222">
-	
-	<div class="dividerline"></div>
-      <div class="left">
+  <div id="headline" class="row"> 
+      <h1>
       <?php 
-		$tarray = explode("/", $this->helper('core/url')->getCurrentUrl());
-		$pagetype = explode(".", $tarray[4]);
-		$t2array = explode(".", $tarray[3]);
+		$tarray 	= explode("/", $this->helper('core/url')->getCurrentUrl());
+		$pagetype 	= explode(".", $tarray[4]);
+		$t2array 	= explode(".", $tarray[3]);
 		$currcat223 = $t2array[0];
-	 ?>
-	  <?php  
-	  		$category = Mage::registry('current_category'); 
-			$style = "";
-			$material = "";
-			$designer = "";
-			$countryorig = "";
-			if($_GET['style']){
-				$attributeId = '118';
-				$attribute = Mage::getModel('catalog/resource_eav_attribute')->load($attributeId);
-				$attributeOptions = $attribute ->getSource()->getAllOptions();				
-				foreach($attributeOptions as $sstyle){
-					if($sstyle['value'] == $_GET['style']){
-						$style = $sstyle['label'];
-					}
+  		$category 	= Mage::registry('current_category'); 
+		$style 		= "";
+		$material 	= "";
+		$designer 	= "";
+		$countryorig = "";
+		if($_GET['style']){
+			$attributeId = '118';
+			$attribute = Mage::getModel('catalog/resource_eav_attribute')->load($attributeId);
+			$attributeOptions = $attribute ->getSource()->getAllOptions();				
+			foreach($attributeOptions as $sstyle){
+				if($sstyle['value'] == $_GET['style']){
+					$style = $sstyle['label'];
 				}
 			}
-			if($_GET['material']){
-				$attributeId = '120';
-				$attribute = Mage::getModel('catalog/resource_eav_attribute')->load($attributeId);
-				$attributeOptions = $attribute ->getSource()->getAllOptions();
-				foreach($attributeOptions as $sstyle){
-					if($sstyle['value'] == $_GET['material']){
-						$material = $sstyle['label'];
-					}
+		}
+		if($_GET['material']){
+			$attributeId = '120';
+			$attribute = Mage::getModel('catalog/resource_eav_attribute')->load($attributeId);
+			$attributeOptions = $attribute ->getSource()->getAllOptions();
+			foreach($attributeOptions as $sstyle){
+				if($sstyle['value'] == $_GET['material']){
+					$material = $sstyle['label'];
 				}
 			}
-			if($_GET['designer']){
-				$attributeId = '119';
-				$attribute = Mage::getModel('catalog/resource_eav_attribute')->load($attributeId);
-				$attributeOptions = $attribute ->getSource()->getAllOptions();
-				foreach($attributeOptions as $sstyle){
-					if($sstyle['value'] == $_GET['designer']){
-						$designer = $sstyle['label'];
-					}
+		}
+		if($_GET['designer']){
+			$attributeId = '119';
+			$attribute = Mage::getModel('catalog/resource_eav_attribute')->load($attributeId);
+			$attributeOptions = $attribute ->getSource()->getAllOptions();
+			foreach($attributeOptions as $sstyle){
+				if($sstyle['value'] == $_GET['designer']){
+					$designer = $sstyle['label'];
 				}
 			}
-			if($_GET['countryorig']){
-				$attributeId = '127';
-				$attribute = Mage::getModel('catalog/resource_eav_attribute')->load($attributeId);
-				$attributeOptions = $attribute ->getSource()->getAllOptions();
-				foreach($attributeOptions as $sstyle){
-					if($sstyle['value'] == $_GET['countryorig']){
-						$countryorig = $sstyle['label'];
-					}
+		}
+		if($_GET['countryorig']){
+			$attributeId = '127';
+			$attribute = Mage::getModel('catalog/resource_eav_attribute')->load($attributeId);
+			$attributeOptions = $attribute ->getSource()->getAllOptions();
+			foreach($attributeOptions as $sstyle){
+				if($sstyle['value'] == $_GET['countryorig']){
+					$countryorig = $sstyle['label'];
 				}
 			}
-			
-			if($_GET['style']){
-				echo strtoupper($style);
-			}else if($_GET['material']){
-				echo strtoupper($material);
-			}else if($_GET['designer']){
-				echo strtoupper($designer);
-			}else if($this->helper('catalogSearch')->getEscapedQueryText()){ 
-				echo ucwords($this->helper('catalogSearch')->getEscapedQueryText()); 
-			}else{ 
-				if(strtoupper($category->getName()) == strtoupper("ladies") || strtoupper($category->getName()) == strtoupper("gentlemen")){
-					echo strtoupper("accessorize your style");
-				}else{
-					echo strtoupper($category->getName());
-				}
-			} 
-		?>
-	  </div>
+		}
+		
+		if($_GET['style']){
+			echo strtoupper($style);
+		}else if($_GET['material']){
+			echo strtoupper($material);
+		}else if($_GET['designer']){
+			echo strtoupper($designer);
+		}else if($this->helper('catalogSearch')->getEscapedQueryText()){ 
+			echo ucwords($this->helper('catalogSearch')->getEscapedQueryText()); 
+		}else{ 
+			if(strtoupper($category->getName()) == strtoupper("ladies") || strtoupper($category->getName()) == strtoupper("gentlemen")){
+				echo strtoupper("accessorize your style");
+			}else{
+				echo strtoupper($category->getName());
+			}
+		} 
+?>
+	  </h1>
+   </div>
+	  <div id="all_products">
 	  <?= str_replace("<a href=\"#\" class=\"backlink\">back to top <img src=\"" . $this->getSkinUrl('images/up_arrow.jpg') . '" width="10" height="8" /></a>', "", $this->getToolbarHtml()); ?>
-	   </div>
 	   <div id="filternavtext">
 	 <?php 
 	  	$totalfilters = 0;

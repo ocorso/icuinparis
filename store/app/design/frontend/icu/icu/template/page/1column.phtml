@@ -29,44 +29,31 @@
  * Template for Mage_Page_Block_Html
  */
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
 <?php echo $this->getChildHtml('head') ?>
-<link href="<?php echo $this->getSkinUrl('css/facebox.css') ?>" media="screen" rel="stylesheet" type="text/css" />
-
-<script src="<?php echo $this->getSkinUrl('js/facebox.js') ?>" type="text/javascript"></script>
-<script type="text/javascript">
-    jQuery(document).ready(function($) {
-      $('a[rel*=facebox]').facebox() 
-    })
-</script>
-
-</script>
-<script src="<?php echo $this->getSkinUrl('js/menu.js') ?>" type="text/javascript"></script>
 </head>
 <body>
-<?php echo $this->getChildHtml('after_body_start') ?>
-<?php echo $this->getChildHtml('global_notices') ?>
-<!-- HEADER AND NAVIGATION SECTION -->
+<div id="wrapper" class="container">
+
+<!-- oc: 3 columns HEADER AND NAVIGATION SECTION -->
 <?php echo $this->getChildHtml('header') ?>
 <!-- /HEADER AND NAVIGATION SECTION -->
 
-<!-- BODY SECTION -->
-<div id="body_section">
-  <!-- body container -->
-	<?php //echo $this->getChildHtml('global_messages') ?>
-	<?php echo $this->getChildHtml('content') ?> 
-  <!-- /body container -->
+<!-- content container -->
+<?php echo $this->getChildHtml('content') ?> 
+<!-- /content container -->
 
-  <div class="clr"></div>
-</div>
-<!-- /BODY SECTION -->
-<div class="clr"></div>
 <!-- FOOTER SECTION -->
 <?php echo $this->getChildHtml('footer') ?>
 <!-- /FOOTER SECTION -->
 <?php echo $this->getChildHtml('before_body_end') ?>
-<div class="clr"></div>
+</div>
+<!-- end #wrapper -->
+
 </body>
 </html>

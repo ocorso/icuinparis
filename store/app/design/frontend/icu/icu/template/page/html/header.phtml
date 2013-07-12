@@ -28,60 +28,36 @@
  */
 ?>
 
-<!-- Google Code for ICU remarketing_2 Remarketing List -->
-<script type="text/javascript">
-/* <![CDATA[ */
-var google_conversion_id = 1008295145;
-var google_conversion_language = "fr";
-var google_conversion_format = "3";
-var google_conversion_color = "666666";
-var google_conversion_label = "FVa8CP-p6AIQ6bnl4AM";
-var google_conversion_value = 0;
-/* ]]> */
-</script>
-<script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js"></script>
 
 	<?php 
 		//oc: remove old stuff.
 		$base_url  	= str_replace("/store/", "",$this->getUrl(''));
 		$headerPath	= $base_url . '/php/common_icu_header.php';
-		//print_r($headerPath);
-		$header  	= file_get_contents($headerPath, false); 
+		$header  	  = file_get_contents($headerPath, false); 
 		echo $header;
 
 	?>
 
-<div id="header_section">
-  <?php echo $this->getChildHtml('bfm_storeswitcher') ?>
 
-  <!-- account -->
-  <div id="account">
-  	<a href="<?php echo $this->getUrl('') ?>"><?php echo $this->__('Home') ?></a> <span>|</span> 
-  	<a href="<?php echo $this->getUrl('customer/account/') ?>"><?php echo $this->__('My Account') ?></a> <span>|</span> 
-  	<a href="<?php echo $this->getUrl('wishlist/') ?>"><?php echo $this->__('My Wishlist') ?></a> <span>|</span> 
-  	<a href="<?php echo $this->getUrl('checkout/cart/') ?>"><?php echo $this->__('My Cart') ?></a> <span>|</span> 
-  	<a href="<?php echo $this->getUrl('checkout/cart/') ?>"><?php echo $this->__('Checkout') ?></a><span>|</span> 
+
+
+  <!-- store subnav -->
+<div id="store_subnav_wrapper" class="row">
+  <ul id="store_subnav" class="offset4 span8">
+  	<li><a href="<?= $this->getUrl('customer/account/'); ?>"><?= $this->__('My Account') ?></a></li> 
+  	<li><a href="<?= $this->getUrl('wishlist/'); ?>"><?= $this->__('My Wishlist') ?></a></li>  
+  	<li><a href="<?= $this->getUrl('checkout/cart/'); ?>"><?= $this->__('My Cart') ?></a></li>  
+  	<li><a href="<?= $this->getUrl('checkout/cart/'); ?>"><?= $this->__('Checkout') ?></a></li>
   
   <?php
- $toTest = Mage::getSingleton('customer/session')->getCustomer()->getName();
-// echo '+'.$toTest.'+';
-  if($toTest!=' ')
-  { 
-		echo '<a href="'.$this->getUrl().'customer/account/logout">Sign Out</a>';
-  }
-  else
-  {
-		echo '<a href="'.$this->getUrl().'customer/account/login">Sign In</a>';
-  }
-  ?>
-
-  
-  </div>
-  <!-- /account -->
-  <?php echo $this->getChildHtml('store_language') ?>
-  <!-- search -->
-  <?php echo $this->getChildHtml('topSearch') ?>
+$n = Mage::getSingleton('customer/session')->getCustomer()->getName();
+if($n !=' ')   echo '<li><a href="'.$this->getUrl().'customer/account/logout">Sign Out</a></li> ';
+else		       echo '<li><a href="'.$this->getUrl().'customer/account/login">Sign In</a></li> ';?>
+    <li><?= $this->getChildHtml('bfm_storeswitcher') ?></li>
+    <li><?= $this->getChildHtml('store_language') ?></li> 
+    <!-- search -->
+    <li> <?= $this->getChildHtml('topSearch') ?></li> 
   <!-- /search -->
-</div>
+  </ul>
 
-</div>
+</div>  <!-- #store_subnav_wrapper end -->

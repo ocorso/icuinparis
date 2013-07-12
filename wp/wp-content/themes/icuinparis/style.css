@@ -109,7 +109,10 @@ body {
     background-repeat: repeat-x;
     background-color: rgba(0, 0, 0, 0.19);
 }
+#store_featurette_header h1 {
+    padding: 0; 
 
+}
 .product{
     padding-bottom: 31px;
 }
@@ -201,19 +204,6 @@ div#content.col-full section#main.col-left article.post-8994 aside.post-meta{
     border-bottom: none;
     margin-bottom: 0px;
     padding-bottom: 0px;
-}
-
-
-
-h1, #store_featurette_header h1 {
-    padding: 25px 0px 10px 215px; 
-    text-shadow:none; 
-    font-size: 5.0em; 
-    line-height: 83px;
-    font-weight:normal;
-    color:#000000; 
-    text-transform:uppercase;   
-    font-family: 'JosefinSansStdLight', 'Source Sans Pro', sans-serif; 
 }
 
 .page #content header p, .single #content header p {
@@ -416,7 +406,7 @@ article {
     font-family: 'JosefinSansStdLight', 'Source Sans Pro', sans-serif;
     margin-top: 15px;
     display: block;
-    padding-top: 15px;
+    padding-top: 20px;
     padding-bottom: 10px;
     font-size: 1.6em;
     text-align: center;
@@ -434,9 +424,7 @@ footer a:hover{
 /*****************************************************************************
 /*****************************************************************************/
 @media (max-width: 979px) {
-    h1{
-        padding-left: 0;
-    }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -460,12 +448,7 @@ footer a:hover{
 }
 
 @media screen and (max-width: 480px) {
-    .page #content header{
-        margin: 0px 5% 0px 7%;
-    }
-     h1{
-       font-size: 4em;
-    }
+
     .page #content{
         margin:0px;
         padding:0px;

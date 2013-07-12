@@ -1,54 +1,23 @@
-/* 
-   Simple JQuery Accordion menu.
-   HTML structure to use:
+//oc: Google Code for ICU remarketing_2 Remarketing List
+var google_conversion_id 		= 1008295145;
+var google_conversion_language 	= "fr";
+var google_conversion_format 	= "3";
+var google_conversion_color 	= "666666";
+var google_conversion_label 	= "FVa8CP-p6AIQ6bnl4AM";
+var google_conversion_value 	= 0;
 
-   <ul id="menu">
-     <li><a href="#">Sub menu heading</a>
-     <ul>
-       <li><a href="http://site.com/">Link</a></li>
-       <li><a href="http://site.com/">Link</a></li>
-       <li><a href="http://site.com/">Link</a></li>
-       ...
-       ...
-     </ul>
-     <li><a href="#">Sub menu heading</a>
-     <ul>
-       <li><a href="http://site.com/">Link</a></li>
-       <li><a href="http://site.com/">Link</a></li>
-       <li><a href="http://site.com/">Link</a></li>
-       ...
-       ...
-     </ul>
-     ...
-     ...
-   </ul>
+function showBigImageDiv(packName, packId) {
+	alert(packId);
+	document.getElementById(packId).src = packName;
 
-Copyright 2007 by Marco van Hylckama Vlieg
+}
 
-web: http://www.i-marco.nl/weblog/
-email: marco@i-marco.nl
+jQuery(document).ready(function($) {
+  $('a[rel*=facebox]').facebox();
+  initMenu();
 
-Free for non-commercial use
+})
 
-
-function initMenu() {
-  jQuery('#menu ul').hide();
- // jQuery('#menu ul:first').show();
-  jQuery('#menu li a').click(
-    function() {
-      var checkElement = jQuery(this).next();
-      if((checkElement.is('ul')) && (checkElement.is(':visible'))) {
-        return false;
-        }
-      if((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
-        jQuery('#menu ul:visible').slideUp('normal');
-        checkElement.slideDown('normal');
-        return false;
-        }
-      }
-    );
-  }
-jQuery(document).ready(function() {initMenu();}); */
 function MM_swapImgRestore() { //v3.0
   var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
 }
@@ -114,4 +83,3 @@ function swaparrow(e){
 	}
 }
 
-jQuery(document).ready(function() {initMenu();});

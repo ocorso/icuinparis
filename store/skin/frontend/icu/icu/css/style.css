@@ -616,7 +616,9 @@ input[type="button"].btn03 {margin:0; padding:0; width:110px; height:23px; backg
 	z-index: 100;
 	top: 110px;
 }
-
+#store_subnav a{
+	color: #000;
+}
 	/* logo */
 
 	#logo {margin:0; padding:10px 0 0 0; width:345px; height:50px; float:middle; }
@@ -640,7 +642,7 @@ input[type="button"].btn03 {margin:0; padding:0; width:110px; height:23px; backg
 	#keyword {
 		margin:0; 
 		padding:0; 
-		width:247px; 
+		 
 		height:27px; 
 		text-align:right;
 	}
@@ -678,13 +680,13 @@ input[type="button"].btn03 {margin:0; padding:0; width:110px; height:23px; backg
 	}
 
 .b-style-dropdown {
-    position: absolute;
+/*    position: absolute;
     right: 0;
     text-align: right;
     top: 11px;
     width: 170px;
     z-index: 999;
-    z-index:54;
+    z-index:54;*/
 }
 
 .b-style-dropdown span { padding: 0; margin: 0; }
@@ -1059,7 +1061,9 @@ input[type="button"].btn03 {margin:0; padding:0; width:110px; height:23px; backg
 
 /* ---------------------------- Footer Styles ---------------------------- */
 #toolbarbottom {margin:10px 30px 10px 0}
-#footer_section {margin:0 auto; padding:0; width:960px; height:75px; border-top:1px solid #dbdbdb;}
+#footer_section {
+	/*margin:0 auto; padding:0; width:960px; height:75px; border-top:1px solid #dbdbdb;*/
+}
 
 	#footer_ad { margin 0; padding: 5px 0 0 0; width:734px; height: 75px; }
 
@@ -1666,7 +1670,9 @@ input[type="button"].btn03 {margin:0; padding:0; width:110px; height:23px; backg
 
 
 
-	#all_products {margin:0 auto; padding:0; width:960px; height:auto; min-height:650px;}
+	#all_products {
+	/*	margin:0 auto; padding:0; width:960px; height:auto; min-height:650px;*/
+	}
 
 	#tagline2 {margin:0; padding:30px 0; width:960px; height:auto; float:left;}
 
@@ -2848,7 +2854,7 @@ a.flashSale_French:hover {
 }
 #search_mini_form {
   overflow: hidden;
-  padding-top: 37px;
+/*  padding-top: 37px;*/
   position: relative;
   display: block;
 

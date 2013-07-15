@@ -163,7 +163,7 @@ h2.home-footer, #footer_widgets h2 {
     color:#303030; 
     margin-bottom: 1px; 
     font-weight:normal;
-    font-family: 'JosefinSansStdLight', 'Source Sans Pro', sans-serif;
+    font-family: 'JosefinSansStdLight', sans-serif;
     font-size: 2.3em;
 }
 #content article section.entry{
@@ -211,7 +211,7 @@ div#content.col-full section#main.col-left article.post-8994 aside.post-meta{
     margin:0px;
 }
 
-#description p{
+#description p, .page-template-single-designers-php p{
  
     font-size: 1.8em;
     font-family: 'JosefinSansStdLight', 'Source Sans Pro', sans-serif; 
@@ -329,7 +329,14 @@ body #content{
 #ourdesigners .designer .popup ul li{
     display: inline;
 }
-
+.page-template-single-designers-php h2{
+    color:#333; 
+    margin-bottom: 1px; 
+    font-weight:normal;
+    font-family: 'JosefinSansStdLight', sans-serif;
+    font-size: 3.5em;
+    text-transform: uppercase;
+}
 .filter1343 {
     display: none !important;
 }

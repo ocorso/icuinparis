@@ -31,6 +31,6 @@
   ga('send', 'pageview');
 
 </script>
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
 </body>
 </html>

@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<title><?php woo_title( '' ); ?></title>
-	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+	<script>window.jQuery || document.write('<script src="<?php bloginfo('stylesheet_directory'); ?>/js/vendor/jquery.js"><\/script>')</script>
 <?php wp_head(); ?>
 </head>
 

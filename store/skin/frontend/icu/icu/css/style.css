@@ -614,7 +614,7 @@ input[type="button"].btn03 {margin:0; padding:0; width:110px; height:23px; backg
 #store_subnav_wrapper{
 	position:absolute;
 	z-index: 100;
-	top: 110px;
+	top: 134px;
 }
 #store_subnav a{
 	color: #000;

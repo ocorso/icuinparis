@@ -84,16 +84,17 @@ if ( ! function_exists( 'wp' ) && ! empty( $_SERVER['SCRIPT_FILENAME'] ) && base
 
 
     	<div id="store_featurette_header" class="row">
-         	<h1 class="span10">Shop ICU Online</h1>
-         	<a class="shop-all-btn span2" href="<?= get_bloginfo('url'); ?>/store/" title="Shop All ICU">Shop All</a>
+         	<h1 class="span8">Shop ICU Online</h1>
+         	<a class="shop-all-btn span2" href="<?= get_bloginfo('url'); ?>/store/mens" title="Shop ICU Mens">Shop Mens</a>
+         	<a class="shop-all-btn span2" href="<?= get_bloginfo('url'); ?>/store/womens" title="Shop ICU Womens">Shop Womens</a>
         </div><!--/#store_featurette_header .row-->
 
      	<div id="homeproducts" class="row">
      		
         <?php 
         //oc: pull in main large featured product (catID = 1343)
-            $args 		= array(	'category'=> '1343',
-        							'suppress_filters' => true
+            $args 		= array(	'category'			=> '1343',
+        							'suppress_filters' 	=> true
         					);
         	$featured 	= get_posts( $args ); 
 

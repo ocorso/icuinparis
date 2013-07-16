@@ -43,11 +43,11 @@
 
   <!-- store subnav -->
 <div id="store_subnav_wrapper" class="row">
-  <ul id="store_subnav" class="offset3 span8">
-  	<li><a href="<?= $this->getUrl('customer/account/'); ?>"><?= $this->__('My Account') ?></a></li> 
-  	<li><a href="<?= $this->getUrl('wishlist/'); ?>"><?= $this->__('My Wishlist') ?></a></li>  
-  	<li><a href="<?= $this->getUrl('checkout/cart/'); ?>"><?= $this->__('My Cart') ?></a></li>  
-  	<li><a href="<?= $this->getUrl('checkout/cart/'); ?>"><?= $this->__('Checkout') ?></a></li>
+  <ul id="store_subnav" class="pull-left">
+  	<li class="piped"><a href="<?= $this->getUrl('customer/account/'); ?>"><?= $this->__('My Account') ?></a></li> 
+  	<li class="piped"><a href="<?= $this->getUrl('wishlist/'); ?>"><?= $this->__('My Wishlist') ?></a></li>  
+  	<li class="piped"><a href="<?= $this->getUrl('checkout/cart/'); ?>"><?= $this->__('My Cart') ?></a></li>  
+  	<li class="piped"><a href="<?= $this->getUrl('checkout/cart/'); ?>"><?= $this->__('Checkout') ?></a></li>
   
   <?php
 $n = Mage::getSingleton('customer/session')->getCustomer()->getName();
@@ -56,8 +56,8 @@ else		       echo '<li><a href="'.$this->getUrl().'customer/account/login">Sign 
     <li><?= $this->getChildHtml('bfm_storeswitcher') ?></li>
     <li><?= $this->getChildHtml('store_language') ?></li> 
     <!-- search -->
-    <li> <?= $this->getChildHtml('topSearch') ?></li> 
   <!-- /search -->
   </ul>
+    <div class="pull-right"> <?= $this->getChildHtml('topSearch') ?></div> 
 
 </div>  <!-- #store_subnav_wrapper end -->

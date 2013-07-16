@@ -113,81 +113,10 @@
 ?>
 	  </h1>
    </div>
-	  <div id="all_products">
-	  <?= str_replace("<a href=\"#\" class=\"backlink\">back to top <img src=\"" . $this->getSkinUrl('images/up_arrow.jpg') . '" width="10" height="8" /></a>', "", $this->getToolbarHtml()); ?>
-	   <div id="filternavtext">
-	 <?php 
-	  	$totalfilters = 0;
-	  	/*
-	  	$breadcrumbs = $this->getLayout()->getBlock('breadcrumbs');
-	  	if($breadcrumbs) echo $breadcrumbs->toHtml();
-	  	 */
-		if(Mage::app()->getStore()->getStoreId() == "1"){ echo "Sort by price"; }else{ echo "Trier par prix"; } ?>: <?php echo "<a href=\"?";
-				if($_GET['price']){ 
-					echo "&price=" . $_GET['price'];
-				}
-				if($_GET['countryorig']){
-					echo "&countryorig=" . $_GET['countryorig'];
-				}
-				if($_GET['style']){
-					echo "&style=" . $_GET['style'];
-				}
-				if($_GET['material']){
-					echo "&material=" . $_GET['material'];
-				}
-				if($_GET['material_2']){
-					echo "&material_2=" . $_GET['material_2'];
-				}
-				if($_GET['designer']){
-                	echo "&designer=" . $_GET['designer'];
-                }
-				if($_GET['limit']){
-					echo "&limit=" . $_GET['limit'];
-				}
-				if($_GET['q']){
-					echo "&q=" . $_GET['q'];
-				}
-				if(Mage::app()->getStore()->getStoreId() == "1"){
-					echo "&dir=desc&order=price\" class=\"tTip\" title=\"Sort High to Low\">High</a> | ";
-				}else{
-					echo "&dir=desc&order=price\" class=\"tTip\" title=\"Trier max à min\">Max</a> | ";
-				}
-				
-				echo "<a href=\"?";
-				if($_GET['price']){ 
-					echo "&price=" . $_GET['price'];
-				}
-				if($_GET['countryorig']){
-					echo "&countryorig=" . $_GET['countryorig'];
-				}
-				if($_GET['style']){
-					echo "&style=" . $_GET['style'];
-				}
-				if($_GET['material']){
-					echo "&material=" . $_GET['material'];
-				}
-				if($_GET['material_2']){
-					echo "&material_2=" . $_GET['material_2'];
-				}
-				if($_GET['designer']){
-                	echo "&designer=" . $_GET['designer'];
-                }
-				if($_GET['limit']){
-					echo "&limit=" . $_GET['limit'];
-				}
-				if($_GET['q']){
-					echo "&q=" . $_GET['q'];
-				}
-				if(Mage::app()->getStore()->getStoreId() == "1"){
-					echo "&dir=asc&order=price\" class=\"tTip\" title=\"Sort Low to High\">Low</a>";
-				}else{
-					echo "&dir=asc&order=price\" class=\"tTip\" title=\"Trier min à max\">Min</a>";
-                }?>
-        <?php 
-		echo "</div>";
-		?>
-		
-    <div id="sidemenu22">
+  
+<div id="store_list" class="container-fluid">
+	<div class="row-fluid">
+    	<div id="sidebar" class="span2">
     <?php 
     	$downArrow = $this->getSkinUrl('images/down-arrow.jpg');
     	$left_navigation_menu = '
@@ -266,131 +195,135 @@
     }
     ?>
 		
-	<!-- oc: remove subscribe-left -->
+	<!-- oc: subscribe-left -->
 		<?php echo $this->getChildHtml('subscribe_left'); ?>
 	<!-- /subscribe-left -->
 
 </div>
-	
+<div id="store_content" class="span10">
+ <div id="pagination" class="row">
+	  <?= $this->getToolbarHtml(); ?>
+	   <div id="sort_controls" class="pull-left" >
 
-	
-	
-	
-    <div id="content2">
-    <div class="contentad">
-     <?php if($category != NULL && strlen(trim($category->getImageUrl())) > 0){?>
-     <img src="<?php echo $category->getImageUrl(); ?>" />
-     <?php }?>
-    </div>
+	 <?php 
+	  	$totalfilters = 0;
+	  	/*
+	  	$breadcrumbs = $this->getLayout()->getBlock('breadcrumbs');
+	  	if($breadcrumbs) echo $breadcrumbs->toHtml();
+	  	 */
+		if(Mage::app()->getStore()->getStoreId() == "1"){ echo "Sort by price"; }else{ echo "Trier par prix"; } ?>: <?php echo "<a href=\"?";
+				if($_GET['price']){ 
+					echo "&price=" . $_GET['price'];
+				}
+				if($_GET['countryorig']){
+					echo "&countryorig=" . $_GET['countryorig'];
+				}
+				if($_GET['style']){
+					echo "&style=" . $_GET['style'];
+				}
+				if($_GET['material']){
+					echo "&material=" . $_GET['material'];
+				}
+				if($_GET['material_2']){
+					echo "&material_2=" . $_GET['material_2'];
+				}
+				if($_GET['designer']){
+                	echo "&designer=" . $_GET['designer'];
+                }
+				if($_GET['limit']){
+					echo "&limit=" . $_GET['limit'];
+				}
+				if($_GET['q']){
+					echo "&q=" . $_GET['q'];
+				}
+				if(Mage::app()->getStore()->getStoreId() == "1"){
+					echo "&dir=desc&order=price\" class=\"tTip\" title=\"Sort High to Low\">High</a> | ";
+				}else{
+					echo "&dir=desc&order=price\" class=\"tTip\" title=\"Trier max à min\">Max</a> | ";
+				}
+				
+				echo "<a href=\"?";
+				if($_GET['price']){ 
+					echo "&price=" . $_GET['price'];
+				}
+				if($_GET['countryorig']){
+					echo "&countryorig=" . $_GET['countryorig'];
+				}
+				if($_GET['style']){
+					echo "&style=" . $_GET['style'];
+				}
+				if($_GET['material']){
+					echo "&material=" . $_GET['material'];
+				}
+				if($_GET['material_2']){
+					echo "&material_2=" . $_GET['material_2'];
+				}
+				if($_GET['designer']){
+                	echo "&designer=" . $_GET['designer'];
+                }
+				if($_GET['limit']){
+					echo "&limit=" . $_GET['limit'];
+				}
+				if($_GET['q']){
+					echo "&q=" . $_GET['q'];
+				}
+				if(Mage::app()->getStore()->getStoreId() == "1"){
+					echo "&dir=asc&order=price\" class=\"tTip\" title=\"Sort Low to High\">Low</a>";
+				}else{
+					echo "&dir=asc&order=price\" class=\"tTip\" title=\"Trier min à max\">Min</a>";
+                }?>
+        <?php 
+		echo "</div>";
+		?>
+
+	</div> <!-- end #pagination -->
 	<?php if(!$_productCollection->count()): ?>
-	<div style='text-align:center; padding-top:200px; font:31px/40px "Baskerville Handcut"'>
-		
-		<?php echo $this->__('There are no products matching the selection.') ?>
-
+	<div class="">
+		<?= $this->__('There are no products matching the selection.') ?>
 	</div>
 <?php else: ?>
 	
-	
-	  
-	<?php // Grid Mode ?>
+<?php // Grid Mode ?>
     <?php if($this->getMode()=='grid'): ?>
 
 
     <?php $_collectionSize = $_productCollection->count() ?>
     <?php $_columnCount = $this->getColumnCount(); ?>
     <?php $i=0; foreach ($_productCollection as $_product): $i = $i+1; ?>
-		
-		<?php 
-			$attributeId = '119';
-			$attributes = $_product->getAttributes();
-			$designer = ucwords($attributes['designer']->getFrontend()->getValue($_product));
-			//$designer = $_product->getAttributeText('designer');
-		?>
+	<?php 
+		$attributeId = '119';
+		$attributes = $_product->getAttributes();
+		$designer = ucwords($attributes['designer']->getFrontend()->getValue($_product));
+		//$designer = $_product->getAttributeText('designer');
+	?>
 	  	
 	 
 	  
-		  <div class="pro_box">
-		  <table>
-		  <tr>
-		  <td>
-		  </td>
-		  <td>
-		  <div style="text-align:left">
-		  	<a href="<?php echo $_product->getProductUrl() ?>" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('<?php echo $i . "image"; ?>','','<?php echo $this->helper('catalog/image')->init($_product, 'thumbnail')->resize(195, 292); ?>',0)"><img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(195, 292); ?>" alt="<?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?>" width="195" height="292" name="<?php echo $i . "image"; ?>" id="<?php echo $i . "image"; ?>" /></a>
-		  </div>
-		  </td>
-		  <td>
-		  </td>
-		  </tr>
-		  <tr>
-		  <td width="25">
-		  </td>
-		  <td>
-		  <div style="text-align:left">
-		  <a href="<?php echo $_product->getProductUrl() ?>" class="prodtitlelink"><b><?php echo $designer; ?></b><br><?php echo str_replace($designer, "", $_helper->productAttribute($_product, $_product->getName(), 'name')) ?><br><?php $specialPrice = $_product->getSpecialPrice(); if($specialPrice != 0){ if(Mage::app()->getStore()->getStoreId() == "1"){ echo "<div class=\"price-box\"><p class=\"old-price\"><span class=\"price-label\">Regular Price: </span><span class=\"price\" id=\"old-price-136\">" . Mage::helper('core')->currency($_product->getPrice(), true, false) . "</span></p><p class=\"special-price\"><span class=\"price-label\">Sales Price: </span><span class=\"price\" id=\"product-price-136\">" . Mage::helper('core')->currency($_product->getSpecialPrice(), true, false) . "</span></p></div>"; }else{ echo "<div class=\"price-box\"><p class=\"old-price\"><span class=\"price-label\">Prix Initial: </span><span class=\"price\" id=\"old-price-136\">" . Mage::helper('core')->currency($_product->getPrice(), true, false) . "</span></p><p class=\"special-price\"><span class=\"price-label\">Prixe Promo: </span><span class=\"price\" id=\"product-price-136\">" . Mage::helper('core')->currency($_product->getSpecialPrice(), true, false) . "</span></p></div>"; } }else{ echo "<b>" . Mage::helper('core')->currency($_product->getPrice(), true, false) . "</b>"; } ?></a>
-		  </div>
-		  </td>
-		  <td>
-		  </td>
-		  </tr>
-		  </table>
-		  </div>
-          
-		  <div id="pro<?php echo $i ?>" style="display:none">
-			<div class="product_popup">
-			  <div class="product_desc">
-				<div class="img_box" id="mygall<?php echo $i ?>"><img id="listbigimage<?php echo $i ?>" height="250" src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(250); ?>" alt="<?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?>" /></div>
-					<div class="txt_box">
-				  		<a href="<?php echo $_product->getProductUrl() ?>"><h2><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h2></a>
-				  
-				  		<h4><?php echo $this->getPriceHtml($_product, true) ?></h4>
-				  		<p>&nbsp;</p>
-				  		<p><?php echo $_helper->productAttribute($_product, $_product->getShortDescription(), 'short_description') ?></p>
-				  		<p>&nbsp;</p>
-				  		<h4><a href="<?php echo $_product->getProductUrl() ?>"><strong>View Product Detail</strong></a></h4>
-				  		<p>&nbsp;</p>
-					</div>
-			  	</div>
-			  <div class="product_slider">
-				<div class="Container3">
-				<img src="<?php echo $this->getSkinUrl('images/up_arrow.gif') ?>" class="Scrollbar-Up3" onmouseover="scroller.startScroll(0, 5);" onmouseout="scroller.stopScroll();" alt="" /> 
-				<img src="<?php echo $this->getSkinUrl('images/down_arrow.gif') ?>" class="Scrollbar-Down3" onmouseover="scroller.startScroll(0, -5);" onmouseout="scroller.stopScroll();" alt="" />
-				  <div class="Scroller-3">
-				  
-					<div class="Scroller-Container3">
-					<?php $_gallery = Mage::getModel('catalog/product')->load($_product->getId())->getMediaGalleryImages(); 
-					$jjs = 0;  ?>
-						<?php foreach ($_gallery as $_image ):  $jjs = $jjs+1; ?>
-					  <div class="box3"><img onclick="showBigImageDiv('<?php echo $this->helper('catalog/image')->init($_product->getProduct(), '', $_image->getFile()); ?>', 'listbigimage<?php echo $i ?>')" style="cursor:pointer;" src="<?php echo $this->helper('catalog/image')->init($_product, 'thumbnail', $_image->getFile())->resize(100, 100); ?>" alt="" /></div>
-					  <?php endforeach;  ?>
-					</div>
-					
-				  </div>
-				</div>
-			  </div>
-			  <br class="clr" />
-			  <div class="button">
-				<p align="center">
-				  <input type="button" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')" class="btn01" value="ADD TO SHOPPING BAG" />
-				  <input type="button" onclick="setLocation('<?php echo $this->helper('wishlist')->getAddUrl($_product) ?>')" class="btn02" value="ADD TO WISHLIST" />
-				</p>
-			  </div>
-			</div>
-			
-		  </div>
-	  
-	  
-	  
-	  
-     
+<div class="pro_box span3">
+	<div>	  
+	<a 	href="<?php echo $_product->getProductUrl() ?>" 
+		onmouseout="MM_swapImgRestore()" 
+		onmouseover="MM_swapImage('<?php echo $i . "image"; ?>','','<?php echo $this->helper('catalog/image')->init($_product, 'thumbnail')->resize(195, 292); ?>',0)">
+		<img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(195, 292); ?>" alt="<?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?>" name="<?php echo $i . "image"; ?>" id="<?php echo $i . "image"; ?>" />
+	</a>
+</div><div>
+
+
+	<a href="<?php echo $_product->getProductUrl() ?>" class="prodtitlelink">
+		<b><?php echo $designer; ?></b><br>
+<?php echo str_replace($designer, "", $_helper->productAttribute($_product, $_product->getName(), 'name')) ?><br>
+<?php $specialPrice = $_product->getSpecialPrice(); if($specialPrice != 0){ if(Mage::app()->getStore()->getStoreId() == "1"){ echo "<div class=\"price-box\"><p class=\"old-price\"><span class=\"price-label\">Regular Price: </span><span class=\"price\" id=\"old-price-136\">" . Mage::helper('core')->currency($_product->getPrice(), true, false) . "</span></p><p class=\"special-price\"><span class=\"price-label\">Sales Price: </span><span class=\"price\" id=\"product-price-136\">" . Mage::helper('core')->currency($_product->getSpecialPrice(), true, false) . "</span></p></div>"; }else{ echo "<div class=\"price-box\"><p class=\"old-price\"><span class=\"price-label\">Prix Initial: </span><span class=\"price\" id=\"old-price-136\">" . Mage::helper('core')->currency($_product->getPrice(), true, false) . "</span></p><p class=\"special-price\"><span class=\"price-label\">Prixe Promo: </span><span class=\"price\" id=\"product-price-136\">" . Mage::helper('core')->currency($_product->getSpecialPrice(), true, false) . "</span></p></div>"; } }else{ echo "<b>" . Mage::helper('core')->currency($_product->getPrice(), true, false) . "</b>"; } ?></a>
+	</div>  
+</div>
 		
-		<?php endforeach ?>
-		
-	<?php endif; ?>
-	<?php endif; ?>  
+<?php endforeach; ?>
+<?php endif; ?>
+<?php endif; ?>  
       
     
     </div>
   </div>
- 
-  <div id="toolbarbottom"> <?php if(substr_count($this->getToolbarHtml(), "12 per page") > 0){ echo str_replace("padding-top:14px", "padding-top:16px", $this->getToolbarHtml()); }else{ if(Mage::app()->getStore()->getStoreId() == "1"){ echo str_replace("<div class=\"pages\"><div class=\"basictextfiller\">all products shown</div>", "", $this->getToolbarHtml());}else{ echo str_replace("<div class=\"pages\"><div class=\"basictextfiller\">Tous les produits indiqués</div>", "", $this->getToolbarHtml()); } } ?></div>
+ </div>
+<div class="toolbar row">
+<?= $this->getToolbarHtml(); ?>
+</div>

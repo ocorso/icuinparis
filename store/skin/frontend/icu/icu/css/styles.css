@@ -390,7 +390,7 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 
 /* Toolbar */
 .toolbar {}
-.toolbar .pager { padding:3px 8px; border-bottom:1px solid #fff; }
+
 .toolbar .sorter { border-bottom:1px solid #fff; }
 .toolbar-bottom {}
 

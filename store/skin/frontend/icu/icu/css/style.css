@@ -2,15 +2,31 @@
 
 @charset "utf-8";
 
+@font-face {
+    font-family: 'Gotham-Light';
+    src: url('../fonts/gotham-light.eot');
+    src: url('../fonts/gotham-light.eot') format('embedded-opentype'),
+         url('../fonts/gotham-light.woff') format('woff'),
+         url('../fonts/gotham-light.ttf') format('truetype'),
+         url('../fonts/gotham-light.svg#GothamRegular') format('svg');
+}
+@font-face {
+    font-family: 'JosefinSansStdLight';
+    src: url('../fonts/JosefinSansStd-Light-webfont.eot');
+    src: url('../fonts/JosefinSansStd-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/JosefinSansStd-Light-webfont.woff') format('woff'),
+         url('../fonts/JosefinSansStd-Light-webfont.ttf') format('truetype'),
+         url('../fonts/JosefinSansStd-Light-webfont.svg#JosefinSansStdLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
 
+}
 
 /* General Styles */
 
 
 
 * {margin:0; padding:0;}
-
-html, body, p, div, h1, h2, h3, h4, h5, h6, img, span, ul, li, br, hr, a, form, input,  dl, dt, dd, iframe { padding:0px; margin:0px; border:0px;}
 
 img {margin:0; padding:0; outline-style:none; outline-width:0; }
 
@@ -23,8 +39,15 @@ a, a:hover, a:active, a:focus { outline:none; outline-style:none; outline-width:
 button:focus::-moz-focus-inner, input[type="reset"]:focus::-moz-focus-inner, input[type="button"]:focus::-moz-focus-inner, input[type="submit"]:focus::-moz-focus-inner,input[type="file"] > input[type="button"]:focus::-moz-focus-inner {border: 1px dotted transparent;}
 
 
-
-body {margin:0; padding:0; font-family:Arial, Helvetica, sans-serif; color:#000000;}
+html{
+	background-color: #545454;
+}
+body {
+	background-color: white;
+	margin:0; 
+	padding:0; 
+	font-family:Arial, Helvetica, sans-serif; color:#000000;
+}
 
 
 
@@ -648,7 +671,7 @@ input[type="button"].btn03 {margin:0; padding:0; width:110px; height:23px; backg
 	#keyword input[type="text"] {
 		margin:0; 
 		padding:4px 4px; 
-		width:190px; 
+		width:170px; 
 		background-color:#E6E6E6; 
 		border-radius: 0;
 		font-family:Arial, Helvetica, sans-serif; 
@@ -668,6 +691,7 @@ input[type="button"].btn03 {margin:0; padding:0; width:110px; height:23px; backg
 		padding:0; 
 		width:85px; 
 		height:28px; 
+		border:none;
 		background-color: #84bcbc; 
 		font-family:Arial, Helvetica, sans-serif; 
 		color:#fff; 
@@ -675,6 +699,7 @@ input[type="button"].btn03 {margin:0; padding:0; width:110px; height:23px; backg
 		line-height:20px; 
 		text-transform:uppercase; 
 		cursor:pointer;
+		box-shadow: none;
 	}
 #search_mini_form {
 
@@ -684,7 +709,7 @@ input[type="button"].btn03 {margin:0; padding:0; width:110px; height:23px; backg
 	display: none;
 }
 .b-style-dropdown {
-	padding-left: 40px;
+	padding-left: 5px;
 }
 
 .b-style-dropdown span { padding: 0; margin: 0; }
@@ -809,6 +834,9 @@ input[type="button"].btn03 {margin:0; padding:0; width:110px; height:23px; backg
 
 #body_section {margin:0 auto; padding:0; width:962px; height:auto;position:relative;z-index:2}
 
+.std{ 
+	padding-top: 35px;
+}
 	/* body container */
 
 	#body_container {margin:0; padding:0; width:846px; height:555px; float:left; background:url(../images/brand-bg.png) no-repeat top left;}
@@ -1009,12 +1037,15 @@ input[type="button"].btn03 {margin:0; padding:0; width:110px; height:23px; backg
 
 /* subscribe-left */
 	.subscribe-left-block {margin-top:50px; padding:0; height:auto; text-decoration:none;}
-	.subscribe-borders {padding: 15px 0; width:180px; border-top: 1px solid #999999; border-bottom: 1px solid #999999; overflow:hidden;}
+	.subscribe-borders {
+		padding: 15px 0; width:180px; border-top: 1px solid #999999; 
+		overflow:hidden;
+	}
 	.subscribe-header {
 		margin:0; 
 		padding:0; 
 		height:auto; 
-		font-size:23px; 
+		font-size:2.0em; 
 		font-family:"JosefinSansStdLight";
 		text-transform: uppercase; 
 		color:#000000;
@@ -1031,7 +1062,20 @@ input[type="button"].btn03 {margin:0; padding:0; width:110px; height:23px; backg
 	
 	.newsletter-elements {clear:both;}
 	.subscribe-content {margin:0 0 10px 0; font: 11px/14px Arial,Helvetica,sans-serif; color: #999999;}
-	.newsletter-elements input[type="text"] {float:left; margin:0; padding:2px 4px; width:140px; height:auto; background-color:#f7f7f7; border:1px solid #bcbcbc; font-family:Arial, Helvetica, sans-serif; color:#bcbcbc; font-size:11px;}
+	.newsletter-elements input[type="text"], .newsletter-elements input[type="email"] {
+		float:left; 
+		margin:0; 
+		padding:2px 4px; 
+		width:140px; 
+		height:auto; 
+		background-color:#E6E6E6; 
+		border:none;
+		height:20px;
+		border-radius: 0; 
+		font-family:Arial, Helvetica, sans-serif; 
+		color:#bcbcbc; 
+		font-size:11px;
+	}
 	.subscribe-button {float:left; background: none repeat scroll 0 0 transparent; border: 0 none; cursor: pointer; margin: 0; overflow: visible; padding: 0; width: auto;}
 	.subscribe-button::-moz-focus-inner { padding:0; border:0; }
 	.subscribe-button { -webkit-border-fit:lines; }
@@ -2819,24 +2863,4 @@ a.flashSale_French:hover {
          -webkit-border-radius: 3px;
          -moz-border-radius: 3px;
          border-radius: 3px; }
-
-@font-face {
-    font-family: 'Gotham-Light';
-    src: url('../fonts/gotham-light.eot');
-    src: url('../fonts/gotham-light.eot') format('embedded-opentype'),
-         url('../fonts/gotham-light.woff') format('woff'),
-         url('../fonts/gotham-light.ttf') format('truetype'),
-         url('../fonts/gotham-light.svg#GothamRegular') format('svg');
-}
-@font-face {
-    font-family: 'JosefinSansStdLight';
-    src: url('../fonts/JosefinSansStd-Light-webfont.eot');
-    src: url('../fonts/JosefinSansStd-Light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/JosefinSansStd-Light-webfont.woff') format('woff'),
-         url('../fonts/JosefinSansStd-Light-webfont.ttf') format('truetype'),
-         url('../fonts/JosefinSansStd-Light-webfont.svg#JosefinSansStdLight') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
 

@@ -2,12 +2,17 @@
 	<div class="subscribe-borders">
 		<form action="<?php echo $this->getUrl('bfmsubscribe/subscriber/new') ?>" method="post" id="subscribe-left-validate-detail">
 			<div class="subscribe-header">Subscribe to ICU</div>
-			<div class="subscribe-content"><?php echo $this->__('Sign up for specials, promos and new product announcements from ICUinParis.com') ?></div>
+			<div class="subscribe-content"><?= $this->__('Sign up for specials, promos and new product announcements from ICUinParis.com'); ?></div>
 			<div class="newsletter-elements">
-				<input type="text" value="<?php echo $this->__('YOUR EMAIL ADDRESS') ?>" onfocus="if(this.value=='<?php echo $this->__('YOUR EMAIL ADDRESS') ?>')this.value='';" onblur="if(this.value=='')this.value='<?php echo $this->__('YOUR EMAIL ADDRESS') ?>';" name="email" id="newsletternew" class="_for_sending" />
+				<input type="email" 
+				value="<?php echo $this->__('Your Email Address') ?>" 
+				onfocus="if(this.value=='<?php echo $this->__('Your Email Address') ?>')this.value='';" 
+				onblur="if(this.value=='')this.value='<?php echo $this->__('Your Email Address') ?>';" 
+				name="email" id="newsletternew" 
+				class="_for_sending" />
 				<button class="subscribe-button" type="submit">
 					<span>
-						<img src="<?php echo $this->getSkinUrl('images/btn_arrow.gif') ?>" alt="" />
+						<img src="<?= $this->getSkinUrl('images/btn_arrow.gif') ?>" alt="Submit to ICU Newsletter" />
 					</span>
 				</button>
 			</div>

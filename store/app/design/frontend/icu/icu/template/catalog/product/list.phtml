@@ -278,23 +278,24 @@
 
 	</div> <!-- end #pagination -->
 	<?php if(!$_productCollection->count()): ?>
-	<div class="">
+	<div class="std row">
 		<?= $this->__('There are no products matching the selection.') ?>
 	</div>
 <?php else: ?>
 	
-<?php // Grid Mode ?>
-    <?php if($this->getMode()=='grid'): ?>
+<?php // Grid Mode 
+    if($this->getMode()=='grid'): 
+    	$_collectionSize 	= $_productCollection->count();
+   		$_columnCount 		= $this->getColumnCount(); 
+  		$i 					= 0; 
 
-
-    <?php $_collectionSize = $_productCollection->count() ?>
-    <?php $_columnCount = $this->getColumnCount(); ?>
-    <?php $i=0; foreach ($_productCollection as $_product): $i = $i+1; ?>
-	<?php 
-		$attributeId = '119';
-		$attributes = $_product->getAttributes();
-		$designer = ucwords($attributes['designer']->getFrontend()->getValue($_product));
-		//$designer = $_product->getAttributeText('designer');
+    	foreach ($_productCollection as $_product): 
+    		
+			$attributeId 	= '119';
+			$attributes 	= $_product->getAttributes();
+			$designer 		= ucwords($attributes['designer']->getFrontend()->getValue($_product));
+		//	$designer 		= $_product->getAttributeText('designer');
+		
 	?>
 	  	
 	 
@@ -309,10 +310,23 @@
 </div><div>
 
 
-	<a href="<?php echo $_product->getProductUrl() ?>" class="prodtitlelink">
-		<b><?php echo $designer; ?></b><br>
-<?php echo str_replace($designer, "", $_helper->productAttribute($_product, $_product->getName(), 'name')) ?><br>
-<?php $specialPrice = $_product->getSpecialPrice(); if($specialPrice != 0){ if(Mage::app()->getStore()->getStoreId() == "1"){ echo "<div class=\"price-box\"><p class=\"old-price\"><span class=\"price-label\">Regular Price: </span><span class=\"price\" id=\"old-price-136\">" . Mage::helper('core')->currency($_product->getPrice(), true, false) . "</span></p><p class=\"special-price\"><span class=\"price-label\">Sales Price: </span><span class=\"price\" id=\"product-price-136\">" . Mage::helper('core')->currency($_product->getSpecialPrice(), true, false) . "</span></p></div>"; }else{ echo "<div class=\"price-box\"><p class=\"old-price\"><span class=\"price-label\">Prix Initial: </span><span class=\"price\" id=\"old-price-136\">" . Mage::helper('core')->currency($_product->getPrice(), true, false) . "</span></p><p class=\"special-price\"><span class=\"price-label\">Prixe Promo: </span><span class=\"price\" id=\"product-price-136\">" . Mage::helper('core')->currency($_product->getSpecialPrice(), true, false) . "</span></p></div>"; } }else{ echo "<b>" . Mage::helper('core')->currency($_product->getPrice(), true, false) . "</b>"; } ?></a>
+	<a href="<?php echo $_product->getProductUrl(); ?>" class="prodtitlelink">
+		<b><?= $designer; ?></b>
+		<br>
+		<?= str_replace($designer, "", $_helper->productAttribute($_product, $_product->getName(), 'name')) ?>
+		<br>
+<?php 
+	$specialPrice = $_product->getSpecialPrice(); 
+	if($specialPrice != 0){ 
+		if(Mage::app()->getStore()->getStoreId() == "1"){ 
+			echo "<div class=\"price-box\"><p class=\"old-price\"><span class=\"price-label\">Regular Price: </span><span class=\"price\" id=\"old-price-136\">" . Mage::helper('core')->currency($_product->getPrice(), true, false) . "</span></p><p class=\"special-price\"><span class=\"price-label\">Sales Price: </span><span class=\"price\" id=\"product-price-136\">" . Mage::helper('core')->currency($_product->getSpecialPrice(), true, false) . "</span></p></div>"; }else{ echo "<div class=\"price-box\"><p class=\"old-price\"><span class=\"price-label\">Prix Initial: </span><span class=\"price\" id=\"old-price-136\">" . Mage::helper('core')->currency($_product->getPrice(), true, false) . "</span></p><p class=\"special-price\"><span class=\"price-label\">Prixe Promo: </span><span class=\"price\" id=\"product-price-136\">" . Mage::helper('core')->currency($_product->getSpecialPrice(), true, false) . "</span></p></div>"; 
+		} 
+	}else{ 
+		echo "<b>" . Mage::helper('core')->currency($_product->getPrice(), true, false) . "</b>"; 
+	} 
+?>
+</a>
+
 	</div>  
 </div>
 		

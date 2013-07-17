@@ -1,9 +1,10 @@
 
 body{
-
-padding-top: 41px; /* 60px to make the container go all the way to the bottom of the topbar */ 
+    padding-top: 41px; /* 60px to make the container go all the way to the bottom of the topbar */ 
 }
-
+a{
+    color:#84bcbc;
+}
 .navbar-fixed-top, .navbar-fixed-bottom {
     position: fixed;
 }
@@ -99,7 +100,7 @@ ul.sub-menu li {
 }
 
 h1{
-    padding: 25px 0px 10px 215px; 
+    padding: 12px 0px 10px 215px; 
     text-shadow:none; 
     font-size: 5.0em; 
     line-height: 83px;
@@ -107,6 +108,20 @@ h1{
     color:#000000; 
     text-transform:uppercase;   
     font-family: 'JosefinSansStdLight', 'Source Sans Pro', sans-serif; 
+}
+#footer {
+    border-top: opx solid #676D76;
+    color: #545454;
+    padding: 4.236em 0 2.618em;
+    height:400px;
+}
+
+#footer {
+    color: #d1d1d1;
+    text-align:center;
+    background-image: url('../wp/wp-content/themes/icuinparis/img/bkgr_foot.jpg');
+    background-repeat: repeat-x;
+    background-color: rgba(0, 0, 0, 0.19);
 }
 /*****************************************************************************
 /*****************************************************************************

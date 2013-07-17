@@ -36,90 +36,35 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
 <?= $this->getChildHtml('head'); ?>
-<?php 
-	$_helper 	= $this->helper('catalog/output'); 
-	$_product 	= $this->getProduct(); 
-?>
 
-<script src="<?= $this->getSkinUrl('js/jsScroller.js'); ?>"></script>
-
-<script defer>
-jQuery(document).ready(function() {
-	var options = {
-	    zoomWidth: 400,
-	    zoomHeight: 400,
-		title: false,
-        xOffset: 0,
-        yOffset: 0,
-        position: "right",
-        zoomType: 'standard',
-        lens:true,
-        preloadImages: false,
-        alwaysOn:false
-	};
-	
-	jQuery(".jqzoom").jqzoom(options);
-});
-
-</script>
-
-<link rel="stylesheet" href="<?php echo $this->getSkinUrl('css/sexylightbox.css') ?>" type="text/css"/>
-<script type="text/javascript">
-var scroller = null;
-window.onload = function () {
-  var el 		= document.getElementById("Scroller-2");
-  scroller 		= new jsScroller(el, 400, 200);
-}
-</script>
-<script type="text/javascript">
-function showdescriptionpanel(){
-	document.getElementById('descriptionpanel').style.display = "block";
-	document.getElementById('theatelierpanel').style.display = "none";
-	document.getElementById('shippingpanel').style.display = "none";
-	document.getElementById('inquiriespanel').style.display = "none";
-}
-
-function showtheatelierpanel(){
-	document.getElementById('descriptionpanel').style.display = "none";
-	document.getElementById('theatelierpanel').style.display = "block";
-	document.getElementById('shippingpanel').style.display = "none";
-	document.getElementById('inquiriespanel').style.display = "none";
-}
-
-function showshippingpanel(){
-	document.getElementById('descriptionpanel').style.display = "none";
-	document.getElementById('theatelierpanel').style.display = "none";
-	document.getElementById('shippingpanel').style.display = "block";
-	document.getElementById('inquiriespanel').style.display = "none";
-}
-
-function showinquiriespanel(){
-	document.getElementById('descriptionpanel').style.display = "none";
-	document.getElementById('theatelierpanel').style.display = "none";
-	document.getElementById('shippingpanel').style.display = "none";
-	document.getElementById('inquiriespanel').style.display = "block";
-}
-</script>
-<?php echo $this->getChildHtml('after_body_start') ?>
-<?php echo $this->getChildHtml('global_notices') ?>
+<?php //echo $this->getChildHtml('after_body_start') ?>
+<?php //echo $this->getChildHtml('global_notices') ?>
 </head>
 <body>
-<!-- oc: productdetails HEADER AND NAVIGATION SECTION -->
-<?php echo $this->getChildHtml('header') ?>
-<!-- /HEADER AND NAVIGATION SECTION -->
+	<div id="wrapper" class="container">
 
-<!-- BODY SECTION -->
-<div id="body_section">
+		<!-- oc: productdetails HEADER AND NAVIGATION SECTION -->
+		<?= $this->getChildHtml('header'); ?>
+		<!-- /HEADER AND NAVIGATION SECTION -->
 
-	<?php echo $this->getChildHtml('content') ?> 
+		<!-- BODY SECTION -->
+		<?= $this->getChildHtml('content'); ?> 
+		<!-- /BODY SECTION -->
 
-</div>
-<!-- /BODY SECTION -->
+		<!-- FOOTER SECTION -->
+		<?= $this->getChildHtml('footer'); ?>
+		<!-- /FOOTER SECTION -->
+		<?php echo $this->getChildHtml('before_body_end'); ?>
+	</div>
+	<!-- end #wrapper -->
 
-<!-- FOOTER SECTION -->
-<?php echo $this->getChildHtml('footer') ?>
-<!-- /FOOTER SECTION -->
-<?php echo $this->getChildHtml('before_body_end') ?>
+<?php 
+    //oc: get common footer.
+	$base_url  	= str_replace("/store/", "",$this->getUrl(''));
+    $footerPath = $base_url . '/php/common_icu_footer.php';
+    $footer     = file_get_contents($footerPath, false); 
+    echo $footer;
 
+  ?>
 </body>
 </html>

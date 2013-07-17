@@ -30,21 +30,27 @@
  * @see Mage_Catalog_Block_Product_View_Media
  */
 ?>
-<script language="javascript">
-function showBigImageDiv(largeName, smallName) {
-	document.getElementById('imagebigg').src = smallName;
-	document.getElementById('axss').href = largeName;
-}
-</script>
+
 <?php
     $_product = $this->getProduct();
     $_helper = $this->helper('catalog/output');
 ?>
-<div id="product_details">
-	<table border="0" cellspacing="0" cellpadding="0">
-	<tr><td>
-	<table border="0" cellspacing="0" cellpadding="0">
+
+	<table id="media_table" border="0" cellspacing="0" cellpadding="0">
 		<tr>
+			<td width="450">
+			<div id="product_bigimg">
+				
+				<table>
+					<tr>
+						<td width="0">
+							<a href="<?php echo $this->helper('catalog/image')->init($_product, 'image'); ?>" class="jqzoom" id="axss"><img id="imagebigg" src="<?php echo $this->helper('catalog/image')->init($_product, 'image')->resize(350, 525); ?>" alt="" width="350" /></a>
+						</td>
+					</tr>
+				</table>
+						
+			</div>
+			</td>
 			<td height="540" width="125">
 				<div id="product_images">
 					<?php if (count($this->getGalleryImages()) > 0): ?>
@@ -54,44 +60,7 @@ function showBigImageDiv(largeName, smallName) {
 					<?php endif; ?>
 				</div>
 			</td>
-			<td width="450">
-			<div id="product_bigimg">
-				
-							<table>
-								<tr>
-									<td width="0">
-										<a href="<?php echo $this->helper('catalog/image')->init($_product, 'image'); ?>" class="jqzoom" id="axss"><img id="imagebigg" src="<?php echo $this->helper('catalog/image')->init($_product, 'image')->resize(350, 525); ?>" alt="" width="350" /></a>
-									</td>
-								</tr>
-							</table>
-						
-			</div>
-			</td>
 		</tr>
-		<tr>
-			<td background="<?= $this->getSkinUrl('images/bg_icons.jpg'); ?>" style="background-repeat:repeat-x" height="20" align="right" colspan="2" width="450">
-				<table align="right" border="0" cellspacing="0" cellpadding="0">
-					<tr height="20" style="margin:0; padding:0;">
-						<td width="100" height="20" align="right" style="vertical-align:middle; padding: 0 3px 3px 0; margin:0; text-align:right">
-							<?php if(Mage::app()->getStore()->getStoreId() == "1"){ echo "share this"; }else{ echo "partager"; }?>:
-						</td>
-						<td width="3" height="20">
-							<a href="#"><img src="<?= $this->getSkinUrl('images/icon_divider.jpg'); ?>" width="3" height="24" border="0"></a>
-						</td>
-						<td width="18" height="20">
-							<a href="http://www.facebook.com/sharer.php?u=<?php echo $this->helper('core/url')->getCurrentUrl(); ?>" target="_blank"><img src="<?= $this->getSkinUrl('images/facebook_icon.jpg'); ?>" width="18" height="24" border="0"></a>
-						</td>
-						<td width="18" height="20">
-							<a href="http://twitter.com/?status=<?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') . ": " . $this->helper('core/url')->getCurrentUrl(); ?>" target="_blank"><img src="<?= $this->getSkinUrl('images/twitter_icon.jpg'); ?>" width="18" height="24" border="0"></a>
-						</td>
-						<td width="17" height="20">
-							<a href="mailto:?subject=<?php echo $_helper->productAttribute($_product, $_product->getName(), 'name'); ?>&body=<?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') . ": " . $this->helper('core/url')->getCurrentUrl(); ?>" target="_blank"><img src="<?= $this->getSkinUrl('images/email_icon.jpg'); ?>" width="17" height="24" border="0"></a>
-						</td>
-					</tr>
-				</table>
-			</td>
-		</tr>
+
       
 	</table>
-	</td>
-	<td valign="top">

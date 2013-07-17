@@ -38,22 +38,23 @@
 <?php echo $this->getChildHtml('head') ?>
 </head>
 <body>
-<div id="wrapper" class="container">
+	<div id="wrapper" class="container">
 
-<!-- oc: 3 columns HEADER AND NAVIGATION SECTION -->
-<?php echo $this->getChildHtml('header') ?>
-<!-- /HEADER AND NAVIGATION SECTION -->
+		<!-- oc: 3 columns HEADER AND NAVIGATION SECTION -->
+		<?php echo $this->getChildHtml('header') ?>
+		<!-- /HEADER AND NAVIGATION SECTION -->
 
-<!-- content container -->
-<?php echo $this->getChildHtml('content') ?> 
-<!-- /content container -->
+		<!-- content container -->
+		<?php echo $this->getChildHtml('content') ?> 
+		<!-- /content container -->
 
-<!-- FOOTER SECTION -->
-<?php echo $this->getChildHtml('footer') ?>
-<!-- /FOOTER SECTION -->
-<?php echo $this->getChildHtml('before_body_end') ?>
-</div>
-<!-- end #wrapper -->
+		<!-- FOOTER SECTION -->
+		<?php echo $this->getChildHtml('footer') ?>
+		<!-- /FOOTER SECTION -->
+		<?php echo $this->getChildHtml('before_body_end') ?>
+	</div>
+	<!-- end #wrapper -->
+
   <?php 
     //oc: get common footer.
 	$base_url  	= str_replace("/store/", "",$this->getUrl(''));

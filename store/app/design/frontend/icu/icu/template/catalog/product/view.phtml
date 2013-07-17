@@ -39,16 +39,14 @@
     var optionsPrice = new Product.OptionsPrice(<?php echo $this->getJsonConfig() ?>);
 </script>
 <script type="text/javascript" src="<?= $this->getSkinUrl('js/tiny_mce/tiny_mce.js'); ?>"></script>
-<script type="text/javascript">
-	tinyMCE.init({
-		// General options
-		mode : "textareas",
-		theme : "simple",
-	});
-	
-</script>
-<div id="messages_product_view"><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></div>
-<div style="padding-top:5px; text-align:left;">
+
+
+<div id="messages_product_view" class="row">
+	<?= $this->getMessagesBlock()->getGroupedHtml() ?>
+</div>
+
+
+<div id="headline" class="row">
 	<?php
 		$icuHelper = $this->helper('bfmicu');
 		$url = $icuHelper->backUrl();
@@ -59,272 +57,40 @@
 			}
 			$url = Mage::getStoreConfig('web/unsecure/base_url') . $category;
 		}
+
+		$headlineTxt = Mage::app()->getStore()->getStoreId() == "1" ? "Shop ICU Online" : "boutique en ligne ICU";
 	?>
-	<?php echo "<a href=\"" . $url . "\" class=\"gobacklink\"><img src=\"" . $this->getSkinUrl('images/left-arrow.jpg') . "\" /> "; if(Mage::app()->getStore()->getStoreId() == "1"){ echo "Back to products"; }else{ echo "Retour à les produits"; } echo "</a>";	?>
+	<h1><a href="<?= $url; ?>" title="<?= $headlineTxt; ?>"><?= $headlineTxt; ?></a></h1>
 </div>
 
-
-
-
-
-<form action="<?php echo $this->getAddToCartUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
-<div class="no-display">
-	<input type="hidden" name="product" value="<?php echo $_product->getId() ?>" />
-	<input type="hidden" name="related_product" id="related-products-field" value="" />
-</div>
-
-  <!-- WARNING:: HTML break ----  media.phtml page -->
-
+<form 	action="<?php echo $this->getAddToCartUrl($_product) ?>" 
+		method="post" 
+		id="product_addtocart_form" 
+		class="row"
+	<?php if($_product->getOptions()): ?> 
+		enctype="multipart/form-data"
+	<?php endif; ?>
+	>
 	
-	<?php echo $this->getChildHtml('media') ?>
+  <!-- BEGIN media.phtml page -->
+	<div id="media_wrapper" class="span6 pull-left">
+	<?php echo $this->getChildHtml('media'); ?>
+	</div>
+  <!-- END media.phtml page -->
+  	
 	
-  		
-       <div class="other_img" style="display:none;">
-       	  <ul class="link">
-           	  <li><a href="#">Pair it</a></li>
-                <li>|</li>
-                <li><a href="#">Layer it</a></li>
-                <li>|</li>
-                <li><a href="#">Love it more</a></li>
-          </ul>
-            <ul class="othpro">
-            	<li><a href="#"><img src="<?= $this->getSkinUrl('images/oth-pro01.jpg'); ?>" alt="" width="100" height="100" /></a></li>
-                <li><a href="#"><img src="<?= $this->getSkinUrl('images/oth-pro02.jpg'); ?>" alt="" width="100" height="100" /></a></li>
-                <li><a href="#"><img src="<?= $this->getSkinUrl('images/oth-pro03.jpg'); ?>" alt="" width="100" height="100" /></a></li>
-            </ul>
-        </div>
-    </div>
-	
-		<div id="pro_des_section">
-			<?php
-			$attributes = $_product->getAttributes();
-			$designer = ucwords($attributes['designer']->getFrontend()->getValue($_product));
-			?>
-			<h3><?php echo ucfirst($designer); ?></h3>
-			<h1><?php echo ucfirst(str_replace($designer, "", $_helper->productAttribute($_product, $_product->getName(), 'name'))); ?></h1>
-			<h3><?php echo $this->getPriceHtml($_product, true); ?></h3>
+	<div id="pro_des_section" class="span6 pull-right">
+		<?php
+		$attributes = $_product->getAttributes();
+		$designer 	= ucwords($attributes['designer']->getFrontend()->getValue($_product));
+		?>
+		<h2><?php echo ucfirst($designer); ?></h2>
+		<h3><?php echo ucfirst(str_replace($designer, "", $_helper->productAttribute($_product, $_product->getName(), 'name'))); ?></h3>
+		<?php echo $this->getPriceHtml($_product, true); ?>
 		  
-		  <div id="descriptionpanel" style="display:block">
-		  <table>
-		  	<tr>
-				<td height="25" colspan="9"></td>
-			</tr>
-		  	<tr>
-				<td bgcolor="#CCCCCC" height="1" width="1"></td>
-				<td bgcolor="#CCCCCC" height="1" width="100"></td>
-				<td bgcolor="#CCCCCC" height="1" width="1"></td>
-				<td bgcolor="#CCCCCC" height="1" width="100"></td>
-				<td bgcolor="#CCCCCC" height="1" width="1"></td>
-				<td bgcolor="#CCCCCC" height="1" width="100"></td>
-				<td bgcolor="#CCCCCC" height="1" width="1"></td>
-				<td bgcolor="#CCCCCC" height="1" width="114"></td>
-				<td height="1" width="1"></td>
-			</tr>
-			<tr>
-				<td bgcolor="#CCCCCC" width="1"></td>
-				<td width="100" height="25" align="center" style="text-align:center; padding: 4px 0 0 0; cursor:default;" onclick="showdescriptionpanel();"><?php echo $this->__('DESCRIPTION'); ?></td>
-				<td bgcolor="#CCCCCC" width="1"></td>
-				<td width="100" align="center" style="text-align:center; padding: 4px 0 0 0; cursor:pointer;" onclick="showtheatelierpanel();"><?php echo $this->__('DESIGNER BIO'); ?></td>
-				<td width="1" bgcolor="#CCCCCC"></td>
-				<td width="100" align="center" style="text-align:center; padding: 4px 0 0 0; cursor:pointer;" onclick="showshippingpanel();"><?php echo $this->__("SHIPPING"); ?></td>
-				<td width="1" bgcolor="#CCCCCC"></td>
-				<td width="114" align="center" style="text-align:center; padding: 4px 0 0 0; cursor:pointer;" onclick="showinquiriespanel();"><?php echo $this->__("INQUIRIES"); ?></td>
-				<td width="1" bgcolor="#CCCCCC"></td>
-			</tr>
-			<tr>
-				<td bgcolor="#CCCCCC" height="1" width="1"></td>
-				<td height="1" width="100"></td>
-				<td bgcolor="#CCCCCC" height="1" width="1"></td>
-				<td bgcolor="#CCCCCC" height="1" width="100"></td>
-				<td bgcolor="#CCCCCC" height="1" width="1"></td>
-				<td bgcolor="#CCCCCC" height="1" width="100"></td>
-				<td bgcolor="#CCCCCC" height="1" width="1"></td>
-				<td bgcolor="#CCCCCC" height="1"></td>
-				<td bgcolor="#CCCCCC" height="1" width="1"></td>
-			</tr>
-			<tr>
-				<td bgcolor="#CCCCCC" width="1"></td>
-				<td colspan="7" style="padding: 8px 8px 8px 11px;">
-				  <h2 style="display:none;"><?php echo $_product->getSku() ?></h2>
-				  <p>&nbsp;</p>
-				  <p><?php echo str_replace("<br />", "", $_helper->productAttribute($_product, nl2br($_product->getDescription()), 'description')); ?></p>
-				</td>
-				<td bgcolor="#CCCCCC" width="1"></td>
-			</tr>
-			<tr>
-				<td colspan="9" height="1" bgcolor="#CCCCCC"></td>
-			</tr>
-		  </table>
-		  </div>
 		  
-		  <div id="theatelierpanel" style="display:none">
-		  <table>
-		  	<tr>
-				<td height="25" colspan="9"></td>
-			</tr>
-		  	<tr>
-				<td bgcolor="#CCCCCC" height="1" width="1"></td>
-				<td bgcolor="#CCCCCC" height="1" width="100"></td>
-				<td bgcolor="#CCCCCC" height="1" width="1"></td>
-				<td bgcolor="#CCCCCC" height="1" width="100"></td>
-				<td bgcolor="#CCCCCC" height="1" width="1"></td>
-				<td bgcolor="#CCCCCC" height="1" width="100"></td>
-				<td bgcolor="#CCCCCC" height="1" width="1"></td>
-				<td bgcolor="#CCCCCC" height="1" width="114"></td>
-				<td height="1" width="1"></td>
-			</tr>
-			<tr>
-				<td bgcolor="#CCCCCC" width="1"></td>
-				<td width="100" height="25" align="center" style="text-align:center; padding: 4px 0 0 0; cursor:pointer;" onclick="showdescriptionpanel();"><?php echo $this->__('DESCRIPTION'); ?></td>
-				<td bgcolor="#CCCCCC" width="1"></td>
-				<td width="100" align="center" style="text-align:center; padding: 4px 0 0 0; cursor:default;" onclick="showtheatelierpanel();"><?php echo $this->__('DESIGNER BIO'); ?></td>
-				<td width="1" bgcolor="#CCCCCC"></td>
-				<td width="100" align="center" style="text-align:center; padding: 4px 0 0 0; cursor:pointer;" onclick="showshippingpanel();"><?php echo $this->__("SHIPPING"); ?></td>
-				<td width="1" bgcolor="#CCCCCC"></td>
-				<td width="114" align="center" style="text-align:center; padding: 4px 0 0 0; cursor:pointer;" onclick="showinquiriespanel();"><?php echo $this->__("INQUIRIES"); ?></td>
-				<td width="1" bgcolor="#CCCCCC"></td>
-			</tr>
-			<tr>
-				<td bgcolor="#CCCCCC" height="1" width="1"></td>
-				<td bgcolor="#CCCCCC" height="1" width="100"></td>
-				<td bgcolor="#CCCCCC" height="1" width="1"></td>
-				<td height="1" width="100"></td>
-				<td bgcolor="#CCCCCC" height="1" width="1"></td>
-				<td bgcolor="#CCCCCC" height="1" width="100"></td>
-				<td bgcolor="#CCCCCC" height="1" width="1"></td>
-				<td bgcolor="#CCCCCC" height="1"></td>
-				<td bgcolor="#CCCCCC" height="1" width="1"></td>
-			</tr>
-			<tr>
-				<td bgcolor="#CCCCCC" width="1"></td>
-				<td colspan="7" style="padding: 8px 8px 8px 11px;">
-				  <h2 style="display:none;"><?php echo $_product->getSku() ?></h2>
-				  <p>&nbsp;</p>
-				  <p><?php echo str_replace("<br />", "", $_helper->productAttribute($_product, nl2br($_product->getTheatelier()), 'theatelier')); ?></p>
-				</td>
-				<td bgcolor="#CCCCCC" width="1"></td>
-			</tr>
-			<tr>
-				<td colspan="9" height="1" bgcolor="#CCCCCC"></td>
-			</tr>
-		</table>
-		</div>
-		
-		
-		<div id="shippingpanel" style="display:none">
-		  <table>
-		  	<tr>
-				<td height="25" colspan="9"></td>
-			</tr>
-		  	<tr>
-				<td bgcolor="#CCCCCC" height="1" width="1"></td>
-				<td bgcolor="#CCCCCC" height="1" width="100"></td>
-				<td bgcolor="#CCCCCC" height="1" width="1"></td>
-				<td bgcolor="#CCCCCC" height="1" width="100"></td>
-				<td bgcolor="#CCCCCC" height="1" width="1"></td>
-				<td bgcolor="#CCCCCC" height="1" width="100"></td>
-				<td bgcolor="#CCCCCC" height="1" width="1"></td>
-				<td bgcolor="#CCCCCC" height="1" width="114"></td>
-				<td height="1" width="1"></td>
-			</tr>
-			<tr>
-				<td bgcolor="#CCCCCC" width="1"></td>
-				<td width="100" height="25" align="center" style="text-align:center; padding: 4px 0 0 0; cursor:pointer;" onclick="showdescriptionpanel();"><?php echo $this->__('DESCRIPTION') ?></td>
-				<td bgcolor="#CCCCCC" width="1"></td>
-				<td width="100" align="center" style="text-align:center; padding: 4px 0 0 0; cursor:pointer;" onclick="showtheatelierpanel();"><?php echo $this->__('DESIGNER BIO'); ?></td>
-				<td width="1" bgcolor="#CCCCCC"></td>
-				<td width="100" align="center" style="text-align:center; padding: 4px 0 0 0; cursor:default;" onclick="showshippingpanel();"><?php echo $this->__("SHIPPING"); ?></td>
-				<td width="1" bgcolor="#CCCCCC"></td>
-				<td width="114" align="center" style="text-align:center; padding: 4px 0 0 0; cursor:pointer;" onclick="showinquiriespanel();"><?php echo $this->__("INQUIRIES"); ?></td>
-				<td width="1" bgcolor="#CCCCCC"></td>
-			</tr>
-			<tr>
-				<td bgcolor="#CCCCCC" height="1" width="1"></td>
-				<td bgcolor="#CCCCCC" height="1" width="100"></td>
-				<td bgcolor="#CCCCCC" height="1" width="1"></td>
-				<td bgcolor="#CCCCCC" height="1" width="100"></td>
-				<td bgcolor="#CCCCCC" height="1" width="1"></td>
-				<td height="1" width="100"></td>
-				<td bgcolor="#CCCCCC" height="1" width="1"></td>
-				<td bgcolor="#CCCCCC" height="1"></td>
-				<td bgcolor="#CCCCCC" height="1" width="1"></td>
-			</tr>
-			<tr>
-				<td bgcolor="#CCCCCC" width="1"></td>
-				<td colspan="7" style="padding: 8px 8px 8px 11px;">
-				  <h2 style="display:none;"><?php echo $_product->getSku() ?></h2>
-				  <p>&nbsp;</p>
-				  <?php if($_product->hasBfmShippingInformation() && strlen(trim($_product->getBfmShippingInformation()))) : ?>
-				  <p><?php echo str_replace("<br />", "", $_helper->productAttribute($_product, nl2br($_product->getBfmShippingInformation()), 'bfm_shipping_information')); ?></p>
-				  <?php else: ?>
-				  	<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('default_shipping_dont_change')->toHtml() ?>
-				  <?php endif; ?>
-				</td>
-				<td bgcolor="#CCCCCC" width="1"></td>
-			</tr>
-			<tr>
-				<td colspan="9" height="1" bgcolor="#CCCCCC"></td>
-			</tr>
-		</table>
-		</div>
-		  
-		<div id="inquiriespanel" style="display:none">
-		  <table>
-		  	<tr>
-				<td height="25" colspan="9"></td>
-			</tr>
-		  	<tr>
-				<td bgcolor="#CCCCCC" height="1" width="1"></td>
-				<td bgcolor="#CCCCCC" height="1" width="100"></td>
-				<td bgcolor="#CCCCCC" height="1" width="1"></td>
-				<td bgcolor="#CCCCCC" height="1" width="100"></td>
-				<td bgcolor="#CCCCCC" height="1" width="1"></td>
-				<td bgcolor="#CCCCCC" height="1" width="100"></td>
-				<td bgcolor="#CCCCCC" height="1" width="1"></td>
-				<td bgcolor="#CCCCCC" height="1" width="114"></td>
-				<td height="1" width="1"></td>
-			</tr>
-			<tr>
-				<td bgcolor="#CCCCCC" width="1"></td>
-				<td width="100" height="25" align="center" style="text-align:center; padding: 4px 0 0 0; cursor:pointer;" onclick="showdescriptionpanel();"><?php echo $this->__('DESCRIPTION') ?></td>
-				<td bgcolor="#CCCCCC" width="1"></td>
-				<td width="100" align="center" style="text-align:center; padding: 4px 0 0 0; cursor:pointer;" onclick="showtheatelierpanel();"><?php echo $this->__('DESIGNER BIO'); ?></td>
-				<td width="1" bgcolor="#CCCCCC"></td>
-				<td width="100" align="center" style="text-align:center; padding: 4px 0 0 0; cursor:pointer;" onclick="showshippingpanel();"><?php echo $this->__("SHIPPING"); ?></td>
-				<td width="1" bgcolor="#CCCCCC"></td>
-				<td width="114" align="center" style="text-align:center; padding: 4px 0 0 0; cursor:default;" onclick="showinquiriespanel();"><?php echo $this->__("INQUIRIES"); ?></td>
-				<td width="1" bgcolor="#CCCCCC"></td>
-			</tr>
-			<tr>
-				<td bgcolor="#CCCCCC" height="1" width="1"></td>
-				<td bgcolor="#CCCCCC" height="1" width="100"></td>
-				<td bgcolor="#CCCCCC" height="1" width="1"></td>
-				<td bgcolor="#CCCCCC" height="1" width="100"></td>
-				<td bgcolor="#CCCCCC" height="1" width="1"></td>
-				<td bgcolor="#CCCCCC" height="1" width="100"></td>
-				<td bgcolor="#CCCCCC" height="1" width="1"></td>
-				<td height="1" width="114"></td>
-				<td bgcolor="#CCCCCC" height="1" width="1"></td>
-			</tr>
-			<tr>
-				<td bgcolor="#CCCCCC" width="1"></td>
-				<td colspan="7" style="padding: 8px 8px 8px 11px;">
-				  <p>&nbsp;</p>
-				  <?php if($_product->hasBfmInquiriesInformation() && strlen(trim($_product->getBfmInquiriesInformation()))) : ?>
-				  <p><?php echo str_replace("<br />", "", $_helper->productAttribute($_product, nl2br($_product->getBfmInquiriesInformation()), 'bfm_inquiries_information')); ?></p>
-				  <?php else: ?>
-				  	<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('default_inquiries_message')->toHtml() ?>
-				  <?php endif; ?>
-				</td>
-				<td bgcolor="#CCCCCC" width="1"></td>
-			</tr>
-			<tr>
-				<td colspan="9" height="1" bgcolor="#CCCCCC"></td>
-			</tr>
-		</table>
-		</div>
-				
-		<table>
+<!-- BEGIN add_to_cart  -->
+		<table id="add_to_cart">
 			<tr>
 				<td width="1"></td>
 				<td colspan="5" style="padding: 8px 0px 8px 0px;" width="393">
@@ -346,139 +112,53 @@
 								<?php endif; ?>
 							</td>
 						</tr>
-<?php
-/* 
-//<tr><td colspan="2" style="">
-//<div style="border: 1px solid gray; padding: 10px; ;background-color: #FFCCCC; font-weight: bold; margin-top: 15px;">
-//<? //php  //echo $this->__('Please note, due to the holidays shipping could be delayed between December 22nd and January 2nd. Once your order is placed, you will receive more information regarding shipping in the order confirmation email.');? //>
-//</div>
-//</td></tr>
-*/
-?>                    
+                 
                     </table>
 		  		</td>
 				<td width="1"></td>
 			</tr>
 			
-			<tr><td colspan="7" align="right" style="text-align:right;">
-            <p>&nbsp;</p>
-		  <p><input type="submit" class="btn01" value="<?php if(Mage::app()->getStore()->getStoreId() == "1"){ echo "ADD TO SHOPPING BAG"; }else{ echo "AJOUTER AU PANIER"; }?>" /> 
-			 <input onclick="setLocation('<?php echo $this->helper('wishlist')->getAddUrl($_product) ?>')" type="button" class="btn02" value="<?php if(Mage::app()->getStore()->getStoreId() == "1"){ echo "ADD TO WISHLIST"; }else{ echo "AJOUTER A MA LISTE D'ENVIES"; }?>" />
-		  </p>
-          <div style="height:50px;"></div>
-          <p>
-          
-          </p>
-		  </td></tr>
+			<tr><td colspan="7" align="right" style="text-align:right;"> 
+				<input type="submit" 
+				 		class="btn01" 
+				 		value="<?php if(Mage::app()->getStore()->getStoreId() == "1"){ echo "ADD TO SHOPPING BAG"; }else{ echo "AJOUTER AU PANIER"; }?>" 
+				 /> 
+				<input onclick="setLocation('<?php echo $this->helper('wishlist')->getAddUrl($_product) ?>')" 
+						type="button" 
+						class="btn02" 
+						value="<?php if(Mage::app()->getStore()->getStoreId() == "1"){ echo "ADD TO WISHLIST"; }else{ echo "AJOUTER A MA LISTE D'ENVIES"; }?>" 
+				/>
+			</td></tr>
 		 </table>
-		  
-		</div>
+<!-- END add_to_cart  -->
 		
-  </div>
-  
-  </td>
-  </tr>
-  <tr>
-  	<td colspan="4">
-    	<table>
-        	<tr>
-            	<td><?php echo $this->getLayout()->createBlock('catalog/product_list_upsell')->setTemplate('catalog/product/list/upsell.phtml')->toHtml(); ?></td>
-                <td width="44"></td>
-    			<td><?php echo $this->getLayout()->createBlock('catalog/product_list_related')->setTemplate('catalog/product/list/related.phtml')->toHtml(); ?></td>
-            </tr>
-        </table>
-    </td>
-  </tr>
-  <tr>
-    <td colspan="4" height="25"></td>
-  </tr>
-	<tr>
-    	<td colspan="4">
-        	<table width="100%" id="proddetailsbaseboxes">
-            <script type="text/javascript">var Translator = new Translate({"Credit card number doesn't match credit card type":"Credit card number does not match credit card type","Please use only letters (a-z or A-Z), numbers (0-9) or underscore(_) in this field, first character should be a letter.":"Please use only letters (a-z or A-Z), numbers (0-9) or underscores (_) in this field, first character must be a letter."});</script><script type="text/javascript">
-<!--
-function MM_openBrWindow(theURL,winName,features) { //v2.0
-  window.open(theURL,winName,features);
-}
-//-->
-</script>
+ 	 </div><!--   end #pro_des_section -->
 
-            	<tr>
-                	<td width="237" height="85" bgcolor="#CCCCCC" style="padding:3px 5px 0px 5px">
-                    	<table width="100%" height="100%">
-                        	<tr>
-                            	<td align="left">
-                                	<span class="large">SECURE ONLINE PAYMENT</span><br>
-                                    <span class="small">All payment secured by, Authorize.net. We accept the following payment methods:</span></td>
-                            </tr>
-                            <tr height="3"><td></td></tr>
-                            <tr>
-                            	<td align="left"><img src="<?= $this->getSkinUrl('images/creditcardsoffered.jpg'); ?>"></td>
-                            </tr>
-                        </table>
-                    </td>
-                    <td width="4" bgcolor="#FFFFFF"></td>
-                    <td width="237" height="85" bgcolor="#CCCCCC" style="padding:3px 5px 0px 5px">
-                    <table width="100%">
-                        	<tr>
-                            	<td colspan="2" align="left">
-                                	<span class="large"><span class="large">WORLDWIDE SHIPPING</span><br>
-                                    <span class="small">Your ICU - In Paris is shipped within 24 hours of purchase directly from the designer's atelier. One shipping fee charged.</span>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                    <td width="4" bgcolor="#FFFFFF"></td>
-                    <td width="237" height="85" bgcolor="#CCCCCC" style="padding:3px 5px 0px 5px">
-                    <table width="100%">
-                        	<tr>
-                            	<td colspan="2" align="left">
-                    				<span class="large">CUSTOMER SERVICE</span><br>
-                                    <span class="small">e-mail: <a href="mailto:customerservice@icuinparis.com" target="_blank">customerservice@icuinparis.com</a><br>
-                                    skype: <a href="skype:icuinparis?chat">icuinparis</a><br>
-                                    mon-fri, 9am-6pm CET</span>
-                                </td>
-                            </tr>
-                    </table>
-                    </td>
-                    <td width="4" bgcolor="#FFFFFF"></td>
-                    <td width="237" height="85" bgcolor="#CCCCCC" style="padding:3px 5px 0px 5px">
-                    <table width="100%">
-                        	<tr>
-                            	<td colspan="2" align="left">
-                                    <span class="large">RETURNS & EXCHANGES</span><br>
-                                    <span class="small">Within 7 days of product delivery we are happy to issue a customer return if you are dis-satisfied with your ICU - In Paris purchase.</span>
-                                </td>
-                            </tr>
-                    </table>								
-                    </td>
-                </tr>
-                <tr>
-                	<td style="text-align:right; padding: 0 5px 0 0" bgcolor="#CCCCCC"><a onclick="MM_openBrWindow('<?= $this->getBaseUrl(); ?>/secure-online-payment.html','','scrollbars=yes,width=720,height=460')" href="#"><img src="<?= $this->getSkinUrl('images/more_info.jpg'); ?>" /></a></td>
-                	<td></td>
-                	<td style="text-align:right; padding: 0 5px 0 0" bgcolor="#CCCCCC"><a onclick="MM_openBrWindow('<?= $this->getBaseUrl(); ?>/shipping-info.html','','scrollbars=yes,width=720,height=460')" href="#"><img src="<?= $this->getSkinUrl('images/more_info.jpg'); ?>" /></a></td>
-                	<td></td>
-                	<td style="text-align:right; padding: 0 5px 0 0" bgcolor="#CCCCCC"><a href="<?= $this->getBaseUrl(); ?>/customer-service.html"><img src="<?= $this->getSkinUrl('images/more_info.jpg'); ?>" /></a></td>
-                	<td></td>
-                	<td style="text-align:right; padding: 0 5px 0 0" bgcolor="#CCCCCC"><a onclick="MM_openBrWindow('<?= $this->getBaseUrl(); ?>/returns-exchanges.html','','scrollbars=yes,width=720,height=460')" href="#"><img src="<?= $this->getSkinUrl('images/more_info.jpg'); ?>" /></a></td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-    <tr>
-    <td colspan="4" height="15"></td>
-  </tr>
-</table>
-
-  <div class="clr"></div>
 </form>
-<script type="text/javascript">
-//<![CDATA[
-		var productAddToCartForm = new VarienForm('product_addtocart_form');
-		productAddToCartForm.submit = function(){
-				if (this.validator.validate()) {
-						this.form.submit();
-				}
-		}.bind(productAddToCartForm);
-//]]>
-</script>
+
+<div id="product_detail_boxes" class="row">
+
+	<div class="span3 product-detail-box">
+                <h5>SECURE ONLINE PAYMENT</h5>
+                <p>All payment secured by, Authorize.net. We accept the following payment methods: <img src="<?= $this->getSkinUrl('images/creditcardsoffered.jpg'); ?>"></p>
+				<a href="#" class="learn-more-btn pull-right" onclick="MM_openBrWindow('<?= $this->getBaseUrl(); ?>/secure-online-payment.html','','scrollbars=yes,width=720,height=460')" title="More Info">+Learn More</a>
+	</div>
+	
+	<div class="span3 product-detail-box">
+                <h5>WORLDWIDE SHIPPING</h5>
+                <p>Your ICU - In Paris is shipped within 24 hours of purchase directly from the designer's atelier. One shipping fee charged.</p>
+				<a href="#" class="learn-more-btn pull-right" onclick="MM_openBrWindow('<?= $this->getBaseUrl(); ?>/shipping-info.html','','scrollbars=yes,width=720,height=460')" title="Learn More">+Learn More</a>
+	</div>
+	<div class="span3 product-detail-box">
+                <h5>CUSTOMER SERVICE</h5>                
+                <p>e-mail: <a href="mailto:customerservice@icuinparis.com" target="_blank">customerservice@icuinparis.com</a><br>
+                    skype: <a href="skype:icuinparis?chat">icuinparis</a><br>
+                    mon-fri, 9am-6pm CET</p>
+				<a href="<?= $this->getBaseUrl(); ?>/customer-service.html" class="learn-more-btn pull-right" title="Learn More">+Learn More</a>
+	</div>	
+	<div class="span3 product-detail-box">
+                <h5>RETURNS & EXCHANGES</h5>
+                <p>Within 7 days of product delivery we are happy to issue a customer return if you are dis-satisfied with your ICU - In Paris purchase.</p>
+				<a href="#" class="learn-more-btn pull-right" onclick="MM_openBrWindow('<?= $this->getBaseUrl(); ?>/returns-exchanges.html','','scrollbars=yes,width=720,height=460')" title="Learn More">+Learn More</a>
+	</div>
+</div><!-- END product_detail_boxes -->

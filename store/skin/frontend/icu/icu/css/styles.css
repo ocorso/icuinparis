@@ -840,14 +840,16 @@ tr.summary-details-excluded { font-style:italic; }
 /********** < Product Prices */
 .price { white-space:nowrap !important; }
 
-.price-box { margin:0 0; }
+.price-box { 
+	font-family: "Gotham-light", sans-serif;
+	font-size: 2.7em;
+	font-weight: bold;
+
+	margin:0 0; 
+	border-top: solid 1px #cccccc;
+}
 .price-box .price { font-weight:regular; color:#000000; }
 
-/* Regular price */
-.regular-price { color:#000000; }
-.regular-price .price { font:normal 15px/15px "GeosansLight"; color:#666666; }
-.block .regular-price,
-.block .regular-price .price { color:#2f2f2f; }
 
 /* Old price */
 .old-price { margin:0; }

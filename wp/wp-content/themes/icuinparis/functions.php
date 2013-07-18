@@ -22,8 +22,7 @@ function ored_pre_get_posts($query){
         //  - 1343 featured products, 
         //  - 1342 store,
         //  - 1344 footer widget
-  if($query->is_home())
-        $query->set( 'cat', '-1342,-1343,-1344' );
+  if($query->is_home()) $query->set( 'cat', '-1342,-1343,-1344' );
 }
 
 function icu_scripts() {

@@ -1,37 +1,32 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) exit;
 /**
- * Template Name: Blog
+ * Template Name: ICU Blog
  *
  * The blog page template displays the "blog-style" template on a sub-page. 
  *
- * @package WooFramework
+ * @package ICU
  * @subpackage Template
  */
 
  global $woo_options;
  get_header();
  
-/**
- * The Variables
- *
- * Setup default variables, overriding them if the "Theme Options" have been saved.
- */
-	
-	$settings = array(
-					'thumb_w' => 100, 
-					'thumb_h' => 100, 
-					'thumb_align' => 'alignleft'
-					);
-					
-	$settings = woo_get_dynamic_values( $settings );
 ?>
     <!-- #content Starts -->
-    <div id="content" class="col-full">
+    <div id="headline" class="row">
+        <h1>Creative Community</h1>
+    </div>
+    <div id="description" class="row">
+        <p class="span12">Wherever we go, whomever we meet, we are inspired. The Creative Community page is our digital journal. Are you in the creative industry and have something to share? An expo or event you think we'll enjoy? <a href="mailto:submissions@icuinparis.com">Tell us</a>.</p>
+    </div>
+    <?php get_sidebar(); ?>
+
+    <div id="posts" class="row">
     
         <?php woo_main_before(); ?>
         
-        <section id="main" class="col-left poopy">       
+        <section id="main" class="col-left pooper">       
 		
 		<?php woo_loop_before(); ?>
 
@@ -75,8 +70,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
         
         <?php woo_main_after(); ?>
             
-		<?php get_sidebar(); ?>
-
+		
     </div><!-- /#content -->    
 		
 <?php get_footer(); ?>

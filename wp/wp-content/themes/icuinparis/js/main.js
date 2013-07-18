@@ -2,6 +2,9 @@ var main 				= {};
 
 //Doc Ready.
 $( function($){
+	//start the carousel (if there is one)
+	$('.carousel').carousel("cycle");
+	
 	if ( navigator.userAgent.match(/Android/i) ){
 		$('body').addClass( 'android' );
 	}

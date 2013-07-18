@@ -804,13 +804,14 @@ function wpts_useful_matrix_shortcode($atts=array()){
 						echo '<div class="img_shadow" style="width: '.$bwt2.'px;height: '.$bwt2.'px;text-align:center;margin:auto"><a href="'.get_category_link( $category->term_id ).'"><img src="'.$imgExtract[$key].'" height="'.$bwt2.'" width="'.$bwt2.'" alt="" /></a></div>';
 					}
                 }
-				if($showtitle=="1"){
-                    echo $title= "\n\t<div class='contentTitle' style='font-size: ".$titlesize."px;font-weight: bold;$titlef;padding: 5px'>".$category->name."</div>";
-                }
-				if($showexcerpt=="1"){
+  				if($showexcerpt=="1"){
                     $desc=str_replace("<p>","<p style='font-size: ".$contentsize."px;$contentf'>",strip_tags($category->description));
                     echo $description= "<div class='pa' style='font-size: ".$contentsize."px;$contentf'><p>".$desc."</p></div>";
                 }
+				if($showtitle=="1"){
+                    echo $title= "\n\t<div class='contentTitle' style='font-size: ".$titlesize."px;font-weight: bold;$titlef;padding: 5px'>".$category->name."</div>";
+                }
+
 				?>
 				<?php
 					if($buttoncolor!='nobutton'){

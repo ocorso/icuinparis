@@ -31,11 +31,13 @@ function icu_scripts() {
   wp_enqueue_script('bootstrap', get_stylesheet_directory_uri() . '/js/vendor/bootstrap.min.js', array( 'jquery','modernizr' ));
 	wp_enqueue_script('icu', get_stylesheet_directory_uri() . '/js/main.js', array( 'jquery','modernizr','bootstrap' ));
 
-  if( !is_admin()){
+/*
+  if( !is_admin() ){
     wp_deregister_script('jquery');
     wp_register_script('jquery', ("//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"), false, '1.10.1', true);
     wp_enqueue_script('jquery');
   }
+*/
 }
 
 

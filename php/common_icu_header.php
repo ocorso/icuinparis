@@ -25,7 +25,7 @@
             <ul class="dropdown-menu">
               <li class=""><a title="Shop Womens" href="<?= $base_url; ?>/store/womens">Womens</a></li>
               <li class=""><a href="<?= $base_url; ?>/store/mens">Mens</a></li>
-              <li class=""><a href="<?= $base_url; ?>/store/for-designers" title="For Designers">For Designers</a></li>
+              <li class=""><a href="<?= $base_url; ?>/by-designer" title="By Designer">By Designer</a></li>
             </ul>
           </li>
           <li><a href="<?= $base_url; ?>/representation/">Representation</a></li>

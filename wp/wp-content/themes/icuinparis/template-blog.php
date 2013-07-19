@@ -13,21 +13,19 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  get_header();
  
 ?>
-    <!-- #content Starts -->
     <div id="headline" class="row">
         <h1>Creative Community</h1>
     </div>
     <div id="description" class="row">
         <p class="span12">Wherever we go, whomever we meet, we are inspired. The Creative Community page is our digital journal. Are you in the creative industry and have something to share? An expo or event you think we'll enjoy? <a href="mailto:submissions@icuinparis.com">Tell us</a>.</p>
     </div>
+    
     <?php get_sidebar(); ?>
 
+    <!-- #posts Starts -->
     <div id="posts" class="row">
     
         <?php woo_main_before(); ?>
-        
-        <section id="main" class="col-left pooper">       
-		
 		<?php woo_loop_before(); ?>
 
         <?php
@@ -39,16 +37,13 @@ if ( ! defined( 'ABSPATH' ) ) exit;
         					);
         	
         	$query_args = apply_filters( 'woo_blog_template_query_args', $query_args ); // Do not remove. Used to exclude categories from displaying here.
-        	
         	remove_filter( 'pre_get_posts', 'woo_exclude_categories_homepage' );
-        	
         	query_posts( $query_args );
         	
         	if ( have_posts() ) {
         		$count = 0;
         		while ( have_posts() ) { the_post(); $count++;
         ?>                                                            
-           
                 <?php get_template_part( 'content', 'post' ); ?>
                                                 
         <?php
@@ -62,15 +57,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
         <?php } // End IF Statement ?> 
         
         <?php woo_loop_after(); ?> 
-    
-        <?php woo_pagenav(); ?>
-		<?php wp_reset_query(); ?>                
-
-        </section><!-- /#main -->
-        
         <?php woo_main_after(); ?>
             
-		
-    </div><!-- /#content -->    
-		
+        
+    </div><!-- /#posts -->    
+    
+    <div id="pagination" class="row pull-right">
+        <?php woo_pagenav(); ?>
+		<?php wp_reset_query(); ?>                
+	</div> <!-- end #pagination -->
+    	
 <?php get_footer(); ?>

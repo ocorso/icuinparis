@@ -7,13 +7,14 @@ if ( ! function_exists( 'woothemes_add_javascript' ) ) {
 	function woothemes_add_javascript() {
 		global $woo_options;
 
+//oc: remove unwanted js
 		wp_register_script( 'prettyPhoto', get_template_directory_uri() . '/includes/js/jquery.prettyPhoto.js', array( 'jquery' ) );
 		wp_register_script( 'enable-lightbox', get_template_directory_uri() . '/includes/js/enable-lightbox.js', array( 'jquery', 'prettyPhoto' ) );
 		wp_register_script( 'portfolio', get_template_directory_uri() . '/includes/js/portfolio.js', array( 'jquery', 'prettyPhoto' ) );
 		wp_register_script( 'google-maps', 'http://maps.google.com/maps/api/js?sensor=false' );
 		wp_register_script( 'google-maps-markers', get_template_directory_uri() . '/includes/js/markers.js' );
-		wp_register_script( 'flexslider', get_template_directory_uri() . '/includes/js/jquery.flexslider-min.js', array( 'jquery' ) );
-		wp_register_script( 'featured-slider', get_template_directory_uri() . '/includes/js/featured-slider.js', array( 'jquery' , 'flexslider' ) );
+		//wp_register_script( 'flexslider', get_template_directory_uri() . '/includes/js/jquery.flexslider-min.js', array( 'jquery' ) );
+		//wp_register_script( 'featured-slider', get_template_directory_uri() . '/includes/js/featured-slider.js', array( 'jquery' , 'flexslider' ) );
 		wp_register_script( 'portfolio-slideshow', get_template_directory_uri() . '/includes/js/portfolio-slideshow.js', array( 'jquery' , 'flexslider' ) );
 		wp_register_script( 'home-shop', get_template_directory_uri() . '/includes/js/home-shop.js', array( 'jquery' , 'flexslider' ) );
 

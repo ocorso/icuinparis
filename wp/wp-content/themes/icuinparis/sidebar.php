@@ -11,14 +11,10 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 ?>	
 <aside id="sidebar" class="row">
+	<?php 
 
-
-	<?php if ( woo_active_sidebar( 'primary' ) ) : ?>
-    <div class="primary">
-		<?php woo_sidebar( 'primary' ); ?>		           
-	</div>        
-	<?php endif; ?>   
-	
-	<?php woo_sidebar_inside_after(); ?> 
-	
+	if ( woo_active_sidebar( 'primary' ) ) 
+		woo_sidebar( 'primary' );	                
+		woo_sidebar_inside_after(); 
+	?> 
 </aside><!-- /#sidebar -->

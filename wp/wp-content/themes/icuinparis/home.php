@@ -86,7 +86,7 @@ Template Name: Home
 	    
         <div id="homepage_callouts" class="row">
             <a class="span6" href="<?= get_bloginfo('url'); ?>/store/designs"><img alt="Submit Your Designs Image" src="<?php bloginfo('stylesheet_directory'); ?>/img/homepage/submit-your-own-design.jpg" /></a>
-            <a class="span6" href="<?= get_bloginfo('url'); ?>/representation"><img alt="ICU Representation" src="<?php bloginfo('stylesheet_directory'); ?>/img/homepage/representation.jpg" /></a>
+            <a class="span6" href="<?= get_bloginfo('url'); ?>/wholesale"><img alt="ICU Wholesale" src="<?php bloginfo('stylesheet_directory'); ?>/img/homepage/wholesale.jpg" /></a>
 
         </div>
 	</div>

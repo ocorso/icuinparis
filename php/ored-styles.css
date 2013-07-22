@@ -122,7 +122,14 @@ h1{
     background-image: url('../wp/wp-content/themes/icuinparis/img/bkgr_foot.jpg');
     background-repeat: repeat-x;
     background-color: rgba(0, 0, 0, 0.19);
+    font-family: "Gotham-Light", sans-serif;
+
 }
+#footer h4{
+    font-size: 2.0em;
+    font-weight: normal;
+}
+
 /*****************************************************************************
 /*****************************************************************************
 /* @media queries */

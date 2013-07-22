@@ -87,49 +87,72 @@
 		<h2><?php echo ucfirst($designer); ?></h2>
 		<h3><?php echo ucfirst(str_replace($designer, "", $_helper->productAttribute($_product, $_product->getName(), 'name'))); ?></h3>
 		<?php echo $this->getPriceHtml($_product, true); ?>
+
+<!-- BEGIN product_info_tabs -->
+<ul id="product_info" class="nav nav-pills">
+	<li class="active"><a href="#description_pane" data-toggle="pill"><?php echo $this->__('DESCRIPTION'); ?></a></li>
+	<li><a href="#designer_pane" data-toggle="pill"><?php echo $this->__('DESIGNER BIO'); ?></a></li>
+	<li><a href="#shipping_pane" data-toggle="pill"><?php echo $this->__("SHIPPING"); ?></a></li>
+	<li><a href="#inquiries_pane" data-toggle="pill"><?php echo $this->__("INQUIRIES"); ?></a></li>
+</ul>
+<div id="product_info_tabContent" class="tab-content">
+	<div id="description_pane" class="tab-pane fade active in" >
+		<h2 style="display:none;"><?php echo $_product->getSku() ?></h2>
+	  	<p><?php echo str_replace("<br />", "", $_helper->productAttribute($_product, nl2br($_product->getDescription()), 'description')); ?></p>
+	</div>	
+	<div id="designer_pane" class="tab-pane fade">
+		<h2 style="display:none;"><?php echo $_product->getSku() ?></h2>
+	  	<p><?php echo str_replace("<br />", "", $_helper->productAttribute($_product, nl2br($_product->getTheatelier()), 'theatelier')); ?></p>
+	</div>
+	<div id="shipping_pane" class="tab-pane fade">
+		<h2 style="display:none;"><?php echo $_product->getSku() ?></h2>
+		<?php if($_product->hasBfmShippingInformation() && strlen(trim($_product->getBfmShippingInformation()))) : ?>
+		<p><?php echo str_replace("<br />", "", $_helper->productAttribute($_product, nl2br($_product->getBfmShippingInformation()), 'bfm_shipping_information')); ?></p>
+		<?php else: ?>
+			<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('default_shipping_dont_change')->toHtml() ?>
+		<?php endif; ?>
+	</div>
+	<div id="inquiries_pane" class="tab-pane fade">
+		<?php if($_product->hasBfmInquiriesInformation() && strlen(trim($_product->getBfmInquiriesInformation()))) : ?>
+		<p><?php echo str_replace("<br />", "", $_helper->productAttribute($_product, nl2br($_product->getBfmInquiriesInformation()), 'bfm_inquiries_information')); ?></p>
+		<?php else: ?>
+			<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('default_inquiries_message')->toHtml() ?>
+		<?php endif; ?>
+	</div>
+</div>	  
+<!-- END product_info_tabs -->	  
 		  
-		  
+
 <!-- BEGIN add_to_cart  -->
-		<table id="add_to_cart">
-			<tr>
-				<td width="1"></td>
-				<td colspan="5" style="padding: 8px 0px 8px 0px;" width="393">
-				 	<?php if ($_product->isSaleable() && $this->hasOptions()):?>
-						<?php echo $this->getChildChildHtml('container2', '', true, true) ?>
-					<?php endif;?>
-				  	<table width="100%">
-						<tr>
-							<td align="left" style="padding:0;">
-								<strong>
-								<?php echo $this->getChildHtml('product_type_data') ?>
-								</strong>
-							</td>
-						</tr>
-						<tr>
-							<td align="left" style="padding:10px 0 0 0;">
-								<?php if($_product->isSaleable()): ?>
-								  <?php echo $this->getChildHtml('addtocart') ?>
-								<?php endif; ?>
-							</td>
-						</tr>
-                 
-                    </table>
-		  		</td>
-				<td width="1"></td>
-			</tr>
-			
-			<tr><td colspan="7" align="right" style="text-align:right;"> 
-				<input type="submit" 
-				 		class="btn01" 
-				 		value="<?php if(Mage::app()->getStore()->getStoreId() == "1"){ echo "ADD TO SHOPPING BAG"; }else{ echo "AJOUTER AU PANIER"; }?>" 
-				 /> 
-				<input onclick="setLocation('<?php echo $this->helper('wishlist')->getAddUrl($_product) ?>')" 
-						type="button" 
-						class="btn02" 
-						value="<?php if(Mage::app()->getStore()->getStoreId() == "1"){ echo "ADD TO WISHLIST"; }else{ echo "AJOUTER A MA LISTE D'ENVIES"; }?>" 
-				/>
-			</td></tr>
-		 </table>
+<div id="add_to_cart">
+
+	 	<?php if ($_product->isSaleable() && $this->hasOptions()):?>
+			<?= $this->getChildChildHtml('container2', '', true, true) ?>
+		<?php endif;?>
+	  
+		<strong>
+		<?= $this->getChildHtml('product_type_data') ?>
+		</strong>
+
+		<?php if($_product->isSaleable()): ?>
+		  <?= $this->getChildHtml('addtocart') ?>
+		<?php endif; ?>
+						
+		<input type="submit" 
+		 		class="icu-btn" 
+		 		value="<?php if(Mage::app()->getStore()->getStoreId() == "1"){ 
+		 				echo "ADD TO CART"; 
+		 		}else{ 	echo "AJOUTER AU PANIER"; }?>" 
+		 /> 
+		<input onclick="setLocation('<?php echo $this->helper('wishlist')->getAddUrl($_product) ?>')" 
+				type="button" 
+				class="icu-btn" 
+				value="<?php if(Mage::app()->getStore()->getStoreId() == "1"){ 
+						echo "ADD TO WISHLIST"; 
+				}else{ 	echo "AJOUTER A MA LISTE D'ENVIES"; }?>" 
+		/>
+	
+</div>
 <!-- END add_to_cart  -->
 		
  	 </div><!--   end #pro_des_section -->

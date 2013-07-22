@@ -1,35 +1,5 @@
-//oc: Google Code for ICU remarketing_2 Remarketing List
-var google_conversion_id 		= 1008295145;
-var google_conversion_language 	= "fr";
-var google_conversion_format 	= "3";
-var google_conversion_color 	= "666666";
-var google_conversion_label 	= "FVa8CP-p6AIQ6bnl4AM";
-var google_conversion_value 	= 0;
-
-
-var scroller              = null;
-var showUIDropdownClass   = "b-style-dropdown_state_open";
-var hideUIDropdownClass   = "b-style-dropdown_state_close";
-var UIDropdown            = jQuery(".b-style-dropdown");
-var Translator            = new Translate({"Credit card number doesn't match credit card type":"Credit card number does not match credit card type","Please use only letters (a-z or A-Z), numbers (0-9) or underscore(_) in this field, first character should be a letter.":"Please use only letters (a-z or A-Z), numbers (0-9) or underscores (_) in this field, first character must be a letter."});
-var productAddToCartForm  = new VarienForm('product_addtocart_form');
-productAddToCartForm.submit = function(){
-        if (this.validator.validate()) {
-            this.form.submit();
-        }
-    }.bind(productAddToCartForm);
-
-if(typeof tinyMCE != 'undefined'){
-  tinyMCE.init({
-    // General options
-    mode : "textareas",
-    theme : "simple",
-  });
-  
-}
-
-
 jQuery(document).ready(function($) {
+  console.log("doc ready");
   initMenu();
 
   var options = {
@@ -50,6 +20,37 @@ jQuery(document).ready(function($) {
 
   $('.b-style-dropdown__button').bind('click', trigger);
 });
+
+//oc: Google Code for ICU remarketing_2 Remarketing List
+var google_conversion_id 		= 1008295145;
+var google_conversion_language 	= "fr";
+var google_conversion_format 	= "3";
+var google_conversion_color 	= "666666";
+var google_conversion_label 	= "FVa8CP-p6AIQ6bnl4AM";
+var google_conversion_value 	= 0;
+
+
+var scroller              = null;
+var showUIDropdownClass   = "b-style-dropdown_state_open";
+var hideUIDropdownClass   = "b-style-dropdown_state_close";
+var UIDropdown            = jQuery(".b-style-dropdown");
+var Translator            = new Translate({"Credit card number doesn't match credit card type":"Credit card number does not match credit card type","Please use only letters (a-z or A-Z), numbers (0-9) or underscore(_) in this field, first character should be a letter.":"Please use only letters (a-z or A-Z), numbers (0-9) or underscores (_) in this field, first character must be a letter."});
+
+var productAddToCartForm  = new VarienForm('product_addtocart_form');
+productAddToCartForm.submit = function(){
+        if (this.validator.validate()) {
+            this.form.submit();
+        }
+    }.bind(productAddToCartForm);
+
+if(typeof tinyMCE != 'undefined'){
+  tinyMCE.init({
+    // General options
+    mode : "textareas",
+    theme : "simple",
+  });
+  
+}
 
 function showBigImageDiv(largeName, smallName) {
   document.getElementById('imagebigg').src = smallName;
@@ -79,10 +80,6 @@ function MM_swapImage() { //v3.0
   var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
    if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
 }
-
-
-
-    
 
 //Switcher Dropdown functions
 function trigger() {

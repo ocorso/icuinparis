@@ -48,7 +48,7 @@ body {
 }
 
 #content{
-    /*padding-top: 130px;*/
+   margin-bottom: 40px;
 }
 /*****************************************************************************
 /*****************************************************************************
@@ -103,14 +103,16 @@ body {
     padding: 4px 8px;
     background-color: #000;
 }
-.designer-name{
+.product a.designer-name{
     font-size: 1.4em;
     color: #000;  
     font-weight: bold;  
+    margin-bottom: 5px;
 }
-.product-name{
+.product a.product-name{
     font-size: 1.4em;
     color: #000;  
+    text-transform: none;
     font-weight: normal;  
 }
 #footer-widget-wrapper{
@@ -126,6 +128,7 @@ body {
 }
 #footer_widgets a{
     color: #303030;
+    font-size: 1.2em;
 }
 #footer_widgets .widget{
     cursor: pointer;
@@ -172,12 +175,6 @@ footer a:hover{
     font-size: 1.8em;
     font-family: 'JosefinSansStdLight', 'Source Sans Pro', sans-serif; 
 }
-
-body #content{
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-}
-
 
 .page-template-single-about-php header{
     background-color: #c5d9d9;

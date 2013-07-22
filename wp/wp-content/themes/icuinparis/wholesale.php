@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 /**
  * The Variables
  *
- * Template Name: Designers
+ * Template Name: Wholesale
  * Setup default variables, overriding them if the "Theme Options" have been saved.
  */
 	

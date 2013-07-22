@@ -17,7 +17,7 @@ function custom_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
-function create_post_type() {
+function create_post_types() {
   register_post_type( 'footer-widget',
     array(
       'labels' => array(
@@ -28,7 +28,18 @@ function create_post_type() {
     'has_archive' => false,
     )
   );
+    register_post_type( 'designers', array(
+                                           'labels' => array(
+                                            'name' => __( 'Designers' ),
+                                            'singular_name' => __( 'designer' )
+                                      ),
+                        'public' => true,
+                        'has_archive' => false,
+                        'supports'=>array('title', 'editor','thumbnail')
+    )
+  );
 }
+
 function ored_pre_get_posts($query){
 
         //oc: don't include the following categories:
@@ -80,7 +91,7 @@ function icu_styles()
 add_action('wp_enqueue_scripts', 'icu_styles');
 add_action( 'wp_enqueue_scripts', 'icu_scripts' );
 add_action( 'pre_get_posts', 'ored_pre_get_posts' );
-add_action( 'init', 'create_post_type' );
+add_action( 'init', 'create_post_types' );
 
 //oc: remove feed and other extras...
 remove_action('wp_head',              'wp_generator');

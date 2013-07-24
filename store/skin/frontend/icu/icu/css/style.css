@@ -203,15 +203,7 @@ body {
 
 
 
-/* Baskerville Old Face Styles */
 
-@font-face {
-
- font-family:"Baskerville Old Face";
-
- src: url("../fonts/BASKVILL.eot") /* EOT file for IE */
-
-}
 
 @font-face {
 
@@ -658,7 +650,7 @@ input[type="submit"].btn01 {
 	top: 110px;
 }
 #store_subnav{
-	padding-left: 214px;
+	padding-left: 187px;
 }
 #store_subnav a{
 	color: #000;
@@ -2212,25 +2204,10 @@ input[type="submit"].btn01 {
 
 
 
-	#content_account {margin:0; padding:0 30px; width:485px; height:auto; float:left;}
 
-	#content_account p {font:normal 15px/18px "Baskerville Old Face"; color:#000000;}
+	#content_account h4 {font:normal 13px/30px "Gotham-Light"; color:#000000; text-transform:uppercase; padding-bottom:10px;}
 
-	#content_account p a {color:#999999; text-decoration:none;}
-
-	#content_account p a:hover {color:#333333; text-decoration:none;}
-
-	#content_account p span.grey {color:#999999;}
-
-	#content_account p span {font:normal 12px/18px "Baskerville Old Face"; color:#000000;}
-
-
-
-
-
-	#content_account h4 {font:normal 13px/30px "Baskerville Old Face"; color:#000000; text-transform:uppercase; padding-bottom:10px;}
-
-	#content_account h4 span {font:normal 12px/30px "Baskerville Old Face"; color:#999999; text-transform:none;}
+	#content_account h4 span {font:normal 12px/30px "Gotham-Light"; color:#999999; text-transform:none;}
 
 	#content_account h4 a {color:#000000; text-decoration:none;}
 
@@ -2238,11 +2215,11 @@ input[type="submit"].btn01 {
 
 
 
-	#content_account h2 {font:normal 20px/20px "Baskerville Old Face"; color:#000000;}
+	#content_account h2 {font:normal 20px/20px "Gotham-Light"; color:#000000;}
 
 	#content_account h6 {font:normal 18px/20px "Baskerville Handcut"; color:#000000; padding-bottom:5px;}
 
-	#content_account h6 span {font:normal 12px/20px "Baskerville Old Face"; color:#999999;}
+	#content_account h6 span {font:normal 12px/20px "Gotham-Light"; color:#999999;}
 
 	#content_account h6 span a {color:#999999; text-decoration:none;}
 
@@ -2252,17 +2229,17 @@ input[type="submit"].btn01 {
 
 	#content_account h5 {font:bold 16px/20px "Baskerville Handcut"; color:#000000;}
 
-	#content_account h5 span {font:normal 16px/20px "Baskerville Old Face"; color:#000000;}
+	#content_account h5 span {font:normal 16px/20px "Gotham-Light"; color:#000000;}
 
-	#content_account h3 {font:normal 24px/30px "Baskerville Handcut"; color:#000000; padding-bottom:20px;}
+	#content_account h3 {font:normal 24px/30px "Gotham-Light"; color:#000000; padding-bottom:20px;}
 
 
 
-	#content_account .lable01 {margin:4px 0; padding:0; width:150px; height:auto; float:left; font:normal 15px/18px "Baskerville Old Face"; color:#000000;}
+	#content_account .lable01 {margin:4px 0; padding:0; width:150px; height:auto; float:left; font:normal 15px/18px "Gotham-Light"; color:#000000;}
 
 	#content_account .lable01 span {color:#999999;}
 
-	#content_account .field01 {margin:4px 0; padding:0; width:335px; height:auto; float:left; font:normal 15px/18px "Baskerville Old Face"; color:#000000;}
+	#content_account .field01 {margin:4px 0; padding:0; width:335px; height:auto; float:left; font:normal 15px/18px "Gotham-Light"; color:#000000;}
 
 
 
@@ -2278,19 +2255,19 @@ input[type="submit"].btn01 {
 
 
 
-	#content_account .lable02 {margin:4px 0; padding:0; width:100px; height:auto; float:left; font:normal 13px/18px "Baskerville Old Face"; color:#000000;}
+	#content_account .lable02 {margin:4px 0; padding:0; width:100px; height:auto; float:left; font:normal 13px/18px "Gotham-Light"; color:#000000;}
 
-	#content_account .field02 {margin:4px 0; padding:0; width:180px; height:auto; float:left; font:normal 15px/18px "Baskerville Old Face"; color:#000000;}
+	#content_account .field02 {margin:4px 0; padding:0; width:180px; height:auto; float:left; font:normal 15px/18px "Gotham-Light"; color:#000000;}
 
 
 
 	#sidemenu_account {margin:0; padding:0; width:180px; height:auto; min-height:530px; float:left; background:url(../images/gradient3.gif) no-repeat right top;}
 
-	#sidemenu_account h5 {font:normal 13px/30px "Baskerville Old Face"; color:#000000; text-transform:uppercase;}
+	#sidemenu_account h5 {font:normal 13px/30px "Gotham-Light"; color:#000000; text-transform:uppercase;}
 
 	#sidemenu_account ul {margin:20px 0 0 25px; padding:0; list-style:none;}
 
-	#sidemenu_account ul li {margin:0; padding:0; font:normal 11px/21px "Baskerville Old Face"; color:#999999; text-transform:uppercase;}
+	#sidemenu_account ul li {margin:0; padding:0; font:normal 11px/21px "Gotham-Light"; color:#999999; text-transform:uppercase;}
 
 	#sidemenu_account ul li a {color:#999999; text-decoration:none;}
 
@@ -2308,9 +2285,9 @@ input[type="submit"].btn01 {
 
 	#sidemenu_account #add_box .mid h4 {font:normal 16px/20px "Baskerville Handcut"; color:#000000;}
 
-	#sidemenu_account #add_box .mid h6 {font:bold 12px/20px "Baskerville Old Face"; color:#000000;}
+	#sidemenu_account #add_box .mid h6 {font:bold 12px/20px "Gotham-Light"; color:#000000;}
 
-	#sidemenu_account #add_box .mid p {font:normal 13px/18px "Baskerville Old Face"; color:#000000; text-transform:uppercase;}
+	#sidemenu_account #add_box .mid p {font:normal 13px/18px "Gotham-Light"; color:#000000; text-transform:uppercase;}
 
 
 
@@ -2320,7 +2297,7 @@ input[type="submit"].btn01 {
 
 	#wishlist_section h4 {font:normal 24px/30px "Baskerville Handcut"; color:#000000;}
 
-	#wishlist_section p {font:normal 15px/18px "Baskerville Old Face"; color:#000000;}
+	#wishlist_section p {font:normal 15px/18px "Gotham-Light"; color:#000000;}
 
 
 
@@ -2328,7 +2305,7 @@ input[type="submit"].btn01 {
 
 	#bestseller_section h4 {font:normal 24px/30px "Baskerville Handcut"; color:#000000;}
 
-	#bestseller_section p {font:normal 15px/18px "Baskerville Old Face"; color:#000000;}
+	#bestseller_section p {font:normal 15px/18px "Gotham-Light"; color:#000000;}
 
 
 
@@ -2577,7 +2554,7 @@ color:#000000;
 
 #content_account2 {margin:0; padding:0 30px; width:720px; height:auto; float:left;}
 
-	#content_account2 p {font:normal 15px/18px "Baskerville Old Face"; color:#000000;}
+	#content_account2 p {font:normal 15px/18px "Gotham-Light"; color:#000000;}
 
 	#content_account2 p a {color:#999999; text-decoration:none;}
 
@@ -2585,15 +2562,15 @@ color:#000000;
 
 	#content_account2 p span.grey {color:#999999;}
 
-	#content_account2 p span {font:normal 12px/18px "Baskerville Old Face"; color:#000000;}
+	#content_account2 p span {font:normal 12px/18px "Gotham-Light"; color:#000000;}
 
 
 
 
 
-	#content_account2 h4 {font:normal 13px/30px "Baskerville Old Face"; color:#000000; text-transform:uppercase; padding-bottom:10px;}
+	#content_account2 h4 {font:normal 13px/30px "Gotham-Light"; color:#000000; text-transform:uppercase; padding-bottom:10px;}
 
-	#content_account2 h4 span {font:normal 12px/30px "Baskerville Old Face"; color:#999999; text-transform:none;}
+	#content_account2 h4 span {font:normal 12px/30px "Gotham-Light"; color:#999999; text-transform:none;}
 
 	#content_account2 h4 a {color:#000000; text-decoration:none;}
 
@@ -2601,11 +2578,11 @@ color:#000000;
 
 
 
-	#content_account2 h2 {font:normal 20px/20px "Baskerville Old Face"; color:#000000;}
+	#content_account2 h2 {font:normal 20px/20px "Gotham-Light"; color:#000000;}
 
 	#content_account2 h6 {font:normal 18px/20px "Baskerville Handcut"; color:#000000; padding-bottom:5px;}
 
-	#content_account2 h6 span {font:normal 12px/20px "Baskerville Old Face"; color:#999999;}
+	#content_account2 h6 span {font:normal 12px/20px "Gotham-Light"; color:#999999;}
 
 	#content_account2 h6 span a {color:#999999; text-decoration:none;}
 
@@ -2615,17 +2592,17 @@ color:#000000;
 
 	#content_account2 h5 {font:bold 16px/20px "Baskerville Handcut"; color:#000000;}
 
-	#content_account2 h5 span {font:normal 16px/20px "Baskerville Old Face"; color:#000000;}
+	#content_account2 h5 span {font:normal 16px/20px "Gotham-Light"; color:#000000;}
 
 	#content_account2 h3 {font:normal 24px/30px "Baskerville Handcut"; color:#000000; padding-bottom:20px;}
 
 
 
-	#content_account2 .lable01 {margin:4px 0; padding:0; width:120px; height:auto; float:left; font:normal 15px/18px "Baskerville Old Face"; color:#000000;}
+	#content_account2 .lable01 {margin:4px 0; padding:0; width:120px; height:auto; float:left; font:normal 15px/18px "Gotham-Light"; color:#000000;}
 
 	#content_account2 .lable01 span {color:#999999;}
 
-	#content_account2 .field01 {margin:4px 0; padding:0; width:210px; height:auto; float:left; font:normal 15px/18px "Baskerville Old Face"; color:#000000;}
+	#content_account2 .field01 {margin:4px 0; padding:0; width:210px; height:auto; float:left; font:normal 15px/18px "Gotham-Light"; color:#000000;}
 
 
 
@@ -2641,9 +2618,9 @@ color:#000000;
 
 
 
-	#content_account2 .lable02 {margin:4px 0; padding:0; width:100px; height:auto; float:left; font:normal 13px/18px "Baskerville Old Face"; color:#000000;}
+	#content_account2 .lable02 {margin:4px 0; padding:0; width:100px; height:auto; float:left; font:normal 13px/18px "Gotham-Light"; color:#000000;}
 
-	#content_account2 .field02 {margin:4px 0; padding:0; width:180px; height:auto; float:left; font:normal 15px/18px "Baskerville Old Face"; color:#000000;}
+	#content_account2 .field02 {margin:4px 0; padding:0; width:180px; height:auto; float:left; font:normal 15px/18px "Gotham-Light"; color:#000000;}
 
 	.wrapper {
 

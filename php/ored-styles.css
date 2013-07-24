@@ -20,7 +20,6 @@ a{
 ul.nav li { 
     border-left: #565656 solid;
     border-left-width:1px;
-    float: left;
     list-style: none outside none;
     position: relative;
 }
@@ -43,7 +42,17 @@ ul.sub-menu li {
     border-left: 0px solid #565656;
     border-bottom: 1px solid #848484;
 }
+#social_account{
+    float: right;
+}
+#social_account li{
+    border: none;
 
+}
+#social_account li > a{
+    padding: 10px 5px;
+    
+}
 .dropdown-menu{
     background-color: #666666;
     color: white;
@@ -109,6 +118,15 @@ h1{
     text-transform:uppercase;   
     font-family: 'JosefinSansStdLight', 'Source Sans Pro', sans-serif; 
 }
+#description{
+    padding-top: 35px;
+}
+#description p, .page-template-single-designers-php p{
+ 
+    font-size: 1.8em;
+    font-family: 'JosefinSansStdLight', 'Source Sans Pro', sans-serif; 
+}
+
 #footer {
     border-top: opx solid #676D76;
     color: #545454;
@@ -125,11 +143,20 @@ h1{
     font-family: "Gotham-Light", sans-serif;
 
 }
+#footer form{
+    margin-bottom: 0;
+}
 #footer h4{
-    font-size: 2.0em;
+    font-size: 2.4em;
     font-weight: normal;
 }
-
+#footer p{
+    font-size: 1.2em;
+}
+#footer ul li{ 
+    display: inline;
+    margin: 5px;
+}
 /*****************************************************************************
 /*****************************************************************************
 /* @media queries */

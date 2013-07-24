@@ -24,26 +24,12 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
-<div id="footer_section" class="row pull-right">
-  <!-- share -->
-  <div id="share">
-    <ul>
- 
-      <li><a href="http://www.facebook.com/icuinparis" target="_blank"><img src="<?php echo $this->getSkinUrl('images/icon-facebook.gif') ?>" alt="" /></a></li>
-      <li><a href="http://twitter.com/icuinparis" target="_blank"><img src="<?php echo $this->getSkinUrl('images/icon-twitter.gif') ?>" alt="" /></a></li>
-      <li><a href="http://www.youtube.com/user/PARISICU" target="_blank"><img src="<?php echo $this->getSkinUrl('images/icon-utube.gif') ?>" alt="" /></a></li>
-    </ul>
-  </div>
-  <!-- /share -->
-  <!-- footer links -->
-  <div id="footer_link">
-    <a href="<?php echo $this->getUrl().'contact-us-landing.html' ?>"><?php echo $this->__('Contact Us') ?></a> 
-    <span>|</span> 
-    <a href="<?php echo $this->getUrl().'customer-service.html' ?>"><?php echo $this->__('Customer Service') ?></a> 
-    <span>|</span> 
-    <a href="<?php echo $this->getUrl().'designs' ?>"><?php echo $this->__('Submit Your Design') ?></a>
-  </div>
-  <!-- /footer links -->
 
-</div>
+  <?php 
+    //oc: get common footer.
+    $base_url   = str_replace("/store/", "",$this->getUrl(''));
+    $footerPath = $base_url . '/php/common_icu_footer.php';
+    $footer     = file_get_contents($footerPath, false); 
+    echo $footer;
 
+  ?>

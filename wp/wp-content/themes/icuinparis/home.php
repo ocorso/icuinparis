@@ -38,8 +38,8 @@ Template Name: Home
      	<div id="homeproducts" class="row">
      		
         <?php 
-        //oc: pull in main large featured product (catID = 1343)
-            $args 		= array(	'category'			=> '1343',
+        //oc: pull in main large featured product (catID = 1345)
+            $args 		= array(	'category'			=> '1345',
         							'suppress_filters' 	=> true
         					);
         	$featured 	= get_posts( $args ); 

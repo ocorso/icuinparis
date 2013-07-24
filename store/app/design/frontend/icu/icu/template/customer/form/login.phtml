@@ -1,46 +1,41 @@
 <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
-<form action="<?php echo $this->getPostActionUrl() ?>" method="post" id="login-form">
+  
   <!-- body container -->
-  <div id="create_account">
-  	<div id="tagline_account">&nbsp;</div>
-    <div id="sidemenu_account2">&nbsp;</div>
-    <div id="content_account">
-      <h3>Sign into your ICU account:</h3>
+<div id="headline" class="row">
+  <h1>Sign in/Sign up</h1>
+</div>
+<div id="description" class="row">
+  <p class="span12">Please Login Below. Not registered? Create your ICU account here: 
+    <a class="" href="<?= $this->getCreateAccountUrl() ?>">Create Account</a></p>
+</div>
+
+<div id="login_panel" class="span6">
+    <h3>Sign in</h3> 
+    <p>For returning customers.</p>
+    <form id="login-form" action="<?= $this->getPostActionUrl() ?>" method="post">
+  	  <input  type="email" 
+              id="email" 
+              class="icu-input required-entry validate-email" 
+              name="login[username]" 
+              value="<?= $this->htmlEscape($this->getUsername()) ?>" 
+              title="<?= $this->__('Email Address') ?>" 
+              placeholder="Email Address"
+            />
+      <input  type="password" 
+              id="pass" 
+              class="required-entry validate-password" 
+              name="login[password]" 
+              title="<?= $this->__('Password') ?>"  
+              placeholder="Password"
+            />
+      <input class="icu-btn" type="submit" value="Login"  />
+    </form>
+    <p>Forgot your password?  <a title="Click to retrieve password" href="<?= $this->getForgotPasswordUrl() ?>">Click Here</a></p>
       
-	  
-	  
-		  <div class="lable01">Your Email Address</div>
-		  <div class="field01"><input type="text" name="login[username]" value="<?php echo $this->htmlEscape($this->getUsername()) ?>" id="email" class="input-text required-entry validate-email" title="<?php echo $this->__('Email Address') ?>" style="width:180px;" /></div>
-		  <div class="lable01"> Your Password</div>
-		  <div class="field01"><input type="password" name="login[password]" class="input-text required-entry validate-password" id="pass" title="<?php echo $this->__('Password') ?>"  style="width:180px;" />
-		  </div>
-	  
-	  
-      
-      <br class="clr" />
-      <p>&nbsp;</p>
-      <div style="width:80px; float:left;"><input type="submit" style="background-image:url(<?php echo $this->getSkinUrl('images/login.gif') ?>); width:60px; height:20px;" value=""  /></div> <div style="width:300px; float:left; padding-top:2px;"><p>Forgot your password?  <a href="<?php echo $this->getForgotPasswordUrl() ?>">Click Here</a></p>
-      </div>
-      <br class="clr" />
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-      <h3>Not registered? Create your ICU account here:</h3>
-      <p>By creating an ICU account, you gain the advantage of: </p>
-      <p style="padding-left:30px; padding-top:6px;"> - Faster checkout processes</p>
-      <p style="padding-left:30px;"> - Storing multiple shipping addresses</p>
-      <p style="padding-left:30px;"> - Customizing, viewing and sharing your wishlist </p>
-      <p style="padding-left:30px;"> - Shopping the most sought after ICU designs </p>
-      <p style="padding-left:30px;"> - Choosing your ICU Newsletter Editions</p>
-      <p style="padding-left:30px;">- Tracking your orders from start to finish</p>
-      <p>&nbsp;</p>
-      <p><a href="<?php echo $this->getCreateAccountUrl() ?>"><img src="<?php echo $this->getSkinUrl('images/createaccount.gif') ?>" alt="" width="133" height="20" /></a></p>
-      <p>&nbsp;</p>
-    </div>
   </div>
+
   <!-- /body container -->
-  <div class="clr"></div>
-  </form>
+
 <script type="text/javascript">
 //<![CDATA[
 	var dataForm = new VarienForm('login-form', true);

@@ -1,3 +1,5 @@
+
+
 jQuery(document).ready(function($) {
   console.log("doc ready");
   initMenu();
@@ -14,26 +16,27 @@ jQuery(document).ready(function($) {
       preloadImages: false,
       alwaysOn:false
   };
+  
+  var UIDropdown            = $(".b-style-dropdown");
   $(".jqzoom").jqzoom(options);
   
   $('a[rel*=facebox]').facebox();
 
-  $('.b-style-dropdown__button').bind('click', trigger);
+  $('.b-style-dropdown__button').bind('click', triggerSwitcher);
 });
 
 //oc: Google Code for ICU remarketing_2 Remarketing List
-var google_conversion_id 		= 1008295145;
-var google_conversion_language 	= "fr";
-var google_conversion_format 	= "3";
-var google_conversion_color 	= "666666";
-var google_conversion_label 	= "FVa8CP-p6AIQ6bnl4AM";
-var google_conversion_value 	= 0;
+var google_conversion_id    = 1008295145;
+var google_conversion_language  = "fr";
+var google_conversion_format  = "3";
+var google_conversion_color   = "666666";
+var google_conversion_label   = "FVa8CP-p6AIQ6bnl4AM";
+var google_conversion_value   = 0;
 
 
 var scroller              = null;
 var showUIDropdownClass   = "b-style-dropdown_state_open";
 var hideUIDropdownClass   = "b-style-dropdown_state_close";
-var UIDropdown            = jQuery(".b-style-dropdown");
 var Translator            = new Translate({"Credit card number doesn't match credit card type":"Credit card number does not match credit card type","Please use only letters (a-z or A-Z), numbers (0-9) or underscore(_) in this field, first character should be a letter.":"Please use only letters (a-z or A-Z), numbers (0-9) or underscores (_) in this field, first character must be a letter."});
 
 var productAddToCartForm  = new VarienForm('product_addtocart_form');
@@ -82,18 +85,21 @@ function MM_swapImage() { //v3.0
 }
 
 //Switcher Dropdown functions
-function trigger() {
+function triggerSwitcher() {
+  console.log("triggerSwitcher click");
     isDropDownOpen() ? closeUIDropdown() : openUIDropdown();
     return false;
 }
 
 function openUIDropdown() {
+  console.log("open switcher");
     jQuery('body').bind('click', closeUIDropdown)
     UIDropdown.removeClass(hideUIDropdownClass)
     UIDropdown.addClass(showUIDropdownClass)
 }
 
 function closeUIDropdown() {
+  console.log("close switcher");
     jQuery('body').unbind('click')
     UIDropdown.addClass(hideUIDropdownClass)
     UIDropdown.removeClass(showUIDropdownClass)

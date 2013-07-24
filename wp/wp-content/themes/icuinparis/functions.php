@@ -46,7 +46,7 @@ function ored_pre_get_posts($query){
         //  - 1343 featured products, 
         //  - 1342 store,
         //  - 1344 footer widget
-  if($query->is_home()) $query->set( 'cat', '-1342,-1343,-1344' );
+  if($query->is_home()) $query->set( 'cat', '-1342,-1345,-1344' );
 }
 
 function icu_scripts() {
@@ -85,7 +85,18 @@ function icu_styles()
   wp_enqueue_style( 'ored-responsive' );
 }
 
+function the_slug() {
 
+  global $post;
+
+  if ( is_single() || is_page() ) {
+  return $post->post_name;
+  }
+  else {
+  return "";
+  }
+
+}
 
 // add actions
 add_action('wp_enqueue_scripts', 'icu_styles');

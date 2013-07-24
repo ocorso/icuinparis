@@ -1,52 +1,23 @@
-<script type="text/javascript">
-<!--
-function MM_openBrWindow(theURL,winName,features) { //v2.0
-  window.open(theURL,winName,features);
-}
-//-->
-</script>
-<?php echo $this->getChildHtml('form_fields_before')?>
-    <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
-    <form action="<?php echo $this->getPostActionUrl() ?>" method="post" id="form-validate">
+
+
 <div id="create_account">
+    <form action="<?php echo $this->getPostActionUrl() ?>" method="post" id="form-validate">
   	<div id="tagline_account">Create an account with ICU - In Paris</div>
     <div style="width:150px; float:left;">&nbsp;</div>
     <div id="content_account">
-      <p>Once you create your account you will be able to view your orders, <br />
-      submit your designs and manage your ICU e-mail updates. </p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-      <h4>Personal Info <span>Required Fields*</span></h4>
-      <div class="lable01">First Name <span>*</span></div>
-      <div class="field01"><input name="firstname" id="firstname" class="input-text required-entry" type="text" style="width:180px;" /></div>
-      <div class="lable01">Last Name <span>*</span></div>
-      <div class="field01"><input name="lastname" id="lastname" class="input-text required-entry" type="text" style="width:180px;" /></div>
-      <div class="lable01">Country </div>
-      <div class="field01">
-	  <?php echo $this->getCountryHtmlSelect() ?>
-	  </div>
-      
-      <br class="clr" />
-      <p>&nbsp;</p>
-      <h4>ACCOUNT SIGN-IN</h4>
-      <div class="lable01">Your Email Address <span>*</span></div>
-      <div class="field01"><input name="email" class="input-text validate-email required-entry" id="email_address" type="text" style="width:180px;" /></div>
-      <div class="lable01">Your Password  <span>*</span></div>
-      <div class="field01"><input id="password" class="input-text required-entry validate-password" name="password" type="password" style="width:180px;" />
-      </div>
-      <div class="lable01">Confirm Password  <span>*</span></div>
-      <div class="field01"><input id="confirmation" name="confirmation" class="input-text required-entry validate-cpassword" type="password" style="width:180px;" />
-      </div>
-      
-      <br class="clr" />
-      <p>&nbsp;</p>
-      <p><input type="checkbox" class="checkbox" id="is_subscribed" value="1" title="Sign Up for Newsletter" name="is_subscribed"> Check the box to sign up for the ICU Newsletter  (click <a href="#" onclick="MM_openBrWindow('<?php echo $this->getUrl().'newsletter-sample.html' ?>','newsletter','scrollbars=yes,width=860,height=640')">here</a> for sample newsletter)</p>
-      <p>&nbsp;</p>
-      <p>
-	  <input type="submit" style="background-image:url(<?php echo $this->getSkinUrl('images/submit.gif') ?>); width:60px; height:20px;" value=""  /></p>
+ <h3>Sign Up</h3> 
+    <p>For New Customers. <span>Required Fields*</span></p>
 
-      
-      <p>&nbsp;</p>
+        <input name="firstname" id="firstname" class="input-text required-entry" type="text"  />
+        <input name="lastname" id="lastname" class="input-text required-entry" type="text"  />
+        <input name="email" id="email_address" class="input-text validate-email required-entry"  type="email"  />
+        <input id="password" class="input-text required-entry validate-password" name="password" type="password" />
+        <input id="confirmation" name="confirmation" class="input-text required-entry validate-cpassword" type="password" />
+
+      <p><input type="checkbox" class="checkbox" id="is_subscribed" value="1" title="Sign Up for Newsletter" name="is_subscribed"> Check to sign up for the ICU Newsletter  (click <a href="#" onclick="MM_openBrWindow('<?php echo $this->getUrl().'newsletter-sample.html' ?>','newsletter','scrollbars=yes,width=860,height=640')">here</a> for sample newsletter)</p>
+
+	  <input class="icu-btn" type="submit" />
+
       <p><span>by clicking the &#8220;Submit&#8221; form above, you are agreeing to ICU&#8216;s 
 	  <a href="#" onclick="MM_openBrWindow('<?php echo $this->getUrl().'terms-conditions.html' ?>','termsconditions','scrollbars=yes,width=720,height=460')">terms &amp; conditions</a>.</span></p>
       <p>&nbsp;</p>

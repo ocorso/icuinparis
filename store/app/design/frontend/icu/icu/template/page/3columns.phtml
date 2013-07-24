@@ -48,20 +48,13 @@
 		<?php echo $this->getChildHtml('content') ?> 
 		<!-- /content container -->
 
-		<!-- FOOTER SECTION -->
-		<?php echo $this->getChildHtml('footer') ?>
-		<!-- /FOOTER SECTION -->
 		<?php echo $this->getChildHtml('before_body_end') ?>
 	</div>
 	<!-- end #wrapper -->
 
-  <?php 
-    //oc: get common footer.
-	$base_url  	= str_replace("/store/", "",$this->getUrl(''));
-    $footerPath = $base_url . '/php/common_icu_footer.php';
-    $footer     = file_get_contents($footerPath, false); 
-    echo $footer;
+<!-- FOOTER SECTION -->
+<?php echo $this->getChildHtml('footer') ?>
+<!-- /FOOTER SECTION -->
 
-  ?>
 </body>
 </html>

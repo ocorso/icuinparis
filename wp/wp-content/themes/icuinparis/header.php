@@ -15,9 +15,8 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
-	<title><?php woo_title( '' ); ?></title>
-	<script>window.jQuery || document.write('<script src="<?php bloginfo('stylesheet_directory'); ?>/js/vendor/jquery.js"><\/script>')</script>
-<?php wp_head(); ?>
+	<title><?php woo_title( '' ); ?></title>	
+	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>

@@ -136,7 +136,7 @@ body {
 #footer_widgets a:hover, #homeproducts a:hover {
     text-decoration: none;
 }
-#footer_widgets .widget:hover img, #homeproducts .product:hover img{
+#footer_widgets .widget:hover img, #homeproducts .product:hover img, #homepage_callouts a:hover img{
     -webkit-box-shadow:  2px 2px 6px 0px rgba(0, 0, 0, .5);
     box-shadow:  2px 2px 6px 0px rgba(0, 0, 0, .5);
 }
@@ -167,14 +167,6 @@ footer a:hover{
     
     margin:0px;
 }
-#description{
-    padding-top: 35px;
-}
-#description p, .page-template-single-designers-php p{
- 
-    font-size: 1.8em;
-    font-family: 'JosefinSansStdLight', 'Source Sans Pro', sans-serif; 
-}
 
 .page-template-single-about-php header{
     background-color: #c5d9d9;
@@ -199,7 +191,7 @@ footer a:hover{
 }
 /*****************************************************************************
 /*****************************************************************************
-/* @Representation */
+/* @Wholesale */
 /*****************************************************************************
 /*****************************************************************************/
 
@@ -288,12 +280,8 @@ footer a:hover{
 /* @Creative @Community */
 /*****************************************************************************
 /*****************************************************************************/
-
-#sidebar h3{
-	display: none;
-}
 #sidebar ul li{
-	display: inline;
+    display: inline;
     margin:3px;
     padding: 3px 3px;
     line-height: 40px;
@@ -317,6 +305,9 @@ footer a:hover{
 }
 #sidebar #woo_search-2 input{
     background-color: #ebebeb;
+}
+#sidebar h3, #sidebar ul li.cat-item-1342, #sidebar ul li.cat-item-1345{
+	display: none;
 }
 .post{
     cursor: pointer;
@@ -378,6 +369,17 @@ footer a:hover{
     text-align: center;
 }
 
+.by-designer-btn{
+    background-color: #000;
+    color: #fff;
+    padding: 5px;
+    font-family: "Gotham-Light", sans-serif;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 157px;
+    margin: 0 auto;
+}
 
 /*****************************************************************************
 /*****************************************************************************

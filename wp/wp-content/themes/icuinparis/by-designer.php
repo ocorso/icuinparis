@@ -43,7 +43,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 			while ( $loop->have_posts() ) : $loop->the_post();
 			
 				echo '<div class="post span3">';
-					get_template_part( 'content', 'post' );
+					get_template_part( 'content', 'designer' );
                                                 
 				echo '</div>';
 			endwhile;

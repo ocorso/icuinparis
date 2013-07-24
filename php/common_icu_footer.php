@@ -7,38 +7,75 @@
 ?>
 
 <footer id="footer">
-		<h4>Sign up for the ICU updates</h4>
+	<h4>Sign up for the ICU updates</h4>
+	<form id="email_signup" action="<?= $base_url; ?>/store/bfmsubscribe/subscriber/new/" method="post">
 		<input 	id="newsletter"  
 				class="email"
+				placeholder="Your Email"
 				type="email" 
-				value="Your Email" 
-				onfocus="if(this.value=='Your Email')this.value=''; console.log('onfocus');" 
-				onblur="if(this.value=='')this.value='Your Email';" 
+				value="" 
 				name="email"
 				>
+		<input id="newsletter_submit" type="submit" hidden="true" />
+	</form>
+	<div id="newsletter_modal" class="modal fade">
+		<div class="modal-header">
+			<a class="close" data-dismiss="modal">&times;</a>
+			<h3>ICU Newsletter Sign-up</h3>
+		</div>
+		<div class="modal-body">
+			<p>Merci!</p>
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="icu-btn" data-dismiss="modal">OK</a>
+		</div>
+	</div>
 <script>
+
+var emailController 	= {};
+emailController.url 	= main.base_url + "/store/bfmsubscribe/subscriber/new/";
+emailController.submit	= function($e){
+	console.log("SUBMIT EMAIL: "+ emailController.url);
+	if($e) $e.preventDefault();
+    jQuery(this).blur();
+   	jQuery('#newsletter_submit').focus().click();
+	jQuery('#newsletter_modal').modal('show');
+	jQuery('#newsletter').val("");
+};
+
 jQuery(document).ready(function($) {
-console.log('email form');
+	
+	$("#email_signup").submit(emailController.submit);
+	
+	//$('#newsletter').keypress(function($e) {
+	     //   if($e.which == 13) {
+	      //  	console.log('enter pressed!');
+	       // 	emailController.submit();
+	       // }
+	        
+	   
+	 //   });
+	
 });
 
 </script>
-		<br /> 
-		<br /> 
-		We welcome you to contact us with questions, feedback, designer submissions and/or custom orders.
-		<br /> 
-		<br /> 
-		ICU - IN PARIS LLC
-		<br /> 
+	<p>We welcome you to contact us with questions, feedback, designer submissions and/or custom orders.</p>
+	<h4>ICU - IN PARIS LLC</h4>
+	<p>
 		<a href="mailto:icu@icuinparis.com">icu@icuinparis.com</a>
 		<br /> 
 		P: 646.574.1546 (US)
 		<br /> 
 		P: +33 658285574 (FR)
-		<br /> 
-		<br /> 
-		E-Commerce Site Hours:
-		<br /> 
-		Monday-Friday 9:00–7:00		
+	</p>
+	<h4>E-Commerce Site Hours:</h4>
+	<p>Monday-Friday 9:00–7:00	</p>
+	<ul>
+		<li><a href="<?= $base_url; ?>/store/terms" title="ICU Terms & Conditions">Terms</li>
+		<li><a href="<?= $base_url; ?>/store/privacy" title="ICU Privacy Policy">Privacy</li>
+		<li><a href="<?= $base_url; ?>/store/shipping" title="ICU Shipping">Shipping</li>
+		<li><a href="<?= $base_url; ?>/store/returns" title="ICU Returns">Returns</li>
+	</ul>
 </footer><!-- /#footer  -->
 
 

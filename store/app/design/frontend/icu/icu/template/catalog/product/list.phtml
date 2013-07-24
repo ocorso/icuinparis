@@ -104,8 +104,13 @@
 		}else if($this->helper('catalogSearch')->getEscapedQueryText()){ 
 			echo ucwords($this->helper('catalogSearch')->getEscapedQueryText()); 
 		}else{ 
-			if(strtoupper($category->getName()) == strtoupper("ladies") || strtoupper($category->getName()) == strtoupper("gentlemen")){
-				echo strtoupper("shop icu");
+			if(strtoupper($category->getName()) == strtoupper("ladies")) {
+
+				echo strtoupper("shop womens");
+
+			}else if (strtoupper($category->getName()) == strtoupper("gentlemen")){
+
+				echo strtoupper("shop mens");
 			}else{
 				echo strtoupper($category->getName());
 			}
@@ -131,7 +136,7 @@
     		$left_navigation_menu .= "CATÉGORIES";
     	}
     	$left_navigation_menu .= '</li>';
-		if($tarray[3] == "gentlemen" || $tarray[3] == "gentlemen.html")
+		if($tarray[3] == "gentlemen" || $tarray[3] == "mens")
 		{
 			$left_navigation_menu .= '<li><a href="#" onclick="swaparrow(\'arrow1\')"> <img src="' . $this->getSkinUrl('images/down-arrow.jpg') . ' \>" width="9" height="9" id="arrow1" name="arrow1" />jewelry</a>
 				<ul>
@@ -196,7 +201,7 @@
     ?>
 		
 	<!-- oc: subscribe-left -->
-		<?php echo $this->getChildHtml('subscribe_left'); ?>
+		<?php //echo $this->getChildHtml('subscribe_left'); ?>
 	<!-- /subscribe-left -->
 
 </div>

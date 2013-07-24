@@ -9,21 +9,22 @@ Template Name: Home
 		<ol class="carousel-indicators">
 		    <li data-target="#featured_slider" data-slide-to="0" class="active"></li>
 		    <li data-target="#featured_slider" data-slide-to="1"></li>
-		    <li data-target="#featured_slider" data-slide-to="2"></li>
+            <li data-target="#featured_slider" data-slide-to="2"></li>
+		    <li data-target="#featured_slider" data-slide-to="3"></li>
 		 </ol>
 		 <!-- Carousel items -->
 		<div class="carousel-inner">
 			<div class="active item">
-				<img src="<?= get_bloginfo('wpurl'); ?>/wp-content/uploads/0000_video.png" alt=""  class="woo-image slide-image" />
+				<img src="<?= get_bloginfo('wpurl'); ?>/wp-content/uploads/0000_video.png" alt="" class="woo-image slide-image" />
 			</div>
 			<div class="item">
-				<img src="<?= get_bloginfo('wpurl'); ?>/wp-content/uploads/0001_CREATIVE-COMMUNITY.png" alt=""    class="woo-image slide-image" />			
+				<img src="<?= get_bloginfo('wpurl'); ?>/wp-content/uploads/0001_CREATIVE-COMMUNITY.png" alt="" class="woo-image slide-image" />			
 			</div>
 			<div class="item">
-				<img src="<?= get_bloginfo('wpurl'); ?>/wp-content/uploads/0002_VASKOLG-ESPARATA-SHELL-NECKLACE-GIVE-THEM-SOMETHINGTHEYVE-NE.png" alt=""   class="woo-image slide-image" />
+				<img src="<?= get_bloginfo('wpurl'); ?>/wp-content/uploads/0002_VASKOLG-ESPARATA-SHELL-NECKLACE-GIVE-THEM-SOMETHINGTHEYVE-NE.png" alt="" class="woo-image slide-image" />
 			</div>
 			<div class="item">
-				<img src="<?= get_bloginfo('wpurl'); ?>/wp-content/uploads/0003_NOOT-SS_13.png" alt=""    class="woo-image slide-image" />
+				<img src="<?= get_bloginfo('wpurl'); ?>/wp-content/uploads/0003_NOOT-SS_13.png" alt="" class="woo-image slide-image" />
 			</div>
 		</div>
 	</div><!--/#featured_slider-->

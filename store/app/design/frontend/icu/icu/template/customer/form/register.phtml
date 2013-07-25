@@ -1,35 +1,56 @@
+<div id="headline" class="row">
+  <h1>Sign up</h1>
+</div>
+<div id="description" class="row">
+  <p class="span12">Please register below.
+</div>
 
+<div id="signup_panel" class="span4">
+  <h3>Sign Up</h3> 
+  <p>For New Customers. <span>Required Fields*</span></p>
+  <form id="register_form" action="<?= $this->getUrl(); ?>customer/account/createpost/" method="post">
+    <input 
+            name="firstname" 
+            id="firstname" 
+            class="required-entry" 
+            type="text" 
+            placeholder="First Name" 
+        />
+    <input  name="lastname" 
+            id="lastname" 
+            class="required-entry" 
+            type="text"  
+            placeholder="Last Name" 
+        />
+    <input  name="email" 
+            id="email_address" 
+            class="validate-email required-entry"  
+            type="email"  
+            placeholder="Your Email" 
+        />
+    <input  id="password" 
+            class="required-entry validate-password" 
+            name="password" 
+            type="password" 
+            placeholder="Password" 
+        />
+    <input  id="confirmation" 
+            name="confirmation" 
+            class="required-entry validate-cpassword" 
+            type="password" 
+            placeholder="Confirm Password" 
+        />
 
-<div id="create_account">
-    <form action="<?php echo $this->getPostActionUrl() ?>" method="post" id="form-validate">
-  	<div id="tagline_account">Create an account with ICU - In Paris</div>
-    <div style="width:150px; float:left;">&nbsp;</div>
-    <div id="content_account">
- <h3>Sign Up</h3> 
-    <p>For New Customers. <span>Required Fields*</span></p>
-
-        <input name="firstname" id="firstname" class="input-text required-entry" type="text"  />
-        <input name="lastname" id="lastname" class="input-text required-entry" type="text"  />
-        <input name="email" id="email_address" class="input-text validate-email required-entry"  type="email"  />
-        <input id="password" class="input-text required-entry validate-password" name="password" type="password" />
-        <input id="confirmation" name="confirmation" class="input-text required-entry validate-cpassword" type="password" />
-
-      <p><input type="checkbox" class="checkbox" id="is_subscribed" value="1" title="Sign Up for Newsletter" name="is_subscribed"> Check to sign up for the ICU Newsletter  (click <a href="#" onclick="MM_openBrWindow('<?php echo $this->getUrl().'newsletter-sample.html' ?>','newsletter','scrollbars=yes,width=860,height=640')">here</a> for sample newsletter)</p>
-
-	  <input class="icu-btn" type="submit" />
-
-      <p><span>by clicking the &#8220;Submit&#8221; form above, you are agreeing to ICU&#8216;s 
-	  <a href="#" onclick="MM_openBrWindow('<?php echo $this->getUrl().'terms-conditions.html' ?>','termsconditions','scrollbars=yes,width=720,height=460')">terms &amp; conditions</a>.</span></p>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
-    </div>
-  </div>
+    <p><input type="checkbox" class="checkbox" id="is_subscribed" value="1" title="Sign Up for Newsletter" name="is_subscribed"> Check to sign up for the ICU Newsletter  (click <a href="#" onclick="MM_openBrWindow('<?= $this->getUrl().'newsletter-sample.html' ?>','newsletter','scrollbars=yes,width=860,height=640')">here</a> for sample newsletter)</p>
+    <input class="icu-btn" type="submit" value="Register" />
+    <p>by clicking the &#8220;Submit&#8221; form above, you are agreeing to ICU&#8216;s 
+    <a href="#" onclick="MM_openBrWindow('<?= $this->getUrl().'terms-conditions.html' ?>','termsconditions','scrollbars=yes,width=720,height=460')">terms &amp; conditions</a>.</p>
   </form>
-    <script type="text/javascript">
-    //<![CDATA[
-        var dataForm = new VarienForm('form-validate', true);
-        <?php if($this->getShowAddressFields()): ?>
-        new RegionUpdater('country', 'region', 'region_id', <?php echo $this->helper('directory')->getRegionJson() ?>, undefined, 'zip');
-        <?php endif; ?>
-    //]]>
-    </script>
+</div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+    var registerForm = new VarienForm('register_form', true);
+//]]>
+</script>

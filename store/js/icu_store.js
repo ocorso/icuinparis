@@ -1,9 +1,25 @@
+var main      = {};
+main.base_url = base_url;
+main.switcher             = {}; 
 
-
+// =================================================
+// ================ oc: Doc Ready
+// =================================================
 jQuery(document).ready(function($) {
-  console.log("doc ready");
-  initMenu();
 
+  console.log("doc ready");
+
+
+  initMenu();
+  main.initJQZoom();
+  main.initSwitcher();
+  
+  $('a[rel*=facebox]').facebox();
+});
+// =================================================
+// ================ oc: JQZoom
+// =================================================
+main.initJQZoom           = function (){
   var options = {
       zoomWidth: 400,
       zoomHeight: 400,
@@ -16,14 +32,48 @@ jQuery(document).ready(function($) {
       preloadImages: false,
       alwaysOn:false
   };
-  
-  var UIDropdown            = $(".b-style-dropdown");
-  $(".jqzoom").jqzoom(options);
-  
-  $('a[rel*=facebox]').facebox();
+    jQuery(".jqzoom").jqzoom(options);
+};
+// =================================================
+// ================ Currency and language switcher
+// =================================================
+//oc: 
+main.initSwitcher         = function (){
+console.log("init switcher");
 
-  $('.b-style-dropdown__button').bind('click', triggerSwitcher);
-});
+  main.switcher.elem        = jQuery(".b-style-dropdown");
+  main.switcher.openClass   = "b-style-dropdown_state_open";
+  main.switcher.closeClass  = "b-style-dropdown_state_close";
+  jQuery('.switcher-btn').bind('click', main.switcher.switch);
+};
+
+//Switcher Dropdown functions
+main.switcher.switch        = function() {
+    console.log("triggerSwitcher click");
+    main.switcher.isOpen() ? main.switcher.close() : main.switcher.open();
+    return false;
+};
+
+main.switcher.open          = function() {
+  console.log("open switcher");
+    jQuery('body').bind('click', main.switcher.close)
+    main.switcher.elem.removeClass(main.switcher.closeClass)
+    main.switcher.elem.addClass(main.switcher.openClass)
+};
+
+main.switcher.close         = function() {
+  console.log("close switcher");
+    jQuery('body').unbind('click')
+    main.switcher.elem.addClass(main.switcher.closeClass)
+    main.switcher.elem.removeClass(main.switcher.openClass)
+};
+
+main.switcher.isOpen        = function() { 
+    return main.switcher.elem.hasClass(main.switcher.openClass) || false;
+};
+
+
+
 
 //oc: Google Code for ICU remarketing_2 Remarketing List
 var google_conversion_id    = 1008295145;
@@ -35,11 +85,13 @@ var google_conversion_value   = 0;
 
 
 var scroller              = null;
-var showUIDropdownClass   = "b-style-dropdown_state_open";
-var hideUIDropdownClass   = "b-style-dropdown_state_close";
+
 var Translator            = new Translate({"Credit card number doesn't match credit card type":"Credit card number does not match credit card type","Please use only letters (a-z or A-Z), numbers (0-9) or underscore(_) in this field, first character should be a letter.":"Please use only letters (a-z or A-Z), numbers (0-9) or underscores (_) in this field, first character must be a letter."});
 
+
+
 var productAddToCartForm  = new VarienForm('product_addtocart_form');
+
 productAddToCartForm.submit = function(){
         if (this.validator.validate()) {
             this.form.submit();
@@ -79,34 +131,10 @@ function MM_findObj(n, d) { //v4.01
 function MM_openBrWindow(theURL,winName,features) { //v2.0
   window.open(theURL,winName,features);
 }
-function MM_swapImage() { //v3.0
+function MM_swapImage() { 
+console.log("swap image");//v3.0
   var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
    if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
-}
-
-//Switcher Dropdown functions
-function triggerSwitcher() {
-  console.log("triggerSwitcher click");
-    isDropDownOpen() ? closeUIDropdown() : openUIDropdown();
-    return false;
-}
-
-function openUIDropdown() {
-  console.log("open switcher");
-    jQuery('body').bind('click', closeUIDropdown)
-    UIDropdown.removeClass(hideUIDropdownClass)
-    UIDropdown.addClass(showUIDropdownClass)
-}
-
-function closeUIDropdown() {
-  console.log("close switcher");
-    jQuery('body').unbind('click')
-    UIDropdown.addClass(hideUIDropdownClass)
-    UIDropdown.removeClass(showUIDropdownClass)
-}
-
-function isDropDownOpen() {
-    return UIDropdown.hasClass(showUIDropdownClass) || false;
 }
 
 
@@ -154,32 +182,4 @@ function swaparrow(e){
 	}else{
 		document.getElementById(e).src = down;
 	}
-}
-
-function showdescriptionpanel(){
-  document.getElementById('descriptionpanel').style.display = "block";
-  document.getElementById('theatelierpanel').style.display = "none";
-  document.getElementById('shippingpanel').style.display = "none";
-  document.getElementById('inquiriespanel').style.display = "none";
-}
-
-function showtheatelierpanel(){
-  document.getElementById('descriptionpanel').style.display = "none";
-  document.getElementById('theatelierpanel').style.display = "block";
-  document.getElementById('shippingpanel').style.display = "none";
-  document.getElementById('inquiriespanel').style.display = "none";
-}
-
-function showshippingpanel(){
-  document.getElementById('descriptionpanel').style.display = "none";
-  document.getElementById('theatelierpanel').style.display = "none";
-  document.getElementById('shippingpanel').style.display = "block";
-  document.getElementById('inquiriespanel').style.display = "none";
-}
-
-function showinquiriespanel(){
-  document.getElementById('descriptionpanel').style.display = "none";
-  document.getElementById('theatelierpanel').style.display = "none";
-  document.getElementById('shippingpanel').style.display = "none";
-  document.getElementById('inquiriespanel').style.display = "block";
 }

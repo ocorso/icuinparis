@@ -38,17 +38,16 @@
 
 	?>
 
-
-
-
-  <!-- store subnav -->
+  <!-- store and currency switchers -->
 <div id="store_subnav_wrapper" class="row">
-  <ul id="store_subnav" class="pull-left">
+    <div class="hdr-search"><?= $this->getChildHtml('topSearch') ?></div>
+  <ul id="store_subnav">
+      <?php
+$n = Mage::getSingleton('customer/session')->getCustomer()->getName();
+if($n !=' ')   echo '<li><a href="'.$this->getUrl().'customer/account/logout">Sign Out</a></li> ';
+else           echo '<li><a href="'.$this->getUrl().'customer/account/login">Sign In</a></li> ';?>
     <li><?= $this->getChildHtml('bfm_storeswitcher') ?></li>
-    <li><?= $this->getChildHtml('store_language') ?></li> 
+    <!-- <li><?= $this->getChildHtml('store_language') ?></li>  -->
   </ul>
-  <!-- search -->
-    <div class="pull-right"> <?= $this->getChildHtml('topSearch') ?></div> 
-  <!-- /search -->
 
 </div>  <!-- #store_subnav_wrapper end -->

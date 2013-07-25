@@ -2,24 +2,22 @@
   
   <!-- body container -->
 <div id="headline" class="row">
-  <h1>Sign in/Sign up</h1>
-</div>
-<div id="description" class="row">
-  <p class="span12">Please Login Below. Not registered? Create your ICU account here: 
-    <a class="" href="<?= $this->getCreateAccountUrl() ?>">Create Account</a></p>
+  <h1>Sign in/ Sign up</h1>
 </div>
 
-<div id="login_panel" class="span6">
+<div id="content" class="row">
+
+<div id="signin_panel" class="offset2 span3">
     <h3>Sign in</h3> 
     <p>For returning customers.</p>
-    <form id="login-form" action="<?= $this->getPostActionUrl() ?>" method="post">
+    <form id="login_form" action="<?= $this->getPostActionUrl() ?>" method="post">
   	  <input  type="email" 
               id="email" 
               class="icu-input required-entry validate-email" 
               name="login[username]" 
               value="<?= $this->htmlEscape($this->getUsername()) ?>" 
               title="<?= $this->__('Email Address') ?>" 
-              placeholder="Email Address"
+              placeholder="Your Address"
             />
       <input  type="password" 
               id="pass" 
@@ -33,11 +31,60 @@
     <p>Forgot your password?  <a title="Click to retrieve password" href="<?= $this->getForgotPasswordUrl() ?>">Click Here</a></p>
       
   </div>
+  <!-- END #signin_panel-->
 
+
+  <!-- BEGIN #signup_panel-->
+<div id="signup_panel" class="span4">
+  <h3>Sign Up</h3> 
+  <p>For New Customers. <span>Required Fields*</span></p>
+  <form id="register_form" action="<?= $this->getUrl(); ?>customer/account/createpost/" method="post">
+    <input 
+            name="firstname" 
+            id="firstname" 
+            class="required-entry" 
+            type="text" 
+            placeholder="First Name" 
+        />
+    <input  name="lastname" 
+            id="lastname" 
+            class="required-entry" 
+            type="text"  
+            placeholder="Last Name" 
+        />
+    <input  name="email" 
+            id="email_address" 
+            class="validate-email required-entry"  
+            type="email"  
+            placeholder="Your Email" 
+        />
+    <input  id="password" 
+            class="required-entry validate-password" 
+            name="password" 
+            type="password" 
+            placeholder="Password" 
+        />
+    <input  id="confirmation" 
+            name="confirmation" 
+            class="required-entry validate-cpassword" 
+            type="password" 
+            placeholder="Confirm Password" 
+        />
+
+    <p><input type="checkbox" class="checkbox" id="is_subscribed" value="1" title="Sign Up for Newsletter" name="is_subscribed"> Check to sign up for the ICU Newsletter  (click <a href="#" onclick="MM_openBrWindow('<?= $this->getUrl().'newsletter-sample.html' ?>','newsletter','scrollbars=yes,width=860,height=640')">here</a> for sample newsletter)</p>
+    <input class="icu-btn" type="submit" value="Register" />
+    <p>by clicking the &#8220;Submit&#8221; form above, you are agreeing to ICU&#8216;s 
+    <a href="#" onclick="MM_openBrWindow('<?= $this->getUrl().'terms-conditions.html' ?>','termsconditions','scrollbars=yes,width=720,height=460')">terms &amp; conditions</a>.</p>
+  </form>
+</div>
+  <!-- END #signup_panel-->
+
+</div>
   <!-- /body container -->
 
 <script type="text/javascript">
 //<![CDATA[
-	var dataForm = new VarienForm('login-form', true);
+	var loginForm    = new VarienForm('login_form', true);
+  var registerForm = new VarienForm('register_form', true);
 //]]>
 </script>

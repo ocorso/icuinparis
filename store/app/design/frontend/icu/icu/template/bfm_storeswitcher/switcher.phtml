@@ -1,6 +1,6 @@
 <?php 
-$_current_store = $this->getCurrentStore();
-$_current_currency = $this->getCurrentCurrency();
+$_current_store     = $this->getCurrentStore();
+$_current_currency  = $this->getCurrentCurrency();
 
 ?>
 <div class="b-style-dropdown b-style-dropdown_state_close">
@@ -27,7 +27,7 @@ $_current_currency = $this->getCurrentCurrency();
 			}
 			
             ?></span>
-            <a href="#/b-style-dropdown_state_open" class="b-style-dropdown__button">Open</a>
+            <a href="#/b-style-dropdown_state_open" class="switcher-btn">Open</a>
         </dt>
         <dd class="b-style-dropdown__inner">
             <strong>Select your language</strong>
@@ -63,15 +63,15 @@ switch($_code)
 {
 	case "USD":
 	$_currency = $this->__('US Dollars');
-	$_sign = '$';
+	$_sign     = '$';
 	break;
 	case "GBP":
 	$_currency = $this->__('Pounds');
-	$_sign = '&pound;';
+	$_sign     = '&pound;';
 	break;
 	case "EUR":
 	$_currency = $this->__('Euros');
-	$_sign = '&euro;';
+	$_sign     = '&euro;';
 	break;
 }
 ?>

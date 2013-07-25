@@ -24,6 +24,19 @@
 
 /* General Styles */
 
+a,p,h2,h3,h4,h5,h6,li,div{
+	font-family: "Gotham-Light", sans-serif;
+}
+h3{
+	text-transform: uppercase;
+}
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input{
+	border-radius: 0;
+	border: none;
+	background-color: #e6e6e6;
+	padding:8px;
+	font-size: 1.3em;
+}
 
 
 * {margin:0; padding:0;}
@@ -52,560 +65,6 @@ body {
 
 
 .clr { font-size:0; height:0; line-height:0; clear:both;}
-
-
-
-/* GeosansLight Styles */
-
-@font-face {
-
- font-family:"GeosansLight";
-
- src: url("../fonts/GeosansLight.eot") /* EOT file for IE */
-
-}
-
-@font-face {
-
- font-family:"GeosansLight";
-
- src: url("../fonts/GeosansLight.ttf") format("truetype")/* TTF file for CSS3 browsers */
-
-}
-
-@font-face {
-
- font-family:"GeosansLight";
-
- src: url("../fonts/geosansligh.otf") format("opentype"); /* OTF file for Firefox */
-
-}
-
-@font-face {
-
- font-family:"GeosansLight";
-
- src: url("../fonts/geosansligh.woff") format("woff"); /* OTF file for Firefox */
-
-}
-
-@font-face { /* for non-IE */
-	font-family:GeosansLight;
-	src:url(http://:/) format("No-IE-404"),url(../fonts/GeosansLight.ttf) format("truetype");
-}
-
-.titletext{
-	font:normal 30px/30px "GeosansLight";
-	font-family:"GeosansLight", Arial, Verdana;
-	font-size:28px;
-}
-
-.subtitletext{
-	font:normal 30px/30px "GeosansLight";
-	font-family:"GeosansLight", Arial, Verdana;
-	font-size:18px;
-	font-weight:bold;
-}
-
-.basictext{
-	font-family: Arial, Verdana;
-	font-size:14px;
-}
-
-
-/* Fiolex Girls Styles */
-
-@font-face {
-
- font-family:"Fiolex Girls";
-
- src: url("../fonts/filxgirl.eot") /* EOT file for IE */
-
-}
-
-@font-face {
-
- font-family:"Fiolex Girls";
-
- src: url("../fonts/filxgirl.ttf") /* TTF file for CSS3 browsers */
-
-}
-
-@font-face {
-
- font-family:"Fiolex Girls";
-
- src: url("../fonts/filxgir.otf") format("opentype"); /* OTF file for Firefox */
-
-}
-
-
-
-
-
-/* Honey I Stole Your Jumper Styles */
-
-@font-face {
-
- font-family:"Honey I Stole Your Jumper";
-
- src: url("../fonts/HONEY.eot") /* EOT file for IE */
-
-}
-
-@font-face {
-
- font-family:"Honey I Stole Your Jumper";
-
- src: url("../fonts/HONEY.ttf") /* TTF file for CSS3 browsers */
-
-}
-
-@font-face {
-
- font-family:"Honey I Stole Your Jumper";
-
- src: url("../fonts/hone.otf") format("opentype"); /* OTF file for Firefox */
-
-}
-
-
-
-
-
-/* AmerType Md BT Styles */
-
-@font-face {
-
- font-family:"AmerType Md BT";
-
- src: url("../fonts/amrtypen.eot") /* EOT file for IE */
-
-}
-
-@font-face {
-
- font-family:"AmerType Md BT";
-
- src: url("../fonts/amrtypen.ttf") /* TTF file for CSS3 browsers */
-
-}
-
-@font-face {
-
- font-family:"AmerType Md BT";
-
- src: url("../fonts/amrtype.otf") format("opentype"); /* OTF file for Firefox */
-
-}
-
-
-
-
-
-
-
-@font-face {
-
- font-family:"Baskerville Old Face";
-
- src: url("../fonts/BASKVILL.ttf") /* TTF file for CSS3 browsers */
-
-}
-
-@font-face {
-
- font-family:"Baskerville Old Face";
-
- src: url("../fonts/baskvil.otf") format("opentype"); /* OTF file for Firefox */
-
-}
-
-
-
-
-
-/* Scriptina Styles */
-
-@font-face {
-
- font-family:"Scriptina";
-
- src: url("../fonts/Scriptina.eot") /* EOT file for IE */
-
-}
-
-@font-face {
-
- font-family:"Scriptina";
-
- src: url("../fonts/Scriptina.ttf") /* TTF file for CSS3 browsers */
-
-}
-
-@font-face {
-
- font-family:"Scriptina";
-
- src: url("../fonts/scriptin.otf") format("opentype"); /* OTF file for Firefox */
-
-}
-
-
-
-/* vtks Rude Metal Styles */
-
-@font-face {
-
- font-family:"vtks Rude Metal";
-
- src: url("../fonts/vtks_Rude_Metal.eot") /* EOT file for IE */
-
-}
-
-@font-face {
-
- font-family:"vtks Rude Metal";
-
- src: url("../fonts/vtks Rude Metal.ttf") /* TTF file for CSS3 browsers */
-
-}
-
-@font-face {
-
- font-family:"vtks Rude Metal";
-
- src: url("../fonts/vtks_rude_meta.otf") format("opentype"); /* OTF file for Firefox */
-
-}
-
-
-
-
-
-/* Edwardian Script ITC Styles */
-
-@font-face {
-
- font-family:"Edwardian Script ITC";
-
- src: url("../fonts/ITCEDSCR.eot") /* EOT file for IE */
-
-}
-
-@font-face {
-
- font-family:"Edwardian Script ITC";
-
- src: url("../fonts/ITCEDSCR.ttf") /* TTF file for CSS3 browsers */
-
-}
-
-@font-face {
-
- font-family:"Edwardian Script ITC";
-
- src: url("../fonts/itcedsc.otf") format("opentype"); /* OTF file for Firefox */
-
-}
-
-
-
-
-
-/* ER Architect 866 Styles */
-
-@font-face {
-
- font-family:"ER Architect 866";
-
- src: url("../fonts/ar866n.eot") /* EOT file for IE */
-
-}
-
-@font-face {
-
- font-family:"ER Architect 866";
-
- src: url("../fonts/ar866n.ttf") /* TTF file for CSS3 browsers */
-
-}
-
-@font-face {
-
- font-family:"ER Architect 866";
-
- src: url("../fonts/ar866.otf") format("opentype"); /* OTF file for Firefox */
-
-}
-
-
-
-
-
-/* Maharlika Styles */
-
-@font-face {
-
- font-family:"Maharlika";
-
- src: url("../fonts/maharlik.eot") /* EOT file for IE */
-
-}
-
-@font-face {
-
- font-family:"Maharlika";
-
- src: url("../fonts/maharlik.ttf") /* TTF file for CSS3 browsers */
-
-}
-
-@font-face {
-
- font-family:"Maharlika";
-
- src: url("../fonts/maharli.otf") format("opentype"); /* OTF file for Firefox */
-
-}
-
-
-
-/* PetraScriptEF-Alternate Styles */
-
-@font-face {
-
- font-family:"PetraScriptEF-Alternate";
-
- src: url("../fonts/petrascriptefalterna.eot") /* EOT file for IE */
-
-}
-
-@font-face {
-
- font-family:"PetraScriptEF-Alternate";
-
- src: url("../fonts/PetraScriptEF-Alternate.ttf") /* TTF file for CSS3 browsers */
-
-}
-
-@font-face {
-
- font-family:"PetraScriptEF-Alternate";
-
- src: url("../fonts/petrascriptefalternat.otf") format("opentype"); /* OTF file for Firefox */
-
-}
-
-
-
-/* Baskerville Handcut Styles */
-
-@font-face {
-
- font-family:"Baskerville Handcut";
-
- src: url("../fonts/baskerville_handcut_ital.eot") /* EOT file for IE */
-
-}
-
-@font-face {
-
- font-family:"Baskerville Handcut";
-
- src: url("../fonts/baskerville_handcut_ital.ttf") /* TTF file for CSS3 browsers */
-
-}
-
-@font-face {
-
- font-family:"Baskerville Handcut";
-
- src: url("../fonts/baskerville_handcut_itali.otf") format("opentype"); /* OTF file for Firefox */
-
-}
-
-
-
-
-
-/* Susie's Hand Styles */
-
-@font-face {
-
- font-family:"Susie's Hand";
-
- src: url("../fonts/susie.eot") /* EOT file for IE */
-
-}
-
-@font-face {
-
- font-family:"Susie's Hand";
-
- src: url("../fonts/susie.ttf") /* TTF file for CSS3 browsers */
-
-}
-
-@font-face {
-
- font-family:"Susie's Hand";
-
- src: url("../fonts/susi.otf") format("opentype"); /* OTF file for Firefox */
-
-}
-
-
-
-
-/* Baskerville-DemiBold Styles */
-
-
-
-@font-face {
-
- font-family:"Baskerville-DemiBold";
-
- src: url("../font/Baskerville-DemiBold.eot") /* EOT file for IE */
-
-}
-
-@font-face {
-
- font-family:"Baskerville-DemiBold";
-
- src: url("../font/Baskerville-DemiBold.ttf") format("truetype"); /* TTF file for CSS3 browsers */
-
-}
-
-@font-face {
-
- font-family:"Baskerville-DemiBold";
-
- src: url("../font/baskervilledemibol.otf") format("opentype"); /* OTF file for Firefox */
-
-}
-
-
-
-/* Baskerville-DemiBold Styles */
-
-
-
-@font-face {
-
- font-family:"Britannic Bold";
-
- src: url("../font/britani.eot") /* EOT file for IE */
-
-}
-
-@font-face {
-
- font-family:"Britannic Bold";
-
- src: url("../font/britani.ttf") format("truetype"); /* TTF file for CSS3 browsers */
-
-}
-
-@font-face {
-
- font-family:"Britannic Bold";
-
- src: url("../font/BRITANIC.otf") format("opentype"); /* OTF file for Firefox */
-
-}
-
-
-
-
-
-/* CicleSemi Styles */
-
-
-
-@font-face {
-
- font-family:"CicleSemi";
-
- src: url("../font/cicle_sem.eot") /* EOT file for IE */
-
-}
-
-@font-face {
-
- font-family:"CicleSemi";
-
- src: url("../font/cicle_sem.ttf") format("truetype"); /* TTF file for CSS3 browsers */
-
-}
-
-@font-face {
-
- font-family:"CicleSemi";
-
- src: url("../font/Cicle_Semi.otf") format("opentype"); /* OTF file for Firefox */
-
-}
-
-
-
-/* PAPYRUS Styles */
-
-
-
-@font-face {
-
- font-family:"PAPYRUS";
-
- src: url("../font/papyru.eot") /* EOT file for IE */
-
-}
-
-@font-face {
-
- font-family:"PAPYRUS";
-
- src: url("../font/papyru.ttf") format("truetype"); /* TTF file for CSS3 browsers */
-
-}
-
-@font-face {
-
- font-family:"PAPYRUS";
-
- src: url("../font/PAPYRUS.otf") format("opentype"); /* OTF file for Firefox */
-
-}
-
-
-
-/* BaskervilleOSSSi Styles */
-
-@font-face {
-
- font-family:"BaskervilleOSSSi";
-
- src: url("../fonts/BASKOI__.eot") /* EOT file for IE */
-
-}
-
-@font-face {
-
- font-family:"BaskervilleOSSSi";
-
- src: url("../fonts/BASKOI__.ttf") /* TTF file for CSS3 browsers */
-
-}
-
-@font-face {
-
- font-family:"BaskervilleOSSSi";
-
- src: url("../fonts/baskoi_.otf") format("opentype"); /* OTF file for Firefox */
-
-}
-
 
 
 
@@ -644,13 +103,14 @@ input[type="submit"].btn01 {
 	position: relative;
 }
 #store_subnav_wrapper{
-	width: 100%;
+
 	position:absolute;
 	z-index: 100;
-	top: 110px;
+	top: 10px;
+	right: 0;
 }
 #store_subnav{
-	padding-left: 187px;
+	float:right;
 }
 #store_subnav a{
 	color: #000;
@@ -669,9 +129,6 @@ input[type="submit"].btn01 {
 	#keyword {
 		margin:0; 
 		padding:0; 
-		
-		height:27px; 
-		text-align:right;
 	}
 
 	#keyword input[type="text"] {
@@ -750,7 +207,7 @@ input[type="submit"].btn01 {
     color: #000;
 }
 
-.b-style-dropdown__button {
+.switcher-btn {
     display: inline-block;
     overflow: hidden;
     margin: 0 0 0 5px;
@@ -844,28 +301,6 @@ input[type="submit"].btn01 {
 	padding-top: 35px;
 }
 	/* body container */
-
-	#body_container {margin:0; padding:0; width:846px; height:555px; float:left; background:url(../images/brand-bg.png) no-repeat top left;}
-
-	#body_container2 {margin:0; padding:0; width:860px; height:138px; float:left;/* background:url(../images/footer-reel.png) no-repeat right top;*/ }
-
-	#body_container2 .blu_txt {font:normal 21px/30px "Britannic Bold"; color:#c2bbf6;}
-
-	#body_container2 .sub_txt {font:normal 17px/18px "Baskerville Old Face"; color:#000000;}
-
-	#body_container2 .sub_txt span  {font:normal 34px/34px "Fiolex Girls"; color:#000000;}
-
-	#body_container2 .sub_txt span a {color:#000000; text-decoration:none;}
-
-	#body_container2 .sub_txt span a:hover {color:#000000; text-decoration:none;}
-
-
-
-	#body_container2 .flash {margin:0; padding:2px 0 0 0; width:820px; height:138px; float:left;}
-
-
-
-	#body_container2 .box06 {margin:0; padding:14px 0 0 0; width:300px; height:auto; float:left; background:url(../images/brush.png) no-repeat 70px 65px;}
 
 
 
@@ -1118,15 +553,7 @@ input[type="submit"].btn01 {
 		text-transform: uppercase; 
 		color:#000000;
 	}
-	.subscribe-to {font:normal 33px/30px "Fiolex Girls"; color:#E5A64B;}
-	
-	@font-face {
-		font-family: 'Perpetua_Titling_MT';
-		src: url('fonts/Perpetua_Titling_MT.eot');
-		src: local('☺'), url('../fonts/Perpetua_Titling_MT.woff') format('woff'), url('../fonts/Perpetua_Titling_MT.ttf') format('truetype'), url('../fonts/Perpetua_Titling_MT.svg') format('svg');
-		font-weight: normal;
-		font-style: normal;
-	}
+
 	
 	.newsletter-elements {clear:both;}
 	.subscribe-content {margin:0 0 10px 0; font: 11px/14px Arial,Helvetica,sans-serif; color: #999999;}
@@ -1192,213 +619,13 @@ input[type="submit"].btn01 {
 
 	#copyright {margin:0; padding:0; width:auto; height:auto; float:left; font:normal 11px/24px "Times New Roman", Times, serif; color:#000000;}
 
-
-
-
-
-	/* ---------------------------- Street Style Styles ---------------------------- */
-
-	#street_style {margin:0; padding:0; width:846px; height:517px; position:relative;}
-
-
-
-		#street_style #style01 {width:550px; height:160px; position:absolute; top:2px; left:11px;}
-
-		#street_style #style02 {width:580px; height:170px; position:absolute; top:340px; left:237px;}
-
-		#street_style #style03 {width:432px; height:336px; position:absolute; top:173px; left:343px;}
-
-
-
-		#street_style #way {width:210px; height:277px; position:absolute; top:180px; left:20px; background:url(../images/street-style-img02.jpg) no-repeat 0 0;}
-
-		#street_style #way .effect {margin:0; padding:0; width:96px; height:98px; float:left;}
-
-		#street_style #way .effect a {background:url(../images/street-style-img04.png) no-repeat 0 0; display:block; text-indent:-5000px; width:96px; height:98px;}
-
-		#street_style #way .effect a:hover {background:url(../images/street-style-img04.png) no-repeat 0 -98px; width:96px; height:98px;}
-
-
-
-		#street_style #styletag {width:580px; height:118px; position:absolute; top:68px; left:94px;}
-
-		#street_style #styletag a {background:url(../images/street-style-tag01.png) no-repeat 0 0; display:block; text-indent:-5000px; width:580px; height:118px;}
-
-		#street_style #styletag a:hover {background:url(../images/street-style-tag01.png) no-repeat 0 -118px; width:580px; height:118px;}
-
-
-
-		#street_style #styleshop {width:250px; height:34px; position:absolute; top:175px; left:535px; font:normal 21px/34px "Honey I Stole Your Jumper"; color:#000000;}
-
-		#street_style #styleshop a {color:#000000; text-decoration:none;}
-
-		#street_style #styleshop a:hover {color:#000000; text-decoration:underline;}
-
-
-
-	/* ---------------------------- Brooklyn Flavor Styles ---------------------------- */
-
-	#brooklyn_flavor {margin:0; padding:0; width:846px; height:517px; position:relative; background:url(../images/brooklyn-flavor-img01.jpg) no-repeat 0 0;}
-
-
-
-		#brooklyn_flavor #man01 {width:144px; height:451px; position:absolute; top:54px; right:19px;}
-
-
-
-		#brooklyn_flavor #brooklyntag {width:auto; height:26px; position:absolute; top:370px; left:320px; font:normal 25px/25px "AmerType Md BT"; color:#000000; }
-
-		#brooklyn_flavor #brooklyntag a {color:#000000; text-decoration:none; border-bottom:1px solid #000000;}
-
-		#brooklyn_flavor #brooklyntag a:hover {color:#000000; text-decoration:none; border-bottom:none;}
-
-
-
-		#brooklyn_flavor #brooklynshop {width:auto; height:16px; position:absolute; top:410px; left:425px; font:normal 15px/20px "AmerType Md BT"; color:#000000;}
-
-		#brooklyn_flavor #brooklynshop a {color:#000000; text-decoration:none;}
-
-		#brooklyn_flavor #brooklynshop a:hover {color:#000000; text-decoration:underline;}
-
-
-
-	/* ---------------------------- Classic Styles ---------------------------- */
-
-	#classic {margin:0; padding:0; width:846px; height:517px; position:relative;}
-
-		#classic #pro01 {width:775px; height:133px; position:absolute; left:0; top:40px;}
-
-		#classic #pro02 {width:757px; height:131px; position:absolute; left:0; top:335px;}
-
-
-
-		#classic #classictag {width:774px; height:126px; position:absolute; left:30px; top:180px;}
-
-		#classic #classictag a {background:url(../images/classic-tag.png) no-repeat 0 0; display:block; text-indent:-5000px; width:774px; height:126px;}
-
-		#classic #classictag a:hover {background:url(../images/classic-tag.png) no-repeat 0 -126px; width:774px; height:126px;}
-
-
-
-		#classic #classicshop {width:auto; height:23px; position:absolute; top:280px; left:530px; font:normal 22px/23px "CicleSemi"; color:#000000;}
-
-		#classic #classicshop a {color:#000000; text-decoration:underline;}
-
-		#classic #classicshop a:hover {color:#999999; text-decoration:none;}
-
-
-
-		#classic #tooltip01 {width:775px; height:133px; position:absolute; left:30px; top:40px; background:url(../images/classic-img01.jpg) no-repeat center;}
-
-		#classic #tooltip01 a {display:block; text-indent:-5000px; width:775px; height:133px;}
-
-		#classic #tooltip02 {width:757px; height:131px; position:absolute; left:40px; top:335px; background:url(../images/classic-img02.jpg) no-repeat center;}
-
-		#classic #tooltip02 a {display:block; text-indent:-5000px; width:775px; height:133px;}
-
-
-
-	/* ---------------------------- Bohochic Styles ---------------------------- */
-
-	#bohochic {margin:0; padding:0; width:846px; height:517px; position:relative; background:url(../images/bohochic-img01.png) no-repeat 0 0;}
-
-
-
-		#bohochic #bohochictag {width:478px; height:189px; position:absolute; top:94px; left:359px;}
-
-		#bohochic #bohochictag a { background:url(../images/bohochic-img02.png) no-repeat 0 0; display:block; text-indent:-5000px; width:478px; height:189px;}
-
-		#bohochic #bohochictag a:hover {background:url(../images/bohochic-img02.png) no-repeat 0 -189px; width:478px; height:189px;}
-
-
-
-		#bohochic #bohochicshop {width:auto; height:auto; position:absolute; top:310px; left:490px; font:normal 25px/50px "Scriptina"; color:#666666;}
-
-		#bohochic #bohochicshop a {color:#666666; text-decoration:none;}
-
-		#bohochic #bohochicshop a:hover {color:#666666; text-decoration:underline;}
-
-
-
-		#bohochic #tooltips {width:365px; height:115px; position:absolute; top:325px; left:400px;}
-
-		#bohochic #tooltips a {display:block; text-indent:-5000px; width:365px; height:115px;}
-
-
-
-
-
-	/* ---------------------------- Rocked Styles ---------------------------- */
-
-	#rocked {margin:0; padding:0; width:846px; height:517px; position:relative; background:url(../images/rocked-img01.png) no-repeat 0 0;}
-
-		#rocked #rockedtag {width:546px; height:109px; position:absolute; top:33px; left:240px; background:url(../images/rocked-img02.png) no-repeat 0 0; display:block; text-indent:-5000px; cursor:pointer;}
-
-		#rocked #rockedtag:hover {background:url(../images/rocked-img02.png) no-repeat 0 -109px;}
-
-
-
-		#rocked #rockedtag2 {width:480px; height:140px; position:absolute; top:180px; left:175px; font:bold 50px/60px "vtks Rude Metal"; color:#000000; text-align:center; cursor:pointer;}
-
-
-
-		#rocked #rockedshop {width:262px; height:35px; position:absolute; top:181px; left:497px; z-index:10;}
-
-		#rocked #rockedshop a {background:url(../images/rocked-img03.png) no-repeat 0 0; display:block; text-indent:-5000px; width:262px; height:35px;}
-
-		#rocked #rockedshop a:hover {background:url(../images/rocked-img03.png) no-repeat 0 -35px; width:262px; height:35px;}
-
-
-
-		#rocked #rockedshop2 {width:300px; height:30px; position:absolute; top:420px; left:260px; text-align:center;}
-
-		#rocked #rockedshop2 a {font:bold 19px/24px "vtks Rude Metal"; color:#000000; text-decoration:none;}
-
-		#rocked #rockedshop2 a:hover {text-decoration:none; border-bottom:2px solid #000000;}
-
-
-
-		#rocked #tooltip04 {width:490px; height:265px; position:absolute; top:220px; left:315px;}
-
-		#rocked #tooltip04 a {display:block; text-indent:-5000px; width:490px; height:265px;}
-
-
-
-	/* ---------------------------- Luxe Styles ---------------------------- */
-
-	#luxe {margin:0; padding:0; width:846px; height:517px; position:relative; background:url(../images/luxe-img01.png) no-repeat 236px 0;}
-
-
-
-		#luxe #luxetag {width:auto; height:auto; position:absolute; top:50px; left:0; font:normal 64px/64px "Edwardian Script ITC"; color:#000000; cursor:pointer;}
-
-		#luxe #luxetag a {color:#000000; text-decoration:none;}
-
-		#luxe #luxetag a:hover {text-decoration:none;}
-
-
-
-		#luxe #luxeshop {width:auto; height:auto; position:absolute; bottom:10px; right:30px; font:normal 30px/50px "Edwardian Script ITC"; color:#000000;}
-
-		#luxe #luxeshop a {color:#000000; text-decoration:none;}
-
-		#luxe #luxeshop a:hover {color:#000000; text-decoration:underline;}
-
-
-
-		#luxe #tooltip03 {width:230px; height:430px; position:absolute; top:70px; right:20px;}
-
-		#luxe #tooltip03 a {display:block; text-indent:-5000px; width:230px; height:430px;}
-
-
-
 	/* ---------------------------- Men Styles ---------------------------- */
 
 	#men {margin:0; padding:0; width:960px; height:600px; position:relative; background:url(../images/men-img01.jpg) no-repeat 0 0;}
 
-		#men #tag {width:auto; height:auto; position:absolute; top:20px; left:67px; font:normal 36px/40px "Baskerville Handcut"; color:#000000; font-style:italic;}
+		#men #tag {width:auto; height:auto; position:absolute; top:20px; left:67px; font:normal 36px/40px "Gotham-Light"; color:#000000; font-style:italic;}
 
-		#men #tag span {font:normal 20px/30px "Baskerville Old Face"; color:#000000; padding-left:170px;}
+		#men #tag span {font:normal 20px/30px "Gotham-Light"; color:#000000; padding-left:170px;}
 
 		#men #brand {width:auto; height:auto; position:absolute; top:155px; left:470px;}
 
@@ -1444,9 +671,9 @@ input[type="submit"].btn01 {
 
 	#women {margin:0 auto; padding:0; width:960px; height:510px; position:relative; background:url(../images/women-img01.jpg) no-repeat top;}
 
-	#women #tag {width:auto; height:auto; position:absolute; top:40px; left:10px; font:normal 36px/40px "Baskerville Handcut"; color:#000000; font-style:italic;}
+	#women #tag {width:auto; height:auto; position:absolute; top:40px; left:10px; font:normal 36px/40px "Gotham-Light"; color:#000000; font-style:italic;}
 
-	#women #tag span {font:normal 20px/30px "Baskerville Old Face"; color:#000000; padding-left:90px;}
+	#women #tag span {font:normal 20px/30px "Gotham-Light"; color:#000000; padding-left:90px;}
 
 	#women #brand {width:auto; height:auto; position:absolute; top:200px; left:380px;}
 
@@ -1494,271 +721,7 @@ input[type="submit"].btn01 {
 
 
 
-	/* ---------------------------- About us Styles ---------------------------- */
-
-
-
-
-
-
-
-	#tagline {margin:0; padding:50px 0; width:960px; height:auto; float:left; font:normal 31px/40px "Baskerville Handcut"; color:#000000; cursor:pointer;}
-
-	#tagline:hover {text-decoration:none;}
-
-
-
-
-
-	#sidemenu {margin:0; padding:0; width:230px; height:auto; float:left; font:normal 14px/40px Arial, Helvetica, sans-serif;}
-
-	#sidemenu ul {margin:0; padding:0; list-style:none;}
-
-	#sidemenu ul li {margin:0; padding:0; font:normal 14px/40px Arial, Helvetica, sans-serif; color:#999999; text-transform:uppercase;}
-
-	#sidemenu ul li a {color:#999999; text-decoration:none;}
-
-	#sidemenu ul li a:hover, #sidemenu ul li a.select {color:#000000; text-decoration:none;}
-
-
-
-	/* ------------- contact us ------------- */
-
-	#contact_us {margin:0 auto; padding:0; width:960px; height:auto; min-height:550px; background:url(../images/contact-bg.jpg) no-repeat bottom;}
-
-
-
-	#tagline_contact {margin:0; padding:0; width:960px; height:auto; float:left; font:normal 24px/98px "Baskerville Handcut"; color:#000000;}
-
-	/*#tagline_contact:hover {text-decoration:underline;}*/
-
-
-
-	#sidemenu_contact {margin:0; padding:0 0 0 12px; width:133px; height:420px; float:left; background:url(../images/gradient.gif) no-repeat right top;}
-
-	#sidemenu_contact ul {margin:0; padding:0; list-style:none;}
-
-	#sidemenu_contact ul li {margin:0; padding:0; font:normal 12px/21px "Baskerville Old Face"; color:#999999; text-transform:uppercase;}
-
-	#sidemenu_contact ul li a {color:#999999; text-decoration:none;}
-
-	#sidemenu_contact ul li a:hover, #sidemenu_contact ul li a.select {color:#000000; text-decoration:none;}
-
-
-
-	#content_conatct {margin:0; padding:0 30px; width:485px; height:auto; float:left;}
-
-	#content_conatct p {font:normal 15px/18px "Baskerville Old Face"; color:#000000;}
-
-	#content_conatct p a {color:#999999; text-decoration:none;}
-
-	#content_conatct p a:hover {color:#333333; text-decoration:none;}
-
-	#content_conatct p span.grey {color:#999999;}
-
-	#content_conatct p span {font:normal 13px/18px "Baskerville Old Face"; color:#000000;}
-
-
-
-
-
-	/* ------------- about us ------------- */
-
-	#about_us {margin:0 auto; padding:0; width:960px; height:auto; min-height:600px; background:url(../images/about-bg.jpg) no-repeat right top;}
-
-	#the_mentality {margin:0 auto; padding:0; width:960px; height:auto; min-height:600px; background:url(../images/mentality-bg.jpg) no-repeat right top;}
-
-	#the_advantage {margin:0 auto; padding:0; width:960px; height:auto; min-height:600px; background:url(../images/advantage-bg.jpg) no-repeat right top;}
-
-	#how_seen {margin:0 auto; padding:0; width:960px; height:auto; min-height:600px; background:url(../images/seen-bg.jpg) no-repeat right top;}
-
-
-
-	#tagline_about {margin:0; padding:0; width:960px; height:auto; float:left; font:normal 31px/143px "Baskerville Handcut"; color:#000000;}
-
-
-
-	#sidemenu_about {margin:0; padding:0 0 0 12px; width:133px; height:420px; float:left; background:url(../images/gradient2.gif) no-repeat right top;}
-
-	#sidemenu_about ul {margin:0; padding:0; list-style:none;}
-
-	#sidemenu_about ul li {margin:0; padding:0; font:normal 12px/21px "Baskerville Old Face"; color:#999999; text-transform:uppercase;}
-
-	#sidemenu_about ul li a {color:#999999; text-decoration:none;}
-
-	#sidemenu_about ul li a:hover, #sidemenu_about ul li a.select {color:#000000; text-decoration:none;}
-
-
-
-	#content_about {margin:0; padding:0 30px; width:485px; height:auto; float:left;}
-
-	#content_about p {font:normal 15px/18px "Baskerville Old Face"; color:#000000;}
-
-	#content_about p a {color:#999999; text-decoration:none;}
-
-	#content_about p a:hover {color:#333333; text-decoration:none;}
-
-	#content_about p span.grey {color:#999999;}
-
-	#content_about p span {font:normal 13px/18px "Baskerville Old Face"; color:#000000;}
-
-
-
-	/* ------------- career ------------- */
-
-	#career_culture {margin:0 auto; padding:0; width:960px; height:auto; min-height:663px; background:url(../images/career-bg.jpg) no-repeat top;}
-
-	#career_vacancy {margin:0 auto; padding:0; width:960px; height:auto; min-height:663px; background:url(../images/career-bg2.jpg) no-repeat top;}
-
-	#career_application {margin:0 auto; padding:0; width:960px; height:auto; min-height:663px; background:url(../images/career-bg3.jpg) no-repeat top;}
-
-
-
-	#tagline_career {margin:0; padding:0; width:960px; height:auto; float:left; font:normal 31px/143px "Baskerville Handcut"; color:#000000;}
-
-
-
-
-
-	#sidemenu_career {margin:0; padding:0 0 0 12px; width:180px; height:530px; float:left; background:url(../images/gradient2.gif) no-repeat right top;}
-
-	#sidemenu_career ul {margin:0; padding:0; list-style:none;}
-
-	#sidemenu_career ul li {margin:0; padding:0; font:normal 12px/21px "Baskerville Old Face"; color:#999999; text-transform:uppercase;}
-
-	#sidemenu_career ul li a {color:#999999; text-decoration:none;}
-
-	#sidemenu_career ul li a:hover, #sidemenu_career ul li a.select {color:#000000; text-decoration:none;}
-
-
-
-	#content_career {margin:0; padding:0 30px; width:485px; height:auto; float:left;}
-
-	#content_career p {font:normal 15px/18px "Baskerville Old Face"; color:#000000;}
-
-	#content_career p a {color:#999999; text-decoration:none;}
-
-	#content_career p a:hover {color:#333333; text-decoration:none;}
-
-	#content_career p span.grey {color:#999999;}
-
-	#content_career p span {font:normal 13px/18px "Baskerville Old Face"; color:#000000;}
-
-
-
-
-
-
-
-	#sidemenu2 {margin:0; padding:0; width:230px; height:auto; float:left; text-decoration:none;}
-
-	#sidemenu2 ul {margin:0; padding:0; list-style:none;}
-
-	#sidemenu2 ul li {margin:0; padding:0; font:normal 18px/40px "Arial"; color:#666666; background:url(../images/line.gif) no-repeat bottom left;}
-
-	#sidemenu2 ul li.last {background:none;}
-
-	#sidemenu2 ul li a {color:#000000; text-decoration:none;}
-
-	#sidemenu2 ul li a:hover, #sidemenu22 ul li a.select {color:#000000; text-decoration:none;}
-
-
-
-	#content {margin:0; padding:0 50px 0 0; width:680px; height:auto; float:right;}
-
-	#content p {font:normal 13px/18px Arial, Helvetica, sans-serif; color:#000000;}
-
-	#content p a {color:#999999; text-decoration:none;}
-
-	#content p a:hover {color:#515151; text-decoration:none;}
-
-	#content p span.grey {color:#999999;}
-
-
-
-
-
-
-
-	#content p.vacancy {font:normal 13px/25px Arial, Helvetica, sans-serif; color:#000000;}
-
-	#content p.vacancy a {color:#000000; text-decoration:none;}
-
-	#content p.vacancy a:hover {color:#999999; text-decoration:none;}
-
-
-
-	#video_section {margin:0; padding:25px 105px; width:750px; height:auto; min-height:320px; float:left;}
-
-	#video_section .video {margin:0; padding:10px; width:448px; height:298px; float:left; border:1px solid #000000; vertical-align:middle;}
-
-	#video_section .video_des {margin:0; padding:10px; width:250px; height:auto; float:right;}
-
-	#video_section .video_des h2 {font:normal 30px/30px "GeosansLight"; color:#000000; text-transform:uppercase; padding-bottom:20px;}
-
-	#video_section .video_des h2 a {color:#000000; text-decoration:none;}
-
-	#video_section .video_des h2 a:hover {color:#000000; text-decoration:underline;}
-
-	#video_section .video_des h4 {font:normal 18px/18px "GeosansLight"; color:#000000; text-transform:uppercase;}
-
-	#video_section .video_des h4 a {color:#000000; text-decoration:none;}
-
-	#video_section .video_des h4 a:hover {color:#000000; text-decoration:underline;}
-
-	#video_section .video_des p {font:normal 12px/18px Arial, Helvetica, sans-serif; color:#666666;}
-
-
-
-	#video_carousel {margin:0; padding:25px 0 50px 0; width:960px; height:auto; float:left;}
-
-
-
-	.stepcarousel {position: relative; overflow:hidden; width:820px; height:110px; margin:0 auto; padding:0 5px;}
-
-	.stepcarousel .belt {position: absolute; left: 0; top: 0;}
-
-	.stepcarousel .panel {float: left; overflow: hidden; margin:0 40px; width:140px; height:90px; border:1px solid #000000; padding:9px;}
-
-
-
-	#designer_tag {margin:0; padding:0 30px; width:900px; height:124px; float:left; font:bold 48px/124px "Susie's Hand"; color:#000000;}
-
-	#designer_tag img {margin:0 3px; vertical-align:middle; cursor:pointer;}
-
-	#designer_slider {margin:0; padding:0; width:960px; height:264px; float:left; background-color:#000000;}
-
-	#designer_carousel {margin:0; padding:0 40px; width:880px; height:125px; float:left;}
-
-	#designer_carousel p { font:normal 60px/90px "Susie's Hand"; color:#000000; text-align:right; cursor:pointer; width:100px; float:right;}
-
-	#designer_carousel p:hover {font-weight:bold;}
-
-	#designer_carousel .reel {margin:26px 0 0 0; padding:0; width:80px; height:60px; float:right; background:url(../images/reel2.gif) no-repeat 0 0;}
-
-	/*#designer_carousel .reel:hover {background:url(../images/reel2.gif) no-repeat 0 -60px;}*/
-
-
-
-	.stepcarousel2 {position: relative; overflow:hidden; width:960px; height:264px; margin:0 auto; padding:0;}
-
-	.stepcarousel2 .belt {position: absolute; left: 0; top: 0;}
-
-	.stepcarousel2 .panel {float: left; overflow: hidden; margin:0; width:960px; height:264px;}
-
-	.stepcarousel2 .panel ul.designer {margin:0; padding:0; list-style:none; width:480px; float:left;}
-
-	.stepcarousel2 .panel ul.designer li {margin:0; padding:0; float:left; display:block; font:normal 15px/18px "PAPYRUS"; color:#000000;}
-
-	.stepcarousel2 .panel ul.designer li a {color:#000000; text-decoration:none; font-weight:normal;}
-
-	.stepcarousel2 .panel ul.designer li a:hover {color:#999999; text-decoration:none;}
-
-	.dividerline {position:relative; left:0px; right:0px; top:32px; background-color:#999; width:960px; height:1px; }
-	.dividerline2 {position:relative; left:0px; right:0px; top:90px; background-color:#999; width:960px; height:1px; }
-
-
-
+	
 
 	#store_list {
 		padding-top: 50px;
@@ -1873,13 +836,13 @@ input[type="submit"].btn01 {
 
 	#all_designer {margin:0 auto; padding:0; width:960px; height:auto;}
 
-	#tagline3 {margin:0; padding:20px 0; width:960px; height:auto; float:left; font:normal 31px/40px "Baskerville Handcut"; color:#000000;}
+	#tagline3 {margin:0; padding:20px 0; width:960px; height:auto; float:left; font:normal 31px/40px "Gotham-Light"; color:#000000;}
 
 	#sidemenu3 {margin:2px 0 0 0; padding:0; width:209px; height:424px; float:left; }
 
 	#sidemenu3 ul {margin:20px; padding:0; list-style:none;}
 
-	#sidemenu3 ul li {margin:0; padding:0; font:normal 12px/30px "Baskerville Old Face"; color:#000000; text-transform:uppercase;}
+	#sidemenu3 ul li {margin:0; padding:0; font:normal 12px/30px "Gotham-Light"; color:#000000; text-transform:uppercase;}
 
 	#sidemenu3 ul li a {color:#999999; text-decoration:none;}
 
@@ -2012,6 +975,12 @@ input[type="submit"].btn01 {
 }
 
 
+#signin_panel{
+	border-right: solid 1px #ccc;
+}
+#signup_panel{
+	margin-left: 74px;
+}
 
 
 	.stepcarousel3 {position: relative; overflow:hidden; width:100px; height:500px; margin:50px auto; padding:0;}
@@ -2024,7 +993,7 @@ input[type="submit"].btn01 {
 
 	#customer_service {margin:0 auto; padding:0; width:960px; height:auto; min-height:550px;}
 
-	#tagline5 {margin:0; padding:0; width:960px; height:auto; float:left; font:normal 37px/94px "Baskerville Handcut"; color:#000000;}
+	#tagline5 {margin:0; padding:0; width:960px; height:auto; float:left; font:normal 37px/94px "Gotham-Light"; color:#000000;}
 
 	#proddetailsbaseboxes { font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#333;}
 
@@ -2046,7 +1015,7 @@ input[type="submit"].btn01 {
 
 	#sidemenu5 ul {margin:0; padding:0; list-style:none;}
 
-	#sidemenu5 ul li {margin:0; padding:0; font:normal 10px/21px "Baskerville Old Face"; color:#000000; text-transform:uppercase;}
+	#sidemenu5 ul li {margin:0; padding:0; font:normal 10px/21px "Gotham-Light"; color:#000000; text-transform:uppercase;}
 
 	#sidemenu5 ul li a {color:#999999; text-decoration:none;}
 
@@ -2176,23 +1145,23 @@ input[type="submit"].btn01 {
 
 
 
-	a.tt:hover div.tooltip {display:block; position:absolute; bottom:10px; left:150px; padding:10px 20px 20px 10px; width:114px; height:40px; font:normal 13px/16px "Baskerville Old Face"; color:#000000; text-indent:0; background: url(../images/bubble.png) no-repeat top; text-decoration:none;}
+	a.tt:hover div.tooltip {display:block; position:absolute; bottom:10px; left:150px; padding:10px 20px 20px 10px; width:114px; height:40px; font:normal 13px/16px "Gotham-Light"; color:#000000; text-indent:0; background: url(../images/bubble.png) no-repeat top; text-decoration:none;}
 
 
 
-	a.tt:hover div.tooltip2 {display:block; position:absolute; bottom:90px; left:300px; padding:10px 10px 20px 10px; width:124px; height:40px; font:normal 13px/16px "Baskerville Old Face"; color:#000000; text-indent:0; background: url(../images/bubble.png) no-repeat top; text-decoration:none;}
+	a.tt:hover div.tooltip2 {display:block; position:absolute; bottom:90px; left:300px; padding:10px 10px 20px 10px; width:124px; height:40px; font:normal 13px/16px "Gotham-Light"; color:#000000; text-indent:0; background: url(../images/bubble.png) no-repeat top; text-decoration:none;}
 
 
 
-	a.tt:hover div.tooltip3 {display:block; position:absolute; bottom:90px; left:300px; padding:10px 10px 20px 10px; width:124px; height:40px; font:normal 13px/16px "Baskerville Old Face"; color:#000000; text-indent:0; background: url(../images/bubble.png) no-repeat top; text-decoration:none;}
+	a.tt:hover div.tooltip3 {display:block; position:absolute; bottom:90px; left:300px; padding:10px 10px 20px 10px; width:124px; height:40px; font:normal 13px/16px "Gotham-Light"; color:#000000; text-indent:0; background: url(../images/bubble.png) no-repeat top; text-decoration:none;}
 
 
 
-	a.tt:hover div.tooltip4 {display:block; position:absolute; bottom:100px; left:70px; padding:10px 25px 20px 10px; width:109px; height:40px; font:normal 13px/16px "Baskerville Old Face"; color:#000000; text-indent:0; background: url(../images/bubble.png) no-repeat top; text-decoration:none;}
+	a.tt:hover div.tooltip4 {display:block; position:absolute; bottom:100px; left:70px; padding:10px 25px 20px 10px; width:109px; height:40px; font:normal 13px/16px "Gotham-Light"; color:#000000; text-indent:0; background: url(../images/bubble.png) no-repeat top; text-decoration:none;}
 
 
 
-	a.tt:hover div.tooltip5 {display:block; position:absolute; bottom:110px; left:195px; padding:10px 25px 20px 10px; width:109px; height:40px; font:normal 13px/16px "Baskerville Old Face"; color:#000000; text-indent:0; background: url(../images/bubble.png) no-repeat top; text-decoration:none;}
+	a.tt:hover div.tooltip5 {display:block; position:absolute; bottom:110px; left:195px; padding:10px 25px 20px 10px; width:109px; height:40px; font:normal 13px/16px "Gotham-Light"; color:#000000; text-indent:0; background: url(../images/bubble.png) no-repeat top; text-decoration:none;}
 
 
 
@@ -2200,7 +1169,7 @@ input[type="submit"].btn01 {
 
 	#create_account {margin:0 auto; padding:0; width:960px; height:auto; min-height:600px; background:url(../images/account-bg.jpg) no-repeat right top;}
 
-	#tagline_account {margin:0; padding:0; width:960px; height:auto; float:left; font:normal 24px/74px "Baskerville Handcut"; color:#000000;}
+	#tagline_account {margin:0; padding:0; width:960px; height:auto; float:left; font:normal 24px/74px "Gotham-Light"; color:#000000;}
 
 
 
@@ -2217,7 +1186,7 @@ input[type="submit"].btn01 {
 
 	#content_account h2 {font:normal 20px/20px "Gotham-Light"; color:#000000;}
 
-	#content_account h6 {font:normal 18px/20px "Baskerville Handcut"; color:#000000; padding-bottom:5px;}
+	#content_account h6 {font:normal 18px/20px "Gotham-Light"; color:#000000; padding-bottom:5px;}
 
 	#content_account h6 span {font:normal 12px/20px "Gotham-Light"; color:#999999;}
 
@@ -2227,7 +1196,7 @@ input[type="submit"].btn01 {
 
 
 
-	#content_account h5 {font:bold 16px/20px "Baskerville Handcut"; color:#000000;}
+	#content_account h5 {font:bold 16px/20px "Gotham-Light"; color:#000000;}
 
 	#content_account h5 span {font:normal 16px/20px "Gotham-Light"; color:#000000;}
 
@@ -2283,46 +1252,11 @@ input[type="submit"].btn01 {
 
 	#sidemenu_account #add_box .mid {margin:0; padding:0 15px; width:149px; height:auto; background:url(../images/addbg.gif) repeat-y top;}
 
-	#sidemenu_account #add_box .mid h4 {font:normal 16px/20px "Baskerville Handcut"; color:#000000;}
+	#sidemenu_account #add_box .mid h4 {font:normal 16px/20px "Gotham-Light"; color:#000000;}
 
 	#sidemenu_account #add_box .mid h6 {font:bold 12px/20px "Gotham-Light"; color:#000000;}
 
 	#sidemenu_account #add_box .mid p {font:normal 13px/18px "Gotham-Light"; color:#000000; text-transform:uppercase;}
-
-
-
-
-
-	#wishlist_section {margin:0; padding:0 30px; width:720px; height:auto; float:right;}
-
-	#wishlist_section h4 {font:normal 24px/30px "Baskerville Handcut"; color:#000000;}
-
-	#wishlist_section p {font:normal 15px/18px "Gotham-Light"; color:#000000;}
-
-
-
-	#bestseller_section {margin:0; padding:0 30px; width:720px; height:auto; float:right;}
-
-	#bestseller_section h4 {font:normal 24px/30px "Baskerville Handcut"; color:#000000;}
-
-	#bestseller_section p {font:normal 15px/18px "Gotham-Light"; color:#000000;}
-
-
-
-	#wishlist_carousel {margin:0; padding:15px 30px; width:720px; height:auto; float:right;}
-
-	#bestseller_carousel {margin:0; padding:15px 30px; width:720px; height:auto; float:right;}
-
-
-
-	.mail_box {margin:0; padding:0; width:480px; height:auto; float:left;}
-
-	.mail_box .box01 {margin:0; padding:0; width:50px; height:auto; float:left; text-align:center;}
-
-	.mail_box .box02 {margin:0; padding:0; width:430px; height:auto; float:left;}
-
-
-
 
 
 
@@ -2580,7 +1514,7 @@ color:#000000;
 
 	#content_account2 h2 {font:normal 20px/20px "Gotham-Light"; color:#000000;}
 
-	#content_account2 h6 {font:normal 18px/20px "Baskerville Handcut"; color:#000000; padding-bottom:5px;}
+	#content_account2 h6 {font:normal 18px/20px "Gotham-Light"; color:#000000; padding-bottom:5px;}
 
 	#content_account2 h6 span {font:normal 12px/20px "Gotham-Light"; color:#999999;}
 
@@ -2590,11 +1524,11 @@ color:#000000;
 
 
 
-	#content_account2 h5 {font:bold 16px/20px "Baskerville Handcut"; color:#000000;}
+	#content_account2 h5 {font:bold 16px/20px "Gotham-Light"; color:#000000;}
 
 	#content_account2 h5 span {font:normal 16px/20px "Gotham-Light"; color:#000000;}
 
-	#content_account2 h3 {font:normal 24px/30px "Baskerville Handcut"; color:#000000; padding-bottom:20px;}
+	#content_account2 h3 {font:normal 24px/30px "Gotham-Light"; color:#000000; padding-bottom:20px;}
 
 
 
@@ -2739,56 +1673,7 @@ color:#000000;
 
 	}
 
-a.flashSale {
 
-	background: url(../images/NOOT_HOMEPAGE.jpg) no-repeat top left;
-	float: left;
-	height: 460px;
-	width: 960px;
-
-}
-
-a.flashSale:hover {
-
-	background: url(../images/NOOT_HOMEPAGE.jpg) no-repeat top left;
-
-}
-
-a.flashSale_French {
-
-	background: url(../images/NOOT_HOMEPAGE.jpg) no-repeat top left;
-	float: left;
-	height: 458px;
-	width: 960px;
-
-}
-
-a.flashSale_French:hover {
-
-	background: url(../images/NOOT_HOMEPAGE.jpg) no-repeat top left;
-
-}
-
-#divSignup {
-	/*make visible*/
-    /*display:none;*/
-
-    /*position it at the very top-left corner*/
-    width:100%;
-	height:100%;
-	text-align:center;
-	/*in supporting browsers, make it
-      a little transparent*/
-    background:#999;
-	_background:none; /*this line removes the background in IE*/
-	opacity:.80;
-	color: #333;
-	z-index:10;
-	position: absolute;
-	top:0px;
-	left:0px;
-	display:none;
-}
 
 #signupBG {
 	background-image:url(../images/signup_popup.jpg);
@@ -3013,3 +1898,18 @@ a.flashSale_French:hover {
 	position:relative;
 	right:17px;
 }
+
+
+/*****************************************************************************
+/*****************************************************************************
+/* @media queries */
+/*****************************************************************************
+/*****************************************************************************/
+@media (max-width: 979px) {
+	#store_subnav_wrapper{
+		position: relative;
+	}
+	ol,ul{ margin: 0;}
+	.hdr-search{ float: left;}
+}
+

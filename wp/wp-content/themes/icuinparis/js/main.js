@@ -15,7 +15,9 @@ $( function($){
 	} else{
 		main.is_mobile = false;
 	}
-$(window).resize( main.onresize);
+
+	$(window).resize( main.onresize);
+	console.log("window width: "+$(window).width());
 	console.log("is_mobile : ", main.is_mobile );
 	console.log("user agent : " + navigator.userAgent );
 });

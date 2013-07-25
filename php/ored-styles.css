@@ -13,6 +13,9 @@ a{
     font-size: 1.3em;	
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
+.navbar-inner{
+    min-height: none;
+}
 .navbar .brand{
     padding: 0px 20px;
 }
@@ -109,7 +112,7 @@ ul.sub-menu li {
 }
 
 h1{
-    padding: 12px 0px 10px 215px; 
+    padding: 12px 0px 10px 220px; 
     text-shadow:none; 
     font-size: 5.0em; 
     line-height: 83px;
@@ -157,6 +160,10 @@ h1{
     display: inline;
     margin: 5px;
 }
+
+#newsletter_modal{
+    display: none;
+}
 /*****************************************************************************
 /*****************************************************************************
 /* @media queries */
@@ -178,6 +185,12 @@ h1{
     }
     .nav-collapse.collapse{
         margin-left: 0px;
+    }
+    #social_account{
+        float: none;
+    }
+    #social_account li.social-icon{
+        float: left;
     }
 }
 @media (max-width: 753px){

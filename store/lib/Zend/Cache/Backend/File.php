@@ -87,8 +87,9 @@ class Zend_Cache_Backend_File extends Zend_Cache_Backend implements Zend_Cache_B
      *
      * @var array available options
      */
+
     protected $_options = array(
-        'cache_dir' => null,
+        'cache_dir' => 'media/tmp',
         'file_locking' => true,
         'read_control' => true,
         'read_control_type' => 'crc32',

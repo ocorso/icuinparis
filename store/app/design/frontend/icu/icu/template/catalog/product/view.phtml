@@ -144,14 +144,7 @@
 		 				echo "ADD TO CART"; 
 		 		}else{ 	echo "AJOUTER AU PANIER"; }?>" 
 		 /> 
-		<input onclick="setLocation('<?php echo $this->helper('wishlist')->getAddUrl($_product) ?>')" 
-				type="button" 
-				class="icu-btn" 
-				value="<?php if(Mage::app()->getStore()->getStoreId() == "1"){ 
-						echo "ADD TO WISHLIST"; 
-				}else{ 	echo "AJOUTER A MA LISTE D'ENVIES"; }?>" 
-		/>
-	
+
 </div>
 <!-- END add_to_cart  -->
 		

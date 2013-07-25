@@ -37,7 +37,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 			<?php 
 			$args = array( 	'post_type' => 'designers', 
-							'posts_per_page' => 4,
+							'posts_per_page' => 25,
 							'order'           => 'ASC' );
 			$loop = new WP_Query( $args );
 			while ( $loop->have_posts() ) : $loop->the_post();

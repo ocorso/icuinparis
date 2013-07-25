@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		<a class="article-inner" href="<?= $href; ?>" title="<?php the_title_attribute(); ?>">
 			<section class="rollover">
 				<?php the_excerpt(); ?>
-				<div class="by-designer-btn" title="Shop by designer">Shop by designer</div>
+				<div class="by-designer-btn" title="Shop by designer">Shop Collection</div>
 			</section>
 			<?php if (has_post_thumbnail( )) the_post_thumbnail( 'medium' ); ?>
 		</a><!-- .article-inner -->

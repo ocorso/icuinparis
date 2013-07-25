@@ -8,8 +8,7 @@
 <link media="all" href="<?= $base_url; ?>/php/ored-styles.css" type="text/css" rel="stylesheet">
 
 <script>  
-  var main      = {};
-  main.base_url = "<?= $base_url; ?>";
+  var base_url = "<?= $base_url; ?>";
 </script>
 
 <div class="navbar navbar-inverse navbar-fixed-top">
@@ -37,19 +36,18 @@
           <li><a href="<?= $base_url; ?>/about/">About</a></li>
         </ul>
         <ul id="social_account" class="nav">
-            <li><a href="http://www.facebook.com/icuinparis" title="ICU on Facebook"><img src="/wp/wp-content/themes/icuinparis/img/icons/icon-facebook.png" alt="ICU on Facebook" /></a></li>       
-            <li><a href="http://twitter.com/icuinparis" title="ICU on Twitter"><img src="/wp/wp-content/themes/icuinparis/img/icons/icon-twitter.png" alt="ICU on Twitter" /></a></li>      
-            <li><a href="http://instagram.com/icuinparis" title="ICU on Instagram"><img src="/wp/wp-content/themes/icuinparis/img/icons/icon-instagram.png" alt="ICU on Instagram" /></a></li>
-            <li><a href="http://youtube.com/icuinparis" title="ICU on YouTube"><img src="/wp/wp-content/themes/icuinparis/img/icons/icon-youtube.png" alt="ICU on YouTube" /></a></li>         
             <li class="dropdown pull-right">
-            <a href="#" title="Account" class="dropdown-toggle" data-toggle="dropdown">Account<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="<?= $base_url; ?>/store/customer/account" title="My Account">My Account</a></li> 
-              <li><a href="<?= $base_url; ?>/store/checkout/cart" title="My Cart">My Cart</a></li>  
-              <li><a href="<?= $base_url; ?>/store/checkout/cart" title="Checkout">Checkout</a></li>
-            </ul>
-          </li>
-        
+              <a href="#" title="Account" class="dropdown-toggle" data-toggle="dropdown">Account<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="<?= $base_url; ?>/store/customer/account" title="My Account">My Account</a></li> 
+                <li><a href="<?= $base_url; ?>/store/checkout/cart" title="My Cart">My Cart</a></li>  
+                <li><a href="<?= $base_url; ?>/store/checkout/cart" title="Checkout">Checkout</a></li>
+              </ul>
+            </li>
+            <li class="social-icon"><a href="http://www.facebook.com/icuinparis" title="ICU on Facebook"><img src="/wp/wp-content/themes/icuinparis/img/icons/icon-facebook.png" alt="ICU on Facebook" /></a></li>       
+            <li class="social-icon"><a href="http://twitter.com/icuinparis" title="ICU on Twitter"><img src="/wp/wp-content/themes/icuinparis/img/icons/icon-twitter.png" alt="ICU on Twitter" /></a></li>      
+            <li class="social-icon"><a href="http://instagram.com/icuinparis" title="ICU on Instagram"><img src="/wp/wp-content/themes/icuinparis/img/icons/icon-instagram.png" alt="ICU on Instagram" /></a></li>
+            <li class="social-icon"><a href="http://youtube.com/icuinparis" title="ICU on YouTube"><img src="/wp/wp-content/themes/icuinparis/img/icons/icon-youtube.png" alt="ICU on YouTube" /></a></li>         
         </ul>
       </div><!--/.nav-collapse -->
     </div>

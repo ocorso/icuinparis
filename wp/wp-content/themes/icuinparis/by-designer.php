@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 	if ( have_posts() ) : while ( have_posts() ) : the_post(); 
 ?>                                                           
     	<div id="headline" class="row">
-    		<h1>Designers</h1>
+    		<h1>Shop By Designer</h1>
     	</div>
     	<div id="description" class="row">
 			<p>If you are a designer that would like to be featured on ICU in Paris, please fill out this
@@ -42,10 +42,10 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 			$loop = new WP_Query( $args );
 			while ( $loop->have_posts() ) : $loop->the_post();
 			
-				echo '<div class="post span3">';
+				
 					get_template_part( 'content', 'designer' );
                                                 
-				echo '</div>';
+				
 			endwhile;
 			?>
 </div><!-- /#content -->

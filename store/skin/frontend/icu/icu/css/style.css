@@ -977,9 +977,10 @@ input[type="submit"].btn01 {
 
 #signin_panel{
 	border-right: solid 1px #ccc;
+	padding-right: 50px;
 }
 #signup_panel{
-	margin-left: 74px;
+	margin-left: 50px;
 }
 
 

@@ -28,12 +28,17 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 					
 	$settings = woo_get_dynamic_values( $settings );
 ?>
-       
-    <div id="content" class="row">
+     <div id="headline" class="row">
+        <h1>Creative Community</h1>
+    </div>
+
+    <div id="post_content" class="row">
     
     	<?php woo_main_before(); ?>
-    	
-		<section id="main" class="col-left">
+    	<div class="span2">
+    		<?= the_tags(); ?>
+    	</div>
+		<section id="main" class="span7">
 		           
         <?php
         	if ( have_posts() ) { $count = 0;
@@ -50,8 +55,8 @@ if ( ! defined( 'ABSPATH' ) ) exit;
                 	
 	                <header>
 	                
-		                <h1><?php the_title(); ?></h1>
-	                	
+		                <h2><?php the_title(); ?></h2>
+	                	<p>by <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php printf( __( '%s', 'woothemes' ), get_the_author() ); ?></a> on <?php the_date(); ?>
 	                </header>
 	                
 	                <section class="entry fix">
@@ -65,30 +70,52 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 				<?php if ( isset( $woo_options['woo_post_author'] ) && $woo_options['woo_post_author'] == 'true' ) { ?>
 				<aside id="post-author" class="fix">
-					<div class="profile-image"><?php echo get_avatar( get_the_author_meta( 'ID' ), '70' ); ?></div>
+					
 					<div class="profile-content">
-						<h3 class="title"><?php printf( esc_attr__( 'About %s', 'woothemes' ), get_the_author() ); ?></h3>
+					
 						<?php the_author_meta( 'description' ); ?>
 						<div class="profile-link">
-							<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
-								<?php printf( __( 'View all posts by %s <span class="meta-nav">&rarr;</span>', 'woothemes' ), get_the_author() ); ?>
-							</a>
+				
 						</div><!-- #profile-link	-->
 					</div><!-- .post-entries -->
 				</aside><!-- .post-author-box -->
 				<?php } ?>
 
-				<?php woo_subscribe_connect(); ?>
+			<ul id="social_sharing">
+		
+				<!-- BEGIN FACEBOOK -->
+				<li class="facebook-like">
+				<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=567784666596189";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+					<div class="fb-like" data-href="http://developers.facebook.com/docs/reference/plugins/like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
+				</li>
+				<!-- END facebook -->
 
-	        <nav id="post-entries" class="fix">
-	            <div class="nav-prev fl"><?php previous_post_link( '%link', '%title' ); ?></div>
-	            <div class="nav-next fr"><?php next_post_link( '%link', '%title' ); ?></div>
+				<li class="google-plus">
+					<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+					<g:plusone></g:plusone>
+				</li>
+				<li class="twitter-share">
+					<a href="https://twitter.com/share" class="twitter-share-button" data-via="ocorso">Tweet</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+				</li>
+			</ul>
+			
+			<!-- BEGIN facebook comments -->
+			<div class="fb-comments" data-href="<?= get_permalink(); ?>" data-width="500" data-num-posts="10"></div>
+			<!-- END facebook comments -->
+	        <nav id="post_nav" class="row pull-right">
+	            <div class="nav-prev fl"><?php previous_post_link( '%link', 'Prev' ); ?></div>
+	            <div class="nav-next fr"><?php next_post_link( '%link', 'Next' ); ?></div>
 	        </nav><!-- #post-entries -->
+	       
             <?php
-            	// Determine wether or not to display comments here, based on "Theme Options".
-            	if ( isset( $woo_options['woo_comments'] ) && in_array( $woo_options['woo_comments'], array( 'post', 'both' ) ) ) {
-            		comments_template();
-            	}
 
 				} // End WHILE Loop
 			} else {
@@ -99,10 +126,6 @@ if ( ! defined( 'ABSPATH' ) ) exit;
        	<?php } ?>  
         
 		</section><!-- #main -->
-		
-		<?php woo_main_after(); ?>
-
-        <?php get_sidebar(); ?>
 
     </div><!-- #content -->
 		

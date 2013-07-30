@@ -309,8 +309,12 @@
 	<div>	  
 	<a 	href="<?php echo $_product->getProductUrl() ?>" 
 		onmouseout="MM_swapImgRestore()" 
-		onmouseover="MM_swapImage('<?php echo $i . "image"; ?>','','<?php echo $this->helper('catalog/image')->init($_product, 'thumbnail')->resize(195, 292); ?>',0)">
-		<img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(195, 292); ?>" alt="<?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?>" name="<?php echo $i . "image"; ?>" id="<?php echo $i . "image"; ?>" />
+		onmouseover="MM_swapImage('<?= $i . "image"; ?>','','<?=$this->helper('catalog/image')->init($_product, 'thumbnail')->resize(195, 292); ?>',0)">
+		<img src="<?= $this->helper('catalog/image')->init($_product, 'small_image')->resize(195, 292); ?>" alt="<?= $_helper->productAttribute($_product, $_product->getName(), 'name') ?>" 
+		name="<?= $i . "image"; ?>" 
+		id="<?= $i . "image"; ?>" 
+		data-over="<?=$this->helper('catalog/image')->init($_product, 'thumbnail')->resize(195, 292); ?>" 
+		data-out="<?= $this->helper('catalog/image')->init($_product, 'small_image')->resize(195, 292); ?>"/>
 	</a>
 </div><div>
 

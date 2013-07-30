@@ -15,6 +15,8 @@ jQuery(document).ready(function($) {
   main.initSwitcher();
   
   $('a[rel*=facebox]').facebox();
+
+  $('.pro_box a img').hover(function(){ var i= $(this); i.data(); i.attr("src", i.over); },function(){ var i= $(this); i.data(); i.attr("src", i.out); });
 });
 // =================================================
 // ================ oc: JQZoom

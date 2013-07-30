@@ -131,13 +131,8 @@ h1{
 }
 
 #footer {
-    border-top: opx solid #676D76;
-    color: #545454;
-    padding: 4.236em 0 2.618em;
-    height:400px;
-}
-
-#footer {
+    border-top: 1px solid #676D76;
+    padding: 42px 0 26px;
     color: #d1d1d1;
     text-align:center;
     background-image: url('../wp/wp-content/themes/icuinparis/img/bkgr_foot.jpg');

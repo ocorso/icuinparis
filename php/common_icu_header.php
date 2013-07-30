@@ -8,6 +8,7 @@
 <link media="all" href="<?= $base_url; ?>/php/ored-styles.css" type="text/css" rel="stylesheet">
 
 <script>  
+//
   var base_url = "<?= $base_url; ?>";
 </script>
 
@@ -46,7 +47,7 @@
             </li>
             <li class="social-icon"><a href="http://www.facebook.com/icuinparis" title="ICU on Facebook"><img src="/wp/wp-content/themes/icuinparis/img/icons/icon-facebook.png" alt="ICU on Facebook" /></a></li>       
             <li class="social-icon"><a href="http://twitter.com/icuinparis" title="ICU on Twitter"><img src="/wp/wp-content/themes/icuinparis/img/icons/icon-twitter.png" alt="ICU on Twitter" /></a></li>      
-            <li class="social-icon"><a href="http://instagram.com/icuinparis" title="ICU on Instagram"><img src="/wp/wp-content/themes/icuinparis/img/icons/icon-instagram.png" alt="ICU on Instagram" /></a></li>
+            <li class="social-icon"><a href="http://instagram.com/christansummers" title="ICU on Instagram"><img src="/wp/wp-content/themes/icuinparis/img/icons/icon-instagram.png" alt="ICU on Instagram" /></a></li>
             <li class="social-icon"><a href="http://youtube.com/icuinparis" title="ICU on YouTube"><img src="/wp/wp-content/themes/icuinparis/img/icons/icon-youtube.png" alt="ICU on YouTube" /></a></li>         
         </ul>
       </div><!--/.nav-collapse -->

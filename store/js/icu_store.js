@@ -1,6 +1,6 @@
 var main      = {};
 main.base_url = base_url;
-main.switcher             = {}; 
+main.switcher = {}; 
 
 // =================================================
 // ================ oc: Doc Ready
@@ -16,6 +16,11 @@ jQuery(document).ready(function($) {
   MM_preloadImages();
 
   $('a[rel*=facebox]').facebox();
+
+  $('.pro_box a img').hover(
+    function(){ var i=$(this); var d=i.data(); i.attr('src', d.over); }, 
+    function(){ i=$(this); var d=i.data(); i.attr('src', d.out); }
+    );
 });
 // =================================================
 // ================ oc: JQZoom

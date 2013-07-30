@@ -8,7 +8,7 @@ main.switcher = {};
 jQuery(document).ready(function($) {
 
   console.log("doc ready");
-
+  console.log("window width: "+$(window).width());
 
   initMenu();
   main.initJQZoom();

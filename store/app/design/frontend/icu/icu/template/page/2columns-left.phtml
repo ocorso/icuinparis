@@ -29,51 +29,48 @@
  * Template for Mage_Page_Block_Html
  */
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
 <?php echo $this->getChildHtml('head') ?>
 </head>
 <body>
-<?php echo $this->getChildHtml('after_body_start') ?>
-<?php echo $this->getChildHtml('global_notices') ?>
-<!-- oc: 2columns- left HEADER AND NAVIGATION SECTION -->
-<?php echo $this->getChildHtml('header') ?>
-<!-- /HEADER AND NAVIGATION SECTION -->
-<div class="clr"></div>
-<!-- BODY SECTION -->
-<div id="body_section">
-  <!-- body container -->
-  <div id="create_account">
+  <div id="wrapper" class="container">
+  <!-- oc: 2columns- left HEADER AND NAVIGATION SECTION -->
+  <?php echo $this->getChildHtml('header') ?>
+  <!-- /HEADER AND NAVIGATION SECTION -->
 
-    <div id="tagline_account">
-	<?php $user=$this->__('Hello %s!', Mage::getSingleton('customer/session')->getCustomer()->getName()); echo $user; ?>
-	</div>
-	
-    <div id="sidemenu_account">
-    <h5>My DashBoard</h5>
-    	<?php echo $this->getChildHtml('left') ?>
+<!-- BODY SECTION -->
+
+
+    <div id="headline">
+      <h1><?php $user=$this->__('Hello %s!', Mage::getSingleton('customer/session')->getCustomer()->getName()); echo $user; ?></h1>
+    </div>
+  <div class="container-fluid">
+    <div class="row-fluid">
+    <div id="sidebar" class="span2">
+      <h5>My Dashboard</h5>
+      <?= $this->getChildHtml('left') ?>
     </div>
     
-    <div id="content_account" style="padding-top:6px;">
+    <div id="content" class="span10">
 
+      <?= $this->getChildHtml('content') ?>
 
-
-      <?php //echo $this->getChildHtml('global_messages') ?>
-      <?php echo $this->getChildHtml('content') ?>
-      <p>&nbsp;</p>
-      <p>&nbsp;</p>
     </div>
-  </div>
-  <!-- /body container -->
-  <div class="clr"></div>
-</div>
+  </div></div>
 <!-- /BODY SECTION -->
-<div class="clr"></div>
-<?php echo $this->getChildHtml('before_body_end') ?>
-<div class="clr"></div>
+
+
+  </div>
+  <!-- end #wrapper -->
+
 <!-- FOOTER SECTION -->
 <?php echo $this->getChildHtml('footer') ?>
 <!-- /FOOTER SECTION -->
+
 </body>
 </html>

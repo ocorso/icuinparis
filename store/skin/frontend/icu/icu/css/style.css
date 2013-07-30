@@ -362,7 +362,9 @@ input[type="submit"].btn01 {
 	#pro_img_section .other_img ul.othpro li {margin:0; padding:16px; width:100px; height:auto; float:left; display:block;}
 
 
-
+#product_wrapper{
+	overflow: hidden;
+}
 #media_table{}
 
 	#pro_des_section {

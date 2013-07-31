@@ -69,7 +69,12 @@ body {
   position: relative;
   background: url("../../uploads/white.png");
 }
-
+.carousel-indicators li {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+.carousel-indicators .active {
+    background-color: #84bcbc;
+}
 .home #content {
     background: url("../../uploads/white.png");
     overflow: hidden;
@@ -357,7 +362,7 @@ footer a:hover{
 
 }
 .shop-all-btn{
-    background-color: #84bcbc;
+    background-color: #000;
     color: white;
     text-transform: uppercase;
     font-family: 'JosefinSansStdLight', 'Source Sans Pro', sans-serif;

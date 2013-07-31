@@ -29,8 +29,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
     		<h1>Shop By Designer</h1>
     	</div>
     	<div id="description" class="row">
-			<p>If you are a designer that would like to be featured on ICU in Paris, please fill out this
-			<a href="http://icuinparis.dev/store/designs" title="Submit Your Designs">Designer Submission Form</a> and we will get back to you shortly.</p>	
+    		<p><?= the_content(); ?></p>
   		</div>
   		
 <div id="content" class="row">	
@@ -51,6 +50,8 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 </div><!-- /#content -->
 		         
 	<?php endwhile; endif; ?>
-
-		
+<div class="row">
+	<p>If you are a designer that would like to be featured on ICU in Paris, please fill out this
+	<a href="http://icuinparis.dev/store/designs" title="Submit Your Designs">Designer Submission Form</a> and we will get back to you shortly.</p>	
+</div>
 <?php get_footer(); ?>

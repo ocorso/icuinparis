@@ -42,9 +42,10 @@
     <?php endif; ?>
     <?php echo $this->getProductListHtml() ?>
 <?php else: ?>
-<div style='font:24px/74px "Baskerville Handcut"'>
-    <?php //echo ($this->getHeaderText() || $this->getHeaderText() === false) ? $this->getHeaderText() : $this->__("Search results for '%s'", $this->helper('catalogsearch')->getEscapedQueryText()) ?>
+<div id="headline">
+    <h1>Search Results</h1>
 </div>
+<div class="description"><p><?= ($this->getHeaderText() || $this->getHeaderText() === false) ? $this->getHeaderText() : $this->__("Search results for '%s'", $this->helper('catalogsearch')->getEscapedQueryText()); ?></p></div>
 <p class="note-msg">
     <?php echo ($this->getNoResultText()) ? $this->getNoResultText() : $this->__('Your search returned no results. Please try searching for another term or start by using the menu above. You may have refined your search results to get here, if that is the case, please use the back button in your browser to continue.') ?>
     <?php if ($messages = $this->getNoteMessages()):?>

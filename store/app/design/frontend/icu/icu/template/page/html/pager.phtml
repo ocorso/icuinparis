@@ -88,12 +88,12 @@
                     href="<?php 
                     $t3array = explode("?", $this->helper('core/url')->getCurrentUrl()); 
                     echo $t3array[0]; ?>?limit=all<?php 
-                    if($_GET['price']){ echo "&price=" . $_GET['price']; } 
-                    if($_GET['style']){ echo "&style=" . $_GET['style']; } 
-                    if($_GET['countryorig']){ echo "&countryorig=" . $_GET['countryorig']; } 
-                    if($_GET['material']){ echo "&material=" . $_GET['material']; } 
-                    if($_GET['designer']){ echo "&designer=" . $_GET['designer']; } 
-                    if($_GET['q']){ echo "&q=" . $_GET['q']; } 
+                    if(isset($_GET['price'])){ echo "&price=" . $_GET['price']; } 
+                    if(isset($_GET['style'])){ echo "&style=" . $_GET['style']; } 
+                    if(isset($_GET['countryorig'])){ echo "&countryorig=" . $_GET['countryorig']; } 
+                    if(isset($_GET['material'])){ echo "&material=" . $_GET['material']; } 
+                    if(isset($_GET['designer'])){ echo "&designer=" . $_GET['designer']; } 
+                    if(isset($_GET['q'])){ echo "&q=" . $_GET['q']; } 
                     ?>" 
                     class="prodtitlelink"><?php if(Mage::app()->getStore()->getStoreId() == "1"){ echo "view all products"; }else{ echo "voir tous les produits"; } ?></a>
 
@@ -123,12 +123,12 @@
                     $t3array = explode('?', $this->helper('core/url')->getCurrentUrl()); 
                     echo $t3array[0]; 
                     ?>?limit=12&p=1<?php 
-                    if($_GET['price']){ echo "&price=" . $_GET['price']; } 
-                    if($_GET['style']){ echo "&style=" . $_GET['style']; } 
-                    if($_GET['countryorig']){ echo "&countryorig=" . $_GET['countryorig']; } 
-                    if($_GET['material']){ echo "&material=" . $_GET['material']; } 
-                    if($_GET['designer']){ echo "&designer=" . $_GET['designer']; } 
-                    if($_GET['q']){ echo "&q=" . $_GET['q']; }
+                    if(isset($_GET['price'])){ echo "&price=" . $_GET['price']; } 
+                    if(isset($_GET['style'])){ echo "&style=" . $_GET['style']; } 
+                    if(isset($_GET['countryorig'])){ echo "&countryorig=" . $_GET['countryorig']; } 
+                    if(isset($_GET['material'])){ echo "&material=" . $_GET['material']; } 
+                    if(isset($_GET['designer'])){ echo "&designer=" . $_GET['designer']; } 
+                    if(isset($_GET['q'])){ echo "&q=" . $_GET['q']; }
                     ?>">click here to show 12 per page </a><?php }?></div></div>
 		<?php } ?>
     	<?php if($this->getUseContainer()): ?>

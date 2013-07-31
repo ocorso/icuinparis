@@ -1176,8 +1176,12 @@ input, textarea, .uneditable-input {
 
 	#tagline_account {margin:0; padding:0; width:960px; height:auto; float:left; font:normal 24px/74px "Gotham-Light"; color:#000000;}
 
-
-
+.my-account{
+	margin-top: 30px;
+}
+#sidebar{
+	margin-top: 25px;
+}
 
 	#content_account h4 {font:normal 13px/30px "Gotham-Light"; color:#000000; text-transform:uppercase; padding-bottom:10px;}
 

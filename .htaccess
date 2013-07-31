@@ -19,3 +19,5 @@ RewriteRule . /index.php [L]
 </IfModule>
 
 # END WordPress
+
+SetEnv MAGE_IS_DEVELOPER_MODE true

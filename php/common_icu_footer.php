@@ -71,11 +71,7 @@ jQuery(document).ready(function($) {
 	<h4>E-Commerce Site Hours:</h4>
 	<p>Monday-Friday 9:00–7:00	</p>
 	<ul>
-<<<<<<< HEAD
 		<li><a href="<?= $base_url; ?>/store/terms" title="ICU Terms &amp; Conditions">Terms</a></li>
-=======
-<li><a href="<?= $base_url; ?>/store/terms" title="ICU Terms &amp; Conditions">Terms</a></li>
->>>>>>> 8ac9fbe603a3242af833cf4bd97dfd8dbe4b8316
 		<li><a href="<?= $base_url; ?>/store/privacy" title="ICU Privacy Policy">Privacy</a></li>
 		<li><a href="<?= $base_url; ?>/store/shipping" title="ICU Shipping">Shipping</a></li>
 		<li><a href="<?= $base_url; ?>/store/returns" title="ICU Returns">Returns</a></li>

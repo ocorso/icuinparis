@@ -39,7 +39,7 @@
 <table id="media_table" border="0" cellspacing="0" cellpadding="0">
 <tr>
 	<td>
-	<div id="product_bigimg">
+	<div id="product_bigimg" class="span4">
 
 		<a 	href="<?= $_product->getImageUrl(); ?>" 
 			class="jqzoom"
@@ -52,14 +52,16 @@
 		<ul id="thumblist">
 			<?php if (count($this->getGalleryImages()) > 0): ?>
 				<?php foreach ($this->getGalleryImages() as $_image): ?>
-				  <li><a href="javascript:void(0);" class="" 
-				  				  rel="{gallery:'product-gallery',smallimage:'<?= $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(350,525); ?>',largeimage:'<?= $this->helper('catalog/image')->init($this->getProduct(), '', $_image->getFile()); ?>'}"
+				  <li>
+				  	<a 	href="javascript:void(0);" 
+				  		class="" 
+				  		rel="{gallery:'product-gallery',smallimage:'<?= $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(350,525); ?>',largeimage:'<?= $this->helper('catalog/image')->init($this->getProduct(), '', $_image->getFile()); ?>'}"
+	  				  	data-large="<?= $this->helper('catalog/image')->init($this->getProduct(), '', $_image->getFile()); ?>"
 				  				  >
-				  				  	<img 
-				  				
-				  				  	src="<?= $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(75,125); ?>" 
-				  				  	alt="Product Thumbnail" />
-				  				  </a></li>
+				  		<img 	src="<?= $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(75,125); ?>" 
+				  				alt="Product Thumbnail"  />
+				  	</a>
+				  </li>
 				<?php endforeach; ?>
 			<?php endif; ?>
 		</ul>

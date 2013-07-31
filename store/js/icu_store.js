@@ -11,12 +11,17 @@ jQuery(document).ready(function($) {
   console.log("window width: "+$(window).width());
 
   initMenu();
-  main.initJQZoom();
+  //main.initJQZoom();
   main.initSwitcher();
-  MM_preloadImages();
+
 
   $('a[rel*=facebox]').facebox();
 
+  $('#thumblist a').click(function(){
+    var d     = $(this).data();
+    var src   = d.large;
+    $("#image_big").attr("src",src);
+  });
 
   $('.pro_box a img').hover(
     function(){ var i=$(this); var d=i.data(); i.attr('src', d.over); }, 

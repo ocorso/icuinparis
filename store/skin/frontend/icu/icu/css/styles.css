@@ -170,9 +170,6 @@ button.btn-checkout.no-checkout span span { background-position:100% 100%; }
 
 p.control input.checkbox,
 p.control input.radio { margin-right:6px; }
-/* Form Highlight */
-input.input-text:focus,select:focus,textarea:focus { background-color:#ffffff; }
-/*.highlight { background:#efefef; }*/
 
 /* Form lists */
 /* Grouped fields */
@@ -1143,8 +1140,10 @@ tr.summary-details-excluded { font-style:italic; }
 .cart .page-title .checkout-types li { margin:0 0 5px; }
 .cart .title-buttons .checkout-types { float:right; }
 .cart .title-buttons .checkout-types li { float:left; margin:0 0 5px 5px; }
-
 /* Shopping Cart Table */
+#shopping-cart-table{
+	margin-top: 30px;
+}
 .cart-table th { padding:2px 10px; }
 .cart-table td { padding:10px; }
 .cart-table .product-name { font-weight:bold; margin:0 0 5px; color:#2f2f2f; }
@@ -1306,6 +1305,7 @@ tr.summary-details-excluded { font-style:italic; }
 /********** Common Checkout Styles > */
 
 /* One Page Checkout */
+#checkoutSteps{ margin-top: 30px;}
 .block-progress { border:0; margin:0; }
 .block-progress .block-title { background:none; border:0; padding:0; margin:0 0 5px; }
 .block-progress .block-title strong { font-size:13px; color:#0a263c; }

@@ -161,12 +161,7 @@ h2.home-footer, #footer_widgets h2 {
     padding-top: 50px;
 }
 
-footer a{
-    color: white;
-}
-footer a:hover{
-    color: #D1D1D1;
-}
+    
 
 .page #content header p, .single #content header p {
     
@@ -297,7 +292,7 @@ footer a:hover{
     font-weight: bold;
     font-size: 1.2em;
     text-transform: uppercase;
-    background-color: #84bcbc;
+    background-color: #000;
     color: white;
     padding: 7px 10px;
 }
@@ -369,11 +364,13 @@ footer a:hover{
     margin-top: 15px;
     display: block;
     padding-top: 20px;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
     font-size: 1.6em;
     text-align: center;
 }
-
+.shop-all-btn:hover{
+      background-color: #a0a0a0;
+}
 .by-designer-btn{
     background-color: #000;
     color: #fff;
@@ -385,6 +382,9 @@ footer a:hover{
     width: 157px;
     text-align: center;
 }
+#post_content header{
+    padding-bottom: 20px;
+}
 /*****************************************************************************
 /*****************************************************************************
 /* @Post @single */
@@ -393,11 +393,14 @@ footer a:hover{
 #post_content{
     border-top: 2px solid #eaeaea;
     padding-top: 20px;
-    margin-top:20px;
+    margin-top:45px;
 }
 #post_content h2{
-    font-size: 5.2em;
+    font-size: 3.2em;
     font-family: "Gotham-Light", sans-serif;
+}
+#post_content p{
+    font-size:1.2em;
 }
 #social_sharing li{
     list-style: none;
@@ -410,13 +413,13 @@ footer a:hover{
 .fb_comments{
     display: block;
 }
-#post_nav div{ display: inline-block;}
-#post_nav a{
+#post_content nav div{ display: inline-block;}
+#post_content nav a{
     background-color: #000;
     color: #fff;
-    margin: 5px;
+    margin: 4px;
     text-transform: uppercase;
-    font-size: 2.7em;
+    font-size: 1.9em;
     font-family: "Gotham-Light", sans-serif;
     display:block;
     padding: 10px;

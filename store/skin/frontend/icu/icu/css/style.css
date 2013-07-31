@@ -322,7 +322,9 @@ input[type="submit"].btn01 {
 
 	#product_images {position:relative; left:0px; top:15px; width:125px; height:450px;}
 
-	#product_bigimg {position:relative; left: 25px; top:15px; width:375px; height:450px; }
+	#product_bigimg {
+	/*	position:relative; left: 25px; top:15px; width:375px; height:450px; */
+	}
 
 	#product_container {margin:0; padding-top:45px; width:400px; height:auto; float:left; position:relative;}
 
@@ -446,7 +448,10 @@ input[type="submit"].btn01 {
 	box-shadow: none;
 		text-align:center;
 	}
-
+#qty{
+	width: 32px;
+	text-align: center;
+}
 	.shippingtitle {font:"GeosansLight"; color:#000000;}
 
 	.standardbutton {
@@ -1923,10 +1928,20 @@ color:#000000;
 	#store_subnav_wrapper{
 		position: relative;
 	}
-	ol,ul{ margin: 0;}
-	.hdr-search{ float: left;}
-input, textarea, .uneditable-input {
-    width: 150px;
-}
-}
 
+	ol,ul{ margin: 0;}
+	
+	.hdr-search{ float: left;}
+
+	input, textarea, .uneditable-input {
+    	width: 150px;
+	}
+	.product-detail-box {
+    	height: 195px;
+    }
+}
+@media (max-width: 753px) {
+	#product_bigimg img{
+		width: 100%;
+	}
+}

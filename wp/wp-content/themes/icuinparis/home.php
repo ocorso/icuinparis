@@ -31,7 +31,7 @@ Template Name: Home
 
 
     	<div id="store_featurette_header" class="row">
-         	<h1 class="span8">Shop ICU Online</h1>
+         	<h1 class="span8">Shop Online</h1>
          	<a class="shop-all-btn span2" href="<?= get_bloginfo('url'); ?>/store/mens" title="Shop ICU Mens">Shop Mens</a>
          	<a class="shop-all-btn span2" href="<?= get_bloginfo('url'); ?>/store/womens" title="Shop ICU Womens">Shop Womens</a>
         </div><!--/#store_featurette_header .row-->

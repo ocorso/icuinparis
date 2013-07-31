@@ -29,7 +29,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
     		<h1><?php the_title(); ?></h1>
     	</div>
     	<div id="description" class="row">
-	    	<p class="span12">Showroom ICU is the business-to-business division of the ICU e-shop. We represent a curated selection of designers for international retail distribution. To receive look books and linesheets for any of the designers listed below, <a title="Christan Summers" href="mailto:christan@icuinparis.com">please contact us</a>. </p>
+	    	<p>Showroom ICU is the business-to-business division of the ICU e-shop. We represent a curated selection of designers for international retail distribution. To receive look books and linesheets for any of the designers listed below, <a title="Christan Summers" href="mailto:christan@icuinparis.com">please contact us</a>. </p>
   		</div>
   		
 <div id="content">	

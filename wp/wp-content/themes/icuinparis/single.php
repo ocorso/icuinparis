@@ -37,6 +37,10 @@ if ( ! defined( 'ABSPATH' ) ) exit;
     	<?php woo_main_before(); ?>
     	<div class="span2">
     		<?= the_tags(); ?>
+    		<nav>
+	            <div class="nav-prev fl"><?php previous_post_link( '%link', 'Prev' ); ?></div>
+	            <div class="nav-next fr"><?php next_post_link( '%link', 'Next' ); ?></div>
+	        </nav><!-- #post-entries -->
     	</div>
 		<section id="main" class="span7">
 		           
@@ -85,7 +89,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 		
 				<!-- BEGIN FACEBOOK -->
 				<li class="facebook-like">
-				<div id="fb-root"></div>
+					<div id="fb-root"></div>
 					<div class="fb-like" data-href="http://developers.facebook.com/docs/reference/plugins/like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
 				</li>
 				<!-- END facebook -->
@@ -101,9 +105,9 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 			</ul>
 			
 			<!-- BEGIN facebook comments -->
-			<div class="fb-comments" data-href="<?= get_permalink(); ?>" data-width="500" data-num-posts="10"></div>
+			<div class="fb-comments span7" data-href="<?= get_permalink(); ?>"  data-num-posts="10"></div>
 			<!-- END facebook comments -->
-	        <nav id="post_nav" class="row pull-right">
+	        <nav class="row pull-right">
 	            <div class="nav-prev fl"><?php previous_post_link( '%link', 'Prev' ); ?></div>
 	            <div class="nav-next fr"><?php next_post_link( '%link', 'Next' ); ?></div>
 	        </nav><!-- #post-entries -->

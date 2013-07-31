@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
         <h1>Creative Community</h1>
     </div>
     <div id="description" class="row">
-        <p class="span12">Wherever we go, whomever we meet, we are inspired. The Creative Community page is our digital journal. Are you in the creative industry and have something to share? An expo or event you think we'll enjoy? <a href="mailto:submissions@icuinparis.com">Tell us</a>.</p>
+        <p>Wherever we go, whomever we meet, we are inspired. The Creative Community page is our digital journal. Are you in the creative industry and have something to share? An expo or event you think we'll enjoy? <a href="mailto:submissions@icuinparis.com">Tell us</a>.</p>
     </div>
     
     <?php get_sidebar(); ?>

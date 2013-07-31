@@ -14,18 +14,18 @@ Template Name: Home
 		 </ol>
 		 <!-- Carousel items -->
 		<div class="carousel-inner">
-			<div class="active item">
-				<img src="<?= get_bloginfo('wpurl'); ?>/wp-content/uploads/0000_video.png" alt="" class="woo-image slide-image" />
-			</div>
-			<div class="item">
+			<a href="<?= get_bloginfo('url'); ?>/creative-community" class="active item">
 				<img src="<?= get_bloginfo('wpurl'); ?>/wp-content/uploads/0001_CREATIVE-COMMUNITY.png" alt="" class="woo-image slide-image" />			
-			</div>
-			<div class="item">
+			</a>
+            <a href="<?= get_bloginfo('url'); ?>/wholesale" class="item">
+                <img src="<?= get_bloginfo('wpurl'); ?>/wp-content/uploads/0000_video.png" alt="" class="woo-image slide-image" />
+            </a>
+			<a href="<?= get_bloginfo('url'); ?>/wholesale" class="item">
 				<img src="<?= get_bloginfo('wpurl'); ?>/wp-content/uploads/0002_VASKOLG-ESPARATA-SHELL-NECKLACE-GIVE-THEM-SOMETHINGTHEYVE-NE.png" alt="" class="woo-image slide-image" />
-			</div>
-			<div class="item">
+			</a>
+			<a href="<?= get_bloginfo('url'); ?>/store/womens?designer=44" class="item">
 				<img src="<?= get_bloginfo('wpurl'); ?>/wp-content/uploads/0003_NOOT-SS_13.png" alt="" class="woo-image slide-image" />
-			</div>
+			</a>
 		</div>
 	</div><!--/#featured_slider-->
 

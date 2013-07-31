@@ -362,7 +362,9 @@ input[type="submit"].btn01 {
 	#pro_img_section .other_img ul.othpro li {margin:0; padding:16px; width:100px; height:auto; float:left; display:block;}
 
 
-
+#product_wrapper{
+	overflow: hidden;
+}
 #media_table{}
 
 	#pro_des_section {
@@ -854,7 +856,9 @@ input[type="submit"].btn01 {
 
 	#content3 .designer_design img {display:block}
 
-
+input, textarea, .uneditable-input {
+    width: 250px;
+}
 #design-submit-form {
 	width: 575px;	
 	padding:0; 
@@ -1906,11 +1910,19 @@ color:#000000;
 /* @media queries */
 /*****************************************************************************
 /*****************************************************************************/
+@media (max-width: 1198px) {
+	input, textarea, .uneditable-input {
+    width: 202px;
+}
+}
 @media (max-width: 979px) {
 	#store_subnav_wrapper{
 		position: relative;
 	}
 	ol,ul{ margin: 0;}
 	.hdr-search{ float: left;}
+input, textarea, .uneditable-input {
+    width: 150px;
+}
 }
 

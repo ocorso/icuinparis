@@ -36,31 +36,33 @@
     $_helper = $this->helper('catalog/output');
 ?>
 
-	<table id="media_table" border="0" cellspacing="0" cellpadding="0">
-		<tr>
-			<td width="450">
-			<div id="product_bigimg">
-				
-				<table>
-					<tr>
-						<td width="0">
-							<a href="<?php echo $this->helper('catalog/image')->init($_product, 'image'); ?>" class="jqzoom" id="axss"><img id="imagebigg" src="<?php echo $this->helper('catalog/image')->init($_product, 'image')->resize(350, 525); ?>" alt="" width="350" /></a>
-						</td>
-					</tr>
-				</table>
-						
-			</div>
-			</td>
-			<td height="540" width="125">
-				<div id="product_images">
-					<?php if (count($this->getGalleryImages()) > 0): ?>
-						<?php foreach ($this->getGalleryImages() as $_image): ?>
-						  <div class="box2"><img onclick="showBigImageDiv('<?php echo $this->helper('catalog/image')->init($this->getProduct(), '', $_image->getFile()); ?>', '<?php echo $this->helper('catalog/image')->init($this->getProduct(), '', $_image->getFile())->resize(350, 525); ?>')" style="cursor:pointer;" src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(75,125); ?>" alt="" /></div>
-						<?php endforeach; ?>
-					<?php endif; ?>
-				</div>
-			</td>
-		</tr>
+<table id="media_table" border="0" cellspacing="0" cellpadding="0">
+<tr>
+	<td>
+	<div id="product_bigimg">
 
-      
-	</table>
+		<a 	href="<?= $_product->getImageUrl(); ?>" 
+			class="jqzoom"
+			rel="product-gallery">
+			<img id="image_big" src="<?= $this->helper('catalog/image')->init($_product, 'image')->resize(350, 525); ?>" alt="" />
+		</a>			
+	</div>
+	</td>
+	<td>
+		<ul id="thumblist">
+			<?php if (count($this->getGalleryImages()) > 0): ?>
+				<?php foreach ($this->getGalleryImages() as $_image): ?>
+				  <li><a href="javascript:void(0);" class="" 
+				  				  rel="{gallery:'product-gallery',smallimage:'<?= $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(350,525); ?>',largeimage:'<?= $this->helper('catalog/image')->init($this->getProduct(), '', $_image->getFile()); ?>'}"
+				  				  >
+				  				  	<img 
+				  				
+				  				  	src="<?= $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(75,125); ?>" 
+				  				  	alt="Product Thumbnail" />
+				  				  </a></li>
+				<?php endforeach; ?>
+			<?php endif; ?>
+		</ul>
+	</td>
+</tr>
+</table>

@@ -56,6 +56,9 @@ ul.sub-menu li {
     padding: 10px 5px;
     
 }
+.social-icon img{
+    width: 17px;
+}
 .dropdown-menu{
     background-color: #666666;
     color: white;

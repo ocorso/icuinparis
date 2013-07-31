@@ -221,6 +221,8 @@ h2.home-footer, #footer_widgets h2 {
     margin-right: 46px;
     padding-bottom:10px;
     padding-top:10px;
+    padding-left: 15px;
+    padding-right: 15px;
     overflow: hidden;
     transition: all 0.2s ease 0s;
     linear-gradient(to bottom, #111111 0%, #222222 100%) repeat scroll 0 0 transparent;

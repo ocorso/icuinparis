@@ -14,10 +14,12 @@ if($urlpieces[4] && $urlpieces[4] == "?success%2F="): ?>
 <?php endif; ?>
 
 
-	<header id="submit_designs_header" class="container">
-   	<h2 class="span10 offset2">Submit Your Design</h2>
+<div class="headline">
+   	<h1>Submit Your Design</h1>
+</div>
+<div class="description">
     <p class="span8 offset2">We want to see you and depending on your creative outlet, you could be the next featured designer sold on I C U, or the subject for our next blog post, or even the next street style love for the day. Submit. You never know, you could be the next big inspiration... Click <a href="#" onclick="MM_openBrWindow('<?php echo $this->getUrl('').'more-design-info.html' ?>','termsconditions','scrollbars=yes,width=720,height=460')">HERE</a> for more info. </p>
-</header>
+</div>
 
 <form id="design-submit-form" class="container" action="<?= $this->getUrl('designs/') ?>index/sendemail" method="post" enctype="multipart/form-data">
     

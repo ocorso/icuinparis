@@ -1134,7 +1134,7 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* Shopping Cart ========================================================================= */
 .cart .page-title { border-bottom:0; margin:0 0 12px; }
-.cart .page-title h1 { margin:10px 0 0; }
+
 
 /* Checkout Types */
 .cart .page-title .checkout-types li { margin:0 0 5px; }
@@ -1142,7 +1142,10 @@ tr.summary-details-excluded { font-style:italic; }
 .cart .title-buttons .checkout-types li { float:left; margin:0 0 5px 5px; }
 /* Shopping Cart Table */
 #shopping-cart-table{
-	margin-top: 30px;
+	margin-top: 45px;
+}
+#shopping-cart-table a img{
+	max-width: none;
 }
 .cart-table th { padding:2px 10px; }
 .cart-table td { padding:10px; }

@@ -226,6 +226,7 @@ h2.home-footer, #footer_widgets h2 {
     overflow: hidden;
     transition: all 0.2s ease 0s;
     linear-gradient(to bottom, #111111 0%, #222222 100%) repeat scroll 0 0 transparent;
+    line-height: 20px;
 }
 
 #ourdesigners .designer:hover .popup{
@@ -386,6 +387,10 @@ h2.home-footer, #footer_widgets h2 {
 }
 #post_content header{
     padding-bottom: 20px;
+}
+.page-numbers{
+    font-size: 2.2em;
+    margin-right: 5px;
 }
 /*****************************************************************************
 /*****************************************************************************

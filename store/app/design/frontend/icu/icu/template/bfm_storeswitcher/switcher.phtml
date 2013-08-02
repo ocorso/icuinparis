@@ -4,88 +4,63 @@ $_current_currency  = $this->getCurrentCurrency();
 
 ?>
 <div class="b-style-dropdown b-style-dropdown_state_close">
+   
     <dl class="b-style-dropdown__wrap">
         <dt>
-            <span class="b-style-dropdown__placeholder"><?php
-            echo $this->__($this->htmlEscape($_current_store->getName()));
-            
-            ?>
-                <i class="b-style-dropdown__flag">
-                    <img src="<?php 
-                    if($_current_store->getLocaleCode() == 'fr_FR') echo $this->getSkinUrl('images/fr.png');
-                    else echo $this->getSkinUrl('images/uk.png');
-                    ?>" alt="<?php echo $this->__($this->htmlEscape($_current_store->getName())); ?>" />
-                </i>
-            </span>
-            <span class="b-style-dropdown__currentcy"><?php 
+            <span class="b-style-dropdown__currentcy">
+                Currency: <?php 
             switch($_current_currency)
 			{
 				case "USD": echo '$'; break;
 				case "GBP": echo '&pound;'; break;
 				case "EUR": echo '&euro;'; break;
-				default: echo $_current_currency; break;
+				//default: echo $_current_currency; break;
 			}
 			
             ?></span>
             <a href="#/b-style-dropdown_state_open" class="switcher-btn">Open</a>
         </dt>
+       
         <dd class="b-style-dropdown__inner">
-            <strong>Select your language</strong>
-            <ul class="b-style-dropdown__list">
-<?php foreach ($this->getLanguages() as $_lang):
-$_selected = $_lang->getCode() == $this->getCurrentStoreCode(); 
-?>
-                <li class="b-style-dropdown__list__item">
-                <?php if(!$_selected) : ?>
-                    <a href="<?php echo $this->getLanguageUrl($_lang) ?>" class="b-style-dropdown__list__link<?php if($_selected):?> b-style-dropdown__list__link_state_current<?php endif; ?>">
-                <?php endif; ?>
-                        <span class="b-style-dropdown__list__icon"><img src="<?php 
-                        
-                        if($_lang->getLocaleCode() == 'fr_FR') echo $this->getSkinUrl('images/fr.png');
-                        else echo $this->getSkinUrl('images/uk.png');
-                        
-                        
-                        ?>" alt="" /></span>
-                        <?php echo $this->__($this->htmlEscape($_lang->getName())); ?>
-                <?php if(!$_selected) : ?>
-                    </a>
-                <?php endif; ?>
-                </li>
-<?php endforeach; ?>
-            </ul>
+           
             <strong>Select your currency</strong>
+            
             <ul class="b-style-dropdown__list">
-<?php foreach ($this->getCurrencies() as $_code):
-$_selected = $this->getCurrentCurrency() == $_code;
-$_currency = $_code;
-$_sign = '';
-switch($_code)
-{
-	case "USD":
-	$_currency = $this->__('US Dollars');
-	$_sign     = '$';
-	break;
-	case "GBP":
-	$_currency = $this->__('Pounds');
-	$_sign     = '&pound;';
-	break;
-	case "EUR":
-	$_currency = $this->__('Euros');
-	$_sign     = '&euro;';
-	break;
-}
+    <?php foreach ($this->getCurrencies() as $_code):
+        $_selected  = $this->getCurrentCurrency() == $_code;
+        $_currency  = $_code;
+        $_sign      = '';
+        switch($_code)
+        {
+        	case "USD":
+        	$_currency = $this->__('US Dollars');
+        	$_sign     = '$';
+        	break;
+        	case "GBP":
+        	$_currency = $this->__('Pounds');
+        	$_sign     = '&pound;';
+        	break;
+        	case "EUR":
+        	$_currency = $this->__('Euros');
+        	$_sign     = '&euro;';
+        	break;
+        }
+
+        if( $_code == "USD" || $_code == "GBP" || $_code == "EUR") :
 ?>
+
                 <li class="b-style-dropdown__list__item">
-<?php if(!$_selected) :?>
-                    <a href="<?php echo $this->getCurrencyUrl($_code);?>" class="b-style-dropdown__list__link<?php if($_selected):?> b-style-dropdown__list__link_state_current<?php endif; ?>">
-<?php endif; ?>                    
-                        <span class="b-style-dropdown__list__icon"><?php echo $_sign ?></span>
-                        <?php echo $_currency?>
-<?php if(!$_selected) :?>
+            <?php if(!$_selected) :?>
+                    <a href="<?= $this->getCurrencyUrl($_code); ?>" class="b-style-dropdown__list__link<?php if($_selected):?> b-style-dropdown__list__link_state_current<?php endif; ?>">
+            <?php endif; ?>                    
+                        <span class="b-style-dropdown__list__icon"><?= $_sign; ?></span>
+                        <?= $_currency; ?>
+            <?php if(!$_selected) :?>
                     </a>
-<?php endif; ?>                    
+            <?php endif; ?>                    
                 </li>
-<?php endforeach; ?>
+
+    <?php endif; endforeach; ?>
             </ul>
             <!-- b-style-dropdown__list -->
         </dd>

@@ -94,8 +94,14 @@ input[type="submit"].btn01 {
 	text-transform:uppercase; 
 	cursor:pointer;
 }
+#add_to_cart .icu-btn{
+	background-color: black;
+	margin-left: 0;
+}
 
-
+#add_to_cart{
+	margin-bottom: 20px;
+}
 
 /* ---------------------------- Header Styles ---------------------------- */
 #wrapper{ 
@@ -290,6 +296,7 @@ input[type="submit"].btn01 {
 #navigation_section {margin:0 auto; padding:0; width:960px; height:22px; background-color:#000000; left: -1px;}
 .pages ol li{
 	display: inline;
+	font-size: 1.7em;
 }
 
 

@@ -206,118 +206,47 @@
 
 </div>
 <div id="store_content" class="span10">
- <div id="pagination" class="row">
-	  <?= $this->getToolbarHtml(); ?>
-	   <div id="sort_controls" class="pull-left" >
 
-	 <?php 
-	  	$totalfilters = 0;
-	  	/*
-	  	$breadcrumbs = $this->getLayout()->getBlock('breadcrumbs');
-	  	if($breadcrumbs) echo $breadcrumbs->toHtml();
-	  	 */
-		if(Mage::app()->getStore()->getStoreId() == "1"){ echo "Sort by price"; }else{ echo "Trier par prix"; } ?>: <?php echo "<a href=\"?";
-				if(isset($_GET['price'])){ 
-					echo "&price=" . $_GET['price'];
-				}
-				if(isset($_GET['countryorig'])){
-					echo "&countryorig=" . $_GET['countryorig'];
-				}
-				if(isset($_GET['style'])){
-					echo "&style=" . $_GET['style'];
-				}
-				if(isset($_GET['material'])){
-					echo "&material=" . $_GET['material'];
-				}
-				if(isset($_GET['material_2'])){
-					echo "&material_2=" . $_GET['material_2'];
-				}
-				if(isset($_GET['designer'])){
-                	echo "&designer=" . $_GET['designer'];
-                }
-				if(isset($_GET['limit'])){
-					echo "&limit=" . $_GET['limit'];
-				}
-				if(isset($_GET['q'])){
-					echo "&q=" . $_GET['q'];
-				}
-				if(Mage::app()->getStore()->getStoreId() == "1"){
-					echo "&dir=desc&order=price\" class=\"tTip\" title=\"Sort High to Low\">High</a> | ";
-				}else{
-					echo "&dir=desc&order=price\" class=\"tTip\" title=\"Trier max à min\">Max</a> | ";
-				}
-				
-				echo "<a href=\"?";
-				if(isset($_GET['price'])){ 
-					echo "&price=" . $_GET['price'];
-				}
-				if(isset($_GET['countryorig'])){
-					echo "&countryorig=" . $_GET['countryorig'];
-				}
-				if(isset($_GET['style'])){
-					echo "&style=" . $_GET['style'];
-				}
-				if(isset($_GET['material'])){
-					echo "&material=" . $_GET['material'];
-				}
-				if(isset($_GET['material_2'])){
-					echo "&material_2=" . $_GET['material_2'];
-				}
-				if(isset($_GET['designer'])){
-                	echo "&designer=" . $_GET['designer'];
-                }
-				if(isset($_GET['limit'])){
-					echo "&limit=" . $_GET['limit'];
-				}
-				if(isset($_GET['q'])){
-					echo "&q=" . $_GET['q'];
-				}
-				if(Mage::app()->getStore()->getStoreId() == "1"){
-					echo "&dir=asc&order=price\" title=\"Sort Low to High\">Low</a>";
-				}else{
-					echo "&dir=asc&order=price\" title=\"Trier min à max\">Min</a>";
-                }?>
-        <?php 
-		echo "</div>";
-		?>
-
+	 <div id="pagination" class="row">
+		  <?= $this->getToolbarHtml(); ?>
 	</div> <!-- end #pagination -->
+
 	<?php if(!$_productCollection->count()): ?>
 	<div class="std row">
 		<?= $this->__('There are no products matching the selection.') ?>
 	</div>
-<?php else: ?>
+	<?php else: ?>
 	
-<?php // Grid Mode 
-    if($this->getMode()=='grid'): 
-    	$_collectionSize 	= $_productCollection->count();
-   		$_columnCount 		= $this->getColumnCount(); 
-  		$i 					= 0; 
+		<?php // Grid Mode 
+	    if($this->getMode()=='grid'): 
+	    	$_collectionSize 	= $_productCollection->count();
+	   		$_columnCount 		= $this->getColumnCount(); 
+	  		$i 					= 0; 
 
-    	foreach ($_productCollection as $_product): 
-    		
-			$attributeId 	= '119';
-			$attributes 	= $_product->getAttributes();
-			$designer 		= ucwords($attributes['designer']->getFrontend()->getValue($_product));
-		//	$designer 		= $_product->getAttributeText('designer');
-		
-	?>
-	  	
+	    	foreach ($_productCollection as $_product): 
+	    		
+				$attributeId 	= '119';
+				$attributes 	= $_product->getAttributes();
+				$designer 		= ucwords($attributes['designer']->getFrontend()->getValue($_product));
+			//	$designer 		= $_product->getAttributeText('designer');
+			
+		?>
+		  	
 	 
 	  
-<div class="pro_box span3">
-	<a 	href="<?= $_product->getProductUrl() ?>" title="<?= $_helper->productAttribute($_product, $_product->getName(), 'name') ?>" >
-		<img 
-		src="<?= $this->helper('catalog/image')->init($_product, 'small_image')->resize(195, 292); ?>" 
-		alt="<?= $_helper->productAttribute($_product, $_product->getName(), 'name') ?>" 
-		name="<?= $i . "image"; ?>" 
-		id="<?= $i . "image"; ?>" 
-		data-over="<?= $this->helper('catalog/image')->init($_product, 'thumbnail')->resize(195, 292); ?>"
-		data-out="<?= $this->helper('catalog/image')->init($_product, 'small_image')->resize(195, 292); ?>"
-		/>
+		<div class="pro_box span3">
+			<a 	href="<?= $_product->getProductUrl() ?>" title="<?= $_helper->productAttribute($_product, $_product->getName(), 'name') ?>" >
+				<img 
+				src="<?= $this->helper('catalog/image')->init($_product, 'small_image')->resize(195, 292); ?>" 
+				alt="<?= $_helper->productAttribute($_product, $_product->getName(), 'name') ?>" 
+				name="<?= $i . "image"; ?>" 
+				id="<?= $i . "image"; ?>" 
+				data-over="<?= $this->helper('catalog/image')->init($_product, 'thumbnail')->resize(195, 292); ?>"
+				data-out="<?= $this->helper('catalog/image')->init($_product, 'small_image')->resize(195, 292); ?>"
+				/>
 
-	</a>
-<div>
+			</a>
+		<div>
 
 
 	<a href="<?php echo $_product->getProductUrl(); ?>" class="prodtitlelink">

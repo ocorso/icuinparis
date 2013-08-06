@@ -545,10 +545,12 @@ input[type="submit"].btn01 {
 
 
 .pro_box{
-	margin-left: 10px !important;
+	margin-left: 11px !important;
 }
 
-
+.pro_box div{
+	height: 100px;
+}
 .scrollArea {
 	width: 150px;
 	height: 200px;

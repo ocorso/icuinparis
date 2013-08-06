@@ -74,6 +74,24 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 	                	<p>by <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php printf( __( '%s', 'woothemes' ), get_the_author() ); ?></a> on <?php the_date(); ?>
 	                </header>
 	                
+			        <ul id="social_sharing">
+				
+
+						<li class="twitter-share">
+							<a href="https://twitter.com/share" class="twitter-share-button" data-via="ocorso">Tweet</a>
+							<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+						</li>
+						<li class="google-plus">
+							<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+							<g:plusone></g:plusone>
+						</li>
+						<!-- BEGIN FACEBOOK -->
+						<li class="facebook-like">
+							<div id="fb-root"></div>
+							<div class="fb-like" data-href="<?= get_permalink(); ?>" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
+						</li>
+						<!-- END facebook -->
+					</ul>
 	                <section class="entry fix">
 	                	<?php the_content(); ?>
 						<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'woothemes' ), 'after' => '</div>' ) ); ?>
@@ -95,25 +113,6 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 					</div><!-- .post-entries -->
 				</aside><!-- .post-author-box -->
 				<?php } ?>
-
-			<ul id="social_sharing">
-		
-				<!-- BEGIN FACEBOOK -->
-				<li class="facebook-like">
-					<div id="fb-root"></div>
-					<div class="fb-like" data-href="http://developers.facebook.com/docs/reference/plugins/like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
-				</li>
-				<!-- END facebook -->
-
-				<li class="google-plus">
-					<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-					<g:plusone></g:plusone>
-				</li>
-				<li class="twitter-share">
-					<a href="https://twitter.com/share" class="twitter-share-button" data-via="ocorso">Tweet</a>
-					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-				</li>
-			</ul>
 			
 			<!-- BEGIN facebook comments -->
 			<div class="fb-comments span7" data-href="<?= get_permalink(); ?>"  data-num-posts="10"></div>

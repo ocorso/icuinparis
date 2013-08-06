@@ -414,13 +414,16 @@ h2.home-footer, #footer_widgets h2 {
 #post_content p{
     font-size:1.2em;
 }
+#social_sharing{
+    margin-left: 0px;
+}
 #social_sharing li{
     list-style: none;
-    display: inline;
-    margin-left: 20px;
+    display: inline-block;
+    margin-right: 10px;
 }
 #social_sharing li.twitter-share{
-    margin-left: -20px;
+   
 }
 .fb_comments{
     display: block;

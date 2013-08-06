@@ -150,7 +150,10 @@ select option { padding-right:10px; }
 select.multiselect option { border-bottom:1px solid #b6b6b6; padding:2px 5px; }
 select.multiselect option:last-child { border-bottom:0; }
 textarea { overflow:auto; }
-input.radio { margin-right:3px; }
+input.radio { 
+	float: left;
+	margin-right:3px; 
+}
 input.checkbox { 
 	margin-right:3px; 
 	margin-top: -1px;
@@ -159,7 +162,12 @@ input.checkbox {
 button.button::-moz-focus-inner { padding:0; border:0; } /* FF Fix */
 button.button { -webkit-border-fit:lines; } /* <- Safari & Google Chrome Fix */
 button.button { overflow:visible; width:auto; border:0; padding:0; margin:0; background:transparent; cursor:pointer; }
-button.button span { display:block; height:19px; border:1px solid #000000; background:#FFFFFF; padding:0 8px; font:bold 12px/19px Arial, Helvetica, sans-serif; text-align:center; white-space:nowrap; color:#000000; }
+button.button span { 
+	display:block; 
+	
+	border:1px solid #000000; 
+	background:#FFFFFF; padding:0 8px; font:bold 12px/19px Arial, Helvetica, sans-serif; text-align:center; white-space:nowrap; color:#000000; 
+}
 button.button span span { border:0; padding:0; }
 button.disabled span { border-color:#bbb !important; background:#bbb !important; }
 
@@ -180,7 +188,11 @@ p.control input.radio { margin-right:6px; }
 .form-list label.required em { float:right; font-style:normal; color:#eb340a; position:absolute; top:0; right:-8px; }
 .form-list li.control label { float:none; }
 .form-list li.control input.radio,
-.form-list li.control input.checkbox { margin-right:6px; }
+.form-list li.control input.checkbox { 
+	margin-right:6px; 
+	float: left;
+	margin-top: 1px;
+}
 .form-list li.control .input-box { clear:none; display:inline; width:auto; }
 /*.form-list li.fields { margin-right:-15px; }*/
 .form-list .input-box { display:block; clear:both; width:260px; }
@@ -297,8 +309,13 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
     top: 90px;
     width: auto;
 }
-.col-2 .messages, #checkoutsteps .messages{
-	position: relative;
+.col-2 .messages, #checkoutSteps .messages{
+	position: inherit;
+}
+#s_method_flatrate_flatrate, #allow_gift_messages{
+	float: left;
+	margin-top: 1px;
+	margin-right: 6px;
 }
 .messages li { margin:0 0 10px !important; }
 .messages li li { margin:0 0 3px !important; }
@@ -850,7 +867,7 @@ tr.summary-details-excluded { font-style:italic; }
 
 .price-box { 
 	font-family: "Gotham-light", sans-serif;
-	font-size: 2.7em;
+	font-size: 1.0em;
 	font-weight: bold;
 
 	margin:0 0; 
@@ -1299,7 +1316,10 @@ tr.summary-details-excluded { font-style:italic; }
 .opc .centinel { border:1px solid #bbb6a5; border-width:0 1px 1px; padding:10px 30px; }
 
 /* Generic Info Set */
-.info-set { background:#fbfaf6 url(../images/bkg_checkout.gif) 0 0 repeat-x; border:1px solid #bbb6a5; margin:0 0 25px; padding:20px; }
+.info-set { 
+	background:#fbfaf6 url(../images/bkg_checkout.gif) 0 0 repeat-x; border:1px solid #bbb6a5; margin:0 0 25px; padding:20px; 
+	margin-top: 35px;
+}
 .info-set h2 { font-size:13px; font-weight:bold; margin:0 0 10px; }
 .info-set h3,
 .info-set h4 { font-size:13px; font-weight:bold; color:#E26703; }

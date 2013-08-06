@@ -187,11 +187,17 @@ p.control input.radio { margin-right:6px; }
 .form-list .field { float:left; width:275px; }
 .form-list input.input-text { width:254px; }
 .form-list textarea { width:254px; height:10em; }
-.form-list select { width:260px; }
+.form-list select, .form-list select:focus { 
+	width:260px; 
+	outline: 0;
+	}
 .form-list li.wide .input-box { width:535px; }
 .form-list li.wide input.input-text { width:529px; }
 .form-list li.wide textarea { width:529px; }
-.form-list li.wide select { width:535px; }
+.form-list li.wide select, .form-list li.wide select:focus { 
+	width:535px; 
+	outline: 0;
+}
 .form-list li.additional-row { border-top:1px solid #ccc; margin-top:10px; padding-top:7px; }
 .form-list li.additional-row .btn-remove { float:right; margin:5px 0 0; }
 .form-list .input-range input.input-text { width:74px; }
@@ -290,6 +296,9 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
     position: absolute;
     top: 90px;
     width: auto;
+}
+.col-2 .messages, #checkoutsteps .messages{
+	position: relative;
 }
 .messages li { margin:0 0 10px !important; }
 .messages li li { margin:0 0 3px !important; }

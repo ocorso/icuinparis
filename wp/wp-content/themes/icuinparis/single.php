@@ -28,6 +28,17 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 					
 	$settings = woo_get_dynamic_values( $settings );
 ?>
+<!-- BEGIN facebook js -->
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=567784666596189";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- END facebook js -->
+
+
      <div id="headline" class="row">
         <h1>Creative Community</h1>
     </div>

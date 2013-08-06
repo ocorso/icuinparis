@@ -373,6 +373,8 @@ h2.home-footer, #footer_widgets h2 {
 }
 .shop-all-btn:hover{
       background-color: #a0a0a0;
+      color: white;
+      text-decoration: none;
 }
 .by-designer-btn{
     background-color: #000;
@@ -391,6 +393,9 @@ h2.home-footer, #footer_widgets h2 {
 .page-numbers{
     font-size: 2.2em;
     margin-right: 5px;
+}
+.submit p{
+    font-size: 1.2em;
 }
 /*****************************************************************************
 /*****************************************************************************

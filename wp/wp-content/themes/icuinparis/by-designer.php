@@ -48,9 +48,9 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 			endwhile;
 			?>
 </div><!-- /#content -->
-		         
 	<?php endwhile; endif; ?>
-<div class="row">
+		         
+<div class="submit">
 	<p>If you are a designer that would like to be featured on ICU in Paris, please fill out this
 	<a href="<?= bloginfo('url'); ?>/store/designs" title="Submit Your Designs">Designer Submission Form</a> and we will get back to you shortly.</p>	
 </div>

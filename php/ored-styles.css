@@ -204,6 +204,9 @@ h1{
     .navbar .btn-navbar {
         margin-right: 20px;
     }
+    #social_account li > a{
+        padding-left: 16px;
+    }
 }
 @media screen and (max-width: 480px) {
     .page #content header{

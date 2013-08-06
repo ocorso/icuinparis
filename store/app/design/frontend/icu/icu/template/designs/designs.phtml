@@ -14,11 +14,11 @@ if($urlpieces[4] && $urlpieces[4] == "?success%2F="): ?>
 <?php endif; ?>
 
 
-<div class="headline">
+<div id="headline" class="row">
    	<h1>Submit Your Design</h1>
 </div>
-<div class="description">
-    <p class="span8 offset2">We want to see you and depending on your creative outlet, you could be the next featured designer sold on I C U, or the subject for our next blog post, or even the next street style love for the day. Submit. You never know, you could be the next big inspiration... Click <a href="#" onclick="MM_openBrWindow('<?php echo $this->getUrl('').'more-design-info.html' ?>','termsconditions','scrollbars=yes,width=720,height=460')">HERE</a> for more info. </p>
+<div id="description" class="row">
+    <p class="">We want to see you and depending on your creative outlet, you could be the next featured designer sold on I C U, or the subject for our next blog post, or even the next street style love for the day. Submit. You never know, you could be the next big inspiration... Click <a href="<?= $this->getUrl(''); ?>terms" title="ICU Terms">HERE</a> for more info. </p>
 </div>
 
 <form id="design-submit-form" class="container" action="<?= $this->getUrl('designs/') ?>index/sendemail" method="post" enctype="multipart/form-data">
@@ -44,20 +44,9 @@ if($urlpieces[4] && $urlpieces[4] == "?success%2F="): ?>
           <h4 class="two">TELL US A LITTLE ABOUT YOU</h4>
           <div>
               <input name="name" id="name" class="required-entry span3" type="text" placeholder="Your Name" />
-              <input name="compname" id="compname" class="span3" type="text" placeholder="Company Name/Design Alias/Blog" />            
+              <input name="compname" id="compname" class="span3" type="text" placeholder="Company Name" />            
               <input name="website" id="website" class="validate-clean-url span3" type="text" placeholder="Website" />
               <input name="email" id="email" class="required-entry validate-email span3" type="text" placeholder="Email" />
-              <div class="styled-select span3">
-                <select name="agerange" id="agerange" class="required-entry span4">
-                    <option value="">Your age range</option>
-            				<option value="18-">18-</option>
-            				<option value="18-22">18-22</option>
-            				<option value="22-26">22-26</option>
-            				<option value="26-30">26-30</option>
-            				<option value="30-35">30-35</option>
-            				<option value="35+">35+</option>
-                </select>
-              </div>
           </div>
         </fieldset>
 
@@ -98,7 +87,7 @@ if($urlpieces[4] && $urlpieces[4] == "?success%2F="): ?>
         </fieldset>
     
     	 <div class="row-fluid">
-	      <input id="submit_design_btn" class="span6 offset3"  type="submit" value="Submit & Mercí"  />
+	      <input class="icu-btn span6 offset3"  type="submit" value="Submit & Mercí"  />
       </div>
     </form>
 <script>

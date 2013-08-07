@@ -6,7 +6,8 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  
 ?>
 <?php 
- $href = get_bloginfo('url') . '/store/designers/' . the_slug();
+ //$href = get_bloginfo('url') . '/store/designers/' . the_slug();
+	$href	= get_bloginfo('url') . "/store/womens/" . get_field("link_to_store");
  ?>
 	<article class="post span4 poopy">
 		<a class="article-inner" href="<?= $href; ?>" title="<?php the_title_attribute(); ?>">

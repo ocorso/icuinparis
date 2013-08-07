@@ -14,9 +14,6 @@ jQuery(document).ready(function($) {
   //main.initJQZoom();
   main.initSwitcher();
 
-
-  $('a[rel*=facebox]').facebox();
-
   $('#thumblist a').click(function(){
     var d     = $(this).data();
     var src   = d.large;

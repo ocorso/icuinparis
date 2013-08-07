@@ -20,7 +20,7 @@ Template Name: Home
             <a href="<?= get_bloginfo('url'); ?>/wholesale" class="item">
                 <img src="<?= get_bloginfo('wpurl'); ?>/wp-content/uploads/0000_video.png" alt="" class="woo-image slide-image" />
             </a>
-			<a href="<?= get_bloginfo('url'); ?>/wholesale" class="item">
+			<a href="<?= get_bloginfo('url'); ?>/store/esparta-shell-necklace.html" title="Shop the Esparata Shell Necklace" class="item">
 				<img src="<?= get_bloginfo('wpurl'); ?>/wp-content/uploads/0002_VASKOLG-ESPARATA-SHELL-NECKLACE-GIVE-THEM-SOMETHINGTHEYVE-NE.png" alt="" class="woo-image slide-image" />
 			</a>
 			<a href="<?= get_bloginfo('url'); ?>/store/womens?designer=44" class="item">

@@ -93,6 +93,7 @@ body {
     padding-bottom: 31px;
 }
 .product a{
+    font-family: arial, sans-serif;
     position: relative;
     display: block;
     text-transform: uppercase;
@@ -113,12 +114,16 @@ body {
     color: #000;  
     font-weight: bold;  
     margin-bottom: 5px;
+    margin-top: 5px;
 }
 .product a.product-name{
-    font-size: 1.4em;
+    font-size: 1.2em;
     color: #000;  
     text-transform: none;
     font-weight: normal;  
+}
+#footer_widgets_header div.span2 img{
+    margin-right: 15px;
 }
 #footer-widget-wrapper{
     background-color: #E6E6E6;
@@ -189,6 +194,9 @@ h2.home-footer, #footer_widgets h2 {
     padding: 0px;
     padding-bottom: 35px;
 }
+body.home footer#footer{
+    margin-top: 0;
+}
 /*****************************************************************************
 /*****************************************************************************
 /* @Wholesale */
@@ -217,7 +225,7 @@ h2.home-footer, #footer_widgets h2 {
     opacity: 0;
     bottom: -50px;
     position: absolute;
-    background-color:#E3B1B7;
+    background-color:#000;
     margin-right: 46px;
     padding-bottom:10px;
     padding-top:10px;
@@ -238,7 +246,7 @@ h2.home-footer, #footer_widgets h2 {
     bottom: 0;
 }
 
-#ourdesigners .designer .popup p, #ourdesigners .designer .popup h2, .designer-btn{
+#ourdesigners .designer .popup p, .designer-btn{
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -265,10 +273,11 @@ h2.home-footer, #footer_widgets h2 {
     width: 130px;
     text-align: center;
     margin:10px 0px;
-    margin-left: 10px;
+    margin-left: 0px;
 }
 #ourdesigners .designer .popup ul{
     list-style: none;
+    margin-left:0px;
 }
 #ourdesigners .designer .popup ul li{
     display: inline;
@@ -306,6 +315,7 @@ h2.home-footer, #footer_widgets h2 {
 
 #sidebar ul li a:hover{
     background-color: #a0a0a0;
+    text-decoration: none;
 }
 #sidebar #woo_search-2{
     float: right;
@@ -330,6 +340,9 @@ h2.home-footer, #footer_widgets h2 {
     text-transform: uppercase;
     height: 35px;
     display: block;
+}
+.post-title:hover{
+    text-decoration: none;
 }
 .post:hover .rollover{
     opacity: 1;
@@ -405,6 +418,12 @@ h2.home-footer, #footer_widgets h2 {
 }
 .submit p{
     font-size: 1.2em;
+}
+.archive-header{
+    margin-left: 
+}
+#sidebar ul li.current-cat a{
+    background-color: #a0a0a0;
 }
 /*****************************************************************************
 /*****************************************************************************

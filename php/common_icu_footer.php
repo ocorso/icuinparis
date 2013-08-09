@@ -27,7 +27,7 @@
 			<p>Merci!</p>
 		</div>
 		<div class="modal-footer">
-			<a href="#" class="icu-btn" data-dismiss="modal">OK</a>
+			<a href="#" data-dismiss="modal">OK</a>
 		</div>
 	</div>
 <script>
@@ -37,7 +37,7 @@ var emailController 	= {};
 emailController.url 	= jQuery("#email_signup").attr("action");
 emailController.complete= function($d){
 	console.log($d.result);
-		jQuery(".modeal-body").text($d.result);
+		jQuery(".modal-body p").text($d.result);
 		jQuery('#newsletter_modal').modal('show');
 };
 emailController.submit	= function($e){

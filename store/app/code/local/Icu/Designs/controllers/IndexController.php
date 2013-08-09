@@ -62,10 +62,7 @@ $adminEmailAddress = "icu@icuinparis.com";//$list_emails[0];
 							<td><strong>Who is your target customer?</strong></td>
 							<td>{$params['targetcustomer']}</td>
 						  </tr>
-						  <tr>
-							<td><strong>Current Distribution Channels:</strong></td>
-							<td>{$params['channel1']}<br />{$params['channel2']}<br />{$params['channel3']}</td>
-						  </tr>
+
 						  <tr>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
@@ -93,30 +90,7 @@ $adminEmailAddress = "icu@icuinparis.com";//$list_emails[0];
 							<td><strong>E-mail:</strong></td>
 							<td>{$params['email']}</td>
 						  </tr>
-						  <tr>
-							<td><strong>Age range:</strong></td>
-							<td>{$params['agerange']}</td>
-						  </tr>
-						  <tr>
-							<td><strong>What is your strongest inspiration?</strong></td>
-							<td>{$params['inspiration']}</td>
-						  </tr>
-						  <tr>
-							<td><strong>What is your favorite color? </strong></td>
-							<td>{$params['favcolor']}</td>
-						  </tr>
-						  <tr>
-							<td><strong>What is your favorite city in the world?</strong></td>
-							<td>{$params['favcity']}</td>
-						  </tr>
-						  <tr>
-							<td><strong>What city do you call home? </strong></td>
-							<td>{$params['city']}</td>
-						  </tr>
-						  <tr>
-							<td><strong>What country do you call home?</strong></td>
-							<td>{$params['country']}</td>
-						  </tr>
+
 						  <tr>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
@@ -189,7 +163,7 @@ if (isset($_FILES[$imageFileName]['name']) && $_FILES[$imageFileName]['name'] !=
         }
  		$myargs = array("success" => "1");
         //Redirect back to index action of (this) activecodeline-simplecontact controller
-        $this->_redirect('designs/?success/');
+        $this->_redirect('designs/success/');
     }
 	
 	

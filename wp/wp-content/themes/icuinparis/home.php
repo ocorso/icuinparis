@@ -6,38 +6,34 @@ Template Name: Home
 	get_header();
 ?>
 	<div id="featured_slider" class="carousel slide " data-interval="50">
+        <ol class="carousel-indicators">
+            <li data-target="#featured_slider" data-slide-to="0" class="active"></li>
+            <li data-target="#featured_slider" data-slide-to="1"></li>
+            <li data-target="#featured_slider" data-slide-to="2"></li>
+            <li data-target="#featured_slider" data-slide-to="3"></li>
+         </ol>
+         <!-- Carousel items -->
+        <div class="carousel-inner">
         <?php 
-            $args = array(  'post_type' => 'carousel', 
+            $args       = array(  'post_type' => 'carousel', 
                             'posts_per_page' => 4,
                             'order'           => 'ASC' );
-            $loop = new WP_Query( $args );
+            $loop       = new WP_Query( $args );
+            $isFirst    = true;
+
             while ( $loop->have_posts() ) : $loop->the_post();
-            
-                echo '<a class="item">';
+                if ($isFirst){
+                    $class      = "item active";
+                    $isFirst    = false;
+                }else {
+                    $class    = "item";
+                }
+                echo '<a class="'.$class.'" href="'. get_field("link") .'">';
                     the_content();
-                echo '</a>';
+                echo '</a>\n';
             endwhile;
             ?>
-		<ol class="carousel-indicators">
-		    <li data-target="#featured_slider" data-slide-to="0" class="active"></li>
-		    <li data-target="#featured_slider" data-slide-to="1"></li>
-            <li data-target="#featured_slider" data-slide-to="2"></li>
-		    <li data-target="#featured_slider" data-slide-to="3"></li>
-		 </ol>
-		 <!-- Carousel items -->
-		<div class="carousel-inner">
-			<a href="<?= get_bloginfo('url'); ?>/creative-community" class="active item">
-				<img src="<?= get_bloginfo('wpurl'); ?>/wp-content/uploads/0001_CREATIVE-COMMUNITY.png" alt="" class="slide-image" />			
-			</a>
-            <a href="<?= get_bloginfo('url'); ?>/wholesale" class="item">
-                <img src="<?= get_bloginfo('wpurl'); ?>/wp-content/uploads/0000_video.png" alt="" class="slide-image" />
-            </a>
-			<a href="<?= get_bloginfo('url'); ?>/store/esparta-shell-necklace.html" title="Shop the Esparata Shell Necklace" class="item">
-				<img src="<?= get_bloginfo('wpurl'); ?>/wp-content/uploads/0002_VASKOLG-ESPARATA-SHELL-NECKLACE-GIVE-THEM-SOMETHINGTHEYVE-NE.png" alt="" class="slide-image" />
-			</a>
-			<a href="<?= get_bloginfo('url'); ?>/store/womens?designer=44" class="item">
-				<img src="<?= get_bloginfo('wpurl'); ?>/wp-content/uploads/0003_NOOT-SS_13.png" alt="" class="slide-image" />
-			</a>
+
 		</div>
 	</div><!--/#featured_slider-->
 

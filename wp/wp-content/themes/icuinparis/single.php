@@ -42,7 +42,9 @@ if ( ! defined( 'ABSPATH' ) ) exit;
      <div id="headline" class="row">
         <h1>Creative Community</h1>
     </div>
-
+    <div id="description" class="row">
+        <p>Wherever we go, whomever we meet, we are inspired. The Creative Community page is our digital journal. Are you in the creative industry and have something to share? An expo or event you think we'll enjoy? <a href="mailto:submissions@icuinparis.com">Tell us</a>.</p>
+    </div>
     <div id="post_content" class="row">
     
     	<?php woo_main_before(); ?>

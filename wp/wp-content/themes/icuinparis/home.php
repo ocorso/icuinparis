@@ -6,6 +6,18 @@ Template Name: Home
 	get_header();
 ?>
 	<div id="featured_slider" class="carousel slide " data-interval="50">
+        <?php 
+            $args = array(  'post_type' => 'carousel', 
+                            'posts_per_page' => 4,
+                            'order'           => 'ASC' );
+            $loop = new WP_Query( $args );
+            while ( $loop->have_posts() ) : $loop->the_post();
+            
+                echo '<a class="item">';
+                    the_content();
+                echo '</a>';
+            endwhile;
+            ?>
 		<ol class="carousel-indicators">
 		    <li data-target="#featured_slider" data-slide-to="0" class="active"></li>
 		    <li data-target="#featured_slider" data-slide-to="1"></li>
@@ -15,16 +27,16 @@ Template Name: Home
 		 <!-- Carousel items -->
 		<div class="carousel-inner">
 			<a href="<?= get_bloginfo('url'); ?>/creative-community" class="active item">
-				<img src="<?= get_bloginfo('wpurl'); ?>/wp-content/uploads/0001_CREATIVE-COMMUNITY.png" alt="" class="woo-image slide-image" />			
+				<img src="<?= get_bloginfo('wpurl'); ?>/wp-content/uploads/0001_CREATIVE-COMMUNITY.png" alt="" class="slide-image" />			
 			</a>
             <a href="<?= get_bloginfo('url'); ?>/wholesale" class="item">
-                <img src="<?= get_bloginfo('wpurl'); ?>/wp-content/uploads/0000_video.png" alt="" class="woo-image slide-image" />
+                <img src="<?= get_bloginfo('wpurl'); ?>/wp-content/uploads/0000_video.png" alt="" class="slide-image" />
             </a>
 			<a href="<?= get_bloginfo('url'); ?>/store/esparta-shell-necklace.html" title="Shop the Esparata Shell Necklace" class="item">
-				<img src="<?= get_bloginfo('wpurl'); ?>/wp-content/uploads/0002_VASKOLG-ESPARATA-SHELL-NECKLACE-GIVE-THEM-SOMETHINGTHEYVE-NE.png" alt="" class="woo-image slide-image" />
+				<img src="<?= get_bloginfo('wpurl'); ?>/wp-content/uploads/0002_VASKOLG-ESPARATA-SHELL-NECKLACE-GIVE-THEM-SOMETHINGTHEYVE-NE.png" alt="" class="slide-image" />
 			</a>
 			<a href="<?= get_bloginfo('url'); ?>/store/womens?designer=44" class="item">
-				<img src="<?= get_bloginfo('wpurl'); ?>/wp-content/uploads/0003_NOOT-SS_13.png" alt="" class="woo-image slide-image" />
+				<img src="<?= get_bloginfo('wpurl'); ?>/wp-content/uploads/0003_NOOT-SS_13.png" alt="" class="slide-image" />
 			</a>
 		</div>
 	</div><!--/#featured_slider-->
@@ -113,7 +125,7 @@ Template Name: Home
 				echo '</div>';
 			endwhile;
 			?>
-		</div> <!-- test row -->
+		</div> <!-- widget row -->
 
 	</section><!-- /#footer-widgets  -->
 

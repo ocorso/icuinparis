@@ -224,7 +224,11 @@ h2.home-footer, #footer_widgets h2 {
     padding-left: 15px;
     padding-right: 15px;
     overflow: hidden;
-    transition: all 0.2s ease 0s;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    
     linear-gradient(to bottom, #111111 0%, #222222 100%) repeat scroll 0 0 transparent;
     line-height: 20px;
 }
@@ -318,7 +322,6 @@ h2.home-footer, #footer_widgets h2 {
 }
 .article-inner{
     position: relative;
-    overflow: hidden;
     display: block;
 }
 .post-title{
@@ -340,10 +343,16 @@ h2.home-footer, #footer_widgets h2 {
     position: absolute;
     height: 100%;
     padding: 8px;
-    transition: all 0.2s ease 0s;
-    width: 100%
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    
+ /*   width: 100%;*/
 }
-
+.post a{
+    overflow: hidden;
+}
 .post .rollover h5{
     color: #cccccc;
     font-weight: normal;
@@ -467,6 +476,9 @@ h2.home-footer, #footer_widgets h2 {
     .woocommerce-page #content #main .product h1.product_title{
         font-size:18px;
     }
+    .post .rollover{
+        width: 355px;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -496,5 +508,6 @@ h2.home-footer, #footer_widgets h2 {
     #ourdesigners .designer .popup p{
         line-height:15px;
     }
+
 }
 

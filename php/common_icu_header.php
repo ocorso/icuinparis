@@ -1,16 +1,14 @@
 <?php 
+if (defined('IS_SSL'))
+  echo "poop:";
 
-
-    $protocol = isset( $_SERVER["HTTPS"] ) ? "https://" : "http://";
-    $base_url = $protocol . $_SERVER['HTTP_HOST'];
+    if ($_SERVER['HTTPS'] == "on" || IS_SSL) $protocol   = "https://";
+    else                           $protocol   = "http://";
+  	$base_url = $protocol . $_SERVER['HTTP_HOST'];
 
 ?>
 
 <link media="all" href="<?= $base_url; ?>/php/ored-styles.css" type="text/css" rel="stylesheet">
-
-<script>  
-  var base_url = "<?= $base_url; ?>";
-</script>
 
 <div class="navbar navbar-inverse navbar-fixed-top">
   <div class="navbar-inner">

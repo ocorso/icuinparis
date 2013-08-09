@@ -17,5 +17,5 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 			</section>
 			<?php if (has_post_thumbnail( )) the_post_thumbnail( 'medium' ); ?>
 		</a><!-- .article-inner -->
-		<a class="post-title" href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+		<a class="post-title" href="<?= $href; ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
 	</article><!-- /.post -->

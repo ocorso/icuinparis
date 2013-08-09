@@ -33,28 +33,26 @@
 <script>
 
 var emailController 	= {};
-emailController.url 	= main.base_url + "/store/bfmsubscribe/subscriber/new/";
+//emailController.url 	= base_url + "/store/bfmsubscribe/subscriber/new/";
+emailController.url 	= jQuery("#email_signup").attr("action");
+emailController.complete= function($d){
+	console.log($d.result);
+		jQuery(".modeal-body").text($d.result);
+		jQuery('#newsletter_modal').modal('show');
+};
 emailController.submit	= function($e){
 	console.log("SUBMIT EMAIL: "+ emailController.url);
 	if($e) $e.preventDefault();
     jQuery(this).blur();
+	jQuery.post(emailController.url , {email: jQuery('#newsletter').val()}, emailController.complete);
    	jQuery('#newsletter_submit').focus().click();
-	jQuery('#newsletter_modal').modal('show');
 	jQuery('#newsletter').val("");
+
 };
 
 jQuery(document).ready(function($) {
 	
 	$("#email_signup").submit(emailController.submit);
-	
-	//$('#newsletter').keypress(function($e) {
-	     //   if($e.which == 13) {
-	      //  	console.log('enter pressed!');
-	       // 	emailController.submit();
-	       // }
-	        
-	   
-	 //   });
 	
 });
 
@@ -80,12 +78,12 @@ jQuery(document).ready(function($) {
 
 
 <script>
-//  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-//  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-// m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-//  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-//  ga('create', 'UA-41864761-1', 'icuinparis.com');
-//  ga('send', 'pageview');
+ ga('create', 'UA-41864761-1', 'icuinparis.com');
+ ga('send', 'pageview');
 
 </script>

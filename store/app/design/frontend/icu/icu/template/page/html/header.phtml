@@ -30,7 +30,10 @@
 
 
 	<?php 
-		//oc: remove old stuff.
+		//oc: include common header
+$isSSL = Mage::app()->getStore()->isCurrentlySecure() ? 1 : 0;
+ 	define("IS_SSL", $isSSL); 
+
 		$base_url  	= str_replace("/store/", "",$this->getUrl(''));
 		$headerPath	= $base_url . '/php/common_icu_header.php';
 		$header  	  = file_get_contents($headerPath, false); 

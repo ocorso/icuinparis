@@ -71,13 +71,16 @@ body {
 
 input[type="button"].btn01 {margin:0; padding:0; width:160px; height:30px; background:url(../images/btn-01.gif) no-repeat top; border:none; font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#FFFFFF; text-transform:uppercase; cursor:pointer;}
 
-
+.page-title{
+	margin-left: -20px;
+}
 .icu-btn{
 	background-color: #84BCBC;
 	font-family: "Gotham-Light", sans-serif;
 	text-transform: uppercase;
 	font-size: 2.0em;
 	margin: 10px;
+	margin-left: 0;
 	padding: 20px;
 	color: white;
 	border: none;
@@ -545,10 +548,12 @@ input[type="submit"].btn01 {
 
 
 .pro_box{
-	margin-left: 10px !important;
+	margin-left: 11px !important;
 }
 
-
+.pro_box div{
+	height: 100px;
+}
 .scrollArea {
 	width: 150px;
 	height: 200px;
@@ -802,6 +807,10 @@ input[type="submit"].btn01 {
 	color: black;
 	text-transform: uppercase;
 	border-radius: 0;
+}
+.nav-tabs > li > a, .nav-pills > li > a {
+    padding-left: 8px;
+    padding-right: 8px;
 }
 .nav-pills > .active > a, 
 .nav-pills > .active > a:hover, 

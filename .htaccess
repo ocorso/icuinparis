@@ -21,3 +21,5 @@ RewriteRule . /index.php [L]
 # END WordPress
 
 SetEnv MAGE_IS_DEVELOPER_MODE true
+
+AddType application/font-woff .woff

@@ -1,16 +1,13 @@
 <?php 
 
-    $protocol = isset( $_SERVER['HTTPS'] ) ? "https://" : "http://";
-    $base_url = $protocol . $_SERVER['HTTP_HOST'];
+
+    if ($_SERVER['HTTPS'] == "on" || IS_SSL) $protocol   = "https://";
+    else                           $protocol   = "http://";
+  	$base_url = $protocol . $_SERVER['HTTP_HOST'];
 
 ?>
 
 <link media="all" href="<?= $base_url; ?>/php/ored-styles.css" type="text/css" rel="stylesheet">
-
-<script>  
-//
-  var base_url = "<?= $base_url; ?>";
-</script>
 
 <div class="navbar navbar-inverse navbar-fixed-top">
   <div class="navbar-inner">
@@ -45,10 +42,10 @@
                 <li><a href="<?= $base_url; ?>/store/checkout/cart" title="Checkout">Checkout</a></li>
               </ul>
             </li>
-            <li class="social-icon"><a href="http://www.facebook.com/icuinparis" title="ICU on Facebook"><img src="/wp/wp-content/themes/icuinparis/img/icons/icon-facebook.png" alt="ICU on Facebook" /></a></li>       
-            <li class="social-icon"><a href="http://twitter.com/icuinparis" title="ICU on Twitter"><img src="/wp/wp-content/themes/icuinparis/img/icons/icon-twitter.png" alt="ICU on Twitter" /></a></li>      
-            <li class="social-icon"><a href="http://instagram.com/christansummers" title="ICU on Instagram"><img src="/wp/wp-content/themes/icuinparis/img/icons/icon-instagram.png" alt="ICU on Instagram" /></a></li>
-            <li class="social-icon"><a href="http://youtube.com/icuinparis" title="ICU on YouTube"><img src="/wp/wp-content/themes/icuinparis/img/icons/icon-youtube.png" alt="ICU on YouTube" /></a></li>         
+            <li class="social-icon"><a href="http://www.facebook.com/icuinparis" title="ICU on Facebook" target="_blank"><img src="/wp/wp-content/themes/icuinparis/img/icons/icon-facebook.png" alt="ICU on Facebook" /></a></li>       
+            <li class="social-icon"><a href="http://twitter.com/icuinparis" title="ICU on Twitter" target="_blank"><img src="/wp/wp-content/themes/icuinparis/img/icons/icon-twitter.png" alt="ICU on Twitter" /></a></li>      
+            <li class="social-icon"><a href="http://instagram.com/christansummers" title="ICU on Instagram" target="_blank"><img src="/wp/wp-content/themes/icuinparis/img/icons/icon-instagram.png" alt="ICU on Instagram" /></a></li>
+            <li class="social-icon"><a href="http://youtube.com/parisicu" title="ICU on YouTube" target="_blank"><img src="/wp/wp-content/themes/icuinparis/img/icons/icon-youtube.png" alt="ICU on YouTube" /></a></li>         
         </ul>
       </div><!--/.nav-collapse -->
     </div>

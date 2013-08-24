@@ -30,7 +30,7 @@ Template Name: Home
                 }
                 echo '<a class="'.$class.'" href="'. get_field("link") .'">';
                     the_content();
-                echo '</a>\n';
+                echo '</a>';
             endwhile;
             ?>
 

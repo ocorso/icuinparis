@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 	<meta property="fb:app_id" content="567784666596189" />
 	<meta property="og:title" content="<?php woo_title( '' ); ?>" />
 	<meta property="og:url" content="<?= the_permalink(); ?>" />
-	<meta property="og:description" content="ICU in Paris is a jewery and accessories retailer based in New York and Paris" />
+	<meta property="og:description" content="ICU in Paris is a jewelry and accessories retailer based in New York and Paris" />
 	<meta property="og:site_name" content="ICU in Paris" />
 <?php 
 

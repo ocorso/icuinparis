@@ -21,11 +21,18 @@
     font-style: normal;
 
 }
-
+@font-face {
+    font-family: 'Gotham-Book';
+    src: url('../fonts/Gotham-Book.eot');
+    src: url('../fonts/Gotham-Book.eot') format('embedded-opentype'),
+         url('../fonts/Gotham-Book.woff') format('woff'),
+         url('../fonts/Gotham-Book.ttf') format('truetype'),
+         url('../fonts/Gotham-Book.svg#GothamRegular') format('svg');
+}
 /* General Styles */
 
 a,p,h2,h3,h4,h5,h6,li,div{
-	font-family: "Gotham-Light", sans-serif;
+	font-family: "Gotham-Book", sans-serif;
 }
 h3{
 	text-transform: uppercase;
@@ -76,7 +83,7 @@ input[type="button"].btn01 {margin:0; padding:0; width:160px; height:30px; backg
 }
 .icu-btn{
 	background-color: #84BCBC;
-	font-family: "Gotham-Light", sans-serif;
+	font-family: "Gotham-Book", sans-serif;
 	text-transform: uppercase;
 	font-size: 2.0em;
 	margin: 10px;
@@ -102,11 +109,23 @@ input[type="submit"].btn01 {
 	text-transform:uppercase; 
 	cursor:pointer;
 }
-#add_to_cart .icu-btn{
+#add_to_cart .icu-btn, #add_to_cart .icu-btn:focus{
+	    font-family: 'JosefinSansStdLight', 'Source Sans Pro', sans-serif;
+	    font-size: 1.6em;
+	        margin-top: 15px;
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 15px;
 	background-color: black;
 	margin-left: 0;
+  text-decoration: none;
+  color: white;
 }
-
+#add_to_cart .icu-btn:hover{
+      background-color: #a0a0a0;
+      color: white;
+      text-decoration: none;
+}
 #add_to_cart{
 	margin-bottom: 20px;
 }
@@ -392,7 +411,7 @@ input[type="submit"].btn01 {
 	}
 
 	#pro_des_section h2 { 
-		font-family: "Gotham-Light", sans-serif; 
+		font-family: "Gotham-Book", sans-serif; 
 		font-weight:bold; 
 		font-size: 2.0em;
 		text-transform: uppercase;
@@ -402,7 +421,7 @@ input[type="submit"].btn01 {
 		line-height: 2.0em;
 	}
 	#pro_des_section h3 {
-		font-family: "Gotham-Light", sans-serif;
+		font-family: "Gotham-Book", sans-serif;
 		font-size: 2.7em;
 		font-weight: normal;
 		text-transform: uppercase;
@@ -423,7 +442,7 @@ input[type="submit"].btn01 {
 		height: 130px;
 	}
 	.product-detail-box h5, .product-detail-box p{
-		font-family: "Gotham-Light", sans-serif;
+		font-family: "Gotham-Book", sans-serif;
 		margin-left: 15px;
 		margin-right: 10px;
 
@@ -441,7 +460,7 @@ input[type="submit"].btn01 {
 
 	}
 	.product-detail-box .learn-more-btn{
-		font-family: "Gotham-Light", sans-serif;
+		font-family: "Gotham-Book", sans-serif;
 		font-size: 1.2em;
 		font-weight: bold;
 		text-transform: uppercase;
@@ -472,7 +491,36 @@ input[type="submit"].btn01 {
 	.standardbutton {
 
 	}
+.product a{
+    font-family: arial, sans-serif;
+    position: relative;
+    display: block;
+    text-transform: uppercase;
+    line-height: 16px;
 
+}
+/*.product span{
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 1.4em;
+    padding: 4px 8px;
+    background-color: #000;
+}*/
+.product a.designer-name{
+    font-size: 1.2em;
+    color: #000;  
+    font-weight: bold;  
+    margin-bottom: 0px;
+    margin-top: 5px;
+}
+.product a.product-name{
+    font-size: 1.2em;
+    color: #000;  
+    text-transform: none;
+    font-weight: normal;  
+}
 	.prodtitlelink:link {
 		font:Arial, Helvetica, sans-serif;
 		font-size:12px;
@@ -647,9 +695,9 @@ input[type="submit"].btn01 {
 
 	#men {margin:0; padding:0; width:960px; height:600px; position:relative; background:url(../images/men-img01.jpg) no-repeat 0 0;}
 
-		#men #tag {width:auto; height:auto; position:absolute; top:20px; left:67px; font:normal 36px/40px "Gotham-Light"; color:#000000; font-style:italic;}
+		#men #tag {width:auto; height:auto; position:absolute; top:20px; left:67px; font:normal 36px/40px "Gotham-Book"; color:#000000; font-style:italic;}
 
-		#men #tag span {font:normal 20px/30px "Gotham-Light"; color:#000000; padding-left:170px;}
+		#men #tag span {font:normal 20px/30px "Gotham-Book"; color:#000000; padding-left:170px;}
 
 		#men #brand {width:auto; height:auto; position:absolute; top:155px; left:470px;}
 
@@ -695,9 +743,9 @@ input[type="submit"].btn01 {
 
 	#women {margin:0 auto; padding:0; width:960px; height:510px; position:relative; background:url(../images/women-img01.jpg) no-repeat top;}
 
-	#women #tag {width:auto; height:auto; position:absolute; top:40px; left:10px; font:normal 36px/40px "Gotham-Light"; color:#000000; font-style:italic;}
+	#women #tag {width:auto; height:auto; position:absolute; top:40px; left:10px; font:normal 36px/40px "Gotham-Book"; color:#000000; font-style:italic;}
 
-	#women #tag span {font:normal 20px/30px "Gotham-Light"; color:#000000; padding-left:90px;}
+	#women #tag span {font:normal 20px/30px "Gotham-Book"; color:#000000; padding-left:90px;}
 
 	#women #brand {width:auto; height:auto; position:absolute; top:200px; left:380px;}
 
@@ -801,7 +849,7 @@ input[type="submit"].btn01 {
 
 }
 #product_info a{
-	font-family: "Gotham-Light", sans-serif;
+	font-family: "Gotham-Book", sans-serif;
 	font-weight: bold;
 	font-size: 1.3em;
 	color: black;
@@ -864,13 +912,13 @@ input[type="submit"].btn01 {
 
 	#all_designer {margin:0 auto; padding:0; width:960px; height:auto;}
 
-	#tagline3 {margin:0; padding:20px 0; width:960px; height:auto; float:left; font:normal 31px/40px "Gotham-Light"; color:#000000;}
+	#tagline3 {margin:0; padding:20px 0; width:960px; height:auto; float:left; font:normal 31px/40px "Gotham-Book"; color:#000000;}
 
 	#sidemenu3 {margin:2px 0 0 0; padding:0; width:209px; height:424px; float:left; }
 
 	#sidemenu3 ul {margin:20px; padding:0; list-style:none;}
 
-	#sidemenu3 ul li {margin:0; padding:0; font:normal 12px/30px "Gotham-Light"; color:#000000; text-transform:uppercase;}
+	#sidemenu3 ul li {margin:0; padding:0; font:normal 12px/30px "Gotham-Book"; color:#000000; text-transform:uppercase;}
 
 	#sidemenu3 ul li a {color:#999999; text-decoration:none;}
 
@@ -900,7 +948,7 @@ input, textarea, .uneditable-input {
  }
 
 #submit_designs_header p, #design-submit-form p{
-	font-family: 'Gotham-Light',sans-serif;
+	font-family: 'Gotham-Book',sans-serif;
 	font-size: 1.5em;
 	color: #333;
 }
@@ -921,7 +969,7 @@ input, textarea, .uneditable-input {
 .form_section h4{
 	font-size: 2.5em;
 	text-transform: uppercase;
-	font-family: 'Gotham-Light', sans-serif;
+	font-family: 'Gotham-Book', sans-serif;
 	color: #333;
 	margin-bottom: 20px;
 	margin-top: 20px;
@@ -935,7 +983,7 @@ input, textarea, .uneditable-input {
 .form_section input[type="text"] {
 	background-color: #e6e6e6;
 	height: 38px;	
-	font-family:'Gotham-Light', Helvetica, sans-serif; 
+	font-family:'Gotham-Book', Helvetica, sans-serif; 
 	font-size: 1.3em;
 	outline: 0;
 	color:#333333; 
@@ -950,14 +998,14 @@ input, textarea, .uneditable-input {
 	.form_section input[type="password"] {margin:0; padding:2px; width:auto; height:auto; background-color:#FFFFFF; border:1px solid #000000; font-family:Arial, Helvetica, sans-serif; color:#000000; font-size:11px;}
 
 .form_section label{
-	font-family:'Gotham-Light', Helvetica, sans-serif; 
+	font-family:'Gotham-Book', Helvetica, sans-serif; 
 	font-size: 1.3em;
 	outline: 0;
 	color:#333333; 
 }
 .form_section textarea {
 	background-color:#e6e6e6; 
-	font-family:'Gotham-Light', Helvetica, sans-serif; 
+	font-family:'Gotham-Book', Helvetica, sans-serif; 
 	color:#333; 
 	font-size:1.3em; 
 	overflow:auto;
@@ -974,7 +1022,7 @@ input, textarea, .uneditable-input {
 	 -moz-border-radius:0;
 	height: 38px;
 	-webkit-appearance: none;
-	font-family:'Gotham-Light', Helvetica, sans-serif; 
+	font-family:'Gotham-Book', Helvetica, sans-serif; 
 	outline: 0;
 	padding-top: 8px;
 }
@@ -1004,7 +1052,7 @@ input, textarea, .uneditable-input {
 	width:auto; 
 	height:auto; 
 	background-color:#99cccc; 
-	font-family:'Gotham-Light', Helvetica, sans-serif; 
+	font-family:'Gotham-Book', Helvetica, sans-serif; 
 	color:#fff; 
 	font-size:1.3em;
 }
@@ -1012,7 +1060,7 @@ input, textarea, .uneditable-input {
 #submit_design_btn{
 	color: white;
 	background-color:#99cccc; 
-	font-family:'Gotham-Light', Helvetica, sans-serif; 
+	font-family:'Gotham-Book', Helvetica, sans-serif; 
 	text-transform: uppercase;
 	font-size: 2.2em;
 	padding:13px;
@@ -1038,7 +1086,7 @@ input, textarea, .uneditable-input {
 
 	#customer_service {margin:0 auto; padding:0; width:960px; height:auto; min-height:550px;}
 
-	#tagline5 {margin:0; padding:0; width:960px; height:auto; float:left; font:normal 37px/94px "Gotham-Light"; color:#000000;}
+	#tagline5 {margin:0; padding:0; width:960px; height:auto; float:left; font:normal 37px/94px "Gotham-Book"; color:#000000;}
 
 	#proddetailsbaseboxes { font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#333;}
 
@@ -1060,7 +1108,7 @@ input, textarea, .uneditable-input {
 
 	#sidemenu5 ul {margin:0; padding:0; list-style:none;}
 
-	#sidemenu5 ul li {margin:0; padding:0; font:normal 10px/21px "Gotham-Light"; color:#000000; text-transform:uppercase;}
+	#sidemenu5 ul li {margin:0; padding:0; font:normal 10px/21px "Gotham-Book"; color:#000000; text-transform:uppercase;}
 
 	#sidemenu5 ul li a {color:#999999; text-decoration:none;}
 
@@ -1190,23 +1238,23 @@ input, textarea, .uneditable-input {
 
 
 
-	a.tt:hover div.tooltip {display:block; position:absolute; bottom:10px; left:150px; padding:10px 20px 20px 10px; width:114px; height:40px; font:normal 13px/16px "Gotham-Light"; color:#000000; text-indent:0; background: url(../images/bubble.png) no-repeat top; text-decoration:none;}
+	a.tt:hover div.tooltip {display:block; position:absolute; bottom:10px; left:150px; padding:10px 20px 20px 10px; width:114px; height:40px; font:normal 13px/16px "Gotham-Book"; color:#000000; text-indent:0; background: url(../images/bubble.png) no-repeat top; text-decoration:none;}
 
 
 
-	a.tt:hover div.tooltip2 {display:block; position:absolute; bottom:90px; left:300px; padding:10px 10px 20px 10px; width:124px; height:40px; font:normal 13px/16px "Gotham-Light"; color:#000000; text-indent:0; background: url(../images/bubble.png) no-repeat top; text-decoration:none;}
+	a.tt:hover div.tooltip2 {display:block; position:absolute; bottom:90px; left:300px; padding:10px 10px 20px 10px; width:124px; height:40px; font:normal 13px/16px "Gotham-Book"; color:#000000; text-indent:0; background: url(../images/bubble.png) no-repeat top; text-decoration:none;}
 
 
 
-	a.tt:hover div.tooltip3 {display:block; position:absolute; bottom:90px; left:300px; padding:10px 10px 20px 10px; width:124px; height:40px; font:normal 13px/16px "Gotham-Light"; color:#000000; text-indent:0; background: url(../images/bubble.png) no-repeat top; text-decoration:none;}
+	a.tt:hover div.tooltip3 {display:block; position:absolute; bottom:90px; left:300px; padding:10px 10px 20px 10px; width:124px; height:40px; font:normal 13px/16px "Gotham-Book"; color:#000000; text-indent:0; background: url(../images/bubble.png) no-repeat top; text-decoration:none;}
 
 
 
-	a.tt:hover div.tooltip4 {display:block; position:absolute; bottom:100px; left:70px; padding:10px 25px 20px 10px; width:109px; height:40px; font:normal 13px/16px "Gotham-Light"; color:#000000; text-indent:0; background: url(../images/bubble.png) no-repeat top; text-decoration:none;}
+	a.tt:hover div.tooltip4 {display:block; position:absolute; bottom:100px; left:70px; padding:10px 25px 20px 10px; width:109px; height:40px; font:normal 13px/16px "Gotham-Book"; color:#000000; text-indent:0; background: url(../images/bubble.png) no-repeat top; text-decoration:none;}
 
 
 
-	a.tt:hover div.tooltip5 {display:block; position:absolute; bottom:110px; left:195px; padding:10px 25px 20px 10px; width:109px; height:40px; font:normal 13px/16px "Gotham-Light"; color:#000000; text-indent:0; background: url(../images/bubble.png) no-repeat top; text-decoration:none;}
+	a.tt:hover div.tooltip5 {display:block; position:absolute; bottom:110px; left:195px; padding:10px 25px 20px 10px; width:109px; height:40px; font:normal 13px/16px "Gotham-Book"; color:#000000; text-indent:0; background: url(../images/bubble.png) no-repeat top; text-decoration:none;}
 
 
 
@@ -1214,7 +1262,7 @@ input, textarea, .uneditable-input {
 
 	#create_account {margin:0 auto; padding:0; width:960px; height:auto; min-height:600px; background:url(../images/account-bg.jpg) no-repeat right top;}
 
-	#tagline_account {margin:0; padding:0; width:960px; height:auto; float:left; font:normal 24px/74px "Gotham-Light"; color:#000000;}
+	#tagline_account {margin:0; padding:0; width:960px; height:auto; float:left; font:normal 24px/74px "Gotham-Book"; color:#000000;}
 
 .my-account{
 	margin-top: 30px;
@@ -1223,9 +1271,9 @@ input, textarea, .uneditable-input {
 	margin-top: 25px;
 }
 
-	#content_account h4 {font:normal 13px/30px "Gotham-Light"; color:#000000; text-transform:uppercase; padding-bottom:10px;}
+	#content_account h4 {font:normal 13px/30px "Gotham-Book"; color:#000000; text-transform:uppercase; padding-bottom:10px;}
 
-	#content_account h4 span {font:normal 12px/30px "Gotham-Light"; color:#999999; text-transform:none;}
+	#content_account h4 span {font:normal 12px/30px "Gotham-Book"; color:#999999; text-transform:none;}
 
 	#content_account h4 a {color:#000000; text-decoration:none;}
 
@@ -1233,11 +1281,11 @@ input, textarea, .uneditable-input {
 
 
 
-	#content_account h2 {font:normal 20px/20px "Gotham-Light"; color:#000000;}
+	#content_account h2 {font:normal 20px/20px "Gotham-Book"; color:#000000;}
 
-	#content_account h6 {font:normal 18px/20px "Gotham-Light"; color:#000000; padding-bottom:5px;}
+	#content_account h6 {font:normal 18px/20px "Gotham-Book"; color:#000000; padding-bottom:5px;}
 
-	#content_account h6 span {font:normal 12px/20px "Gotham-Light"; color:#999999;}
+	#content_account h6 span {font:normal 12px/20px "Gotham-Book"; color:#999999;}
 
 	#content_account h6 span a {color:#999999; text-decoration:none;}
 
@@ -1245,19 +1293,19 @@ input, textarea, .uneditable-input {
 
 
 
-	#content_account h5 {font:bold 16px/20px "Gotham-Light"; color:#000000;}
+	#content_account h5 {font:bold 16px/20px "Gotham-Book"; color:#000000;}
 
-	#content_account h5 span {font:normal 16px/20px "Gotham-Light"; color:#000000;}
+	#content_account h5 span {font:normal 16px/20px "Gotham-Book"; color:#000000;}
 
-	#content_account h3 {font:normal 24px/30px "Gotham-Light"; color:#000000; padding-bottom:20px;}
+	#content_account h3 {font:normal 24px/30px "Gotham-Book"; color:#000000; padding-bottom:20px;}
 
 
 
-	#content_account .lable01 {margin:4px 0; padding:0; width:150px; height:auto; float:left; font:normal 15px/18px "Gotham-Light"; color:#000000;}
+	#content_account .lable01 {margin:4px 0; padding:0; width:150px; height:auto; float:left; font:normal 15px/18px "Gotham-Book"; color:#000000;}
 
 	#content_account .lable01 span {color:#999999;}
 
-	#content_account .field01 {margin:4px 0; padding:0; width:335px; height:auto; float:left; font:normal 15px/18px "Gotham-Light"; color:#000000;}
+	#content_account .field01 {margin:4px 0; padding:0; width:335px; height:auto; float:left; font:normal 15px/18px "Gotham-Book"; color:#000000;}
 
 
 
@@ -1273,19 +1321,19 @@ input, textarea, .uneditable-input {
 
 
 
-	#content_account .lable02 {margin:4px 0; padding:0; width:100px; height:auto; float:left; font:normal 13px/18px "Gotham-Light"; color:#000000;}
+	#content_account .lable02 {margin:4px 0; padding:0; width:100px; height:auto; float:left; font:normal 13px/18px "Gotham-Book"; color:#000000;}
 
-	#content_account .field02 {margin:4px 0; padding:0; width:180px; height:auto; float:left; font:normal 15px/18px "Gotham-Light"; color:#000000;}
+	#content_account .field02 {margin:4px 0; padding:0; width:180px; height:auto; float:left; font:normal 15px/18px "Gotham-Book"; color:#000000;}
 
 
 
 	#sidemenu_account {margin:0; padding:0; width:180px; height:auto; min-height:530px; float:left; background:url(../images/gradient3.gif) no-repeat right top;}
 
-	#sidemenu_account h5 {font:normal 13px/30px "Gotham-Light"; color:#000000; text-transform:uppercase;}
+	#sidemenu_account h5 {font:normal 13px/30px "Gotham-Book"; color:#000000; text-transform:uppercase;}
 
 	#sidemenu_account ul {margin:20px 0 0 25px; padding:0; list-style:none;}
 
-	#sidemenu_account ul li {margin:0; padding:0; font:normal 11px/21px "Gotham-Light"; color:#999999; text-transform:uppercase;}
+	#sidemenu_account ul li {margin:0; padding:0; font:normal 11px/21px "Gotham-Book"; color:#999999; text-transform:uppercase;}
 
 	#sidemenu_account ul li a {color:#999999; text-decoration:none;}
 
@@ -1301,11 +1349,11 @@ input, textarea, .uneditable-input {
 
 	#sidemenu_account #add_box .mid {margin:0; padding:0 15px; width:149px; height:auto; background:url(../images/addbg.gif) repeat-y top;}
 
-	#sidemenu_account #add_box .mid h4 {font:normal 16px/20px "Gotham-Light"; color:#000000;}
+	#sidemenu_account #add_box .mid h4 {font:normal 16px/20px "Gotham-Book"; color:#000000;}
 
-	#sidemenu_account #add_box .mid h6 {font:bold 12px/20px "Gotham-Light"; color:#000000;}
+	#sidemenu_account #add_box .mid h6 {font:bold 12px/20px "Gotham-Book"; color:#000000;}
 
-	#sidemenu_account #add_box .mid p {font:normal 13px/18px "Gotham-Light"; color:#000000; text-transform:uppercase;}
+	#sidemenu_account #add_box .mid p {font:normal 13px/18px "Gotham-Book"; color:#000000; text-transform:uppercase;}
 
 
 
@@ -1506,7 +1554,9 @@ ul#menu2222 li a {
 
 }
 
-
+.side-nav-arrow, #menu li a img{
+ margin-top: -4px;
+}
 
 ul#menu2222 li a.last {background:none; text-transform:uppercase;}
 
@@ -1537,7 +1587,7 @@ color:#000000;
 
 #content_account2 {margin:0; padding:0 30px; width:720px; height:auto; float:left;}
 
-	#content_account2 p {font:normal 15px/18px "Gotham-Light"; color:#000000;}
+	#content_account2 p {font:normal 15px/18px "Gotham-Book"; color:#000000;}
 
 	#content_account2 p a {color:#999999; text-decoration:none;}
 
@@ -1545,15 +1595,15 @@ color:#000000;
 
 	#content_account2 p span.grey {color:#999999;}
 
-	#content_account2 p span {font:normal 12px/18px "Gotham-Light"; color:#000000;}
+	#content_account2 p span {font:normal 12px/18px "Gotham-Book"; color:#000000;}
 
 
 
 
 
-	#content_account2 h4 {font:normal 13px/30px "Gotham-Light"; color:#000000; text-transform:uppercase; padding-bottom:10px;}
+	#content_account2 h4 {font:normal 13px/30px "Gotham-Book"; color:#000000; text-transform:uppercase; padding-bottom:10px;}
 
-	#content_account2 h4 span {font:normal 12px/30px "Gotham-Light"; color:#999999; text-transform:none;}
+	#content_account2 h4 span {font:normal 12px/30px "Gotham-Book"; color:#999999; text-transform:none;}
 
 	#content_account2 h4 a {color:#000000; text-decoration:none;}
 
@@ -1561,11 +1611,11 @@ color:#000000;
 
 
 
-	#content_account2 h2 {font:normal 20px/20px "Gotham-Light"; color:#000000;}
+	#content_account2 h2 {font:normal 20px/20px "Gotham-Book"; color:#000000;}
 
-	#content_account2 h6 {font:normal 18px/20px "Gotham-Light"; color:#000000; padding-bottom:5px;}
+	#content_account2 h6 {font:normal 18px/20px "Gotham-Book"; color:#000000; padding-bottom:5px;}
 
-	#content_account2 h6 span {font:normal 12px/20px "Gotham-Light"; color:#999999;}
+	#content_account2 h6 span {font:normal 12px/20px "Gotham-Book"; color:#999999;}
 
 	#content_account2 h6 span a {color:#999999; text-decoration:none;}
 
@@ -1573,19 +1623,19 @@ color:#000000;
 
 
 
-	#content_account2 h5 {font:bold 16px/20px "Gotham-Light"; color:#000000;}
+	#content_account2 h5 {font:bold 16px/20px "Gotham-Book"; color:#000000;}
 
-	#content_account2 h5 span {font:normal 16px/20px "Gotham-Light"; color:#000000;}
+	#content_account2 h5 span {font:normal 16px/20px "Gotham-Book"; color:#000000;}
 
-	#content_account2 h3 {font:normal 24px/30px "Gotham-Light"; color:#000000; padding-bottom:20px;}
+	#content_account2 h3 {font:normal 24px/30px "Gotham-Book"; color:#000000; padding-bottom:20px;}
 
 
 
-	#content_account2 .lable01 {margin:4px 0; padding:0; width:120px; height:auto; float:left; font:normal 15px/18px "Gotham-Light"; color:#000000;}
+	#content_account2 .lable01 {margin:4px 0; padding:0; width:120px; height:auto; float:left; font:normal 15px/18px "Gotham-Book"; color:#000000;}
 
 	#content_account2 .lable01 span {color:#999999;}
 
-	#content_account2 .field01 {margin:4px 0; padding:0; width:210px; height:auto; float:left; font:normal 15px/18px "Gotham-Light"; color:#000000;}
+	#content_account2 .field01 {margin:4px 0; padding:0; width:210px; height:auto; float:left; font:normal 15px/18px "Gotham-Book"; color:#000000;}
 
 
 
@@ -1601,9 +1651,9 @@ color:#000000;
 
 
 
-	#content_account2 .lable02 {margin:4px 0; padding:0; width:100px; height:auto; float:left; font:normal 13px/18px "Gotham-Light"; color:#000000;}
+	#content_account2 .lable02 {margin:4px 0; padding:0; width:100px; height:auto; float:left; font:normal 13px/18px "Gotham-Book"; color:#000000;}
 
-	#content_account2 .field02 {margin:4px 0; padding:0; width:180px; height:auto; float:left; font:normal 15px/18px "Gotham-Light"; color:#000000;}
+	#content_account2 .field02 {margin:4px 0; padding:0; width:180px; height:auto; float:left; font:normal 15px/18px "Gotham-Book"; color:#000000;}
 
 	.wrapper {
 
@@ -1978,5 +2028,9 @@ color:#000000;
 @media (max-width: 753px) {
 	#product_bigimg img{
 		width: 100%;
+	}
+	#add_to_cart, p{
+		margin-left: 7px;
+		margin-right: 7px;
 	}
 }

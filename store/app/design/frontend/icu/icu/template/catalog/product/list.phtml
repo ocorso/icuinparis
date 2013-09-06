@@ -138,7 +138,7 @@
     	$left_navigation_menu .= '</li>';
 		if($tarray[3] == "gentlemen" || $tarray[3] == "mens")
 		{
-			$left_navigation_menu .= '<li><a href="#" onclick="swaparrow(\'arrow1\')"> <img src="' . $this->getSkinUrl('images/down-arrow.jpg') . ' \>" width="9" height="9" id="arrow1" name="arrow1" />jewelry</a>
+			$left_navigation_menu .= '<li><a href="#" onclick="swaparrow(\'arrow1\')"> <img class="side-nav-arrow" src="' . $this->getSkinUrl('images/down-arrow.jpg') . ' \>" width="9" height="9" id="arrow1" name="arrow1" />jewelry</a>
 				<ul>
 				<li><a href="' . $this->getUrl() . '/' . $currcat223 . '/cufflinks.html?limit=12&p=1" ' . ($pagetype[0] == "cufflinks" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>cufflinks</a></li>
 				<li><a href="' . $this->getUrl() . '/' . $currcat223 . '/rings.html?limit=12&p=1" ' . ($pagetype[0] == "rings" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>RINGS</a></li>
@@ -147,7 +147,7 @@
 				<li><a href="' . $this->getUrl() . '/' . $currcat223 . '/pins.html?limit=12&p=1" ' . ($pagetype[0] == "pins" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>PINS</a></li>
 				</ul>
 			</li>
-			<li><a href="#" onclick="swaparrow(\'arrow2\')"><img src="' . $this->getSkinUrl('images/down-arrow.jpg') . '" width="9" height="9" id="arrow2" name="arrow2" />accessories</a>
+			<li><a href="#" onclick="swaparrow(\'arrow2\')"><img class="side-nav-arrow" src="' . $this->getSkinUrl('images/down-arrow.jpg') . '" width="9" height="9" id="arrow2" name="arrow2" />accessories</a>
 				<ul>
 				<li><a href="' . $this->getUrl() . '/' . $currcat223 . '/scarves.html?limit=12&p=1" ' . ($pagetype[0] == "scarves" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>scarves</a></li>
 				<li><a href="' . $this->getUrl() . '/' . $currcat223 . '/bows.html?limit=12&p=1" ' . ($pagetype[0] == "bows" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>bows</a></li>
@@ -160,7 +160,7 @@
 			</li>';
 		}else{
 			$left_navigation_menu .= '
-			<li><a href="#" onclick="swaparrow(\'arrow1\')"><img src="'. $this->getSkinUrl('images/down-arrow.jpg') . '" width="9" height="9" id="arrow1" name="arrow1" />jewelry</a>
+			<li><a href="#" onclick="swaparrow(\'arrow1\')"><img class="side-nav-arrow" src="'. $this->getSkinUrl('images/down-arrow.jpg') . '" width="9" height="9" id="arrow1" name="arrow1" />jewelry</a>
 				<ul>
 				<li><a href="' . $this->getUrl() . '/ladies/earrings.html?limit=12&p=1" ' . ($pagetype[0] == "earrings" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>EARRINGS</a></li>
 				<li><a href="' . $this->getUrl() . '/ladies/rings.html?limit=12&p=1" ' . ($pagetype[0] == "rings" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>RINGS</a></li>
@@ -168,7 +168,7 @@
 				<li><a href="' . $this->getUrl() . '/ladies/necklaces.html?limit=12&p=1" ' . ($pagetype[0] == "necklaces" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>NECKLACES</a></li>
 				</ul>
 			</li>
-			<li><a href="#" onclick="swaparrow(\'arrow2\')"><img src="'. $this->getSkinUrl('images/down-arrow.jpg') . '" width="9" height="9" id="arrow2" name="arrow2" />accessories</a>
+			<li><a href="#" onclick="swaparrow(\'arrow2\')"><img class="side-nav-arrow" src="'. $this->getSkinUrl('images/down-arrow.jpg') . '" width="9" height="9" id="arrow2" name="arrow2" />accessories</a>
 				<ul>
 				<li><a href="' . $this->getUrl() . '/ladies/scarves.html?limit=12&p=1" ' . ($pagetype[0] == "scarves" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>scarves</a></li>
 				<li><a href="' . $this->getUrl() . '/ladies/bags.html?limit=12&p=1" ' . ($pagetype[0] == "bgs" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>bags</a></li>
@@ -179,7 +179,7 @@
 				<li><a href="' . $this->getUrl() . '/ladies/bows.html?limit=12&p=1" ' . ($pagetype[0] == "bows" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>bows</a></li>
 				</ul>
 			</li>
-			<li><a href="#" onclick="swaparrow(\'arrow3\')"><img src="' . $this->getSkinUrl('images/down-arrow.jpg') . '" width="9" height="9" id="arrow3" name="arrow3" />clothing</a>
+			<li><a href="#" onclick="swaparrow(\'arrow3\')"><img class="side-nav-arrow" src="' . $this->getSkinUrl('images/down-arrow.jpg') . '" width="9" height="9" id="arrow3" name="arrow3" />clothing</a>
 				<ul>
 				<li><a href="' . $this->getUrl() . '/ladies/tee-shirts.html?limit=12&p=1" ' . ($pagetype[0] == "tee-shirts" ? 'style="color:#e5a64b; font-weight:bold;"' : "") . '>tee-shirts</a></li>
 				</ul>
@@ -248,24 +248,21 @@
 			</a>
 		<div>
 
-
-	<a href="<?php echo $_product->getProductUrl(); ?>" class="prodtitlelink">
-		<b><?= $designer; ?></b>
-		<br>
-		<?= str_replace($designer, "", $_helper->productAttribute($_product, $_product->getName(), 'name')) ?>
-		<br>
-<?php 
-	$specialPrice = $_product->getSpecialPrice(); 
-	if($specialPrice != 0){ 
-		if(Mage::app()->getStore()->getStoreId() == "1"){ 
-			echo "<div class=\"price-box\"><p class=\"old-price\"><span class=\"price-label\">Regular Price: </span><span class=\"price\" id=\"old-price-136\">" . Mage::helper('core')->currency($_product->getPrice(), true, false) . "</span></p><p class=\"special-price\"><span class=\"price-label\">Sales Price: </span><span class=\"price\" id=\"product-price-136\">" . Mage::helper('core')->currency($_product->getSpecialPrice(), true, false) . "</span></p></div>"; }else{ echo "<div class=\"price-box\"><p class=\"old-price\"><span class=\"price-label\">Prix Initial: </span><span class=\"price\" id=\"old-price-136\">" . Mage::helper('core')->currency($_product->getPrice(), true, false) . "</span></p><p class=\"special-price\"><span class=\"price-label\">Prixe Promo: </span><span class=\"price\" id=\"product-price-136\">" . Mage::helper('core')->currency($_product->getSpecialPrice(), true, false) . "</span></p></div>"; 
-		} 
-	}else{ 
-		echo "<b>" . Mage::helper('core')->currency($_product->getPrice(), true, false) . "</b>"; 
-	} 
-?>
-</a>
-
+<div class="product">
+	<a href="<?= $_product->getProductUrl(); ?>" class="designer-name"><?= $designer; ?></a>
+	<a class="product-name" href="<?= $_product->getProductUrl(); ?>"><?= str_replace($designer, "", $_helper->productAttribute($_product, $_product->getName(), 'name')) ?></a>
+	<?php 
+			$specialPrice = $_product->getSpecialPrice(); 
+			if($specialPrice != 0){ 
+				if(Mage::app()->getStore()->getStoreId() == "1"){ 
+					echo "<div class=\"price-box\"><p class=\"old-price\"><span class=\"price-label\">Old Price: </span><span class=\"price\" id=\"old-price-136\">" . Mage::helper('core')->currency($_product->getPrice(), true, false) . "</span></p><p class=\"special-price\"><span class=\"price-label\">Sales Price: </span><span class=\"price\" id=\"product-price-136\">" . Mage::helper('core')->currency($_product->getSpecialPrice(), true, false) . "</span></p></div>"; }else{ echo "<div class=\"price-box\"><p class=\"old-price\"><span class=\"price-label\">Prix Initial: </span><span class=\"price\" id=\"old-price-136\">" . Mage::helper('core')->currency($_product->getPrice(), true, false) . "</span></p><p class=\"special-price\"><span class=\"price-label\">Prixe Promo: </span><span class=\"price\" id=\"product-price-136\">" . Mage::helper('core')->currency($_product->getSpecialPrice(), true, false) . "</span></p></div>"; 
+				} 
+			}else{ 
+				echo "<b>" . Mage::helper('core')->currency($_product->getPrice(), true, false) . "</b>"; 
+			} 
+		?>
+	</a>
+</div>
 	</div>  
 </div>
 		

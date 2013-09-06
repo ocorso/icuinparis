@@ -866,28 +866,35 @@ tr.summary-details-excluded { font-style:italic; }
 .price { white-space:nowrap !important; }
 
 .price-box { 
-	font-family: "Gotham-light", sans-serif;
+	font-family: "Gotham-Book", sans-serif;
 	font-size: 1.0em;
 	font-weight: bold;
-
 	margin:0 0; 
 	border-top: solid 1px #cccccc;
 }
 .price-box .price { 
-	font-weight:regular; 
+
 	color:#000000; 
-	font-size: 2.7em;
+
 }
-
-
+.product .price-box .price, .product .price-box .price .old-price, .product .price-box .price .price-label{
+	font-size: 1.4em;
+	font-family: arial, sans-serif;
+}
+#pro_des_section .price-box {
+	padding-top: 10px;
+}
+#pro_des_section .price-box p{
+	font-size: 2.0em;
+}
 /* Old price */
-.old-price { margin:0; }
-.old-price .price-label { white-space:nowrap; color:#999; }
+.product .old-price { margin:0; }
+.old-price .price-label { white-space:nowrap; color:#999; 	font-size: 1.4em;}
 .old-price .price { font-weight:bold; color:#000000; text-decoration:line-through; }
 
 /* Special price */
 .special-price { margin:0; padding:3px 0; }
-.special-price .price-label { font-size:13px; font-weight:bold; white-space:nowrap; color:#cd5033; }
+.special-price .price-label {font-family: arial, sans-serif; font-weight:bold; white-space:nowrap; color:#cd5033;	font-size: 1.4em; }
 .special-price .price { font-size:13px; font-weight:bold; color:#000000; }
 
 /* Minimal price (as low as) */

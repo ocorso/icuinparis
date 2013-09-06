@@ -35,6 +35,7 @@
 /** Database for info WordPress */
 
 switch($_SERVER['HTTP_HOST']){
+	
 	case "icuinparis.dev" :
 		define('DB_NAME', 'icuinparis_wp');
 		define('DB_USER', 'root');

@@ -33,7 +33,14 @@ Version:        1.0
          url('fonts/gotham-light.ttf') format('truetype'),
          url('fonts/gotham-light.svg#GothamRegular') format('svg');
 }
-
+@font-face {
+    font-family: 'Gotham-Book';
+    src: url('fonts/Gotham-Book.eot');
+    src: url('fonts/Gotham-Book.eot') format('embedded-opentype'),
+         url('fonts/Gotham-Book.woff') format('woff'),
+         url('fonts/Gotham-Book.ttf') format('truetype'),
+         url('fonts/Gotham-Book.svg#GothamRegular') format('svg');
+}
 html{
     background-color: #545454;
 }
@@ -41,7 +48,7 @@ body {
   font-size: 62.5%;
   color: #666;
   background: #ffffff;
-  font-family: 'Gotham-Light', sans-serif;
+  font-family: 'Gotham-Book', sans-serif;
 } 
 #wrapper{
     margin-top: 0;
@@ -97,7 +104,7 @@ body {
     position: relative;
     display: block;
     text-transform: uppercase;
-    line-height: 17px;
+    line-height: 16px;
 
 }
 .product span{
@@ -110,10 +117,10 @@ body {
     background-color: #000;
 }
 .product a.designer-name{
-    font-size: 1.4em;
+    font-size: 1.2em;
     color: #000;  
     font-weight: bold;  
-    margin-bottom: 5px;
+    margin-bottom: 0px;
     margin-top: 5px;
 }
 .product a.product-name{
@@ -128,7 +135,7 @@ body {
 #footer-widget-wrapper{
     background-color: #E6E6E6;
 }
-#footer_widgets_header{
+#footer_widgets_header, #footer_widgets .widget{
     margin-bottom: 20px;
     font-size: 1.2em;
 }
@@ -196,6 +203,13 @@ h2.home-footer, #footer_widgets h2 {
 }
 body.home footer#footer{
     margin-top: 0;
+}
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input{
+    border-radius: 0;
+    border: none;
+    background-color: #e6e6e6;
+    padding:8px;
+    font-size: 1.3em;
 }
 /*****************************************************************************
 /*****************************************************************************
@@ -304,7 +318,7 @@ body.home footer#footer{
 }
 
 #sidebar ul li a{
-    font-family: "Gotham-Light", sans-serif;
+    font-family: "Gotham-Book", sans-serif;
     font-weight: bold;
     font-size: 1.2em;
     text-transform: uppercase;
@@ -334,15 +348,18 @@ body.home footer#footer{
     position: relative;
     display: block;
 }
-.post-title{
+.post-title, .post-title:focus{
     font-size: 1.2em;
     font-family: sans-serif;
     text-transform: uppercase;
-    height: 35px;
+    height: 40px;
     display: block;
+    color: black;
+    margin-top: 7px;
 }
 .post-title:hover{
     text-decoration: none;
+    color: gray;
 }
 .post:hover .rollover{
     opacity: 1;
@@ -381,17 +398,18 @@ body.home footer#footer{
     margin-right: 5px;
 
 }
-.shop-all-btn{
+.shop-all-btn, .shop-all-btn:focus{
     background-color: #000;
     color: white;
-    text-transform: uppercase;
-    font-family: 'JosefinSansStdLight', 'Source Sans Pro', sans-serif;
     margin-top: 15px;
     display: block;
     padding-top: 20px;
     padding-bottom: 15px;
+    font-family: 'JosefinSansStdLight', 'Source Sans Pro', sans-serif;
     font-size: 1.6em;
+    text-transform: uppercase;
     text-align: center;
+    text-decoration: none;
 }
 .shop-all-btn:hover{
       background-color: #a0a0a0;
@@ -402,7 +420,7 @@ body.home footer#footer{
     background-color: #000;
     color: #fff;
     padding: 5px;
-    font-family: "Gotham-Light", sans-serif;
+    font-family: "Gotham-Book", sans-serif;
     font-size: 1.2em;
     text-transform: uppercase;
     font-weight: bold;
@@ -437,7 +455,7 @@ body.home footer#footer{
 }
 #post_content h2{
     font-size: 3.2em;
-    font-family: "Gotham-Light", sans-serif;
+    font-family: "Gotham-Book", sans-serif;
 }
 #post_content p{
     font-size:1.2em;
@@ -463,18 +481,23 @@ body.home footer#footer{
     margin: 4px;
     text-transform: uppercase;
     font-size: 1.9em;
-    font-family: "Gotham-Light", sans-serif;
+    font-family: "Gotham-Book", sans-serif;
     display:block;
     padding: 10px;
 }
-
+.entry{
+    cursor: auto;
+    font-size: 1.2em;
+}
 /*****************************************************************************
 /*****************************************************************************
 /* @media queries */
 /*****************************************************************************
 /*****************************************************************************/
-@media (max-width: 979px) {
-
+@media (max-width: 964px) {
+    .post-title, .post-title:focus{
+        height: 70px;
+    }
 }
 
 @media screen and (max-width: 768px) {

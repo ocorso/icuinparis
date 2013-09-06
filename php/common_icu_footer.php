@@ -7,7 +7,7 @@
 ?>
 
 <footer id="footer">
-	<h4>Sign up for the ICU updates</h4>
+	<h4>Sign up for ICU updates</h4>
 	<form id="email_signup" action="<?= $base_url; ?>/store/bfmsubscribe/subscriber/new/" method="post">
 		<input 	id="newsletter"  
 				class="email"
@@ -66,8 +66,6 @@ jQuery(document).ready(function($) {
 		<br /> 
 		P: +33 658285574 (FR)
 	</p>
-	<h4>E-Commerce Site Hours:</h4>
-	<p>Monday-Friday 9:00–7:00	</p>
 	<ul>
 		<li><a href="<?= $base_url; ?>/store/terms" title="ICU Terms &amp; Conditions">Terms</a></li>
 		<li><a href="<?= $base_url; ?>/store/privacy" title="ICU Privacy Policy">Privacy</a></li>

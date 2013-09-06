@@ -1,7 +1,7 @@
 <?php 
 
 
-    if ($_SERVER['HTTPS'] == "on" || IS_SSL) $protocol   = "https://";
+    if ($_SERVER['HTTPS'] == "on" || IS_SSL) $protocol   = "//";
     else                           $protocol   = "http://";
   	$base_url = $protocol . $_SERVER['HTTP_HOST'];
 

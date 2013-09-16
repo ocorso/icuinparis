@@ -11,13 +11,17 @@ jQuery(document).ready(function($) {
   console.log("window width: "+$(window).width());
 
   initMenu();
-  //main.initJQZoom();
+  //main.initZoom();
   main.initSwitcher();
+  $('.jqzoom').unbind("click").bind('click',main.productClick);
 
-  $('#thumblist a').click(function(){
+  $('#thumblist a').click(function($e){
+    console.log("thumb click");
     var d     = $(this).data();
     var src   = d.large;
-    $("#image_big").attr("src",src);
+    $("#image_big, #overlay_product").attr("src",src);
+    $('.jqzoom').unbind("click").bind('click',main.productClick);
+    return false;
   });
 
   $('.pro_box a img').hover(
@@ -29,6 +33,13 @@ jQuery(document).ready(function($) {
 // =================================================
 // ================ oc: JQZoom
 // =================================================
+main.productClick         = function($e){
+      console.log("open modal");
+      if($e) $e.preventDefault();
+      jQuery("#product_modal").modal("show");
+      return false;
+};
+
 main.initJQZoom           = function (){
   var options = {
       zoomWidth: 300,

@@ -35,6 +35,8 @@
     $_helper = $this->helper('catalog/output');
     $_product = $this->getProduct();
 ?>
+
+
 <script type="text/javascript">
     var optionsPrice = new Product.OptionsPrice(<?php echo $this->getJsonConfig() ?>);
 </script>
@@ -62,7 +64,19 @@
 	?>
 	<h1><?= $headlineTxt; ?></h1>
 </div>
-
+<div id="description">
+	<ul>
+		<li><a href="<?= $url; ?>" title="">Back</a></li>
+		<li>/</li>
+		<li><a href="<?= $this->getBaseUrl(); ?>/shop-independent-designer-accessories/independent-designer-earrings.html" title="Shop Earrings">Earrings</a></li>
+		<li>/</li>
+		<li><a href="<?= $this->getBaseUrl(); ?>/shop-independent-designer-accessories/unique-designer-rings.html" title="Shop Rings">Rings</a></li>
+		<li>/</li>
+		<li><a href="<?= $this->getBaseUrl(); ?>/shop-independent-designer-accessories/unique-designer-bracelets.html" title="Bracelets">Bracelets</a></li>
+		<li>/</li>
+		<li><a href="<?= $this->getBaseUrl(); ?>/shop-independent-designer-accessories/unique-designer-bracelets.html" title="Necklaces">Necklaces</a></li>
+	</ul>
+</div>
 <div id="product_wrapper">
 	
   <!-- BEGIN media.phtml page -->

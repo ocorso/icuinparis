@@ -402,14 +402,38 @@ input[type="submit"].btn01 {
 	overflow: hidden;
 }
 #media_table{}
-
+#description ul{
+	margin-left: -26px;
+}
+#description ul li{
+	display: inline-block;
+}
+#description ul li a, #description ul li{
+	font-size: 1.3em;
+	font-weight: normal;
+	color: #999999;
+	text-transform: uppercase;
+	font-family: "Gotham-Book";
+}
 	#pro_des_section {
 		margin:0 0 0 0; 
 
 		height:auto; 
 		float:right;
 	}
-
+	#product_modal{ 
+		display: none;
+		width: 90%;
+	/*	height: 90%;*/
+		left: 5%;
+		margin-left: 0;
+	}
+	#product_modal .modal-body{
+		max-height: 700px;
+	}
+	.modal-header, .modal-footer{
+		overflow: hidden;
+	}
 	#pro_des_section h2 { 
 		font-family: "Gotham-Book", sans-serif; 
 		font-weight:bold; 
@@ -1858,9 +1882,11 @@ color:#000000;
     color: #db7202;
     text-decoration: none;
 }
-
+.b-filter__list{
+	margin-bottom: 0;
+}
 .b-filter__list__dl-list {
-    margin: 0 20px;
+    margin: 0px;
 }
 
 .b-filter__list__dt {
@@ -1893,7 +1919,8 @@ color:#000000;
 .b-filter__title {
     margin-left: 20px;
     margin-bottom: 10px;
-    font-style: italic;
+    font-size: 1.2em;
+    line-height: 1.2em;
 }
 
 .b-filter__list__close_wrap {

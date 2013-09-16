@@ -884,7 +884,7 @@ tr.summary-details-excluded { font-style:italic; }
 #pro_des_section .price-box {
 	padding-top: 10px;
 }
-#pro_des_section .price-box p{
+#pro_des_section .price-box .price{
 	font-size: 2.0em;
 }
 /* Old price */

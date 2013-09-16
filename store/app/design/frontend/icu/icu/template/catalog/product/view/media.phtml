@@ -53,8 +53,8 @@
 			<?php if (count($this->getGalleryImages()) > 0): ?>
 				<?php foreach ($this->getGalleryImages() as $_image): ?>
 				  <li>
-				  	<a 	href="javascript:void(0);" 
-				  		class="" 
+				  	<a 	href="<?= $this->helper('catalog/image')->init($this->getProduct(), '', $_image->getFile()); ?>" 
+				  		class="product-thumbnail" 
 				  		rel="{gallery:'product-gallery',smallimage:'<?= $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(350,525); ?>',largeimage:'<?= $this->helper('catalog/image')->init($this->getProduct(), '', $_image->getFile()); ?>'}"
 	  				  	data-large="<?= $this->helper('catalog/image')->init($this->getProduct(), '', $_image->getFile()); ?>"
 				  				  >
@@ -68,3 +68,15 @@
 	</td>
 </tr>
 </table>
+
+	<div id="product_modal" class="modal fade">
+		<div class="modal-header">
+			<a class="close" data-dismiss="modal">&times;</a>
+		</div>
+		<div class="modal-body">
+			<img id="overlay_product" src="<?= $this->helper('catalog/image')->init($_product, 'image'); ?>" alt="product image"/>
+		</div>
+		<div class="modal-footer">
+		
+		</div>
+	</div>

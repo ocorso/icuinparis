@@ -24,9 +24,9 @@
           <li class="dropdown">
             <a href="#" title="Shop" class="dropdown-toggle " data-toggle="dropdown">Shop <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li class=""><a title="Shop Womens" href="<?= $base_url; ?>/store/womens">Shop Womens</a></li>
-              <li class=""><a href="<?= $base_url; ?>/store/mens">Shop Mens</a></li>
-              <li class=""><a href="<?= $base_url; ?>/designers" title="By Designer">Shop By Designer</a></li>
+              <li class=""><a title="Shop Womens" href="<?= $base_url; ?>/store/womens">Womens</a></li>
+              <li class=""><a href="<?= $base_url; ?>/store/mens">Mens</a></li>
+              <li class=""><a href="<?= $base_url; ?>/designers" title="By Designer">By Designer</a></li>
             </ul>
           </li>
           <li><a href="<?= $base_url; ?>/wholesale/">Wholesale</a></li>
